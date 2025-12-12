@@ -449,8 +449,9 @@ def cek_apk(session,coki):
         for i in range(len(game)):
             print(f"\r%s [%s] %s %s "%(D,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),D))
     w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
-    sop = BeautifulSoup(w,"html.parser")
+    sop = BeautifulSoup(w,"html.parser"))
 x = sop.find("form", method="post"))
+
 
 
 
