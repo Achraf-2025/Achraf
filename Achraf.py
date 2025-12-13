@@ -642,4 +642,32 @@ def M_file_3(ids,names,passlist):
                                 adid = str(uuid.uuid4())
                                 li = ['28']
                                 li2 = random.choice(li)
-                                data = {"adid": str(uuid.uuid4()),'format': 'json','device_id': str(uuid.uuid4()),'family_device_id': str(uuid.uuid4()),'secure_family_device_id': str(uuid.uuid4()),'cpl': 'true','try_num': '1','email': ids,'password': pas,'method': 'auth.login','generate_session_cookies': '1','sim_serials': "['80973453345210784798']",'openid_flow': 'android_login','openid_provider': 'google','openid_emails': "['01710940017']",'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiO
+                                data = {
+    "adid": str(uuid.uuid4()),
+    "format": "json",
+    "device_id": str(uuid.uuid4()),
+    "family_device_id": str(uuid.uuid4()),
+    "secure_family_device_id": str(uuid.uuid4()),
+    "cpl": "true",
+    "try_num": "1",
+    "email": ids,
+    "password": pas,
+    "method": "auth.login",
+    "generate_session_cookies": "1",
+    "sim_serials": ["80973453345210784798"],
+    "openid_flow": "android_login",
+    "openid_provider": "google",
+    "openid_emails": ["01710940017"],
+    "openid_tokens": [
+        """eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ
+        .eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVl
+        """
+    ],
+    "error_detail_type": "button_with_disabled",
+    "source": "account_recovery",
+    "locale": "es_ES",
+    "client_country_code": "ES",
+    "fb_api_req_friendly_name": "authenticate",
+    "fb_api_caller_class": "AuthOperations$PasswordAuthOperation",
+    "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32"
+}
