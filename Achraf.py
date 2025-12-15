@@ -495,7 +495,7 @@ def M_file_1(ids,names,passlist):
 
 [FBAN/FB4A;FBAV/57.0.0.18.136;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/18629582;FBCR/Post Office Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/K9 Pro;FBSV/5.5.5;FBCA/x86:armeabi-v7a;FBDM/{density=2.75,width=705,height=2120};FB_FW/1;FBRV/18686594;] FBBK/1
 
-[FBAN/FB4A;FBAV/416.0.0.35.85;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/442213661;FBCR/PENNYmobil Prepaid;FBMF/Tecno;FBBD/tecno;FBDV/KF4;FBSV/12.7.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=759,height=1309};FB_FW/1;]"
+[FBAN/FB4A;FBAV/407.0.0.30.97;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/440412261;FBCR/TPG Telecom;FBMF/Vivo;FBBD/vivo;FBDV/V5;FBSV/12.6.1;FBCA/x86_64:armeabi-v7a;FBDM/{density=2.8,width=709,height=1043};FB_FW/1;]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
