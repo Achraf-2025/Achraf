@@ -483,13 +483,13 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a = "[FBAN/FB4A;FBAV/461.0.0.0.73;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/451208771;FBCR/Vodafone Red;FBMF/Realme;FBBD/realme;FBDV/RMX3718;FBSV/14.6.1;FBCA/arm64-v8a:null;FBDM/{density=2.5,width=1060,height=1288};FB_FW/1;FBRV/451669864;]"+"
-[FBAN/FB4A;FBAV/38.0.0.0.64;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/12090456;FBCR/Lebara Mobile;FBMF/Nokia;FBBD/nokia;FBDV/TA-1123;FBSV/5.5.1;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=1.278,width=1015,height=2218};FB_FW/1;FBRV/12128508;]"+"
-[FBAN/FB4A;FBAV/197.0.0.46.98;FBBV/130483514;FBDM/{density=1.0,width=1174,height=2425};FBLC/de_DE;FBRV/130680556;FB_FW/2;FBCR/Netto Prepaid;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ZS670KS;FBSV/9.7.5;FBOP/19;FBCA/x86_64:armeabi-v7a;]"+"
-[FBAN/FB4A;FBAV/332.0.0.23.111;FBPN/com.facebook.katana;FBLC/en_US;FBBV/286414668;FBCR/T-Mobile;FBMF/Nokia;FBBD/nokia;FBDV/TA-1136;FBSV/13.9.5;FBCA/x86:armeabi-v7a;FBDM/{density=2.9,width=584,height=1600};]"+"
-[FBAN/FB4A;FBAV/373.0.0.31.112;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/314614855;FBCR/Vidéotron;FBMF/Nokia;FBBD/nokia;FBDV/TA-1402;FBSV/12.5.0;FBCA/arm64-v8a:;FBDM/{density=2.29375,width=550,height=1068};FB_FW/1;] FBBK/1
-[FBAN/FB4A;FBAV/57.0.0.18.136;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/18629582;FBCR/Post Office Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/K9 Pro;FBSV/5.5.5;FBCA/x86:armeabi-v7a;FBDM/{density=2.75,width=705,height=2120};FB_FW/1;FBRV/18686594;] FBBK/1
-[FBAN/FB4A;FBAV/416.0.0.35.85;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/442213661;FBCR/PENNYmobil Prepaid;FBMF/Tecno;FBBD/tecno;FBDV/KF4;FBSV/12.7.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=759,height=1309};FB_FW/1;]
+                                u1a = ";[FBAN/FB4A;FBAV/383.0.0.23.106;FBPN/com.facebook.katana;FBLC/en_US;FBBV/316614371;FBCR/C-Spire Wireless;FBMF/Samsung;FBBD/samsung;FBDV/SM-A605F;FBSV/13.9.5;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=914,height=972};]"
+    f = ";[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/315213325;FBCR/Netzclub;FBMF/Samsung;FBBD/samsung;FBDV/SM-M536B;FBSV/13.6.0;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=1.8,width=1244,height=2270};FB_FW/1;]"
+    g = ";[FBAN/FB4A;FBAV/387.0.0.24.102;FBBV/317416518;FBDM/{density=1.75,width=917,height=1540};FBLC/en_GB;FBRV/317803564;FB_FW/2;FBCR/Pioneer Mobile;FBMF/LG;FBBD/lg;FBPN/com.facebook.katana;FBDV/LGX230Z;FBSV/15.7.2;FBOP/20;FBCA/x86_64:arm64-v8a:armeabi-v7a;]"
+    l = ";[FBAN/FB4A;FBAV/375.0.0.26.111;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/315015017;FBCR/Virgin Mobile Canada;FBMF/Lava;FBBD/lava;FBDV/A450;FBSV/15.6.3;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1095,height=2336};FB_FW/1;]"
+    h = ";[FBAN/FB4A;FBAV/472.0.0.45.79;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/453410037;FBCR/OVO Mobile;FBMF/Lava;FBBD/lava;FBDV/A200;FBSV/15.9.3;FBCA/x86:arm64-v8a:armeabi-v7a;FBDM/{density=2.5,width=928,height=1122};FB_FW/1;]" 
+    j = ";[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/315213325;FBCR/Netzclub;FBMF/Samsung;FBBD/samsung;FBDV/SM-M536B;FBSV/13.6.0;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=1.8,width=1244,height=2270};FB_FW/1;]"
+    k = ";[FBAN/FB4A;FBAV/359.0.0.30.118;FBPN/com.facebook.katana;FBLC/en_US;FBBV/311816631;FBCR/Mint Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/Z6 Lite;FBSV/15.6.2;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=1.625,width=1302,height=1708};FB_FW/1;]"
 
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
