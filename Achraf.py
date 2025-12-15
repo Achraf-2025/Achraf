@@ -19,7 +19,7 @@ from concurrent.futures import ThreadPoolExecutor as tred
 from time import sleep as waktu
 from time import time as mek
 from bs4 import BeautifulSoup as sop
-استيراد os، base64، zlib، pip، urllib، random، requests
+استيراد import os, base64, zlib, pip, urllib, random, requests
 من io استورد BytesIO
 #استيراد pycurl
 يحاول :
