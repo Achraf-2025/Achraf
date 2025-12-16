@@ -541,7 +541,7 @@ def M_file_1(ids,names,passlist):
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open('/sdcard/DJALIL_MK-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/Achraf_MK-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
