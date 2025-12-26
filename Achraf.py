@@ -1,4 +1,4 @@
-Enterimport os,time,_md5,marshal,inspect,hashlib
+import os,time,_md5,marshal,inspect,hashlib
 import http.client
 import platform
 import base64
