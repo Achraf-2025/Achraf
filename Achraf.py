@@ -139,7 +139,7 @@ elif bit == '32bit':
 def clear():
     os.system('clear')
     print(logo)
-logo =
+logo = "Achraf logo"
 | .--------------. | | .--------------. |
 | |      __      | | | | ____    ____ | |
 | |     /  \     | | | ||_   \  /   _|| |
