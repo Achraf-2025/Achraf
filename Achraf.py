@@ -812,7 +812,7 @@ def M_file_4(ids, names, passlist):
         
 		fn = names.split(' ')[0]
 		try:
-except Jhi names.split(' ')[1]
+			ln = names.split(' ')[1]
 		except:
 			ln = fn
 			
