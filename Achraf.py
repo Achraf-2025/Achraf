@@ -283,7 +283,7 @@ def Trial(PF):
 TrialExist=""
 logo=(f"""\033[1;37m
 
-{green}  .----------------.  .----------------.
+{green}.----------------.  .----------------.
 | .--------------. | | .--------------. |
 | |      __      | | | | ____    ____ | |
 | |     /  \     | | | ||_   \  /   _|| |
@@ -292,16 +292,16 @@ logo=(f"""\033[1;37m
 | | _/ /    \ \_ | | | | _| |_\/_| |_ | |
 | ||____|  |____|| | | ||_____||_____|| |
 | |              | | | |              | |
-| '--------------' | | '--------------' |                          '----------------'   '----------------' 
-{green}     
+| '--------------' | | '-------------- 
 {green}  
-  {green}  
+{green}  
+  {green}   
 {green}  
 {green}   
    
 ─────────────────────────────────────────────
  {green}[{red}–{green}] FACEBOK : achraf 
- {green}[{red}–{green}] GITHUB  : achraf-AM
+ {green}[{red}–{green}] GITHUB  : achraf -AM
  {green}[{red}–{green}] VERSION : 0.7
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
@@ -812,7 +812,7 @@ def M_file_4(ids, names, passlist):
         
 		fn = names.split(' ')[0]
 		try:
-			ln = names.split(' ')[1]
+except Jhi names.split(' ')[1]
 		except:
 			ln = fn
 			
