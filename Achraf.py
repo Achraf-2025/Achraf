@@ -302,7 +302,7 @@ logo=(f"""\033[1;37m
 ─────────────────────────────────────────────
  {green}[{red}–{green}] FACEBOK : achraf 
  {green}[{red}–{green}] GITHUB  : achraf -AM
- {green}[{red}–{green}] VERSION : 0.7
+ {green}[{red}–{green}] VERSION : 0.5
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
 # I love you Mom 
