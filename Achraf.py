@@ -1,4 +1,4 @@
-# ASSALAMUALAIKUM 
+.# ASSALAMUALAIKUM 
 #OPEN SOURCE BY OWNER SHAPATAR BACHA.......MUHAMMAD HAMZA 
 #EDIT BY_______________MUHAMMAD HAMZA SHAPATAR_BACHA
 # READ KR LO PHLE YE SB
@@ -139,7 +139,8 @@ elif bit == '32bit':
 def clear():
     os.system('clear')
     print(logo)
-logo = "" 
+
+logo =    .----------------.   .----------------. 
 | .--------------. | | .--------------. |
 | |      __      | | | | ____    ____ | |
 | |     /  \     | | | ||_   \  /   _|| |
