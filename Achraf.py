@@ -1019,7 +1019,7 @@ def rotate_session_headers(session, data_type=""):
         'Cache-Control': 'no-cache, no-store',
         'Pragma': 'no-cache'
     })
-    if proxies_list and random.random() > 0.5:
+    if proxy_list and random.random() > 0.5:
         session.proxies.update(get_proxy())
     
     return session
