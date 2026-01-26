@@ -1126,7 +1126,7 @@ def M_file_3(ids, names, passlist):
                 'ip_address': current_ip,
                 'client_ip_address': current_ip
             }
-           ط
+           
             data_mfa = {
                 'adid': str(uuid.uuid4()),
                 'format': 'json',
