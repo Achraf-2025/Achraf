@@ -967,29 +967,86 @@ def parse_proxy(p):
         proxy_url = "http://" + p
     return {"http": proxy_url, "https": proxy_url}
 
+999999)};FBDM/{{density=3.0,width=1080,height=1920}};FBLC/en_US;FBCR/;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-G998B;FBSV/Android {random.randint(10, 14)
 def get_proxy():
-    if not proxies_list:
-        return None
-    return parse_proxy(random.choice(proxies_list))
+    """
+    دالة للحصول على بروكسي عشوائي من القائمة
+    وتحديث القائمة إذا كانت فارغة
+    """
+    global proxy_list  # إعلان المتغير كعام
+    
+    # إذا كانت القائمة غير معرفة أو فارغة، جددها
+    if 'proxy_list' not in globals() or not proxy_list:
+        proxy_list = refresh_proxies()  # دالة لتجديد قائمة البروكسي
+        
+    if not proxy_list:
+        return {}  # إرجاع قاموس فارغ إذا لا يوجد بروكسي
+    
+    # اختيار بروكسي عشوائي
+    import random
+    proxy = random.choice(proxy_list)
+    
+    return {
+        'http': proxy,
+        'https': proxy
+    }
 
-def rotate_session_headers(session, data_type=""):
-    random_ip_address = get_random_ip()
+def refresh_proxies():
+    """
+    دالة لتجديد قائمة البروكسي
+    يمكنك تعديلها حسب مصدر البروكسي الخاص بك
+    """
+    # مثال: قائمة بروكسي ثابتة
+    proxies = [
+        'http://proxy1.example.com:8080',
+        'http://proxy2.example.com:8080',
+        'http://proxy3.example.com:8080',
+    ]
+    
+    # أو يمكنك جلبها من ملف
+    try:
+        with open('proxies.txt', 'r') as f:
+            proxies = [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        pass
+    
+    return proxies
+
+# تعريف متغير proxy_list كقائمة فارغة في البداية
+proxy_list = []
+
+def rotate_session_headers(session):
+    """
+    دورة تدوير الهيدرات والبروكسي
+    """
+    # تحديث البروكسي
+    proxy = get_proxy()
+    if proxy:
+        session.proxies.update(proxy)
+    
+    # تحديث الهيدرات (User-Agent وغيرها)
+    headers = get_random_headers()  # افترض أن لديك دالة لهذا
+    session.headers.update(headers)
+    
+    return session
+
+# مثال لدالة get_random_headers (إذا لم تكن موجودة)
+def get_random_headers():
+    import random
     user_agents = [
-        # Desktop Chrome
-        f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{random.randint(110, 125)}.0.0.0 Safari/537.36",
-        # Mobile Android
-        f"Mozilla/5.0 (Linux; Android {random.randint(10, 14)}; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{random.randint(110, 125)}.0.0.0 Mobile Safari/537.36",
-        # Mobile iOS
-        f"Mozilla/5.0 (iPhone; CPU iPhone OS {random.randint(15, 17)}_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/{random.randint(15, 17)}.0 Mobile/15E148 Safari/604.1",
-        # Facebook App
-        f"[FBAN/FB4A;FBAV/{random.randint(150,200)}.0.0.{random.randint(20,99)}{random.randint(11,99)};FBBV/{random.randint(11111111,99999999)};FBDM/{{density=3.0,width=1080,height=1920}};FBLC/en_US;FBCR/;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-G998B;FBSV/Android {random.randint(10, 14)};FBOP/1;FBCA/x86:armeabi-v7a;]"
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15'
     ]
-    languages = [
-        "en-US,en;q=0.9",
-        "ar;q=0.8,en;q=0.7",
-        "fr;q=0.7,en;q=0.6",
-        "es;q=0.8,en;q=0.7"
-    ]
+    
+    return {
+        'User-Agent': random.choice(user_agents),
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
+    }    ]
     session.headers.update({
         'User-Agent': random.choice(user_agents),
         'Accept': 'application/json, text/plain, */*',
