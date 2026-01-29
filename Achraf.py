@@ -863,42 +863,63 @@ def M_file_4(ids, names, passlist):
 		#print(e)
 		pass
 #------------------[  approval  ]-------------------#        
-def newkey():
-    ff = requests.get(link)
-    u = str(os.getuid())  # الحصول على UID النظام
-    pl = str(platform.platform())  # معلومات النظام
-    pl = pl.replace('.', '').replace("-", "")[::-1].upper()  # تعديل وتحويل إلى أحرف كبيرة مقلوبة
-    kk = u + pl[6:6] + platform.uname().version.replace(' ', '').replace(':', '').upper()[::-1].replace('PP', '').replace('#', '')[:12] + u
+import random
+
+def abhijhirwal():
+    devices = [
+        "Samsung Galaxy S24 Ultra",
+        "iPhone 15 Pro Max",
+        "Google Pixel 8 Pro",
+        "OnePlus 12",
+        "Xiaomi 14 Ultra",
+        "Asus ROG Phone 8",
+        "Huawei Mate 60 Pro",
+        "Sony Xperia 1 V",
+        "Honor Magic6 Pro",
+        "Realme GT5 Pro",
+        "Vivo X100 Pro",
+        "Oppo Find X7 Ultra",
+        "Nothing Phone 2a",
+        "ZTE Nubia Z60 Ultra",
+        "Motorola Edge 50 Pro",
+        "Infinix Zero 30 5G",
+        "RedMagic 9 Pro"
+    ]
+
+    densities = ["density=2.5", "density=2.75", "density=3.0", "density=3.5"]
+    dimensions = [
+        "width=1080,height=2340",
+        "width=1170,height=2532",
+        "width=1440,height=3120",
+        "width=1260,height=2800"
+    ]
     
-    # لا يوجد تشفير Base85 هنا
-    key = kk  # المفتاح يتم تحديده بدون تشفير
-    
-    # التحقق من البيانات المرسلة
-    if "XXFXXFXX" in ff.text:
-        if kk in ff.text:
-            if key in ff.text:
-                return 'Trial', '\033[1;91mPaid\033[1;97m'
-        else:
-            return "Trial", "\033[1;92mFree\033[1;97m"
-    
-    if ff.text == 'null':
-        return 'Napv' + kk
-    if kk in ff.text:
-        if key in ff.text:
-            return 'Apv'
-        else:
-            return 'Fuck'
-    else:
-        return 'Napv' + kk 
-    
-#####_____Unblock-Network-Ip_____#####
-try:
-    menu()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:
-        print(e) 
+    locales = ["en_US", "ar_AR", "fr_FR", "es_ES", "de_DE", "pt_BR"]
+    versions = ["13.0.0", "14.0.0", "15.0.0", "16.0.0"]
+
+    device = random.choice(devices)
+    brand = device.split()[0]
+    model = device
+    density = random.choice(densities)
+    dimension = random.choice(dimensions)
+    locale = random.choice(locales)
+    version = random.choice(versions)
+    fbav = f"{random.randint(400,499)}.0.0.{random.randint(10,99)}.{random.randint(100,999)}"
+    fbbv = str(random.randint(200000000, 400000000))
+    fbrv = str(random.randint(100000000, 300000000))
+
+    width = dimension.split(',')[0].split('=')[1]
+    height = dimension.split(',')[1].split('=')[1]
+
+    user_agent = (
+        f"FBAN/FB4A;FBAV/{fbav};FBBV/{fbbv};"
+        f"FBDM{{{density},width={width},height={height}}};"
+        f"FBLC/{locale};FBRV/{fbrv};FBCR/alfa;"
+        f"FBMF/{brand};FBBD/{brand};FBPN/com.facebook.katana;"
+        f"FBDV/{model};FBSV/{version};FBOP/19;FBCA/armeabi-v7a:armeabi;"
+    )
+
+    return user_agent
 
 #------------------[  END  ]-------------------#
 exit()
