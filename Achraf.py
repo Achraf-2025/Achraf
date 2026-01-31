@@ -1,3 +1,4 @@
+
 try:
     import os,requests,json,time,re,random,sys,uuid,string,subprocess
     from string import *
@@ -132,8 +133,7 @@ device = {
         'fbdm':fbdm}
 
 def uaa():
-    return "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/412.0.0.28.118;FBBV/552950445;FBDM/{density=2.0,width=1440,height=1280};FBLC/en_GB;FBCR/T-Mobile;FBMF/samsung;FBBD/samsung;FBDV/Galaxy A36;FBCA/armeabi-v7a;FBBR/Barki;]"
-
+    return "[FBAN/FB4A;FBAV/376.0.0.12.108;FBBV/315213325;[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/315213325;FBCR/Plusnet Mobile;FBMF/OPPO;FBBD/oppo;FBDV/CPH2485;FBSV/13.8.3;FBCA/x86:arm64-v8a]"
 
 logo='''
     ▗▖ ▗▖▗▖ ▗▖▗▖  ▗▖▗▄▄▄▖▗▄▄▄▖▗▄▄▖ 
