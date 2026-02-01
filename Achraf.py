@@ -1,4 +1,4 @@
-Enter#DECODED BY CRIMINAL WITH ICDEC
+#DECODED BY CRIMINAL WITH ICDEC
 # OWNER MR Achraf
 import os,time,_md5,marshal,inspect,hashlib
 import http.client
