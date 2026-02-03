@@ -68,7 +68,7 @@ def WIZ():
 #---------------------()-----------------------#
 
 def SHAPTAR_BACHA():
-    ua = '[FBAN/FB4A;FBAV/376.0.0.12.108;FBBV/315213325;[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/315213325;FBCR/Plusnet Mobile;FBMF/OPPO;FBBD/oppo;FBDV/CPH2485;FBSV/13.8.3;FBCA/x86:arm64-v8a]"
+    ua = "[FBAN/FB4A;FBAV/376.0.0.12.108;FBBV/315213325;[FBAN/FB4A;FBAV/376.0.0.12.108;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/315213325;FBCR/Plusnet Mobile;FBMF/OPPO;FBBD/oppo;FBDV/CPH2485;FBSV/13.8.3;FBCA/x86:arm64-v8a]"
     return ua
 #============END============#
 
