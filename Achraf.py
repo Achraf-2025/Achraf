@@ -115,29 +115,6 @@ for agent in range(10000):
         fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
         ugen.append(fullagnt) """
 
-#───────────────[BIT ROOM]───────────────────────── #
-import os, platform, time, sys
-print('\033[1;91m[\033[1;92m⊀⊁\033[1;91m] \033[1;91m⊀\33[1;92mAssalam O Alaikum\33[1;91m⊁ ')
-time.sleep(1)
-os.system('clear')
-import os, platform, time, sys
-try:
- import requests
-except:os.system("pip uninstall requests -y;pip install requests")
-print('\033[1;91m[\033[1;97m-\033[1;91m] \033[1;92mChecking For Update. . . .')
-os.system(f'xdg-open https://t.me/TOUFIK_TLAMCANI')
-time.sleep(2)
-os.system('git pull --quiet 2>/dev/null')
-bit = platform.architecture()[0]
-if bit == '64bit':
- print('\033[1;91m[\033[1;92m◉\033[1;91m] \033[1;92mYOU ARE 64BIT USER') 
-elif bit == '32bit':
- print('\033[1;91m[\033[1;92m◉\033[1;91m] \033[1;92mYOU ARE 32BIT USER')
-
-#───────────────[BIT End]───────────────────────── #    
-
-def clear():
-    os.system('clear')
 TrialExist=""
 logo=(f"""\033[1;37m
 
