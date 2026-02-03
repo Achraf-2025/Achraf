@@ -141,13 +141,15 @@ def clear():
 TrialExist=""
 logo=(f"""\033[1;37m
 
-{green}  .d8888. d8888b. d88888b d88888b d8888b.      
-{green}  88'  YP 88  `8D 88'     88'     88  `8D      
-{green}  `8bo.   88oodD' 88ooooo 88ooooo 88   88      
-  {green}  `Y8b. 88~~~   88~~~~~ 88~~~~~ 88   88      
-{green}  db   8D 88      88.     88.     88  .8D      
-{green}  `8888Y' 88      Y88888P Y88888P Y8888D'   
-   
+green = '\033[92m'
+reset = '\033[0m'
+
+print(f"{green} .d8888. d8888b. d88888b d88888b d8888b.{reset}")
+print(f"{green} 88' YP 88 `8D 88' 88' 88 `8D{reset}")
+print(f"{green} `8bo. 88oodD' 88ooooo 88ooooo 88 88{reset}")
+print(f"{green} `Y8b. 88~~~ 88~~~~~ 88~~~~~ 88 88{reset}")
+print(f"{green} db 8D 88 88. 88. 88 .8D{reset}")
+print(f"{green} `8888Y' 88 Y88888P Y88888P Y8888D'{reset}")
 ─────────────────────────────────────────────
  {green}[{red}–{green}] FACEBOK : Dark
  {green}[{red}–{green}] GITHUB  : speed-sd
