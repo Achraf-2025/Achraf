@@ -1,4 +1,4 @@
-Enter# Achraf mr-mafia / Facebook Achraf YT
+# Achraf mr-mafia / Facebook Achraf YT
 import os,requests,json,time,re,random,sys,uuid,string,subprocess,zlib,platform
 import marshal
 import os,httpx
