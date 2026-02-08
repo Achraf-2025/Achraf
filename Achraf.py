@@ -125,7 +125,7 @@ logo=(f"""\033[1;37m
     
 ════════════════════════════════════════════════
 \033[1;32m  • \033[1;37m Tool Owner :-  Usman X achraf 
-\033[1;32m  • \033[1;37m GitHub     :-  Love -786
+\033[1;32m  • \033[1;37m GitHub     :-  Love -16
 \033[1;32m  • \033[1;37m Type       :-  Free
 \033[1;32m  • \033[1;37m Version    :-  {version}""")
 os.system('clear')
