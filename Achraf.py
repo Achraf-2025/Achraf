@@ -163,27 +163,27 @@ def Main_Achraf():
             if opt == '2':afg()
             if opt== '3':bd()
             if opt== '4':gmail()
-            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_Achraf()
     
 
         elif opt1 == "4":
             clear();print(' [\033[1;32m1\033[97;1m] Contact To Whatsapp');print(' [\033[1;32m2\033[97;1m] Contact To Facebook');print(' [\033[1;32m0\033[97;1m] \033[1;31mBack Main Menu');line()
             d=input(' [•] Choose : ')
-            if d == '1':os.system('xdg-open https://api.whatsapp.com/send?phone=+994409879304/');Main_VENOM()
-            if d == '2':os.system('xdg-open https://www.facebook.com/usman.rajpoot.1100');Main_VENOM()
+            if d == '1':os.system('xdg-open https://api.whatsapp.com/send?phone=+994409879304/');Main_Achraf()
+            if d == '2':os.system('xdg-open https://www.facebook.com/usman.rajpoot.1100');Main_Achraf()
  
-            if d == '0':Main_VENOM()
-            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+            if d == '0':Main_Achraf()
+            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_Achraf()
         elif opt1 == "3":
             clear();print(' [\033[1;32m1\033[97;1m] Join WhatsApp Group');print(' [\033[1;32m2\033[97;1m] Join Facebook Group');print(' [\033[1;32m0\033[97;1m] \033[1;31mBack Main Menu');line()
             d=input(' [•] Choose : ')
-            if d == '1':os.system('xdg-open https://chat.whatsapp.com/HEhfeaajh1IITDiVpyJI7z');Main_VENOM()
-            if d == '2':os.system('xdg-open https://facebook.com/groups/1245912839659325/');Main_VENOM()
+            if d == '1':os.system('xdg-open https://chat.whatsapp.com/HEhfeaajh1IITDiVpyJI7z');Main_Achraf()
+            if d == '2':os.system('xdg-open https://facebook.com/groups/1245912839659325/');Main_Achraf()
             if d == '0':Main_Achraf()
-            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_Achraf()
  
         elif opt1 == "0":line();print('[•] Thanks For Use\n[•] See You Again ');exit()
-        else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+        else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_Achraf()
     
 
 ###########______###########
@@ -224,12 +224,12 @@ def method():
             ids,names = user.split('|')
             passlist = plist
             if methd =='1':
-                VENOM.submit(api1,ids,names,passlist)
+                Achraf.submit(api1,ids,names,passlist)
             #elif methd =='2':
-                #VENOM.submit(api1,ids,names,passlist)
+                #Achraf.submit(api1,ids,names,passlist)
                # line();print('\033[1;32m [!] \033[1;31mComing Soon...!');exit()
             else:
-                VENOM.submit(api1,ids,names,passlist)
+                Achraf.submit(api1,ids,names,passlist)
  
                 
     line()
@@ -239,7 +239,7 @@ def method():
     line()
  
     input("\033[1;32m [•]\033[1;33m Press Enter To Go Back ")
-    os.system('python VENOM.py')
+    os.system('python Achraf.py')
 
 ###########______###########
 
@@ -261,7 +261,7 @@ def pak():
  
                 #clear();cp=input('\033[1;32m [?] \033[1;33m Show Cp Account \033[1;32m(y/n) : \033[1;37m')
                  
-                with tred(max_workers=30) as VENOM:     
+                with tred(max_workers=30) as Achraf:     
                         clear()
                         tl = str(len(user))
                         print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
