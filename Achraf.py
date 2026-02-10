@@ -144,13 +144,14 @@ __COUNTRYS__ = af['country'].upper()
 xlinex = (f"{G}━"*56)
 #----------------\<-LOGO->/----------------#
 logo = f"""
-{G}    ░▀█▀░▀█▀░█▀▀░█▀▀░█▀▄░░
+{G} 
+        
+░▀█▀░▀█▀░█▀▀░█▀▀░█▀▄░░
 ░░█░░░█░░█░█░█▀▀░█▀▄░░
 ░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░
-
-  ╺┳┓  ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}404
-{W}   {G}╺━╸{W}┏╋┛ ┃┃{G}  ●{W}  STATUS    {xpxx} FREE
-{G}     ●{W}  VERSION   {xpxx} V{G}/{W}{version}
+                   ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}404
+{W}                  {G}{W}{G}  ●{W}  STATUS    {xpxx} FREE
+{G}                 ●{W}  VERSION   {xpxx} V{G}/{W}{version}
 {xlinex}
 {W}         👑 MIND IT NOTHING IS IMPOSSIBLE 👑
 {xlinex}
@@ -850,4 +851,3 @@ class __SEAXNOOR__:
 __CLEAR__()
 __SEAXNOOR__().__MENU__()
 #----------------\<-END-CALL->/----------------#
-
