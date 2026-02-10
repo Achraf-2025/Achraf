@@ -1,4 +1,4 @@
-/data/data/com.termux/files/usr/bin/python3.12
+#/data/data/com.termux/files/usr/bin/python3.12
 # -*- coding: utf-8 -*-
 #REVISED BY S. SHAJON
 #----------------\<-IMPORT-MODULE->/----------------#
