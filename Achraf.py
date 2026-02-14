@@ -149,9 +149,9 @@ logo = f"""
 ░▀█▀░▀█▀░█▀▀░█▀▀░█▀▄░░
 ░░█░░░█░░█░█░█▀▀░█▀▄░░
 ░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░
-                                      ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}2026
-{W}                                 {G}  ●{W}  STATUS    {xpxx} FREE
-{G}                                     ●{W}  VERSION   {xpxx} V{G}/{W}{version}
+                              ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}2026
+{W}                      {G}  ●{W}  STATUS    {xpxx} FREE
+{G}                           ●{W}  VERSION   {xpxx} V{G}/{W}{version}
 {xlinex}
 {W}         👑 MIND IT NOTHING IS IMPOSSIBLE 👑
 {xlinex}
