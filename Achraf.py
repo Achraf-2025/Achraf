@@ -9,7 +9,29 @@ from time import localtime as lt
 from pip._vendor import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
+import requests
+import json
 
+url = "https://graph.facebook.com/auth/login"
+
+payload = {
+  "locale": "ar_AR",
+  "format": "json",
+  "email": "turbo1dturbo1t@gmail.com",
+  "password": "#PWD_REACTNATIVE:2:1771158980:AUBP/yH+qv/s3YY5jscAAWXXPm8hXHF1LcK5Gvjj1nJJ4uAQIOtVWqfgENu6NkXH5YGZ5e/+6Q8nFbCRVy8+i+BkBpXC0P1df6+ry8OJku2GI2kMYsANlkGsmOYQ0xlvrtjLygiKZQCrwkpdRXkEzGaqgOxUolXoHpbOaK9lDX8E1LwokyuWWau/HBTXz+7sAHbKeAqbKFpNYbKh6ZzW8Aus5LgZtHjnT29CCLlGTOks63RH5Kqs0XnIb7Rp7VxTE14+LD3o6SWD1i7O8US6Gl6B6KC6TCDu0r8nBxIyYvJkYgldr8josGVGCPm+3GCG9u1W5lOMvKEf6LQJKMc3d6Dc3w3XEhjOvNvc3uM0s1Oj+sYVu/pm5C6EDwHHUUNbFOwd8qq1mx2f",
+  "access_token": "257637621624717|7e73d6961c0c8fab39f62afdfb77f96b",
+  "generate_session_cookies": 1
+}
+
+headers = {
+  'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 15; RMX5566 Build/AP3A.240617.008) [FBAN/ViewpointsForAndroid;FBAV/286.0.0.1.109;FBBV/768956344;FBRV/0;FBPN/com.facebook.viewpoints;FBLC/ar_AR;FBMF/realme;FBBD/realme;FBDV/RMX5566;FBSV/15;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1468};FB_FW/1;]",
+  'Accept-Encoding': "gzip",
+  'content-type': "application/json;charset=utf-8"
+}
+
+response = requests.post(url, data=json.dumps(payload), headers=headers)
+
+print(response.text)
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
