@@ -1,7 +1,3 @@
-#!/data/data/com.termux/files/usr/bin/python3.12
-# -*- coding: utf-8 -*-
-#REVISED BY S. SHAJON
-#----------------\<-IMPORT-MODULE->/----------------#
  import random
 def generate_facebook_ua():
     # أحدث Android versions حتى 2025
