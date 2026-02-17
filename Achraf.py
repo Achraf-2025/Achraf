@@ -2,55 +2,78 @@
 # -*- coding: utf-8 -*-
 #REVISED BY S. SHAJON
 #----------------\<-IMPORT-MODULE->/----------------#
- import os,requests,json,time,re,random,sys,uuid,string,subprocess
-    from string import *
-    import bs4
-    #import dz
-    from concurrent.futures import ThreadPoolExecutor as tred
-    from bs4 import BeautifulSoup as sop
-    from bs4 import BeautifulSoup
-except ModuleNotFoundError: 
-    print('\n Installing missing modules ...')
-    os.system('pip install requests bs4 futures==2 > /dev/null')
-    os.system('python RABAH.py')
-    os.system('xdg-open https://t.me/chawi01a')
-try:
-    os.mkdir('/sdcard/RABAH')
-except:pass
-import os
-import sys
-import time
-import requests
-import random
-import platform
-import base64
-import subprocess 
-from concurrent.futures import ThreadPoolExecutor
-import requests,bs4,uuid,json,os,sys,random,datetime,time,re,subprocess
-ugen=[]
-for xd in range(10000):
-    rr = random.randint
-    build_b = random.choice(["001","002","003","011","012","014","015","020","021","022","023","024"])
-    bl_typ = random.choice(["TKQ1","SKQ1","TP1A","RKQ1","SP1A","RP1A","PPR1","QP1A"])
-    oppo = random.choice(["CPH2461","CPH2451","PCGM00","PBBM00","PFZM10","PGGM10","PECT30","PCHM10","PEAT00","PEYM00","PESM10","PFGM00"])
-    infinix = random.choice(["Infinix X669C","Infinix X6823","Infinix X676C","Infinix X683","Infinix X689C","Infinix X6811","Infinix X612B","Infinix X6810","Infinix X665E"])
-    redmi = random.choice(["2211133G","M2004J19C","22041219I","22101316UG","2209116AG","M2010J19SY","M2012K11C","Redmi Note 7","Redmi Note 8","Redmi Note 5"])
-    um2 = f"Mozilla/5.0 (Linux; Android {str(rr(6,12))}; {oppo} Build/{bl_typ}.{str(rr(120000,220000))}.{build_b}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(80,114))}.0.{str(rr(4200,5400))}.{str(rr(70,150))} Mobile Safari/537.36"
-    um1 = f"Mozilla/5.0 (Linux; Android {str(rr(6,12))}; {redmi} Build/{bl_typ}.{str(rr(120000,220000))}.{build_b}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(80,114))}.0.{str(rr(4200,5400))}.{str(rr(70,150))} Mobile Safari/537.36"
-    um3 = f"Mozilla/5.0 (Linux; Android {str(rr(6,12))}; {infinix} Build/{bl_typ}.{str(rr(120000,220000))}.{build_b}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(rr(80,114))}.0.{str(rr(4200,5400))}.{str(rr(70,150))} Mobile Safari/537.36"
-    um4 = f"Mozilla/5.0 (Linux; Android {str(rr(6,12))}; {infinix}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(100,114))}.0.{str(rr(4900,5700))}.{str(rr(70,150))} Mobile Safari/537.36"
-    ugen.append(um2)
-    ugen.append(um3)
-    ugen.append(um1)
-    ugen.append(um4)
-for xhd in range(1000):
-    a = random.choice(['de-at','in-id','ms-my','uk-ua','en-us','en-gb','id-id','de-de','ru-ru','en-sg','fr-fr','fa-ir','ja-jp','pt-br','cs-cz','zh-hk','zh-cn','vi-vn','en-ph','en-in','tr-tr','en-au','th-th','hi-in','zh-tw','my-zg','en-nz','en-ca','es-mx','ko-kr','el-gr','en-ez','ar-ae','fr-ch','nl-nl','gu-in'])
-    b = random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    c = random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    b2 = random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    c2 = random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    d = f"Mozilla/5.0 (Linux; U; Android {str(random.randint(6,14))}; {a}; OPPO {b}{str(random.randint(10,99))}{c} Build/{b2}{str(random.randint(1,999))}{c2}) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(random.randint(75,117))}.0.{str(random.randint(2500,5900))}.{str(random.randint(80,200))} Mobile Safari/537.36 HeyTapBrowser/{str(random.randint(6,47))}.{str(random.randint(7,8))}.{str(random.randint(2,40))}.{str(random.randint(1,9))}"
-    ugen.append(d)
+ import random
+
+def generate_facebook_ua():
+    # أحدث Android versions حتى 2025
+    android_versions = ["10.0", "11.0", "12.0", "13.0", "14.0", "15.0"]
+
+    # كثافات الشاشة الحديثة
+    densities = [2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
+
+    # أحدث الأجهزة 2024-2025 مع build حقيقي
+    devices = [
+        {"model": "Pixel 9 Pro", "brand": "Google", "build": "AP2A.241005.013"},
+        {"model": "Pixel 8a", "brand": "Google", "build": "AP1A.240505.004"},
+        {"model": "SM-S928B", "brand": "Samsung", "build": "S928BXXU1AWD2"},  # S25 Ultra
+        {"model": "SM-S918B", "brand": "Samsung", "build": "S918BXXU3CWD2"},  # S24
+        {"model": "2201116TG", "brand": "Xiaomi", "build": "V816.0.7.0.ULKMIXM"},  # Xiaomi 14
+        {"model": "LE2123", "brand": "OnePlus", "build": "LE2123_15.F.32"},
+        {"model": "CPH2581", "brand": "OPPO", "build": "CPH2581_15.A.18"},
+        {"model": "IN2023", "brand": "OnePlus", "build": "IN2023_15.F.21"},
+    ]
+
+    # carriers عالمية + جزائرية/عربية
+    carriers = ["Ooredoo", "Mobilis", "Djezzy", "Vodafone", "Orange", "AT&T", "Verizon", "T-Mobile", "EE"]
+
+    # لغات شائعة
+    languages = ["en_US", "en_GB", "fr_FR", "ar_AE", "ar_DZ", "es_ES", "tr_TR", "de_DE"]
+
+    # شاشات حديثة عالية الدقة
+    screen_sizes = [
+        {"width": 1080, "height": 2400},
+        {"width": 1080, "height": 2340},
+        {"width": 1440, "height": 3200},
+        {"width": 1290, "height": 2796},
+        {"width": 1179, "height": 2556},
+        {"width": 1440, "height": 3120},
+    ]
+
+    device = random.choice(devices)
+    android_version = random.choice(android_versions)
+    density = random.choice(densities)
+    screen = random.choice(screen_sizes)
+    carrier = random.choice(carriers)
+    language = random.choice(languages)
+
+    # أحدث FBAV 2025 (من 450 إلى 485+)
+    fbav_major = random.randint(450, 485)
+    fbav_minor = random.randint(0, 99)
+    fbav_patch = random.randint(0, 99)
+    fbav_build = random.randint(1, 99)
+
+    fbbv = random.randint(400000000, 499999999)
+    fbrv = random.randint(400000000, 499999999)
+
+    ua = f"Dalvik/2.1.0 (Linux; U; Android {android_version}; {device['model']} Build/{device['build']}) "
+    ua += f"[FBAN/FB4A;FBAV/{fbav_major}.{fbav_minor}.{fbav_patch}.{fbav_build};"
+    ua += f"FBBV/{fbbv};"
+    ua += f"FBDM/{{density={density:.1f},width={screen['width']},height={screen['height']}}};"
+    ua += f"FBLC/{language};"
+    ua += f"FBRV/{fbrv};"
+    ua += f"FBCR/{carrier};"
+    ua += f"FBMF/{device['brand']};"
+    ua += f"FBBD/{device['brand']};"
+    ua += f"FBPN/com.facebook.katana;"
+    ua += f"FBDV/{device['model']};"
+    ua += f"FBSV/{android_version};"
+    ua += f"FBOP/19;"  # أحدث OP
+    ua += f"FBCA/armeabi-v7a:armeabi;]"  # تحديث للـ CPU
+
+    return ua
+
+# تجربة
+print(generate_facebook_ua())
 
 Login(email=email, password=password)
 #----------------\<-COLOR->/----------------#
