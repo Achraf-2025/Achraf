@@ -1,85 +1,37 @@
-import os
+#!/data/data/com.termux/files/usr/bin/python3.12
+# -*- coding: utf-8 -*-
+#REVISED BY S. SHAJON
+#----------------\<-IMPORT-MODULE->/----------------#
+import os, sys, platform, time, random, uuid, json, string, base64, re, hashlib
+from os import system
+from io import BytesIO
+from time import localtime as lt
+from pip._vendor import requests
+from datetime import datetime, timedelta
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
 import requests
 import json
-import time
-import re
-import random
-import sys
-import uuid
-import string
-import subprocess
-import random
-def generate_facebook_ua():
-    # أحدث Android versions حتى 2025
-    android_versions = ["10.0", "11.0", "12.0", "13.0", "14.0", "15.0"]
 
-    # كثافات الشاشة الحديثة
-    densities = [2.0, 2.5, 3.0, 3.5, 4.0, 4.5]
+url = "https://graph.facebook.com/auth/login"
 
-    # أحدث الأجهزة 2024-2025 مع build حقيقي
-    devices = [
-        {"model": "Pixel 9 Pro", "brand": "Google", "build": "AP2A.241005.013"},
-        {"model": "Pixel 8a", "brand": "Google", "build": "AP1A.240505.004"},
-        {"model": "SM-S928B", "brand": "Samsung", "build": "S928BXXU1AWD2"},  # S25 Ultra
-        {"model": "SM-S918B", "brand": "Samsung", "build": "S918BXXU3CWD2"},  # S24
-        {"model": "2201116TG", "brand": "Xiaomi", "build": "V816.0.7.0.ULKMIXM"},  # Xiaomi 14
-        {"model": "LE2123", "brand": "OnePlus", "build": "LE2123_15.F.32"},
-        {"model": "CPH2581", "brand": "OPPO", "build": "CPH2581_15.A.18"},
-        {"model": "IN2023", "brand": "OnePlus", "build": "IN2023_15.F.21"},
-    ]
+payload = {
+  "locale": "ar_AR",
+  "format": "json",
+  "email": "turbo1dturbo1t@gmail.com",
+  "password": "#PWD_REACTNATIVE:2:1771158980:AUBP/yH+qv/s3YY5jscAAWXXPm8hXHF1LcK5Gvjj1nJJ4uAQIOtVWqfgENu6NkXH5YGZ5e/+6Q8nFbCRVy8+i+BkBpXC0P1df6+ry8OJku2GI2kMYsANlkGsmOYQ0xlvrtjLygiKZQCrwkpdRXkEzGaqgOxUolXoHpbOaK9lDX8E1LwokyuWWau/HBTXz+7sAHbKeAqbKFpNYbKh6ZzW8Aus5LgZtHjnT29CCLlGTOks63RH5Kqs0XnIb7Rp7VxTE14+LD3o6SWD1i7O8US6Gl6B6KC6TCDu0r8nBxIyYvJkYgldr8josGVGCPm+3GCG9u1W5lOMvKEf6LQJKMc3d6Dc3w3XEhjOvNvc3uM0s1Oj+sYVu/pm5C6EDwHHUUNbFOwd8qq1mx2f",
+  "access_token": "257637621624717|7e73d6961c0c8fab39f62afdfb77f96b",
+  "generate_session_cookies": 1
+}
 
-    # carriers عالمية + جزائرية/عربية
-    carriers = ["Ooredoo", "Mobilis", "Djezzy", "Vodafone", "Orange", "AT&T", "Verizon", "T-Mobile", "EE"]
+headers = {
+  'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 15; RMX5566 Build/AP3A.240617.008) [FBAN/ViewpointsForAndroid;FBAV/286.0.0.1.109;FBBV/768956344;FBRV/0;FBPN/com.facebook.viewpoints;FBLC/ar_AR;FBMF/realme;FBBD/realme;FBDV/RMX5566;FBSV/15;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1468};FB_FW/1;]",
+  'Accept-Encoding': "gzip",
+  'content-type': "application/json;charset=utf-8"
+}
 
-    # لغات شائعة
-    languages = ["en_US", "en_GB", "fr_FR", "ar_AE", "ar_DZ", "es_ES", "tr_TR", "de_DE"]
+response = requests.post(url, data=json.dumps(payload), headers=headers)
 
-    # شاشات حديثة عالية الدقة
-    screen_sizes = [
-        {"width": 1080, "height": 2400},
-        {"width": 1080, "height": 2340},
-        {"width": 1440, "height": 3200},
-        {"width": 1290, "height": 2796},
-        {"width": 1179, "height": 2556},
-        {"width": 1440, "height": 3120},
-    ]
-
-    device = random.choice(devices)
-    android_version = random.choice(android_versions)
-    density = random.choice(densities)
-    screen = random.choice(screen_sizes)
-    carrier = random.choice(carriers)
-    language = random.choice(languages)
-
-    # أحدث FBAV 2025 (من 450 إلى 485+)
-    fbav_major = random.randint(450, 485)
-    fbav_minor = random.randint(0, 99)
-    fbav_patch = random.randint(0, 99)
-    fbav_build = random.randint(1, 99)
-
-    fbbv = random.randint(400000000, 499999999)
-    fbrv = random.randint(400000000, 499999999)
-
-    ua = f"Dalvik/2.1.0 (Linux; U; Android {android_version}; {device['model']} Build/{device['build']}) "
-    ua += f"[FBAN/FB4A;FBAV/{fbav_major}.{fbav_minor}.{fbav_patch}.{fbav_build};"
-    ua += f"FBBV/{fbbv};"
-    ua += f"FBDM/{{density={density:.1f},width={screen['width']},height={screen['height']}}};"
-    ua += f"FBLC/{language};"
-    ua += f"FBRV/{fbrv};"
-    ua += f"FBCR/{carrier};"
-    ua += f"FBMF/{device['brand']};"
-    ua += f"FBBD/{device['brand']};"
-    ua += f"FBPN/com.facebook.katana;"
-    ua += f"FBDV/{device['model']};"
-    ua += f"FBSV/{android_version};"
-    ua += f"FBOP/19;"  # أحدث OP
-    ua += f"FBCA/armeabi-v7a:armeabi;]"  # تحديث للـ CPU
-
-    return ua
-
-# تجربة
-print(generate_facebook_ua())
-
+print(response.text)
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
@@ -921,4 +873,3 @@ class __SEAXNOOR__:
 __CLEAR__()
 __SEAXNOOR__().__MENU__()
 #----------------\<-END-CALL->/----------------#
-
