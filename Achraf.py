@@ -3,7 +3,6 @@
 #REVISED BY S. SHAJON
 #----------------\<-IMPORT-MODULE->/----------------#
  import random
-
 def generate_facebook_ua():
     # أحدث Android versions حتى 2025
     android_versions = ["10.0", "11.0", "12.0", "13.0", "14.0", "15.0"]
