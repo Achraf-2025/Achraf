@@ -80,7 +80,6 @@ def generate_facebook_ua():
 # تجربة
 print(generate_facebook_ua())
 
-Login(email=email, password=password)
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
