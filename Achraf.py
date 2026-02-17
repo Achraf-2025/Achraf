@@ -9,29 +9,29 @@ from time import localtime as lt
 from pip._vendor import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
-import requests
-import json
 
-url = "https://graph.facebook.com/auth/login"
+import requests, random, json, hashlib, uuid, time
 
-payload = {
-  "locale": "ar_AR",
-  "format": "json",
-  "email": "turbo1dturbo1t@gmail.com",
-  "password": "#PWD_REACTNATIVE:2:1771158980:AUBP/yH+qv/s3YY5jscAAWXXPm8hXHF1LcK5Gvjj1nJJ4uAQIOtVWqfgENu6NkXH5YGZ5e/+6Q8nFbCRVy8+i+BkBpXC0P1df6+ry8OJku2GI2kMYsANlkGsmOYQ0xlvrtjLygiKZQCrwkpdRXkEzGaqgOxUolXoHpbOaK9lDX8E1LwokyuWWau/HBTXz+7sAHbKeAqbKFpNYbKh6ZzW8Aus5LgZtHjnT29CCLlGTOks63RH5Kqs0XnIb7Rp7VxTE14+LD3o6SWD1i7O8US6Gl6B6KC6TCDu0r8nBxIyYvJkYgldr8josGVGCPm+3GCG9u1W5lOMvKEf6LQJKMc3d6Dc3w3XEhjOvNvc3uM0s1Oj+sYVu/pm5C6EDwHHUUNbFOwd8qq1mx2f",
-  "access_token": "257637621624717|7e73d6961c0c8fab39f62afdfb77f96b",
-  "generate_session_cookies": 1
-}
+def Login(email:str, password:str):
+    r    = requests.Session()
+    head = {'Host':'b-graph.facebook.com','X-Fb-Connection-Quality':'EXCELLENT','Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; RMX3740 Build/QP1A.190711.020) [FBAN/FB4A;FBAV/417.0.0.33.65;FBPN/com.facebook.katana;FBLC/in_ID;FBBV/480086274;FBCR/Corporation Tbk;FBMF/realme;FBBD/realme;FBDV/RMX3740;FBSV/7.1.2;FBCA/x86:armeabi-v7a;FBDM/{density=1.0,width=540,height=960};FB_FW/1;FBRV/483172840;]','X-Tigon-Is-Retry':'false','X-Fb-Friendly-Name':'authenticate','X-Fb-Connection-Bandwidth':str(random.randrange(70000000,80000000)),'Zero-Rated':'0','X-Fb-Net-Hni':str(random.randrange(50000,60000)),'X-Fb-Sim-Hni':str(random.randrange(50000,60000)),'X-Fb-Request-Analytics-Tags':'{"network_tags":{"product":"350685531728","retry_attempt":"0"},"application_tags":"unknown"}','Content-Type':'application/x-www-form-urlencoded','X-Fb-Connection-Type':'WIFI','X-Fb-Device-Group':str(random.randrange(4700,5000)),'Priority':'u=3,i','Accept-Encoding':'gzip, deflate','X-Fb-Http-Engine':'Liger','X-Fb-Client-Ip':'true','X-Fb-Server-Cluster':'true','Content-Length':str(random.randrange(1500,2000))}
+    data = {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':email,'password':'#PWD_FB4A:0:{}:{}'.format(str(time.time())[:10], password),'generate_analytics_claim':'1','community_id':'','linked_guest_account_userid':'','cpl':True,'try_num':'1','family_device_id':str(uuid.uuid4()),'secure_family_device_id':str(uuid.uuid4()),'credentials_type':'password','account_switcher_uids':[],'fb4a_shared_phone_cpl_experiment':'fb4a_shared_phone_nonce_cpl_at_risk_v3','fb4a_shared_phone_cpl_group':'enable_v3_at_risk','enroll_misauth':False,'generate_session_cookies':'1','error_detail_type':'button_with_disabled','source':'login','machine_id':str(''.join([random.choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') for i in range(24)])),'jazoest':str(random.randrange(22000,23000)),'meta_inf_fbmeta':'V2_UNTAGGED','advertiser_id':str(uuid.uuid4()),'encrypted_msisdn':'','currently_logged_in_userid':'0','locale':'id_ID','client_country_code':'ID','fb_api_req_friendly_name':'authenticate','fb_api_caller_class':'Fb4aAuthHandler','api_key':'882a8490361da98702bf97a021ddc14d','sig':str(hashlib.md5(str(uuid.uuid4()).encode()).hexdigest()[:32]),'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
+    pos  = r.post('https://b-graph.facebook.com/auth/login', data=data, headers=head).json()
+    if ('session_key' in str(pos)) and ('access_token' in str(pos)):
+        uid    = pos['uid']
+        token  = pos['access_token']
+        cookie = ''.join(['{}={};'.format(i['name'],i['value']) for i in pos['session_cookies']])
+        print('Success Login!')
+        print('ID     :', uid)
+        print('Token  :', token)
+        print('Cookie :', cookie)
+    else:
+        print('Failed Login!')
 
-headers = {
-  'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 15; RMX5566 Build/AP3A.240617.008) [FBAN/ViewpointsForAndroid;FBAV/286.0.0.1.109;FBBV/768956344;FBRV/0;FBPN/com.facebook.viewpoints;FBLC/ar_AR;FBMF/realme;FBBD/realme;FBDV/RMX5566;FBSV/15;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1468};FB_FW/1;]",
-  'Accept-Encoding': "gzip",
-  'content-type': "application/json;charset=utf-8"
-}
+email    = 'example@gmail.com' or '100088440826190' or 'fb.username'
+password = 'loulouloulou'
 
-response = requests.post(url, data=json.dumps(payload), headers=headers)
-
-print(response.text)
+Login(email=email, password=password)
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
@@ -156,7 +156,7 @@ def _____UpDaTe_S2_____():
     fban3=fb3.split('|')[1];fbpn3=fb3.split('|')[0]
     bit3 = random.choice(['FBOP/19;FBCA/armeabi-v7a:armeabi;]','FBOP/1;FBCA/arm64-v8a:;]'])
     agent3 = '[FBAN/'+str(fban3)+';FBAV/'+str(fbav3)+';FBBV/'+str(fbbv3)+';FBDM/{density='+str(density3)+',width='+str(width3)+',height='+str(height3)+'};FBLC/'+str(fblc3)+';FBRV/'+str(fbrv3)+';FBCR/'+str(fbcr3)+';FBMF/'+str(fbmf3)+';FBBD/'+str(fbbd3)+';FBPN/'+str(fbpn3)+';FBDV/'+str(fbdv3)+';FBSV/'+str(fbsv3)+';'+str(bit3)+''
-    iphone3 = random.choice('[FBAN/FB4A;FBAV/152.0.0.34.136;FBBV/82833102;FBDM/{density=4.0,width=944,height=1983};FBLC/en_US;FBCR/H2O Wireless;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/AI2203;FBSV/10.7.0;FBCA/x86_64:x86:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/34.0.0.0.242;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/10009614;FBCR/PC Mobile;FBMF/Realme;FBBD/realme;FBDV/RMX3721;FBSV/5.8.1;FBCA/x86_64:armeabi-v7a;FBDM/{density=1.5,width=870,height=1794};FB_FW/1;FBRV/10043642;]"+"[FBAN/FB4A;FBAV/382.0.0.33.111;FBBV/316416485;FBDM/{density=2.75,width=1242,height=1752};FBLC/en_US;FBRV/316798559;FB_FW/2;FBCR/MetroPCS;FBMF/Tecno;FBBD/tecno;FBPN/com.facebook.katana;FBDV/TB20;FBSV/13.6.5;FBOP/19;FBCA/arm64-v8a:armeabi-v7a:armeabi;]"+"[FBAN/FB4A;FBAV/460.0.0.0.52;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/451006355;FBCR/Otelo;FBMF/Huawei;FBBD/huawei;FBDV/BLA-L29;FBSV/15.7.3;FBCA/arm64-v8a:;FBDM/{density=3.75,width=934,height=734};FB_FW/1;]"+"[FBAN/FB4A;FBAV/103.0.0.20.72;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/43868207;FBCR/Telekom Family Card;FBMF/Vivo;FBBD/vivo;FBDV/S1;FBSV/5.5.0;FBCA/x86:armeabi-v7a;FBDM/{density=1.5,width=918,height=899};FB_FW/1;]"+"[FBAN/FB4A;FBAV/55.0.0.18.66;FBBV/17676094;FBDM/{density=1.25,width=1351,height=2476};FBLC/en_AU;FBRV/17731121;FB_FW/2;FBCR/Exetel;FBMF/Sony;FBBD/sony;FBPN/com.facebook.katana;FBDV/XQ-BA32;FBSV/6.9.1;FBOP/1;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/275.0.0.49.127;FBBV/221372446;FBDM/{density=2.9,width=1436,height=1158};FBLC/en_AU;FBRV/221647452;FB_FW/2;FBCR/Southern Phone;FBMF/Sony;FBBD/sony;FBPN/com.facebook.katana;FBDV/XQ-BQ52;FBSV/8.8.3;FBOP/1;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/110.0.0.15.69;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/49078465;FBCR/TPG Telecom;FBMF/Wiko;FBBD/wiko;FBDV/W-Y40;FBSV/6.5.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=1108,height=857};FB_FW/1;]"+"[FBAN/FB4A;FBAV/29.0.0.0.5;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/7108191;FBCR/Videotron;FBMF/OPPO;FBBD/oppo;FBDV/CPH2554;FBSV/7.6.4;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=2.0,width=635,height=1691};FB_FW/1;FBRV/7137261;]"+"[FBAN/FB4A;FBAV/62.0.0.42.77;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/21376152;FBCR/Rogers Sans-fil;FBMF/Sony;FBBD/sony;FBDV/F3311;FBSV/7.5.3;FBCA/x86:armeabi-v7a;FBDM/{density=1.0,width=1165,height=2560};FB_FW/1;FBRV/21438230;]"+"[FBAN/FB4A;FBAV/337.0.0.32.118;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/287416593;FBCR/Netzclub;FBMF/Sony;FBBD/sony;FBDV/C6603;FBSV/14.9.5;FBCA/arm64-v8a:;FBDM/{density=1.0,width=525,height=2102};]')
+    iphone3 = random.choice('[FBAN/FB4A;FBAV/152.0.0.34.136;FBBV/82833102;FBDM/{density=4.0,width=944,height=1983};FBLC/en_US;FBCR/H2O Wireless;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/AI2203;FBSV/10.7.0;FBCA/x86_64:x86:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/34.0.0.0.242;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/10009614;FBCR/PC Mobile;FBMF/Realme;FBBD/realme;FBDV/RMX3721;FBSV/5.8.1;FBCA/x86_64:armeabi-v7a;FBDM/{density=1.5,width=870,height=1794};FB_FW/1;FBRV/10043642;]"+"[FBAN/FB4A;FBAV/382.0.0.33.111;FBBV/316416485;FBDM/{density=2.75,width=1242,height=1752};FBLC/en_US;FBRV/316798559;FB_FW/2;FBCR/MetroPCS;FBMF/Tecno;FBBD/tecno;FBPN/com.facebook.katana;FBDV/TB20;FBSV/13.6.5;FBOP/19;FBCA/arm64-v8a:armeabi-v7a:armeabi;]"+"[FBAN/FB4A;FBAV/460.0.0.0.52;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/451006355;FBCR/Otelo;FBMF/Huawei;FBBD/huawei;FBDV/BLA-L29;FBSV/15.7.3;FBCA/arm64-v8a:;FBDM/{density=3.75,width=934,height=734};FB_FW/1;]"+"[FBAN/FB4A;FBAV/103.0.0.20.72;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/43868207;FBCR/Telekom Family Card;FBMF/Vivo;FBBD/vivo;FBDV/S1;FBSV/5.5.0;FBCA/x86:armeabi-v7a;FBDM/{density=1.5,width=918,height=899};FB_FW/1;]"+"[FBAN/FB4A;FBAV/55.0.0.18.66;FBBV/17676094;FBDM/{density=1.25,width=1351,height=2476};FBLC/en_AU;FBRV/17731121;FB_FW/2;FBCR/Exetel;FBMF/Sony;FBBD/sony;FBPN/com.facebook.katana;FBDV/XQ-BA32;FBSV/6.9.1;FBOP/1;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/275.0.0.49.127;FBBV/221372446;FBDM/{density=2.9,width=1436,height=1158};FBLC/en_AU;FBRV/221647452;FB_FW/2;FBCR/Southern Phone;FBMF/Sony;FBBD/sony;FBPN/com.facebook.katana;FBDV/XQ-BQ52;FBSV/8.8.3;FBOP/1;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/110.0.0.15.69;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/49078465;FBCR/TPG Telecom;FBMF/Wiko;FBBD/wiko;FBDV/W-Y40;FBSV/6.5.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=1108,height=857};FB_FW/1;]"+"[FBAN/FB4A;FBAV/29.0.0.0.5;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/7108191;FBCR/Videotron;FBMF/OPPO;FBBD/oppo;FBDV/CPH2554;FBSV/7.6.4;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=2.0,width=635,height=1691};FB_FW/1;FBRV/7137261;]"+"[FBAN/FB4A;FBAV/62.0.0.42.77;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/21376152;FBCR/Rogers Sans-fil;FBMF/Sony;FBBD/sony;FBDV/F3311;FBSV/7.5.3;FBCA/x86:armeabi-v7a;FBDM/{density=1.0,width=1165,height=2560};FB_FW/1;FBRV/21438230;]"+"[FBAN/FB4A;FBAV/337.0.0.32.118;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/287416593;FBCR/Netzclub;FBMF/Sony;FBBD/sony;FBDV/C6603;FBSV/14.9.5;FBCA/arm64-v8a:;FBDM/{density=1.0,width=525,height=2102};]"+"[FBAN/FB4A;FBAV/370.0.0.23.112;FBBV/314014367;FBDM/{density=2.5,width=817,height=770};FBLC/de_DE;FBRV/314384368;FB_FW/2;FBCR/Freenet Funk;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ZS671KS;FBSV/14.8.3;FBOP/1;FBCA/armeabi-v7a:armeabi;]"+"[FBAN/FB4A;FBAV/107.0.0.19.337;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/47807796;FBCR/Vidéotron;FBMF/Asus;FBBD/asus;FBDV/ZS672KS;FBSV/7.7.2;FBCA/x86:armeabi-v7a;FBDM/{density=1.278,width=1360,height=1978};]"+"[FBAN/FB4A;FBAV/242.0.0.43.119;FBBV/176515204;FBDM/{density=1.75,width=839,height=1224};FBLC/en_GB;FBCR/Tesco Mobile;FBMF/Lenovo;FBBD/lenovo;FBPN/com.facebook.katana;FBDV/S5;FBSV/11.5.1;FBCA/x86:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/309.0.0.47.119;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/281818581;FBCR/Circles.Life;FBMF/Sony;FBBD/sony;FBDV/H4213;FBSV/12.9.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=2.75,width=1407,height=1909};FB_FW/1;FBRV/282127632;]')
     ___Noor_on_Fire___ = ''+str(iphone3)+' '+str(agent3)
     return ___Noor_on_Fire___
 #----------------\<-VERSION->/----------------#
@@ -873,3 +873,4 @@ class __SEAXNOOR__:
 __CLEAR__()
 __SEAXNOOR__().__MENU__()
 #----------------\<-END-CALL->/----------------#
+
