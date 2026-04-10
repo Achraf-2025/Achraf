@@ -2,7 +2,7 @@
 import os, sys, platform, time, random, uuid, json, string, base64, re, hashlib
 from os import system
 from io import BytesIO
-from time import localtime as lt
+from time imp
 from pip._vendor import requests
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
