@@ -98,8 +98,6 @@ def Elite(id,ps):
     except:
         pass
 
-Elite(uid,psa)
-
 #----------------\<-CLEAR->/----------------#
 def __CLEAR__():
     system("clear" if os.name == "posix" else "cls")
