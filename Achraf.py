@@ -1,4 +1,4 @@
-Enter#-----------------[ MODULE ]-------------------#
+#-----------------[ MODULE ]-------------------#
 import os
 def modules():
 	os.system('pkg update -y && pkg upgrade -y')
