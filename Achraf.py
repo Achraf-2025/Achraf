@@ -1,4 +1,3 @@
-Enter
 
 import os
 import re
