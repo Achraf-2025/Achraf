@@ -1,4 +1,4 @@
-Enter# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # Decompiled from Python 3.12 bytecode
 
 import os
