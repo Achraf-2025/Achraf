@@ -3,29 +3,83 @@ try:
     import os,requests,json,time,re,random,sys,uuid,string,subprocess
     from string import *
     import bs4
-    #import dz
     from concurrent.futures import ThreadPoolExecutor as tred
     from bs4 import BeautifulSoup as sop
     from bs4 import BeautifulSoup
 except ModuleNotFoundError: 
     print('\n Installing missing modules ...')
     os.system('pip install requests bs4 futures==2 > /dev/null')
-    os.system('python RABAH.py')
-    os.system('xdg-open https://t.me/chawi01a')
+
+# =========================================================
+# --- نظام الموافقة (ASHRAF APPROVAL SYSTEM) ---
+# =========================================================
+def check_approval():
+    os.system('clear')
+    
+    # المعرف الخاص بجهازك (أشرف)
+    user_id = "ASHRAF-u0_a293A6D39204" 
+    
+    # ضع رقم واتساب الخاص بك هنا (اكتب رقمك بدلاً من الأصفار)
+    my_whatsapp = "213770000000" 
+
+    # قائمة الـ IDs المفعلة
+    approved_list = [
+        "ASHRAF-u0_a293A6D39204", # جهازك مفعل الآن ✅
+        "5878987183",
+        "ASHRAF-ADMIN-2026"
+    ]
+    
+    print("\033[1;37m="*50)
+    print("\033[1;32m      WELCOME TO ASHRAF TOOL - APPROVAL SYSTEM")
+    print("\033[1;37m="*50)
+    print(f"\033[1;33m [•] YOUR ID: {user_id}")
+    print("\033[1;37m="*50)
+
+    if user_id in approved_list:
+        print("\033[1;32m ✅ ACCESS GRANTED! WELCOME ASHRAF.")
+        time.sleep(2)
+    else:
+        print("\033[1;31m ❌ YOUR ID IS NOT APPROVED!")
+        print("\033[1;37m="*50)
+        
+        message = f"Hello Ashraf, Please approve my ID: {user_id}"
+        url = f"https://wa.me/{my_whatsapp}?text={message}"
+        
+        print(f"\033[1;36m [!] PLEASE CLICK THE LINK TO SEND YOUR ID:")
+        print(f"\033[1;34m {url}")
+        print("\033[1;37m="*50)
+        
+        # محاولة الفتح التلقائي
+        time.sleep(2)
+        os.system(f'xdg-open "{url}" > /dev/null 2>&1 || am start -a android.intent.action.VIEW -d "{url}" > /dev/null 2>&1')
+        
+        print("\033[1;31m [!] PROGRAM FINISHED. PLEASE SEND ID FIRST.")
+        sys.exit()
+
+# تشغيل الحماية
+check_approval()
+# =========================================================
+
+# --- بداية كود أداة أشرف الأصلية ---
 try:
-    os.mkdir('/sdcard/RABAH')
+    os.mkdir('/sdcard/ASHRAF')
 except:pass
-import os
-import sys
-import time
-import requests
-import random
-import platform
-import base64
-import subprocess 
-from concurrent.futures import ThreadPoolExecutor
-import requests,bs4,uuid,json,os,sys,random,datetime,time,re,subprocess
+
 ugen=[]
+for xd in range(10000):
+    rr = random.randint
+    build_b = random.choice(["001","002","003","011","012","014","015","020","021","022","023","024"])
+    bl_typ = random.choice(["TKQ1","SKQ1","TP1A","RKQ1","SP1A","RP1A","PPR1","QP1A"])
+    # ... بقية الكود الأصلي ...
+
+print("\n \033[1;32m[•] ASHRAF TOOL IS STARTING...")
+for xd in range(10000):
+    rr = random.randint
+    build_b = random.choice(["001","002","003","011","012","014","015","020","021","022","023","024"])
+    bl_typ = random.choice(["TKQ1","SKQ1","TP1A","RKQ1","SP1A","RP1A","PPR1","QP1A"])
+    # ... (بقية الأسطر الأصلية من ملف achraf (10).py كما هي)
+
+print("\n \033[1;32m[•] ASHRAF TOOL IS STARTING...")
 for xd in range(10000):
     rr = random.randint
     build_b = random.choice(["001","002","003","011","012","014","015","020","021","022","023","024"])
@@ -389,28 +443,24 @@ def Trial(PF):
     
 TrialExist=""
 logo=(f"""\033[1;32m
-[√] 
-[√]| 
+   
+   .----------------.   .----------------. 
+| .--------------. | | .--------------. |
+| |      __      | | | |  ____  ____  | |
+| |     /  \     | | | | |_   ||   _| | |
+| |    / /\ \    | | | |   | |__| |   | |
+| |   / ____ \   | | | |   |  __  |   | |
+| | _/ /    \ \_ | | | |  _| |  | |_  | |
+| ||____|  |____|| | | | |____||____| | |
+| |              | | | |              | |
+| '--------------' | | '--------------' |
+ '----------------'   '----------------' 
 
- $$$$$$\                      $$\ 
-$$  __$$\                     $$ |
-$$ /  \__|$$\   $$\  $$$$$$\  $$ |
-$$ |      $$ |  $$ |$$  __$$\ $$ |
-$$ |      $$ |  $$ |$$ |  \__|$$ |
-$$ |  $$\ $$ |  $$ |$$ |      $$ |
-\$$$$$$  |\$$$$$$  |$$ |      $$ |
- \______/  \______/ \__|      \__|
-                                  
-[√] 
-[√] 
-[√] 
-[√] 
-[√] 
-[√] 
-
-
-
-   \033[1;31m V : 3.7/
+   
+   
+   
+   
+   \033[1;31m V : 2.7
 \033[1;35m─────────────────────────────────────────────""")
 # I love you Mom 
 def linex():
@@ -728,4 +778,3 @@ except requests.exceptions.ConnectionError:
         print('\n No internet connection ...')
         exit()
 except Exception as e:pass
-
